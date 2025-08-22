@@ -1,0 +1,97 @@
+2025-05-28 00:53:17,487 - INFO - Starting comparison study with the following parameters:
+2025-05-28 00:53:17,488 - INFO -   band_width: 5
+2025-05-28 00:53:17,488 - INFO -   comparison: all
+2025-05-28 00:53:17,488 - INFO -   data_type: task
+2025-05-28 00:53:17,488 - INFO -   gender_file: None
+2025-05-28 00:53:17,488 - INFO -   input_dir: MPIIDPEye_AOIs
+2025-05-28 00:53:17,489 - INFO -   k: 7
+2025-05-28 00:53:17,489 - INFO -   max_candidates: 20
+2025-05-28 00:53:17,489 - INFO -   n_jobs: -1
+2025-05-28 00:53:17,489 - INFO -   nw_nj: true
+2025-05-28 00:53:17,489 - INFO -   output_dir: Comparison_Results
+2025-05-28 00:53:17,489 - INFO -   random: False
+2025-05-28 00:53:17,489 - INFO -   sample_percentage: 100
+2025-05-28 00:53:17,490 - INFO -   seed_length: 3
+2025-05-28 00:53:17,499 - INFO -   test_size: 0.1
+2025-05-28 00:53:17,499 - INFO -   word_size: 28
+2025-05-28 00:53:17,501 - INFO - Using fixed seed for reproducibility (42)
+2025-05-28 00:53:17,501 - INFO - Loading data from MPIIDPEye_AOIs...
+2025-05-28 00:53:17,501 - INFO - Detected data format: AOI
+2025-05-28 00:53:17,502 - INFO - Loading AOI-encoded sequences from MPIIDPEye_AOIs\encoded_sequences.json
+2025-05-28 00:53:17,505 - INFO - Loaded 60 scanpaths with 3 different labels
+2025-05-28 00:53:17,506 - INFO - Label distribution:
+2025-05-28 00:53:17,506 - INFO -   Task 1 (Comic): 20 samples
+2025-05-28 00:53:17,506 - INFO -   Task 2 (Online newspaper): 20 samples
+2025-05-28 00:53:17,506 - INFO -   Task 3 (Textbook): 20 samples
+2025-05-28 00:53:17,506 - INFO - Splitting data into train/test sets (90/10)...
+2025-05-28 00:53:17,507 - INFO - Training set: 54 samples
+2025-05-28 00:53:17,507 - INFO - Test set: 6 samples
+2025-05-28 00:53:17,507 - INFO - 
+==================================================
+2025-05-28 00:53:17,507 - INFO - 1. Needleman-Wunsch Classification
+2025-05-28 00:53:17,508 - INFO - ==================================================
+2025-05-28 00:53:17,508 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-28 00:53:17,547 - INFO - Training Needleman-Wunsch classifier...
+2025-05-28 00:53:17,730 - INFO - Needleman-Wunsch training completed in 0.18 seconds
+2025-05-28 00:53:17,730 - INFO - Memory usage: 8.5 MB
+2025-05-28 00:53:17,732 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-28 00:53:17,732 - INFO - Evaluating classifier on 6 test samples...
+2025-05-28 00:53:17,732 - INFO - Predicting labels for 6 test samples using Needleman-Wunsch...
+2025-05-28 00:53:17,732 - INFO - Split test data into 6 batches
+2025-05-28 00:53:17,732 - INFO - Processing 6 batches in parallel using 32 jobs
+2025-05-28 00:55:47,959 - INFO - Computing evaluation metrics...
+2025-05-28 00:55:47,965 - INFO - Needleman-Wunsch Accuracy: 0.6667
+2025-05-28 00:55:47,966 - INFO - Prediction time: 150.23 seconds
+2025-05-28 00:55:48,191 - INFO - 
+==================================================
+2025-05-28 00:55:48,191 - INFO - 2. NCBI MegaBLAST Classification
+2025-05-28 00:55:48,192 - INFO - ==================================================
+2025-05-28 00:55:48,248 - INFO - Training MegaBLAST classifier...
+2025-05-28 00:55:48,248 - INFO - Detected AOI-encoded data for MegaBLAST
+2025-05-28 00:55:48,249 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmpc76slpvt
+2025-05-28 00:55:48,250 - INFO - Converting training scanpaths to FASTA format...
+2025-05-28 00:55:49,985 - INFO - Creating BLAST database from training data...
+2025-05-28 00:55:50,716 - INFO - NCBI MegaBLAST training completed in 2.47 seconds
+2025-05-28 00:55:50,716 - INFO - Memory usage: 0.1 MB
+2025-05-28 00:55:50,717 - INFO - Evaluating NCBI MegaBLAST classifier...
+2025-05-28 00:55:50,717 - INFO - Evaluating classifier on 6 test samples...
+2025-05-28 00:55:50,717 - INFO - Predicting labels for 6 test samples using MegaBLAST...
+2025-05-28 00:55:51,434 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpc76slpvt/test_0_results.tsv
+2025-05-28 00:55:52,177 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpc76slpvt/test_1_results.tsv
+2025-05-28 00:55:52,948 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpc76slpvt/test_2_results.tsv
+2025-05-28 00:55:53,676 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpc76slpvt/test_3_results.tsv
+2025-05-28 00:55:54,675 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpc76slpvt/test_4_results.tsv
+2025-05-28 00:55:55,388 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpc76slpvt/test_5_results.tsv
+2025-05-28 00:55:55,389 - INFO - Computing evaluation metrics...
+2025-05-28 00:55:55,398 - INFO - NCBI MegaBLAST Accuracy: 0.5000
+2025-05-28 00:55:55,398 - INFO - Prediction time: 4.67 seconds
+2025-05-28 00:55:55,494 - INFO - 
+==================================================
+2025-05-28 00:55:55,495 - INFO - 3. FastEyeBLAST Classification
+2025-05-28 00:55:55,496 - INFO - ==================================================
+2025-05-28 00:55:55,496 - WARNING - AOI modules not available, falling back to IVT version
+2025-05-28 00:55:55,544 - INFO - Training FastEyeBLAST classifier...
+2025-05-28 00:55:55,544 - INFO - Encoding scanpaths...
+2025-05-28 00:55:55,867 - INFO - Alphabet size: 15
+2025-05-28 00:55:55,867 - INFO - Bits per token: 4
+2025-05-28 00:55:55,868 - INFO - Tokens per 64-bit word: 16
+2025-05-28 00:55:55,868 - INFO - Packing scanpaths into words...
+2025-05-28 00:55:56,059 - INFO - Computing SimHash sketches...
+2025-05-28 00:56:02,193 - INFO - Building LSH index...
+2025-05-28 00:56:02,194 - INFO - FastEyeBLAST training completed in 6.65 seconds
+2025-05-28 00:56:02,194 - INFO - Memory usage: 12.6 MB
+2025-05-28 00:56:02,195 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-28 00:56:02,195 - INFO - Evaluating classifier on 6 test samples...
+2025-05-28 00:56:11,510 - INFO - Computing evaluation metrics...
+2025-05-28 00:56:11,515 - INFO - FastEyeBLAST Accuracy: 0.3333
+2025-05-28 00:56:11,516 - INFO - Prediction time: 9.32 seconds
+2025-05-28 00:56:11,608 - INFO - 
+==================================================
+2025-05-28 00:56:11,608 - INFO - Plotting comparison results
+2025-05-28 00:56:11,608 - INFO - ==================================================
+2025-05-28 00:56:11,610 - INFO - Creating performance comparison chart at Comparison_Results\20250528_005317_MPIIDPEyes_AOI_task_sample100_test10_all_k7\performance_comparison.png...
+2025-05-28 00:56:11,752 - INFO - Saving detailed results to Comparison_Results\20250528_005317_MPIIDPEyes_AOI_task_sample100_test10_all_k7\comparison_results.json...
+2025-05-28 00:56:11,753 - INFO - Results saved to Comparison_Results\20250528_005317_MPIIDPEyes_AOI_task_sample100_test10_all_k7/
+2025-05-28 00:56:11,753 - INFO - Performance comparison plot saved to Comparison_Results\20250528_005317_MPIIDPEyes_AOI_task_sample100_test10_all_k7\performance_comparison.png
+2025-05-28 00:56:11,754 - INFO - Run parameters saved to Comparison_Results\20250528_005317_MPIIDPEyes_AOI_task_sample100_test10_all_k7\run_parameters.json
+2025-05-28 00:56:11,754 - INFO - Comparison study completed.

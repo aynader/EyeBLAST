@@ -1,0 +1,87 @@
+2025-06-12 11:31:33,245 - INFO - Starting comparison study with the following parameters:
+2025-06-12 11:31:33,246 - INFO -   band_width: 5
+2025-06-12 11:31:33,246 - INFO -   comparison: nw-only
+2025-06-12 11:31:33,246 - INFO -   component_modes: ['full', 'simhash_only', 'alignment_only']
+2025-06-12 11:31:33,246 - INFO -   data_type: task
+2025-06-12 11:31:33,246 - INFO -   gender_file: None
+2025-06-12 11:31:33,247 - INFO -   input_dir: JuDo1000_IVT
+2025-06-12 11:31:33,247 - INFO -   k: 7
+2025-06-12 11:31:33,248 - INFO -   max_candidates: 20
+2025-06-12 11:31:33,248 - INFO -   n_jobs: -1
+2025-06-12 11:31:33,248 - INFO -   nw_nj: true
+2025-06-12 11:31:33,248 - INFO -   output_dir: Comparison_Results
+2025-06-12 11:31:33,248 - INFO -   random: False
+2025-06-12 11:31:33,260 - INFO -   sample_percentage: 10
+2025-06-12 11:31:33,261 - INFO -   seed_length: 3
+2025-06-12 11:31:33,261 - INFO -   task_filter: None
+2025-06-12 11:31:33,261 - INFO -   test_size: 0.2
+2025-06-12 11:31:33,261 - INFO -   variable_word_size: 64
+2025-06-12 11:31:33,263 - INFO -   word_size: 28
+2025-06-12 11:31:33,265 - INFO - Using fixed seed for reproducibility (42)
+2025-06-12 11:31:33,265 - INFO - Loading data from JuDo1000_IVT.
+2025-06-12 11:31:33,265 - INFO - Detected data format: IVT
+2025-06-12 11:31:33,270 - INFO - Sampling 60 files (10% of 600)
+2025-06-12 11:31:33,271 - INFO - Loading 60 scanpath files from JuDo1000_IVT...
+2025-06-12 11:31:33,272 - WARNING - Could not parse filename 136_3_tokens.json: list index out of range
+2025-06-12 11:31:33,272 - WARNING - Could not parse filename 10_2_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 18_2_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 171_3_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 165_1_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 143_3_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 134_1_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 89_3_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 12_2_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 57_1_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 111_1_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 110_3_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 130_4_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 163_4_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 169_3_tokens.json: list index out of range
+2025-06-12 11:31:33,273 - WARNING - Could not parse filename 7_2_tokens.json: list index out of range
+2025-06-12 11:31:33,277 - WARNING - Could not parse filename 10_4_tokens.json: list index out of range
+2025-06-12 11:31:33,277 - WARNING - Could not parse filename 92_3_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 158_4_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 56_2_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 164_2_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 63_4_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 19_1_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 103_3_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 149_4_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 35_1_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 148_4_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 163_1_tokens.json: list index out of range
+2025-06-12 11:31:33,278 - WARNING - Could not parse filename 33_1_tokens.json: list index out of range
+2025-06-12 11:31:33,282 - WARNING - Could not parse filename 130_3_tokens.json: list index out of range
+2025-06-12 11:31:33,282 - WARNING - Could not parse filename 47_2_tokens.json: list index out of range
+2025-06-12 11:31:33,282 - WARNING - Could not parse filename 132_4_tokens.json: list index out of range
+2025-06-12 11:31:33,282 - WARNING - Could not parse filename 3_4_tokens.json: list index out of range
+2025-06-12 11:31:33,282 - WARNING - Could not parse filename 36_1_tokens.json: list index out of range
+2025-06-12 11:31:33,282 - WARNING - Could not parse filename 178_3_tokens.json: list index out of range
+2025-06-12 11:31:33,282 - WARNING - Could not parse filename 114_1_tokens.json: list index out of range
+2025-06-12 11:31:33,285 - WARNING - Could not parse filename 66_3_tokens.json: list index out of range
+2025-06-12 11:31:33,286 - WARNING - Could not parse filename 87_2_tokens.json: list index out of range
+2025-06-12 11:31:33,286 - WARNING - Could not parse filename 13_4_tokens.json: list index out of range
+2025-06-12 11:31:33,286 - WARNING - Could not parse filename 46_4_tokens.json: list index out of range
+2025-06-12 11:31:33,286 - WARNING - Could not parse filename 124_1_tokens.json: list index out of range
+2025-06-12 11:31:33,289 - WARNING - Could not parse filename 90_2_tokens.json: list index out of range
+2025-06-12 11:31:33,289 - WARNING - Could not parse filename 22_1_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 40_3_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 98_4_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 157_1_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 120_4_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 114_3_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 168_2_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 21_1_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 124_2_tokens.json: list index out of range
+2025-06-12 11:31:33,290 - WARNING - Could not parse filename 133_4_tokens.json: list index out of range
+2025-06-12 11:31:33,294 - WARNING - Could not parse filename 65_1_tokens.json: list index out of range
+2025-06-12 11:31:33,294 - WARNING - Could not parse filename 41_2_tokens.json: list index out of range
+2025-06-12 11:31:33,294 - WARNING - Could not parse filename 14_3_tokens.json: list index out of range
+2025-06-12 11:31:33,294 - WARNING - Could not parse filename 42_4_tokens.json: list index out of range
+2025-06-12 11:31:33,294 - WARNING - Could not parse filename 38_4_tokens.json: list index out of range
+2025-06-12 11:31:33,294 - WARNING - Could not parse filename 161_3_tokens.json: list index out of range
+2025-06-12 11:31:33,294 - WARNING - Could not parse filename 179_2_tokens.json: list index out of range
+2025-06-12 11:31:33,294 - WARNING - Could not parse filename 121_2_tokens.json: list index out of range
+2025-06-12 11:31:33,298 - INFO - Loaded 0 scanpaths with 0 different labels
+2025-06-12 11:31:33,298 - INFO - Label distribution:
+2025-06-12 11:31:33,298 - ERROR - Not enough data: only 0 samples loaded. Please check input directory and gender file if applicable.

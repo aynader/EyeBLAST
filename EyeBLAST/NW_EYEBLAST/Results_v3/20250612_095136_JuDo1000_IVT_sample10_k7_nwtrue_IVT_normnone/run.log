@@ -1,0 +1,52 @@
+2025-06-12 09:51:36,447 - INFO - Starting similarity comparison with the following parameters:
+2025-06-12 09:51:36,448 - INFO -   input_dir: JuDo1000_IVT
+2025-06-12 09:51:36,448 - INFO -   k: 7
+2025-06-12 09:51:36,448 - INFO -   normalization_mode: none
+2025-06-12 09:51:36,448 - INFO -   nw_nj: true
+2025-06-12 09:51:36,449 - INFO -   output_dir: Results_v3
+2025-06-12 09:51:36,449 - INFO -   sample_percentage: 10
+2025-06-12 09:51:36,449 - INFO -   mode: IVT
+2025-06-12 09:51:36,462 - INFO - Loading 60 IVT scanpath files (10% of 600)...
+2025-06-12 09:51:36,496 - INFO - Total IVT scanpaths loaded: 60
+2025-06-12 09:51:36,496 - INFO - Computing raw similarity matrices...
+2025-06-12 09:51:36,496 - INFO - Computing Needleman-Wunsch_IVT similarity matrix (may be slow)...
+2025-06-12 09:51:36,497 - INFO - Computing pairwise similarities for 60 scanpaths (1770 pairs)...
+2025-06-12 09:51:36,497 - INFO - Sequence length stats: max=42285, avg=6655.2
+2025-06-12 09:51:36,498 - INFO - Estimated memory per NW comparison: 0.2 MB
+2025-06-12 09:51:36,498 - INFO - Available system memory: 15.1 GB
+2025-06-12 09:51:36,500 - INFO - Processing 1770 pairs in batches of 500
+2025-06-12 09:51:36,500 - INFO - Processing batch 1/4 (500 pairs)
+2025-06-12 09:51:36,501 - INFO - Memory usage before batch: 52.3%
+2025-06-12 09:51:49,410 - INFO - Memory usage after batch: 62.7%
+2025-06-12 09:51:49,460 - INFO - Processing batch 2/4 (500 pairs)
+2025-06-12 09:51:49,460 - INFO - Memory usage before batch: 62.7%
+2025-06-12 09:51:57,494 - INFO - Memory usage after batch: 62.6%
+2025-06-12 09:51:57,543 - INFO - Processing batch 3/4 (500 pairs)
+2025-06-12 09:51:57,544 - INFO - Memory usage before batch: 62.6%
+2025-06-12 09:52:06,734 - INFO - Memory usage after batch: 62.6%
+2025-06-12 09:52:06,781 - INFO - Processing batch 4/4 (270 pairs)
+2025-06-12 09:52:06,782 - INFO - Memory usage before batch: 62.6%
+2025-06-12 09:52:11,676 - INFO - Memory usage after batch: 62.6%
+2025-06-12 09:52:11,728 - INFO - Successfully computed 1770 similarity pairs
+2025-06-12 09:52:11,737 - INFO - Saved raw NW similarity matrix to Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\nw_similarity_matrix_raw.npy
+2025-06-12 09:52:11,738 - INFO - Fitting Fast_EyeBLAST_IVT (building indices, encoding all scanpaths)...
+2025-06-12 09:52:11,739 - INFO - Encoding scanpaths...
+2025-06-12 09:52:12,459 - INFO - Alphabet size: 15
+2025-06-12 09:52:12,459 - INFO - Bits per token: 4
+2025-06-12 09:52:12,460 - INFO - Tokens per 64-bit word: 16
+2025-06-12 09:52:12,460 - INFO - Packing scanpaths into words...
+2025-06-12 09:52:12,567 - INFO - Computing SimHash sketches...
+2025-06-12 09:52:15,339 - INFO - Building LSH index...
+2025-06-12 09:52:15,339 - INFO - Computing Fast_EyeBLAST_IVT pairwise similarities...
+2025-06-12 09:52:19,768 - INFO - Saved raw FB similarity matrix to Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\fb_similarity_matrix_raw.npy
+2025-06-12 09:52:19,768 - INFO - Processing normalization method: none
+2025-06-12 09:52:19,770 - INFO - Saved none normalized matrices
+2025-06-12 09:52:19,796 - INFO - [none] Pearson correlation: 0.7280 (p-value = 3.7824e-292)
+2025-06-12 09:52:19,796 - INFO - [none] Spearman correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-12 09:52:20,150 - INFO - [none] Saved scatter plot to Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_scatter.png
+2025-06-12 09:52:20,527 - INFO - [none] Saved NW heatmap to Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_nw_heatmap.png
+2025-06-12 09:52:20,873 - INFO - [none] Saved FB heatmap to Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_fb_heatmap.png
+2025-06-12 09:52:21,104 - INFO - [none] Saved histogram plot to Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_histogram.png
+2025-06-12 09:52:21,285 - INFO - [none] Saved rank-vs-rank scatter to Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_rank_scatter.png
+2025-06-12 09:52:21,287 - INFO - Comprehensive analysis report saved to Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\analysis_report.log
+2025-06-12 09:52:21,287 - INFO - Similarity comparison completed for all normalization methods.

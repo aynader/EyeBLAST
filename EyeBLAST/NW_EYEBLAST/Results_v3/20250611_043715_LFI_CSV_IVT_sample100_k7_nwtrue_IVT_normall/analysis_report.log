@@ -1,0 +1,145 @@
+Analysis Report - Multiple Normalization Methods
+================================================
+
+Run Timestamp       : 2025-06-11 05:02:40
+Mode                : IVT
+Input Directory     : LFI_CSV_IVT
+Sample Percentage   : 100%
+Number of Samples   : 70
+k (FB neighbors)    : 7
+Needleman-Wunsch NJ : true
+Normalization Mode  : all
+
+Correlation Summary Across Normalization Methods
+=================================================
+Method               Pearson    P-value      Spearman   P-value     
+----------------------------------------------------------------------------
+none                 -0.0013    9.4969e-01   0.1387     7.7420e-12  
+minmax               -0.0013    9.4969e-01   0.1387     7.7420e-12  
+zscore               -0.0013    9.4969e-01   0.1387     7.7420e-12  
+rank                 0.1387     7.7420e-12   0.1387     7.7420e-12  
+quantile             0.1607     1.9443e-15   0.1386     7.9736e-12  
+correlation_preserving -0.0013    9.4969e-01   0.1387     7.7420e-12  
+
+Detailed Analysis: NONE Normalization
+==================================================
+Pearson Correlation : -0.0013 (p-value = 9.4969e-01)
+  Interpretation     : Weak linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.1387 (p-value = 7.7420e-12)
+  Interpretation     : Weak monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=-23.2084, max=0.2131, mean=-1.1613, std=1.8551
+  FB: min=0.0000, max=0.9998, mean=0.4084, std=0.4142
+
+Visualizations Saved:
+  - Scatter Plot            : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_scatter.png
+  - NW Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_fb_heatmap.png
+  - Histogram               : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_rank_scatter.png
+
+Detailed Analysis: MINMAX Normalization
+==================================================
+Pearson Correlation : -0.0013 (p-value = 9.4969e-01)
+  Interpretation     : Weak linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.1387 (p-value = 7.7420e-12)
+  Interpretation     : Weak monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=0.0000, max=0.9675, mean=0.9107, std=0.0766
+  FB: min=0.0000, max=0.9998, mean=0.4084, std=0.4142
+
+Visualizations Saved:
+  - Scatter Plot            : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_scatter.png
+  - NW Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_fb_heatmap.png
+  - Histogram               : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_rank_scatter.png
+
+Detailed Analysis: ZSCORE Normalization
+==================================================
+Pearson Correlation : -0.0013 (p-value = 9.4969e-01)
+  Interpretation     : Weak linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.1387 (p-value = 7.7420e-12)
+  Interpretation     : Weak monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=-11.8729, max=0.7225, mean=-0.0166, std=0.9976
+  FB: min=-0.9992, max=1.3972, mean=-0.0203, std=0.9929
+
+Visualizations Saved:
+  - Scatter Plot            : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_scatter.png
+  - NW Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_fb_heatmap.png
+  - Histogram               : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_rank_scatter.png
+
+Detailed Analysis: RANK Normalization
+==================================================
+Pearson Correlation : 0.1387 (p-value = 7.7420e-12)
+  Interpretation     : Weak linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.1387 (p-value = 7.7420e-12)
+  Interpretation     : Weak monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=0.0000, max=0.9926, mean=0.4963, std=0.2867
+  FB: min=0.0000, max=0.9902, mean=0.3310, std=0.3564
+
+Visualizations Saved:
+  - Scatter Plot            : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_scatter.png
+  - NW Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_fb_heatmap.png
+  - Histogram               : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_rank_scatter.png
+
+Detailed Analysis: QUANTILE Normalization
+==================================================
+Pearson Correlation : 0.1607 (p-value = 1.9443e-15)
+  Interpretation     : Weak linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.1386 (p-value = 7.9736e-12)
+  Interpretation     : Weak monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=0.0000, max=0.9855, mean=0.4929, std=0.2846
+  FB: min=0.0000, max=0.9857, mean=0.5112, std=0.2718
+
+Visualizations Saved:
+  - Scatter Plot            : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_scatter.png
+  - NW Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_fb_heatmap.png
+  - Histogram               : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_rank_scatter.png
+
+Detailed Analysis: CORRELATION_PRESERVING Normalization
+==================================================
+Pearson Correlation : -0.0013 (p-value = 9.4969e-01)
+  Interpretation     : Weak linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.1387 (p-value = 7.7420e-12)
+  Interpretation     : Weak monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=0.0000, max=4.7603, mean=4.4809, std=0.3770
+  FB: min=0.0000, max=4.9190, mean=2.0094, std=2.0380
+
+Visualizations Saved:
+  - Scatter Plot            : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_scatter.png
+  - NW Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_fb_heatmap.png
+  - Histogram               : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_rank_scatter.png
+
+Comparative Analysis Across Normalization Methods
+==================================================
+Highest Absolute Pearson Correlation : quantile (0.1607)
+Highest Absolute Spearman Correlation: correlation_preserving (0.1387)
+
+Normalization Method Descriptions:
+- none                : Raw similarity scores (no normalization)
+- minmax              : Linear scaling to [0,1] range
+- zscore              : Standardization to mean=0, std=1
+- rank                : Rank-based normalization to [0,1]
+- quantile            : Quantile normalization to uniform distribution
+- correlation_preserving : Geometric mean scaling preserving correlation structure
+
+Please inspect the visualizations in each normalization subdirectory for detailed analysis.

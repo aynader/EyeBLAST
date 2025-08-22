@@ -1,0 +1,10 @@
+^C:\USERS\AYNAD\DESKTOP\HOME\TUM\RESEARCH\ONGOING_PROJECTS\PRIVACY-PRESERVING_EYEBLAST\PP_EYEBLAST_V13\PYTHONVSCPP\BUILD\CMAKEFILES\F3B5F960379E43215987E6E5C76999F8\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/aynad/Desktop/Home/TUM/Research/Ongoing_Projects/Privacy-Preserving_EyeBLAST/PP_EyeBLAST_v13/PythonVsCpp -BC:/Users/aynad/Desktop/Home/TUM/Research/Ongoing_Projects/Privacy-Preserving_EyeBLAST/PP_EyeBLAST_v13/PythonVsCpp/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/aynad/Desktop/Home/TUM/Research/Ongoing_Projects/Privacy-Preserving_EyeBLAST/PP_EyeBLAST_v13/PythonVsCpp/build/FastEyeBLAST_CPP.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

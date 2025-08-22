@@ -1,0 +1,121 @@
+2025-05-28 02:55:41,131 - INFO - Starting comparison study with the following parameters:
+2025-05-28 02:55:41,132 - INFO -   band_width: 5
+2025-05-28 02:55:41,132 - INFO -   comparison: all
+2025-05-28 02:55:41,132 - INFO -   data_type: gender
+2025-05-28 02:55:41,132 - INFO -   gender_file: None
+2025-05-28 02:55:41,132 - INFO -   input_dir: MPIIDPEye_AOIs
+2025-05-28 02:55:41,133 - INFO -   k: 7
+2025-05-28 02:55:41,133 - INFO -   max_candidates: 20
+2025-05-28 02:55:41,133 - INFO -   n_jobs: -1
+2025-05-28 02:55:41,133 - INFO -   nw_nj: true
+2025-05-28 02:55:41,133 - INFO -   output_dir: Comparison_Results
+2025-05-28 02:55:41,133 - INFO -   random: False
+2025-05-28 02:55:41,134 - INFO -   sample_percentage: 100
+2025-05-28 02:55:41,134 - INFO -   seed_length: 3
+2025-05-28 02:55:41,144 - INFO -   test_size: 0.2
+2025-05-28 02:55:41,144 - INFO -   word_size: 28
+2025-05-28 02:55:41,145 - INFO - Using fixed seed for reproducibility (42)
+2025-05-28 02:55:41,145 - INFO - Auto-selected MPIIDPEye gender file: C:\Users\aynad\Desktop\Home\TUM\Research\Datasets\MPIIDPEye\Ground_Truth.csv
+2025-05-28 02:55:41,146 - INFO - Loading data from MPIIDPEye_AOIs...
+2025-05-28 02:55:41,146 - INFO - Detected data format: AOI
+2025-05-28 02:55:41,146 - INFO - Loading AOI-encoded sequences from MPIIDPEye_AOIs\encoded_sequences.json
+2025-05-28 02:55:41,150 - INFO - Loading gender information from C:\Users\aynad\Desktop\Home\TUM\Research\Datasets\MPIIDPEye\Ground_Truth.csv
+2025-05-28 02:55:41,173 - WARNING - Gender file columns not recognized. Available columns: ['Participant', 'Gender']
+2025-05-28 02:55:41,179 - INFO - After filtering duplicates and non-binary genders, found 20 participants
+2025-05-28 02:55:41,180 - INFO - Loaded gender information for 20 subjects (Male/Female only)
+2025-05-28 02:55:41,180 - INFO - Loaded 60 scanpaths with 2 different labels
+2025-05-28 02:55:41,180 - INFO - Label distribution:
+2025-05-28 02:55:41,180 - INFO -   Female: 30 samples
+2025-05-28 02:55:41,181 - INFO -   Male: 30 samples
+2025-05-28 02:55:41,181 - INFO - Splitting data into train/test sets (80/20)...
+2025-05-28 02:55:41,181 - INFO - Training set: 48 samples
+2025-05-28 02:55:41,181 - INFO - Test set: 12 samples
+2025-05-28 02:55:41,182 - INFO - 
+==================================================
+2025-05-28 02:55:41,182 - INFO - 1. Needleman-Wunsch Classification
+2025-05-28 02:55:41,182 - INFO - ==================================================
+2025-05-28 02:55:41,183 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-28 02:55:41,219 - INFO - Training Needleman-Wunsch classifier...
+2025-05-28 02:55:41,220 - INFO - Detected AOI-encoded data for Needleman-Wunsch
+2025-05-28 02:55:41,220 - INFO - Average AOI sequence length: 20435.02 characters
+2025-05-28 02:55:41,220 - INFO - Using max_seq_length of 3000 for AOI data
+2025-05-28 02:55:41,220 - INFO - Using batch size of 5 for AOI data
+2025-05-28 02:55:41,221 - INFO - Needleman-Wunsch training completed in 0.00 seconds
+2025-05-28 02:55:41,221 - INFO - Training memory usage: 0.0 MB
+2025-05-28 02:55:41,222 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-28 02:55:41,259 - INFO - Evaluating classifier on 12 test samples...
+2025-05-28 02:55:41,260 - INFO - Predicting labels for 12 test samples using Needleman-Wunsch...
+2025-05-28 02:55:41,260 - INFO - Using memory-optimized approach for AOI data
+2025-05-28 02:55:41,260 - INFO - Average test sequence length: 20290.92 characters
+2025-05-28 02:55:41,260 - INFO - Using test batch size of 5
+2025-05-28 02:55:41,260 - INFO - Processing test batch 1/3: samples 0-4
+2025-05-28 02:55:45,849 - INFO - Processing test batch 2/3: samples 5-9
+2025-05-28 02:55:49,767 - INFO - Processing test batch 3/3: samples 10-11
+2025-05-28 02:55:51,329 - INFO - Computing evaluation metrics...
+2025-05-28 02:55:51,335 - INFO - Needleman-Wunsch Accuracy: 0.3333
+2025-05-28 02:55:51,335 - INFO - Prediction time: 10.07 seconds
+2025-05-28 02:55:51,335 - INFO - Prediction memory usage: 37.1 MB
+2025-05-28 02:55:51,335 - INFO - Total memory usage: 37.1 MB
+2025-05-28 02:55:51,493 - INFO - 
+==================================================
+2025-05-28 02:55:51,494 - INFO - 2. NCBI MegaBLAST Classification
+2025-05-28 02:55:51,494 - INFO - ==================================================
+2025-05-28 02:55:51,547 - INFO - Training MegaBLAST classifier...
+2025-05-28 02:55:51,548 - INFO - Detected AOI-encoded data for MegaBLAST
+2025-05-28 02:55:51,548 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmpyfk6pqq1
+2025-05-28 02:55:51,549 - INFO - Converting training scanpaths to FASTA format...
+2025-05-28 02:55:52,990 - INFO - Creating BLAST database from training data...
+2025-05-28 02:55:53,912 - INFO - NCBI MegaBLAST training completed in 2.36 seconds
+2025-05-28 02:55:53,913 - INFO - Training memory usage: 0.1 MB
+2025-05-28 02:55:53,913 - INFO - Evaluating NCBI MegaBLAST classifier...
+2025-05-28 02:55:53,964 - INFO - Evaluating classifier on 12 test samples...
+2025-05-28 02:55:53,965 - INFO - Predicting labels for 12 test samples using MegaBLAST...
+2025-05-28 02:55:54,745 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_0_results.tsv
+2025-05-28 02:55:57,247 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_1_results.tsv
+2025-05-28 02:55:58,280 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_2_results.tsv
+2025-05-28 02:55:59,088 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_3_results.tsv
+2025-05-28 02:56:00,650 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_4_results.tsv
+2025-05-28 02:56:01,361 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_5_results.tsv
+2025-05-28 02:56:02,163 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_6_results.tsv
+2025-05-28 02:56:03,078 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_7_results.tsv
+2025-05-28 02:56:03,789 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_8_results.tsv
+2025-05-28 02:56:04,455 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_9_results.tsv
+2025-05-28 02:56:05,155 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_10_results.tsv
+2025-05-28 02:56:05,940 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyfk6pqq1/test_11_results.tsv
+2025-05-28 02:56:05,950 - INFO - Computing evaluation metrics...
+2025-05-28 02:56:05,955 - INFO - NCBI MegaBLAST Accuracy: 0.5000
+2025-05-28 02:56:05,955 - INFO - Prediction time: 11.99 seconds
+2025-05-28 02:56:05,956 - INFO - Prediction memory usage: 0.1 MB
+2025-05-28 02:56:05,956 - INFO - Total memory usage: 0.1 MB
+2025-05-28 02:56:06,040 - INFO - 
+==================================================
+2025-05-28 02:56:06,041 - INFO - 3. FastEyeBLAST Classification
+2025-05-28 02:56:06,041 - INFO - ==================================================
+2025-05-28 02:56:06,042 - INFO - Using AOI version of FastEyeBLAST
+2025-05-28 02:56:06,097 - INFO - Training FastEyeBLAST classifier...
+2025-05-28 02:56:06,098 - INFO - Encoding scanpaths...
+2025-05-28 02:56:06,165 - INFO - Alphabet size: 15
+2025-05-28 02:56:06,166 - INFO - Bits per token: 4
+2025-05-28 02:56:06,166 - INFO - Tokens per 64-bit word: 16
+2025-05-28 02:56:06,166 - INFO - Packing scanpaths into words...
+2025-05-28 02:56:06,311 - INFO - Computing SimHash sketches...
+2025-05-28 02:56:11,759 - INFO - Building LSH index...
+2025-05-28 02:56:11,760 - INFO - FastEyeBLAST training completed in 5.66 seconds
+2025-05-28 02:56:11,760 - INFO - Training memory usage: 10.6 MB
+2025-05-28 02:56:11,760 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-28 02:56:11,814 - INFO - Evaluating classifier on 12 test samples...
+2025-05-28 02:56:17,032 - INFO - Computing evaluation metrics...
+2025-05-28 02:56:17,036 - INFO - FastEyeBLAST Accuracy: 0.4167
+2025-05-28 02:56:17,036 - INFO - Prediction time: 5.22 seconds
+2025-05-28 02:56:17,037 - INFO - Prediction memory usage: 2.5 MB
+2025-05-28 02:56:17,037 - INFO - Total memory usage: 13.2 MB
+2025-05-28 02:56:17,119 - INFO - 
+==================================================
+2025-05-28 02:56:17,120 - INFO - Plotting comparison results
+2025-05-28 02:56:17,120 - INFO - ==================================================
+2025-05-28 02:56:17,121 - INFO - Creating performance comparison chart at Comparison_Results\20250528_025541_MPIIDPEyes_AOI_gender_sample100_test20_all_k7\performance_comparison.png...
+2025-05-28 02:56:17,252 - INFO - Saving detailed results to Comparison_Results\20250528_025541_MPIIDPEyes_AOI_gender_sample100_test20_all_k7\comparison_results.json...
+2025-05-28 02:56:17,254 - INFO - Results saved to Comparison_Results\20250528_025541_MPIIDPEyes_AOI_gender_sample100_test20_all_k7/
+2025-05-28 02:56:17,254 - INFO - Performance comparison plot saved to Comparison_Results\20250528_025541_MPIIDPEyes_AOI_gender_sample100_test20_all_k7\performance_comparison.png
+2025-05-28 02:56:17,255 - INFO - Run parameters saved to Comparison_Results\20250528_025541_MPIIDPEyes_AOI_gender_sample100_test20_all_k7\run_parameters.json
+2025-05-28 02:56:17,255 - INFO - Comparison study completed.

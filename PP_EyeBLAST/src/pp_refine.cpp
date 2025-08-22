@@ -12,24 +12,24 @@
 using namespace emp;
 using namespace pp_eyeblast;
 
-
-
+// EXACT original seed extraction circuit from Fast_EyeBLAST_IVT.cpp
+// Note: In garbled circuits, we must process all potential seeds to maintain privacy
 std::vector<std::pair<SeedPair, Bit>> SeedExtractionCircuit(const std::vector<Integer>& words_alice,
                                                              const std::vector<Integer>& words_bob,
                                                              int bits_per_token,
                                                              int tokens_per_word) {
     
     std::vector<std::pair<SeedPair, Bit>> seeds_with_validity;
-    int max_mismatches = 1;  
+    int max_mismatches = 1;  // Increased to handle realistic different sequences
     size_t min_len = std::min(words_alice.size(), words_bob.size());
     
     std::cout << "EXACT original seed extraction from " << min_len << " word pairs..." << std::endl;
     
     for (size_t i = 0; i < min_len; i++) {
-        
+        // XOR the words - EXACT same as plain EyeBLAST extract_seeds
         Integer xor_result = words_alice[i] ^ words_bob[i];
         
-        
+        // Count mismatches using popcount - EXACT same as plain EyeBLAST popcount64
         std::vector<Bit> diff_bits(64);
         for (int j = 0; j < 64; j++) {
             diff_bits[j] = xor_result[j];
@@ -42,11 +42,11 @@ std::vector<std::pair<SeedPair, Bit>> SeedExtractionCircuit(const std::vector<In
             mismatch_count = mismatch_count + bit_val;
         }
         
-        
+        // EXACT same condition as plain EyeBLAST: mismatches <= max_mismatches * bits_per_token
         Integer threshold(64, max_mismatches * bits_per_token, PUBLIC);
         Bit is_seed = threshold.geq(mismatch_count);
         
-        
+        // Store all potential seeds with their validity bits - maintains privacy
         int pos1 = i * tokens_per_word;
         int pos2 = i * tokens_per_word;
         seeds_with_validity.emplace_back(SeedPair(pos1, pos2), is_seed);
@@ -56,13 +56,13 @@ std::vector<std::pair<SeedPair, Bit>> SeedExtractionCircuit(const std::vector<In
     return seeds_with_validity;
 }
 
-
-
+// EXACT original greedy chain seeds from Fast_EyeBLAST_IVT.cpp
+// Modified to work with seeds that have validity bits
 std::vector<SeedPair> GreedyChainSeedsCircuit(const std::vector<std::pair<SeedPair, Bit>>& seeds_with_validity,
                                               int len1, int len2) {
     if (seeds_with_validity.empty()) return {};
     
-    
+    // Filter only valid seeds - EXACT same as plain EyeBLAST
     std::vector<SeedPair> valid_seeds;
     std::cout << "=== DEBUG: FILTERING SEEDS ===" << std::endl;
     for (const auto& seed_pair : seeds_with_validity) {
@@ -76,14 +76,14 @@ std::vector<SeedPair> GreedyChainSeedsCircuit(const std::vector<std::pair<SeedPa
     
     if (valid_seeds.empty()) return {};
     
-    
+    // Group seeds by diagonal - EXACT same as plain EyeBLAST
     std::map<int, std::vector<SeedPair>> diagonals;
     for (const auto& seed : valid_seeds) {
         int diag = seed.pos2 - seed.pos1;
         diagonals[diag].push_back(seed);
     }
     
-    
+    // Find the diagonal with the most seeds - EXACT same as plain EyeBLAST
     auto best_diag = std::max_element(diagonals.begin(), diagonals.end(),
                                      [](const auto& a, const auto& b) {
                                          return a.second.size() < b.second.size();
@@ -101,7 +101,7 @@ std::vector<SeedPair> GreedyChainSeedsCircuit(const std::vector<std::pair<SeedPa
                   return a.pos1 < b.pos1;
               });
     
-    
+    // Build chain greedily - EXACT same as plain EyeBLAST
     std::vector<SeedPair> chain;
     if (!best_seeds.empty()) {
         chain.push_back(best_seeds[0]);
@@ -116,12 +116,12 @@ std::vector<SeedPair> GreedyChainSeedsCircuit(const std::vector<std::pair<SeedPa
     std::cout << "Chained " << chain.size() << " seeds" << std::endl;
     return chain;
 }
-
-
+// EXACT original banded Levenshtein DP from Fast_EyeBLAST_IVT.cpp adapted for garbled circuits
+// This implements the TOKEN-level banded DP algorithm, EXACTLY like plain EyeBLAST
 Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
                         const std::vector<Integer>& seq2_tokens,
-                        size_t                     len1,          
-                        size_t                     len2,          
+                        size_t                     len1,          // ← real Alice length
+                        size_t                     len2,          // ← real Bob   length
                         int                        band_width,
                         const std::vector<SeedPair>& chain,
                         int                        party) {
@@ -129,11 +129,11 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
     std::cout << "Computing EXACT original token-level banded Levenshtein DP with band width "
               << band_width << "...\n";
 
-    const size_t m = len1;   
+    const size_t m = len1;   // use true lengths – ignore zero-padding
     const size_t n = len2;
     std::cout << "Token lengths (real): Alice=" << m << ", Bob=" << n << std::endl;
     
-    
+    // DEBUG: Show first 10 tokens of each sequence with raw token verification
     std::cout << "=== DEBUG: FIRST 10 TOKENS ===" << std::endl;
     std::cout << "Alice tokens: ";
     for (int i = 0; i < std::min(10, static_cast<int>(m)); i++) {
@@ -146,7 +146,7 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
     }
     std::cout << std::endl;
     
-    
+    // DEBUG: Token dictionary consistency check
     std::cout << "=== DEBUG: TOKEN DICTIONARY STATE ===" << std::endl;
     std::cout << "First few token mappings:" << std::endl;
     auto raw_tokens = std::vector<std::string>{"F1", "F2", "F3", "M1", "M2", "M3", "S1", "S2", "S3"};
@@ -154,13 +154,13 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
         std::cout << "  " << token << " -> " << get_global_instance().token_to_integer(token) << std::endl;
     }
 
-    
+    /* ─────────────────────────────  early-exit ───────────────────────────── */
     if (chain.empty()) {
-        return Integer(32, static_cast<int>((m + n)), PUBLIC);   
+        return Integer(32, static_cast<int>((m + n)), PUBLIC);   // very poor similarity
     }
 
-    
-    
+    /* ─────────────────────────────  band geometry ───────────────────────── */
+    // CRITICAL FIX: Extract diagonal from chain - EXACT same as FastEyeBLAST
     int diag = chain[0].pos2 - chain[0].pos1;
     int half_band = band_width / 2;
 
@@ -169,12 +169,12 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
               << "Half band: "  << half_band   << '\n'
               << "Diagonal from chain[0]: " << diag << " (from " << chain.size() << " seeds)\n";
 
-    
+    /* ─────────────────────────────  scoring constants ───────────────────── */
     const Integer match_score(32,  2,  PUBLIC);
     const Integer mismatch_pen(32, -1, PUBLIC);
     const Integer gap_penalty(32,  -1, PUBLIC);
 
-    
+    /* ─────────────────────────────  DP matrix alloc/init ────────────────── */
     std::vector<std::vector<Integer>> dp(m + 1,
                                          std::vector<Integer>(band_width,
                                                               Integer(32, 0, PUBLIC)));
@@ -182,10 +182,10 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
     for (int j = 0; j < band_width; ++j)
         dp[0][j] = Integer(32, j, PUBLIC) * gap_penalty;
 
-    
+    /* ─────────────────────────────  main DP loop  ───────────────────────── */
     for (size_t i = 1; i <= m; ++i) {
         
-        
+        // DEBUG: Show progress for key iterations (both parties)
         bool should_debug = (i <= 5) || (i >= m-5) || (i % 200 == 0);
         if (should_debug) {
             std::cout << "=== DEBUG: DP ROW " << i << " (Party " << (party == ALICE ? "Alice" : "Bob") << ") ===" << std::endl;
@@ -195,28 +195,28 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
         int col_end   = std::min(static_cast<int>(n) + 1,
                                  static_cast<int>(i) + diag + half_band + 1);
 
-        
+        /* leftmost cell of the band */
         dp[i][0] = (col_start > 1) ? (dp[i-1][0] + gap_penalty)
                                    : Integer(32, static_cast<int>(i), PUBLIC) * gap_penalty;
 
         for (int j = col_start; j < col_end; ++j) {
-            int band_j = j - col_start;          
+            int band_j = j - col_start;          // local column inside the band
             if (band_j >= band_width) break;
             
-            
+            // DEBUG: Show band positioning for first few rows
             if (i <= 5 && j <= 10) {
                 std::cout << "Row " << i << ": col_start=" << col_start << ", col_end=" << col_end 
                           << ", j=" << j << ", band_j=" << band_j << std::endl;
             }
 
-            
+            /* diagonal predecessor - EXACT same as plain EyeBLAST */
             int band_j_prev = (band_j > 0) ? band_j - 1 : 0;
             Integer diag_base = dp[i-1][band_j_prev];
 
-            
+            /* match / mismatch delta - EXACT same as original Fast_EyeBLAST_IVT.cpp */
             Bit      is_match   = seq1_tokens[i-1].equal(seq2_tokens[j-1]);
-            Integer  mismatch_pen(32, -1, PUBLIC);  
-            Integer  match_score(32, 2, PUBLIC);   
+            Integer  mismatch_pen(32, -1, PUBLIC);  // false case  
+            Integer  match_score(32, 2, PUBLIC);   // true case
             Integer  match_delta = mismatch_pen.select(is_match, match_score);
 
             Integer diag_score  = diag_base + match_delta;
@@ -224,7 +224,7 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
             Integer left_score  = (band_j ? dp[i][band_j-1] + gap_penalty
                                           : Integer(32, INT_MIN/2, PUBLIC));
 
-            
+            /* best = max(diag, up, left) */
             Integer best = diag_score;
             Bit     better = up_score.geq(best);
             Integer tmp(32,0,PUBLIC); tmp[0] = better;
@@ -236,7 +236,7 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
 
             dp[i][band_j] = best;
             
-            
+            // DEBUG: Show token comparisons for key positions
             bool detailed_debug = (i <= 20 && j <= 20) || (i >= m-5 && j >= n-5) || (i % 200 == 0 && j % 10 == 0);
             if (detailed_debug) {
                 bool match_result = is_match.reveal<bool>();
@@ -256,18 +256,18 @@ Integer BandedDPCircuit(const std::vector<Integer>& seq1_tokens,
         }
     }
 
-    
-    
+    /* ───────────────────────────  extract final score  ──────────────────── */
+    // EXACT same as FastEyeBLAST: use last column of band
     Integer final_score = dp[m][band_width-1];
 
     std::cout << "Final cell extraction: using dp[" << m << "][" << (band_width-1) << "] - EXACT same as FastEyeBLAST" << std::endl;
     
-    
+    // DEBUG: Both parties reveal the final score
     std::cout << "=== DEBUG: BANDED DP FINAL SCORE (Party " << (party == ALICE ? "Alice" : "Bob") << ") ===" << std::endl;
     int revealed_score = final_score.reveal<int>();
     std::cout << "Final DP score before return: " << revealed_score << std::endl;
     
-    
+    // DEBUG: Show last few cells for comparison
     std::cout << "=== DEBUG: LAST ROW OF DP MATRIX ===" << std::endl;
     for (int j = std::max(0, band_width-5); j < band_width; j++) {
         int cell_val = dp[m][j].reveal<int>();
@@ -292,12 +292,12 @@ void run_refine_gc(int        party,
 
     std::cout << "Setting up EMP-Toolkit for party " << party << '\n';
 
-    
+    /* 1️⃣  networking + semi-honest setup */
     NetIO io(party == ALICE ? nullptr : ip.c_str(), port);
     setup_semi_honest(&io, party);
     std::cout << "Connected. Starting refinement circuit…\n";
 
-    
+    /* 2️⃣  exchange lengths so both sides can pad to the same size */
     size_t local_packed_len  = local_packed.size();
     size_t remote_packed_len = 0;
     size_t local_token_len   = local_tokens.size();
@@ -318,7 +318,7 @@ void run_refine_gc(int        party,
     const size_t max_packed_len = std::max(local_packed_len,  remote_packed_len);
     const size_t max_token_len  = std::max(local_token_len,   remote_token_len);
 
-    
+    /* 3️⃣  build Integer vectors (zero-pad to max_len) */
     std::vector<Integer> alice_words, bob_words;
     std::vector<Integer> alice_tokens, bob_tokens;
     alice_words .reserve(max_packed_len);
@@ -326,7 +326,7 @@ void run_refine_gc(int        party,
     alice_tokens.reserve(max_token_len);
     bob_tokens  .reserve(max_token_len);
 
-    
+    // packed words
     for (size_t i = 0; i < max_packed_len; ++i) {
         uint64_t a = (party == ALICE && i < local_packed_len) ? local_packed[i] : 0ULL;
         uint64_t b = (party == BOB   && i < local_packed_len) ? local_packed[i] : 0ULL;
@@ -334,7 +334,7 @@ void run_refine_gc(int        party,
         bob_words  .emplace_back(Integer(64, b, BOB));
     }
 
-    
+    // token stream
     for (size_t i = 0; i < max_token_len; ++i) {
         int a = (party == ALICE && i < local_token_len) ? local_tokens[i] : 0;
         int b = (party == BOB   && i < local_token_len) ? local_tokens[i] : 0;
@@ -342,9 +342,9 @@ void run_refine_gc(int        party,
         bob_tokens  .emplace_back(Integer(32, b, BOB));
     }
 
-    
+    /* 4️⃣  debug prints (omitted for brevity) */
 
-    
+    /* 5️⃣  EXACT seed extraction + chaining on packed words */
     std::cout << "Phase 1: EXACT original seed extraction on packed words…\n";
     auto seeds_with_validity = SeedExtractionCircuit(
         alice_words, bob_words,
@@ -355,8 +355,8 @@ void run_refine_gc(int        party,
     std::cout << "Phase 1b: EXACT original seed chaining…\n";
     auto chain = GreedyChainSeedsCircuit(
         seeds_with_validity,
-          max_token_len,
-          max_token_len
+        /* len1 */  max_token_len,
+        /* len2 */  max_token_len
     );
     
     std::cout << "=== DEBUG: SEED CHAINING RESULT ===" << std::endl;
@@ -365,7 +365,7 @@ void run_refine_gc(int        party,
         std::cout << "WARNING: Chain is empty! This will cause early exit with negative score." << std::endl;
     }
 
-    
+    /* 6️⃣  TOKEN‐LEVEL banded DP */
     std::cout << "Phase 2: TOKEN-LEVEL banded dynamic programming - EXACT same as plain EyeBLAST…\n";
 
     if (party == ALICE) {
@@ -374,7 +374,7 @@ void run_refine_gc(int        party,
         std::cout << "Plain library result for identical sequences: " << plain_result << std::endl;
     }
 
-    
+    // Determine the *real* token lengths in Alice-then-Bob order:
     int alice_real_len = (party == ALICE) ? static_cast<int>(local_token_len)
                                           : static_cast<int>(remote_token_len);
     int bob_real_len   = (party == ALICE) ? static_cast<int>(remote_token_len)
@@ -382,20 +382,20 @@ void run_refine_gc(int        party,
 
     Integer final_score = BandedDPCircuit(
         alice_tokens, bob_tokens,
-        alice_real_len,     
-        bob_real_len,       
+        alice_real_len,     // Alice's true length
+        bob_real_len,       // Bob's true length
         band_width,
         chain,
         party
     );
 
-    
+    /* 7️⃣  Reveal & clean-up */
     std::cout << "Revealing final score…\n";
     int32_t raw_score = final_score.reveal<int32_t>();
     finalize_semi_honest();
     std::cout << "Finalizing protocol…\n";
 
-    
+    /* 8️⃣  Persist result */
     std::ofstream out(output_file, std::ios::trunc);
     if (out) {
         size_t alice_len = (party == ALICE) ? local_token_len : remote_token_len;
@@ -423,7 +423,7 @@ void print_usage(const char* program_name) {
 }
 
 int main(int argc, char* argv[]) {
-    
+    // Default parameters
     int party = -1;
     std::string ip = "127.0.0.1";
     int port = 12346;
@@ -431,7 +431,7 @@ int main(int argc, char* argv[]) {
     int band_width = 5;
     std::string output_file = "refine_result.txt";
     
-    
+    // Parse command line arguments
     for (int i = 1; i < argc; i++) {
         std::string arg = argv[i];
         
@@ -465,7 +465,7 @@ int main(int argc, char* argv[]) {
         }
     }
     
-    
+    // Validate required arguments
     if (party == -1) {
         std::cerr << "Error: --role is required" << std::endl;
         print_usage(argv[0]);
@@ -485,7 +485,7 @@ int main(int argc, char* argv[]) {
         std::cout << "Band width: " << band_width << std::endl;
         std::cout << "Port: " << port << std::endl;
         
-        
+        // Load and encode scanpath
         std::cout << "Loading scanpath from " << infile << "..." << std::endl;
         
         std::ifstream file(infile);
@@ -507,13 +507,13 @@ int main(int argc, char* argv[]) {
         
         std::cout << "Loaded " << tokens.size() << " tokens" << std::endl;
         
-        
+        // CRITICAL: Synchronize token dictionary (same logic as pp_main)
         std::cout << "Synchronizing token dictionaries..." << std::endl;
         
-        
+        // Pre-populate with all possible token types deterministically
         std::set<std::string> comprehensive_vocab;
         
-        
+        // Add all possible binned duration tokens (M, F, S with bins 0-7)
         const std::vector<char> prefixes = {'M', 'F', 'S'};
         for (char prefix : prefixes) {
             for (int bin = 0; bin < 8; ++bin) {
@@ -521,28 +521,28 @@ int main(int argc, char* argv[]) {
             }
         }
         
-        
+        // Also add actual tokens from current sequences
         for (const std::string& token : tokens) {
             comprehensive_vocab.insert(get_global_instance().bin_duration(token));
         }
         
-        
+        // Pre-populate token dictionary in deterministic order
         for (const std::string& token : comprehensive_vocab) {
             get_global_instance().token_to_integer(token);
         }
         
-        
+        // Freeze dictionary to prevent further changes
         get_global_instance().freeze_dictionary();
         
         std::cout << "Token dictionary synchronized and frozen with " << comprehensive_vocab.size() << " tokens" << std::endl;
         
-        
+        // Encode and pack scanpath
         std::cout << "Encoding and packing scanpath..." << std::endl;
         auto encoding = encode_and_pack(tokens);
         
         std::cout << "Generated " << encoding.packed.size() << " packed words" << std::endl;
         
-        
+        // Run refinement garbled circuit
         std::cout << "Starting garbled circuit protocol..." << std::endl;
         run_refine_gc(party, ip, port, encoding.packed, encoding.ids,encoding.bits_per_token, encoding.tokens_per_word, band_width, output_file, infile);
         

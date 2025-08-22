@@ -1,0 +1,10 @@
+Parameter Set 3 Analysis
+=============================
+thresh_fix: 3.0, thresh_ms: 10.0, thresh_sacc: 50.0
+Notes: strict fix, broad micro window
+
+Token Distribution:
+  Fixations (F): 56554 (28.00%)
+  Microsaccades (M): 99169 (49.10%)
+  Saccades (S): 46270 (22.91%)
+  Total Tokens: 201993

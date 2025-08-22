@@ -1,0 +1,84 @@
+2025-06-11 03:32:34,484 - INFO - Starting similarity comparison with the following parameters:
+2025-06-11 03:32:34,485 - INFO -   input_dir: EyeBLAST/MPIIDPEye_IVT
+2025-06-11 03:32:34,485 - INFO -   k: 7
+2025-06-11 03:32:34,485 - INFO -   normalization_mode: all
+2025-06-11 03:32:34,485 - INFO -   nw_nj: true
+2025-06-11 03:32:34,485 - INFO -   output_dir: EyeBLAST/Results_v3
+2025-06-11 03:32:34,485 - INFO -   sample_percentage: 100
+2025-06-11 03:32:34,485 - INFO -   mode: IVT
+2025-06-11 03:32:34,496 - INFO - Loading 60 IVT scanpath files (100% of 60)...
+2025-06-11 03:32:34,505 - INFO - Total IVT scanpaths loaded: 60
+2025-06-11 03:32:34,505 - INFO - Computing raw similarity matrices...
+2025-06-11 03:32:34,505 - INFO - Computing Needleman-Wunsch_IVT similarity matrix (may be slow)...
+2025-06-11 03:32:34,506 - INFO - Computing pairwise similarities for 60 scanpaths (1770 pairs)...
+2025-06-11 03:32:34,506 - INFO - Processing batch 1/4
+2025-06-11 03:32:38,601 - INFO - Processing batch 2/4
+2025-06-11 03:32:38,915 - INFO - Processing batch 3/4
+2025-06-11 03:32:39,201 - INFO - Processing batch 4/4
+2025-06-11 03:32:39,400 - INFO - Saved raw NW similarity matrix to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\nw_similarity_matrix_raw.npy
+2025-06-11 03:32:39,401 - INFO - Fitting Fast_EyeBLAST_IVT (building indices, encoding all scanpaths)...
+2025-06-11 03:32:39,401 - INFO - Encoding scanpaths...
+2025-06-11 03:32:39,476 - INFO - Alphabet size: 21
+2025-06-11 03:32:39,476 - INFO - Bits per token: 5
+2025-06-11 03:32:39,477 - INFO - Tokens per 64-bit word: 12
+2025-06-11 03:32:39,477 - INFO - Packing scanpaths into words...
+2025-06-11 03:32:39,486 - INFO - Computing SimHash sketches...
+2025-06-11 03:32:39,826 - INFO - Building LSH index...
+2025-06-11 03:32:39,826 - INFO - Computing Fast_EyeBLAST_IVT pairwise similarities...
+2025-06-11 03:32:40,707 - INFO - Saved raw FB similarity matrix to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\fb_similarity_matrix_raw.npy
+2025-06-11 03:32:40,707 - INFO - Processing normalization method: none
+2025-06-11 03:32:40,709 - INFO - Saved none normalized matrices
+2025-06-11 03:32:40,726 - INFO - [none] Pearson correlation: 0.3802 (p-value = 5.7932e-62)
+2025-06-11 03:32:40,726 - INFO - [none] Spearman correlation: 0.8271 (p-value = 0.0000e+00)
+2025-06-11 03:32:41,018 - INFO - [none] Saved scatter plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_scatter.png
+2025-06-11 03:32:41,323 - INFO - [none] Saved NW heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_nw_heatmap.png
+2025-06-11 03:32:41,618 - INFO - [none] Saved FB heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_fb_heatmap.png
+2025-06-11 03:32:41,809 - INFO - [none] Saved histogram plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_histogram.png
+2025-06-11 03:32:41,971 - INFO - [none] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_rank_scatter.png
+2025-06-11 03:32:41,972 - INFO - Processing normalization method: minmax
+2025-06-11 03:32:41,974 - INFO - Saved minmax normalized matrices
+2025-06-11 03:32:41,976 - INFO - [minmax] Pearson correlation: 0.3802 (p-value = 5.7932e-62)
+2025-06-11 03:32:41,976 - INFO - [minmax] Spearman correlation: 0.8271 (p-value = 0.0000e+00)
+2025-06-11 03:32:42,202 - INFO - [minmax] Saved scatter plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_scatter.png
+2025-06-11 03:32:42,493 - INFO - [minmax] Saved NW heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_nw_heatmap.png
+2025-06-11 03:32:42,797 - INFO - [minmax] Saved FB heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_fb_heatmap.png
+2025-06-11 03:32:43,041 - INFO - [minmax] Saved histogram plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_histogram.png
+2025-06-11 03:32:43,202 - INFO - [minmax] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_rank_scatter.png
+2025-06-11 03:32:43,203 - INFO - Processing normalization method: zscore
+2025-06-11 03:32:43,205 - INFO - Saved zscore normalized matrices
+2025-06-11 03:32:43,208 - INFO - [zscore] Pearson correlation: 0.3802 (p-value = 5.7933e-62)
+2025-06-11 03:32:43,208 - INFO - [zscore] Spearman correlation: 0.8271 (p-value = 0.0000e+00)
+2025-06-11 03:32:43,433 - INFO - [zscore] Saved scatter plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_scatter.png
+2025-06-11 03:32:43,713 - INFO - [zscore] Saved NW heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_nw_heatmap.png
+2025-06-11 03:32:43,990 - INFO - [zscore] Saved FB heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_fb_heatmap.png
+2025-06-11 03:32:44,176 - INFO - [zscore] Saved histogram plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_histogram.png
+2025-06-11 03:32:44,336 - INFO - [zscore] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_rank_scatter.png
+2025-06-11 03:32:44,336 - INFO - Processing normalization method: rank
+2025-06-11 03:32:44,340 - INFO - Saved rank normalized matrices
+2025-06-11 03:32:44,342 - INFO - [rank] Pearson correlation: 0.8271 (p-value = 0.0000e+00)
+2025-06-11 03:32:44,343 - INFO - [rank] Spearman correlation: 0.8271 (p-value = 0.0000e+00)
+2025-06-11 03:32:44,572 - INFO - [rank] Saved scatter plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_scatter.png
+2025-06-11 03:32:44,878 - INFO - [rank] Saved NW heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_nw_heatmap.png
+2025-06-11 03:32:45,186 - INFO - [rank] Saved FB heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_fb_heatmap.png
+2025-06-11 03:32:45,457 - INFO - [rank] Saved histogram plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_histogram.png
+2025-06-11 03:32:45,614 - INFO - [rank] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_rank_scatter.png
+2025-06-11 03:32:45,615 - INFO - Processing normalization method: quantile
+2025-06-11 03:32:45,617 - INFO - Saved quantile normalized matrices
+2025-06-11 03:32:45,620 - INFO - [quantile] Pearson correlation: 0.8271 (p-value = 0.0000e+00)
+2025-06-11 03:32:45,620 - INFO - [quantile] Spearman correlation: 0.8270 (p-value = 0.0000e+00)
+2025-06-11 03:32:45,840 - INFO - [quantile] Saved scatter plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_scatter.png
+2025-06-11 03:32:46,121 - INFO - [quantile] Saved NW heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_nw_heatmap.png
+2025-06-11 03:32:46,398 - INFO - [quantile] Saved FB heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_fb_heatmap.png
+2025-06-11 03:32:46,602 - INFO - [quantile] Saved histogram plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_histogram.png
+2025-06-11 03:32:46,773 - INFO - [quantile] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_rank_scatter.png
+2025-06-11 03:32:46,774 - INFO - Processing normalization method: correlation_preserving
+2025-06-11 03:32:46,776 - INFO - Saved correlation_preserving normalized matrices
+2025-06-11 03:32:46,779 - INFO - [correlation_preserving] Pearson correlation: 0.3802 (p-value = 5.7932e-62)
+2025-06-11 03:32:46,780 - INFO - [correlation_preserving] Spearman correlation: 0.8271 (p-value = 0.0000e+00)
+2025-06-11 03:32:47,024 - INFO - [correlation_preserving] Saved scatter plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_scatter.png
+2025-06-11 03:32:47,346 - INFO - [correlation_preserving] Saved NW heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_nw_heatmap.png
+2025-06-11 03:32:47,638 - INFO - [correlation_preserving] Saved FB heatmap to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_fb_heatmap.png
+2025-06-11 03:32:47,899 - INFO - [correlation_preserving] Saved histogram plot to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_histogram.png
+2025-06-11 03:32:48,056 - INFO - [correlation_preserving] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_rank_scatter.png
+2025-06-11 03:32:48,058 - INFO - Comprehensive analysis report saved to EyeBLAST/Results_v3\20250611_033234_MPIIDPEye_IVT_sample100_k7_nwtrue_IVT_normall\analysis_report.log
+2025-06-11 03:32:48,058 - INFO - Similarity comparison completed for all normalization methods.

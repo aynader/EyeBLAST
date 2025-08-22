@@ -1,0 +1,184 @@
+2025-06-11 06:17:31,213 - INFO - Starting similarity comparison with the following parameters:
+2025-06-11 06:17:31,213 - INFO -   input_dir: EyeBLAST/coco_search18_IVT
+2025-06-11 06:17:31,213 - INFO -   k: 7
+2025-06-11 06:17:31,213 - INFO -   normalization_mode: all
+2025-06-11 06:17:31,213 - INFO -   nw_nj: true
+2025-06-11 06:17:31,213 - INFO -   output_dir: EyeBLAST/Results_v3
+2025-06-11 06:17:31,213 - INFO -   sample_percentage: 100
+2025-06-11 06:17:31,213 - INFO -   mode: IVT
+2025-06-11 06:17:31,224 - INFO - Loading 180 IVT scanpath files (100% of 180)...
+2025-06-11 06:17:32,703 - INFO - Total IVT scanpaths loaded: 180
+2025-06-11 06:17:32,704 - INFO - Computing raw similarity matrices...
+2025-06-11 06:17:32,704 - INFO - Computing Needleman-Wunsch_IVT similarity matrix (may be slow)...
+2025-06-11 06:17:32,704 - INFO - Computing pairwise similarities for 180 scanpaths (16110 pairs)...
+2025-06-11 06:17:32,705 - INFO - Sequence length stats: max=199, avg=119.4
+2025-06-11 06:17:32,705 - INFO - Estimated memory per NW comparison: 0.0 MB
+2025-06-11 06:17:32,705 - INFO - Available system memory: 16.1 GB
+2025-06-11 06:17:32,708 - INFO - Processing 16110 pairs in batches of 500
+2025-06-11 06:17:32,708 - INFO - Processing batch 1/33 (500 pairs)
+2025-06-11 06:17:32,708 - INFO - Memory usage before batch: 49.3%
+2025-06-11 06:17:36,423 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:36,495 - INFO - Processing batch 2/33 (500 pairs)
+2025-06-11 06:17:36,496 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:36,550 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:36,595 - INFO - Processing batch 3/33 (500 pairs)
+2025-06-11 06:17:36,595 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:36,649 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:36,693 - INFO - Processing batch 4/33 (500 pairs)
+2025-06-11 06:17:36,693 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:36,748 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:36,791 - INFO - Processing batch 5/33 (500 pairs)
+2025-06-11 06:17:36,791 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:36,845 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:36,885 - INFO - Processing batch 6/33 (500 pairs)
+2025-06-11 06:17:36,886 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:36,939 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:36,983 - INFO - Processing batch 7/33 (500 pairs)
+2025-06-11 06:17:36,983 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:37,048 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:37,090 - INFO - Processing batch 8/33 (500 pairs)
+2025-06-11 06:17:37,090 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:37,153 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:37,196 - INFO - Processing batch 9/33 (500 pairs)
+2025-06-11 06:17:37,196 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:37,262 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:37,303 - INFO - Processing batch 10/33 (500 pairs)
+2025-06-11 06:17:37,304 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:37,358 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:37,409 - INFO - Processing batch 11/33 (500 pairs)
+2025-06-11 06:17:37,409 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:37,485 - INFO - Memory usage after batch: 59.7%
+2025-06-11 06:17:37,528 - INFO - Processing batch 12/33 (500 pairs)
+2025-06-11 06:17:37,528 - INFO - Memory usage before batch: 59.7%
+2025-06-11 06:17:37,593 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:37,635 - INFO - Processing batch 13/33 (500 pairs)
+2025-06-11 06:17:37,635 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:37,689 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:37,727 - INFO - Processing batch 14/33 (500 pairs)
+2025-06-11 06:17:37,727 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:37,780 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:37,820 - INFO - Processing batch 15/33 (500 pairs)
+2025-06-11 06:17:37,821 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:37,875 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:37,914 - INFO - Processing batch 16/33 (500 pairs)
+2025-06-11 06:17:37,914 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:37,969 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,004 - INFO - Processing batch 17/33 (500 pairs)
+2025-06-11 06:17:38,004 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,059 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,096 - INFO - Processing batch 18/33 (500 pairs)
+2025-06-11 06:17:38,097 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,150 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,186 - INFO - Processing batch 19/33 (500 pairs)
+2025-06-11 06:17:38,186 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,240 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,279 - INFO - Processing batch 20/33 (500 pairs)
+2025-06-11 06:17:38,279 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,333 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,367 - INFO - Processing batch 21/33 (500 pairs)
+2025-06-11 06:17:38,367 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,422 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,459 - INFO - Processing batch 22/33 (500 pairs)
+2025-06-11 06:17:38,459 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,524 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,564 - INFO - Processing batch 23/33 (500 pairs)
+2025-06-11 06:17:38,564 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,618 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,655 - INFO - Processing batch 24/33 (500 pairs)
+2025-06-11 06:17:38,655 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,710 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,747 - INFO - Processing batch 25/33 (500 pairs)
+2025-06-11 06:17:38,747 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,801 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,838 - INFO - Processing batch 26/33 (500 pairs)
+2025-06-11 06:17:38,838 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,892 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:38,929 - INFO - Processing batch 27/33 (500 pairs)
+2025-06-11 06:17:38,930 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:38,985 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:39,022 - INFO - Processing batch 28/33 (500 pairs)
+2025-06-11 06:17:39,022 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:39,076 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:39,113 - INFO - Processing batch 29/33 (500 pairs)
+2025-06-11 06:17:39,113 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:39,166 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:39,203 - INFO - Processing batch 30/33 (500 pairs)
+2025-06-11 06:17:39,204 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:39,258 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:39,294 - INFO - Processing batch 31/33 (500 pairs)
+2025-06-11 06:17:39,294 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:39,349 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:39,382 - INFO - Processing batch 32/33 (500 pairs)
+2025-06-11 06:17:39,383 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:39,437 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:39,470 - INFO - Processing batch 33/33 (110 pairs)
+2025-06-11 06:17:39,470 - INFO - Memory usage before batch: 59.6%
+2025-06-11 06:17:39,494 - INFO - Memory usage after batch: 59.6%
+2025-06-11 06:17:39,528 - INFO - Successfully computed 16110 similarity pairs
+2025-06-11 06:17:39,532 - INFO - Saved raw NW similarity matrix to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\nw_similarity_matrix_raw.npy
+2025-06-11 06:17:39,532 - INFO - Fitting Fast_EyeBLAST_IVT (building indices, encoding all scanpaths)...
+2025-06-11 06:17:39,532 - INFO - Encoding scanpaths...
+2025-06-11 06:17:39,562 - INFO - Alphabet size: 9
+2025-06-11 06:17:39,562 - INFO - Bits per token: 4
+2025-06-11 06:17:39,562 - INFO - Tokens per 64-bit word: 16
+2025-06-11 06:17:39,563 - INFO - Packing scanpaths into words...
+2025-06-11 06:17:39,566 - INFO - Computing SimHash sketches...
+2025-06-11 06:17:39,681 - INFO - Building LSH index...
+2025-06-11 06:17:39,683 - INFO - Computing Fast_EyeBLAST_IVT pairwise similarities...
+2025-06-11 06:17:41,681 - INFO - Saved raw FB similarity matrix to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\fb_similarity_matrix_raw.npy
+2025-06-11 06:17:41,681 - INFO - Processing normalization method: none
+2025-06-11 06:17:41,684 - INFO - Saved none normalized matrices
+2025-06-11 06:17:41,703 - INFO - [none] Pearson correlation: 0.0957 (p-value = 4.5104e-34)
+2025-06-11 06:17:41,703 - INFO - [none] Spearman correlation: 0.4299 (p-value = 0.0000e+00)
+2025-06-11 06:17:42,043 - INFO - [none] Saved scatter plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_scatter.png
+2025-06-11 06:17:42,351 - INFO - [none] Saved NW heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_nw_heatmap.png
+2025-06-11 06:17:42,654 - INFO - [none] Saved FB heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_fb_heatmap.png
+2025-06-11 06:17:42,836 - INFO - [none] Saved histogram plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_histogram.png
+2025-06-11 06:17:43,079 - INFO - [none] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_rank_scatter.png
+2025-06-11 06:17:43,080 - INFO - Processing normalization method: minmax
+2025-06-11 06:17:43,082 - INFO - Saved minmax normalized matrices
+2025-06-11 06:17:43,087 - INFO - [minmax] Pearson correlation: 0.0957 (p-value = 4.5104e-34)
+2025-06-11 06:17:43,087 - INFO - [minmax] Spearman correlation: 0.4299 (p-value = 0.0000e+00)
+2025-06-11 06:17:43,398 - INFO - [minmax] Saved scatter plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_scatter.png
+2025-06-11 06:17:43,718 - INFO - [minmax] Saved NW heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_nw_heatmap.png
+2025-06-11 06:17:44,020 - INFO - [minmax] Saved FB heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_fb_heatmap.png
+2025-06-11 06:17:44,279 - INFO - [minmax] Saved histogram plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_histogram.png
+2025-06-11 06:17:44,520 - INFO - [minmax] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_rank_scatter.png
+2025-06-11 06:17:44,521 - INFO - Processing normalization method: zscore
+2025-06-11 06:17:44,523 - INFO - Saved zscore normalized matrices
+2025-06-11 06:17:44,528 - INFO - [zscore] Pearson correlation: 0.0957 (p-value = 4.5104e-34)
+2025-06-11 06:17:44,528 - INFO - [zscore] Spearman correlation: 0.4299 (p-value = 0.0000e+00)
+2025-06-11 06:17:44,810 - INFO - [zscore] Saved scatter plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_scatter.png
+2025-06-11 06:17:45,137 - INFO - [zscore] Saved NW heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_nw_heatmap.png
+2025-06-11 06:17:45,441 - INFO - [zscore] Saved FB heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_fb_heatmap.png
+2025-06-11 06:17:45,639 - INFO - [zscore] Saved histogram plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_histogram.png
+2025-06-11 06:17:45,887 - INFO - [zscore] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_rank_scatter.png
+2025-06-11 06:17:45,887 - INFO - Processing normalization method: rank
+2025-06-11 06:17:45,893 - INFO - Saved rank normalized matrices
+2025-06-11 06:17:45,898 - INFO - [rank] Pearson correlation: 0.4299 (p-value = 0.0000e+00)
+2025-06-11 06:17:45,899 - INFO - [rank] Spearman correlation: 0.4299 (p-value = 0.0000e+00)
+2025-06-11 06:17:46,246 - INFO - [rank] Saved scatter plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_scatter.png
+2025-06-11 06:17:46,539 - INFO - [rank] Saved NW heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_nw_heatmap.png
+2025-06-11 06:17:46,824 - INFO - [rank] Saved FB heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_fb_heatmap.png
+2025-06-11 06:17:47,025 - INFO - [rank] Saved histogram plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_histogram.png
+2025-06-11 06:17:47,334 - INFO - [rank] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_rank_scatter.png
+2025-06-11 06:17:47,334 - INFO - Processing normalization method: quantile
+2025-06-11 06:17:47,339 - INFO - Saved quantile normalized matrices
+2025-06-11 06:17:47,344 - INFO - [quantile] Pearson correlation: 0.4301 (p-value = 0.0000e+00)
+2025-06-11 06:17:47,344 - INFO - [quantile] Spearman correlation: 0.4300 (p-value = 0.0000e+00)
+2025-06-11 06:17:47,731 - INFO - [quantile] Saved scatter plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_scatter.png
+2025-06-11 06:17:48,055 - INFO - [quantile] Saved NW heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_nw_heatmap.png
+2025-06-11 06:17:48,381 - INFO - [quantile] Saved FB heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_fb_heatmap.png
+2025-06-11 06:17:48,607 - INFO - [quantile] Saved histogram plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_histogram.png
+2025-06-11 06:17:48,867 - INFO - [quantile] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_rank_scatter.png
+2025-06-11 06:17:48,868 - INFO - Processing normalization method: correlation_preserving
+2025-06-11 06:17:48,870 - INFO - Saved correlation_preserving normalized matrices
+2025-06-11 06:17:48,874 - INFO - [correlation_preserving] Pearson correlation: 0.0957 (p-value = 4.5104e-34)
+2025-06-11 06:17:48,874 - INFO - [correlation_preserving] Spearman correlation: 0.4299 (p-value = 0.0000e+00)
+2025-06-11 06:17:49,177 - INFO - [correlation_preserving] Saved scatter plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_scatter.png
+2025-06-11 06:17:49,486 - INFO - [correlation_preserving] Saved NW heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_nw_heatmap.png
+2025-06-11 06:17:49,807 - INFO - [correlation_preserving] Saved FB heatmap to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_fb_heatmap.png
+2025-06-11 06:17:49,996 - INFO - [correlation_preserving] Saved histogram plot to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_histogram.png
+2025-06-11 06:17:50,307 - INFO - [correlation_preserving] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_rank_scatter.png
+2025-06-11 06:17:50,309 - INFO - Comprehensive analysis report saved to EyeBLAST/Results_v3\20250611_061731_coco_search18_IVT_sample100_k7_nwtrue_IVT_normall\analysis_report.log
+2025-06-11 06:17:50,309 - INFO - Similarity comparison completed for all normalization methods.

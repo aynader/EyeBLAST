@@ -1,0 +1,92 @@
+2025-05-31 15:34:56,691 - INFO - Starting comparison study with the following parameters:
+2025-05-31 15:34:56,691 - INFO -   balanced: True
+2025-05-31 15:34:56,691 - INFO -   band_width: 16
+2025-05-31 15:34:56,691 - INFO -   input_dir: dataset16S
+2025-05-31 15:34:56,692 - INFO -   k: 3
+2025-05-31 15:34:56,692 - INFO -   n_jobs: -1
+2025-05-31 15:34:56,692 - INFO -   output_dir: Results
+2025-05-31 15:34:56,692 - INFO -   sample_percentage: 50
+2025-05-31 15:34:56,692 - INFO -   seed: 42
+2025-05-31 15:34:56,692 - INFO -   seed_length: 11
+2025-05-31 15:34:56,692 - INFO -   test_size: 0.2
+2025-05-31 15:34:56,692 - INFO -   word_size: 28
+2025-05-31 15:34:56,702 - INFO - Searching for FASTA files in dataset16S...
+2025-05-31 15:34:56,703 - INFO - Loading 10 FASTA files...
+2025-05-31 15:34:56,793 - INFO - Loaded 4858 sequences from 10 classes
+2025-05-31 15:34:56,793 - INFO - Class distribution:
+2025-05-31 15:34:56,793 - INFO -   Bacillus: 500 sequences
+2025-05-31 15:34:56,793 - INFO -   Clostridium: 500 sequences
+2025-05-31 15:34:56,793 - INFO -   Enterococcus: 500 sequences
+2025-05-31 15:34:56,793 - INFO -   Escherichia: 500 sequences
+2025-05-31 15:34:56,793 - INFO -   Lactobacillus: 500 sequences
+2025-05-31 15:34:56,793 - INFO -   Neisseria: 404 sequences
+2025-05-31 15:34:56,794 - INFO -   Pseudomonas: 500 sequences
+2025-05-31 15:34:56,794 - INFO -   Salmonella: 454 sequences
+2025-05-31 15:34:56,794 - INFO -   Staphylococcus: 500 sequences
+2025-05-31 15:34:56,794 - INFO -   Streptococcus: 500 sequences
+2025-05-31 15:34:56,794 - INFO - Ensuring balanced class distribution...
+2025-05-31 15:34:56,796 - INFO - Created balanced dataset with 2020 sequences
+2025-05-31 15:34:56,796 - INFO -   Bacillus: 202 sequences
+2025-05-31 15:34:56,796 - INFO -   Clostridium: 202 sequences
+2025-05-31 15:34:56,797 - INFO -   Enterococcus: 202 sequences
+2025-05-31 15:34:56,797 - INFO -   Escherichia: 202 sequences
+2025-05-31 15:34:56,797 - INFO -   Lactobacillus: 202 sequences
+2025-05-31 15:34:56,797 - INFO -   Neisseria: 202 sequences
+2025-05-31 15:34:56,797 - INFO -   Pseudomonas: 202 sequences
+2025-05-31 15:34:56,797 - INFO -   Salmonella: 202 sequences
+2025-05-31 15:34:56,797 - INFO -   Staphylococcus: 202 sequences
+2025-05-31 15:34:56,797 - INFO -   Streptococcus: 202 sequences
+2025-05-31 15:34:56,798 - INFO - Splitting data: 2020 sequences with 10 classes
+2025-05-31 15:34:56,800 - INFO - Train set: 1616 sequences
+2025-05-31 15:34:56,800 - INFO - Test set: 404 sequences
+2025-05-31 15:34:56,801 - INFO - 
+==================================================
+2025-05-31 15:34:56,801 - INFO - Running FastEyeBLAST_DNA
+2025-05-31 15:34:56,801 - INFO - ==================================================
+2025-05-31 15:34:56,838 - INFO - Training FastEyeBLAST_DNA...
+2025-05-31 15:34:56,838 - INFO - Encoding sequences...
+2025-05-31 15:34:57,054 - INFO - Computing conserved region weights...
+2025-05-31 15:34:57,054 - INFO - Sequences appear to be 16S rRNA - using specialized optimization
+2025-05-31 15:34:57,054 - INFO - Packing sequences...
+2025-05-31 15:34:57,456 - INFO - Computing simhash sketches...
+2025-05-31 15:35:11,092 - INFO - Building LSH index...
+2025-05-31 15:35:11,099 - INFO - Training completed in 14.26 seconds
+2025-05-31 15:35:11,099 - INFO - Memory usage: 27.51 MB
+2025-05-31 15:35:11,100 - INFO - FastEyeBLAST_DNA training completed in 14.26 seconds
+2025-05-31 15:35:11,100 - INFO - Training memory usage: 27.5 MB
+2025-05-31 15:35:11,155 - INFO - Evaluating classifier on 404 test samples...
+2025-05-31 15:35:11,155 - INFO - Predicting...
+2025-05-31 15:35:11,156 - INFO - Optimizing for 16S rRNA classification
+2025-05-31 15:35:24,028 - INFO - Prediction completed in 12.87 seconds
+2025-05-31 15:35:24,028 - INFO - Computing evaluation metrics...
+2025-05-31 15:35:24,036 - INFO - FastEyeBLAST_DNA Accuracy: 0.6312
+2025-05-31 15:35:24,036 - INFO - Prediction time: 12.87 seconds
+2025-05-31 15:35:24,036 - INFO - Prediction memory usage: 0.8 MB
+2025-05-31 15:35:24,036 - INFO - Total memory usage: 28.4 MB
+2025-05-31 15:35:24,373 - INFO - 
+==================================================
+2025-05-31 15:35:24,373 - INFO - Running MegaBLAST
+2025-05-31 15:35:24,374 - INFO - ==================================================
+2025-05-31 15:35:24,442 - INFO - Training MegaBLAST classifier...
+2025-05-31 15:35:24,443 - INFO - Creating BLAST database...
+2025-05-31 15:35:24,458 - INFO - Running makeblastdb...
+2025-05-31 15:35:25,198 - INFO - MegaBLAST training completed in 0.75 seconds
+2025-05-31 15:35:25,199 - INFO - Training memory usage: 0.0 MB
+2025-05-31 15:35:25,256 - INFO - Evaluating classifier on 404 test samples...
+2025-05-31 15:35:25,257 - INFO - Running MegaBLAST predictions...
+2025-05-31 15:40:04,376 - INFO - Computing evaluation metrics...
+2025-05-31 15:40:04,390 - INFO - MegaBLAST Accuracy: 0.9950
+2025-05-31 15:40:04,390 - INFO - Prediction time: 279.12 seconds
+2025-05-31 15:40:04,392 - INFO - Prediction memory usage: 0.0 MB
+2025-05-31 15:40:04,392 - INFO - Total memory usage: 0.1 MB
+2025-05-31 15:40:04,556 - INFO - Creating performance comparison chart at Results\20250531_153456_dataset16S_test20_sample50_balanced_k3\performance_comparison.png...
+2025-05-31 15:40:04,713 - INFO - 
+Writing results to Results\20250531_153456_dataset16S_test20_sample50_balanced_k3\dna_comparison_results.json
+2025-05-31 15:40:04,715 - INFO - 
+==================================================
+2025-05-31 15:40:04,715 - INFO - RESULTS SUMMARY
+2025-05-31 15:40:04,716 - INFO - ==================================================
+2025-05-31 15:40:04,716 - INFO - {
+  "FastEyeBLAST_DNA": 0.6311881188118812,
+  "MegaBLAST_DNA": 0.995049504950495
+}

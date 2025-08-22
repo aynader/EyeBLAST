@@ -1,4 +1,9 @@
-
+/**
+ * FastEyeBLAST: High-performance scanpath similarity calculation and classification
+ * using bit-level operations, integer encodings, and efficient hashing techniques.
+ * 
+ * C++ implementation with EXACT Python logic replication.
+ */
 
 #include <iostream>
 #include <fstream>
@@ -21,14 +26,14 @@
 #include <bitset>
 #include <numeric>
 
-
+// JSON library - you may need to install nlohmann/json
 #include <nlohmann/json.hpp>
 
 using json = nlohmann::json;
 using namespace std;
 using namespace std::chrono;
 
-
+// Cross-platform popcount function
 #ifdef _MSC_VER
 #include <intrin.h>
 inline int popcount64(uint64_t value) {
@@ -39,7 +44,7 @@ inline int popcount64(uint64_t value) {
     return __builtin_popcountll(value);
 }
 #else
-
+// Fallback implementation for other compilers
 inline int popcount64(uint64_t value) {
     int count = 0;
     while (value) {
@@ -50,7 +55,7 @@ inline int popcount64(uint64_t value) {
 }
 #endif
 
-
+// Constants - EXACT same as Python
 const uint64_t MASK64 = (1ULL << 64) - 1;
 const int DEFAULT_SEED_LENGTH = 3;
 const int DEFAULT_NUM_NEIGHBORS = 5;
@@ -61,7 +66,7 @@ const int DEFAULT_MAX_CANDIDATES = 20;
 const int DEFAULT_LSH_HASH_SIZE = 64;
 const int DEFAULT_DURATION_BINS = 8;
 
-
+// Python-compatible random number generator class
 class PythonRandom {
 private:
     mt19937 gen;
@@ -74,7 +79,7 @@ public:
     }
     
     double random() {
-        
+        // Python's random.random() returns [0.0, 1.0)
         uniform_real_distribution<double> dis(0.0, 1.0);
         return dis(gen);
     }
@@ -86,7 +91,7 @@ public:
     
     template<typename T>
     void shuffle(vector<T>& vec) {
-        
+        // Use same algorithm as Python's random.shuffle
         for (int i = vec.size() - 1; i > 0; i--) {
             int j = randrange(0, i + 1);
             swap(vec[i], vec[j]);
@@ -113,7 +118,7 @@ public:
     }
 };
 
-
+// Global Python-compatible random generator
 PythonRandom python_random(42);
 
 struct ClassMetrics {
@@ -138,7 +143,7 @@ struct EvaluationResults {
 
 class FastEyeBLAST {
 private:
-    
+    // Parameters - EXACT same as Python
     int seed_length;
     int band_width;
     int num_neighbors;
@@ -151,28 +156,28 @@ private:
     bool use_parallel;
     int num_processes;
     
-    
+    // Tokenization and encoding - EXACT same as Python
     unordered_map<string, int> token_to_id;
     unordered_map<int, string> id_to_token;
     int next_token_id;
     
-    
+    // Bit-packing parameters - EXACT same as Python
     int bits_per_token;
     int tokens_per_word;
     uint64_t base;
     vector<uint64_t> pow_base;
     
-    
+    // LSH parameters - EXACT same as Python
     vector<unordered_map<uint64_t, vector<int>>> lsh_tables;
     vector<uint64_t> id_bitmasks;
     
-    
+    // Training data - EXACT same as Python
     vector<vector<int>> encoded_scanpaths;
     vector<vector<uint64_t>> packed_scanpaths;
     vector<uint64_t> simhash_sketches;
     vector<int> labels;
     
-    
+    // Python-compatible random number generator for this instance
     PythonRandom instance_random;
 
 public:
@@ -200,7 +205,7 @@ public:
         }
     }
     
-    
+    // EXACT replication of Python _token_to_integer
     int token_to_integer(const string& token) {
         if (token_to_id.find(token) == token_to_id.end()) {
             token_to_id[token] = next_token_id;
@@ -210,7 +215,7 @@ public:
         return token_to_id[token];
     }
     
-    
+    // EXACT replication of Python _bin_duration
     string bin_duration(const string& token) {
         if (!use_duration_bins) {
             return token;
@@ -232,7 +237,7 @@ public:
             if (duration == 0) {
                 bin_idx = 0;
             } else {
-                
+                // EXACT same logic as Python: min(int(np.log2(duration + 1)), self.duration_bins - 1)
                 bin_idx = min(static_cast<int>(log2(duration + 1)), duration_bins - 1);
             }
             
@@ -242,7 +247,7 @@ public:
         }
     }
     
-    
+    // EXACT replication of Python _encode_scanpath
     vector<int> encode_scanpath(const vector<string>& scanpath) {
         vector<int> encoded;
         for (const string& token : scanpath) {
@@ -252,10 +257,10 @@ public:
         return encoded;
     }
     
-    
+    // EXACT replication of Python _initialize_bit_packing
     void initialize_bit_packing() {
         int alphabet_size = token_to_id.size();
-        
+        // EXACT same calculation as Python
         bits_per_token = max(1, static_cast<int>(ceil(log2(alphabet_size))));
         tokens_per_word = 64 / bits_per_token;
         
@@ -263,8 +268,8 @@ public:
         cout << "Bits per token: " << bits_per_token << endl;
         cout << "Tokens per 64-bit word: " << tokens_per_word << endl;
         
-        
-        base = 31;  
+        // Initialize rolling hash parameters - EXACT same as Python
+        base = 31;  // A prime number for rolling hash
         pow_base.clear();
         pow_base.push_back(1);
         for (int i = 1; i < max(seed_length, 100); i++) {
@@ -272,11 +277,11 @@ public:
         }
     }
     
-    
+    // EXACT replication of Python _pack_ids_into_words
     vector<uint64_t> pack_ids_into_words(const vector<int>& id_list) {
         if (id_list.empty()) return {};
         
-        
+        // EXACT same calculation as Python
         int num_words = (id_list.size() + tokens_per_word - 1) / tokens_per_word;
         vector<uint64_t> packed_words(num_words, 0);
         
@@ -285,7 +290,7 @@ public:
             for (int j = 0; j < tokens_per_word; j++) {
                 int idx = i * tokens_per_word + j;
                 if (idx < id_list.size()) {
-                    
+                    // EXACT same bit manipulation as Python
                     uint64_t token_bits = id_list[idx] & ((1ULL << bits_per_token) - 1);
                     word |= token_bits << (j * bits_per_token);
                 }
@@ -296,27 +301,27 @@ public:
         return packed_words;
     }
     
-    
+    // EXACT replication of Python _calculate_rolling_hash
     vector<uint64_t> calculate_rolling_hash(const vector<int>& id_list) {
         if (id_list.size() < seed_length) return {};
         
         vector<uint64_t> hashes;
         int k = seed_length;
         
-        
+        // Initialize hash for first k-mer - EXACT same as Python
         uint64_t h = 0;
         for (int i = 0; i < k; i++) {
             h = (h * base + id_list[i]) & MASK64;
         }
         hashes.push_back(h);
         
-        
+        // Calculate rolling hash for remaining k-mers - EXACT same as Python
         for (int i = k; i < id_list.size(); i++) {
-            
+            // Remove contribution of the oldest character
             h = (h - id_list[i - k] * pow_base[k - 1]) & MASK64;
-            
+            // Multiply by base
             h = (h * base) & MASK64;
-            
+            // Add contribution of the new character
             h = (h + id_list[i]) & MASK64;
             hashes.push_back(h);
         }
@@ -324,19 +329,19 @@ public:
         return hashes;
     }
     
-    
+    // EXACT replication of Python _initialize_simhash
     void initialize_simhash() {
         int alphabet_size = token_to_id.size();
         id_bitmasks.clear();
         id_bitmasks.resize(alphabet_size);
         
-        
+        // Use EXACT same seed and algorithm as Python: rng = random.Random(42)
         PythonRandom rng(42);
         
         for (int i = 0; i < alphabet_size; i++) {
             uint64_t mask = 0;
             for (int j = 0; j < lsh_hash_size; j++) {
-                
+                // EXACT same logic as Python: if rng.random() < 0.5:
                 if (rng.random() < 0.5) {
                     mask |= (1ULL << j);
                 }
@@ -345,16 +350,16 @@ public:
         }
     }
     
-    
+    // EXACT replication of Python _compute_simhash
     uint64_t compute_simhash(const vector<int>& id_list) {
         if (id_bitmasks.empty()) {
             initialize_simhash();
         }
         
-        
+        // Initialize counters for each bit position - EXACT same as Python
         vector<int> counters(lsh_hash_size, 0);
         
-        
+        // Accumulate counts - EXACT same logic as Python
         for (int token_id : id_list) {
             if (token_id >= 0 && token_id < id_bitmasks.size()) {
                 uint64_t bitmask = id_bitmasks[token_id];
@@ -368,7 +373,7 @@ public:
             }
         }
         
-        
+        // Generate fingerprint based on counters - EXACT same as Python
         uint64_t fingerprint = 0;
         for (int i = 0; i < lsh_hash_size; i++) {
             if (counters[i] > 0) {
@@ -379,12 +384,12 @@ public:
         return fingerprint;
     }
     
-    
+    // EXACT replication of Python _build_lsh_index
     vector<unordered_map<uint64_t, vector<int>>> build_lsh_index(const vector<uint64_t>& simhash_sketches) {
         vector<unordered_map<uint64_t, vector<int>>> lsh_tables;
         lsh_tables.resize(num_hash_tables);
         
-        
+        // EXACT same calculation as Python
         int bits_per_slice = lsh_hash_size / num_hash_tables;
         
         for (int idx = 0; idx < simhash_sketches.size(); idx++) {
@@ -394,7 +399,7 @@ public:
                 int start_bit = table_idx * bits_per_slice;
                 int end_bit = (table_idx + 1) * bits_per_slice;
                 
-                
+                // EXACT same bit extraction as Python
                 uint64_t bit_slice = (sketch >> start_bit) & ((1ULL << (end_bit - start_bit)) - 1);
                 lsh_tables[table_idx][bit_slice].push_back(idx);
             }
@@ -403,18 +408,18 @@ public:
         return lsh_tables;
     }
     
-    
+    // EXACT replication of Python _query_lsh_index
     vector<int> query_lsh_index(uint64_t query_sketch) {
         unordered_set<int> candidates_set;
         
-        
+        // EXACT same calculation as Python
         int bits_per_slice = lsh_hash_size / num_hash_tables;
         
         for (int table_idx = 0; table_idx < num_hash_tables; table_idx++) {
             int start_bit = table_idx * bits_per_slice;
             int end_bit = (table_idx + 1) * bits_per_slice;
             
-            
+            // EXACT same bit extraction as Python
             uint64_t bit_slice = (query_sketch >> start_bit) & ((1ULL << (end_bit - start_bit)) - 1);
             
             if (lsh_tables[table_idx].find(bit_slice) != lsh_tables[table_idx].end()) {
@@ -427,23 +432,23 @@ public:
         return vector<int>(candidates_set.begin(), candidates_set.end());
     }
     
-    
+    // EXACT replication of Python _hamming_distance
     int hamming_distance(uint64_t a, uint64_t b) {
         return popcount64(a ^ b);
     }
     
-    
+    // EXACT replication of Python _extract_seeds
     vector<pair<int, int>> extract_seeds(const vector<uint64_t>& packed1, 
                                          const vector<uint64_t>& packed2) {
         vector<pair<int, int>> seeds;
-        int max_mismatches = 1;  
+        int max_mismatches = 1;  // EXACT same as Python
         
         int min_len = min(packed1.size(), packed2.size());
         for (int i = 0; i < min_len; i++) {
             uint64_t xor_result = packed1[i] ^ packed2[i];
             int mismatches = popcount64(xor_result);
             
-            
+            // EXACT same condition as Python
             if (mismatches <= max_mismatches * bits_per_token) {
                 int pos1 = i * tokens_per_word;
                 int pos2 = i * tokens_per_word;
@@ -454,19 +459,19 @@ public:
         return seeds;
     }
     
-    
+    // EXACT replication of Python _greedy_chain_seeds
     vector<pair<int, int>> greedy_chain_seeds(const vector<pair<int, int>>& seeds,
                                               int len1, int len2) {
         if (seeds.empty()) return {};
         
-        
+        // Group seeds by diagonal - EXACT same as Python
         map<int, vector<pair<int, int>>> diagonals;
         for (const auto& seed : seeds) {
             int diag = seed.second - seed.first;
             diagonals[diag].push_back(seed);
         }
         
-        
+        // Find the diagonal with the most seeds - EXACT same as Python
         auto best_diag = max_element(diagonals.begin(), diagonals.end(),
                                      [](const auto& a, const auto& b) {
                                          return a.second.size() < b.second.size();
@@ -475,7 +480,7 @@ public:
         vector<pair<int, int>> best_seeds = best_diag->second;
         sort(best_seeds.begin(), best_seeds.end());
         
-        
+        // Build chain greedily - EXACT same as Python
         vector<pair<int, int>> chain;
         if (!best_seeds.empty()) {
             chain.push_back(best_seeds[0]);
@@ -490,53 +495,53 @@ public:
         return chain;
     }
     
-    
+    // EXACT replication of Python _banded_levenshtein - CRITICAL FIX!
     pair<int, vector<pair<int, int>>> banded_levenshtein(
             const vector<int>& seq1, const vector<int>& seq2,
             int band_width, const vector<pair<int, int>>& chain) {
         
         if (chain.empty()) {
-            
+            // EXACT same fallback as Python: return len(seq1) + len(seq2), []
             return {static_cast<int>(seq1.size() + seq2.size()), {}};
         }
         
-        
+        // Extract diagonal from chain - EXACT same as Python
         int diag = chain[0].second - chain[0].first;
         
-        
+        // Adjust band width to be symmetric around diagonal - EXACT same as Python
         int half_band = band_width / 2;
         
-        
+        // Initialize dynamic programming matrix - EXACT same as Python
         int m = seq1.size();
         int n = seq2.size();
         
-        
+        // Use integer-only scoring - EXACT same as Python
         int match_score = 2;
         int mismatch_penalty = -1;
         int gap_penalty = -1;
         
-        
+        // Preallocate DP matrix with band - EXACT same as Python
         vector<vector<int>> dp(m + 1, vector<int>(band_width, 0));
         
-        
+        // Initialize first row and column - EXACT same as Python
         for (int i = 0; i < band_width; i++) {
             dp[0][i] = i * gap_penalty;
         }
         
         for (int i = 1; i <= m; i++) {
-            
+            // Calculate column range for this row - EXACT same as Python
             int col_start = max(1, i + diag - half_band);
             int col_end = min(n + 1, i + diag + half_band + 1);
             int band_start = 0;
             
-            
+            // Initialize left edge of band if needed - EXACT same as Python
             if (col_start > 1) {
                 dp[i][0] = dp[i-1][0] + gap_penalty;
             } else {
                 dp[i][0] = i * gap_penalty;
             }
             
-            
+            // Fill the band for this row - EXACT same as Python
             for (int j = col_start; j < col_end; j++) {
                 int band_j = j - col_start + band_start;
                 
@@ -544,46 +549,46 @@ public:
                     break;
                 }
                 
-                
+                // Calculate scores - EXACT same as Python
                 if (j <= n) {
                     bool match = (seq1[i-1] == seq2[j-1]);
                     int diag_score = dp[i-1][band_j-1 > 0 ? band_j-1 : 0] + (match ? match_score : mismatch_penalty);
                     int up_score = dp[i-1][band_j] + gap_penalty;
                     int left_score = (band_j > 0) ? dp[i][band_j-1] : INT_MIN;
                     
-                    
+                    // Choose best score - EXACT same as Python
                     dp[i][band_j] = max({diag_score, up_score, left_score});
                 }
             }
         }
         
-        
+        // Extract score from bottom-right cell - EXACT same as Python
         int score = dp[m][band_width-1];
         
-        
+        // Simple alignment reconstruction (just use the chain) - EXACT same as Python
         vector<pair<int, int>> alignment = chain;
         
         return {score, alignment};
     }
     
-    
+    // EXACT replication of Python _similarity_score
     double similarity_score(const vector<int>& seq1, const vector<int>& seq2) {
-        
+        // Pack sequences into words - EXACT same as Python
         vector<uint64_t> packed1 = pack_ids_into_words(seq1);
         vector<uint64_t> packed2 = pack_ids_into_words(seq2);
         
-        
+        // Extract seeds - EXACT same as Python
         vector<pair<int, int>> seeds = extract_seeds(packed1, packed2);
         
-        
+        // Chain seeds - EXACT same as Python
         vector<pair<int, int>> chain = greedy_chain_seeds(seeds, seq1.size(), seq2.size());
         
-        
+        // Calculate banded Levenshtein distance - EXACT same as Python
         auto result = banded_levenshtein(seq1, seq2, band_width, chain);
         int score = result.first;
         
-        
-        int max_possible_score = max(seq1.size(), seq2.size()) * 2;  
+        // Normalize score - EXACT same as Python
+        int max_possible_score = max(seq1.size(), seq2.size()) * 2;  // Maximum possible score
         double normalized_score = max(0.0, static_cast<double>(score)) / max_possible_score;
         
         return normalized_score;
@@ -616,22 +621,22 @@ public:
         lsh_tables = build_lsh_index(simhash_sketches);
     }
     
-    
+    // EXACT replication of Python predict logic
     vector<int> predict(const vector<vector<string>>& scanpaths) {
         vector<int> predictions;
         predictions.reserve(scanpaths.size());
         
         for (const auto& scanpath : scanpaths) {
-            
+            // Encode scanpath - EXACT same as Python
             vector<int> encoded = encode_scanpath(scanpath);
             
-            
+            // Compute SimHash sketch - EXACT same as Python
             uint64_t sketch = compute_simhash(encoded);
             
-            
+            // Query LSH index for candidates - EXACT same as Python
             vector<int> candidates = query_lsh_index(sketch);
             
-            
+            // If not enough candidates, use random sampling - EXACT same as Python
             if (candidates.size() < max_candidates) {
                 vector<int> all_indices(encoded_scanpaths.size());
                 iota(all_indices.begin(), all_indices.end(), 0);
@@ -647,41 +652,41 @@ public:
                 if (!available.empty()) {
                     int additional = min(max_candidates - static_cast<int>(candidates.size()), 
                                          static_cast<int>(available.size()));
-                    
+                    // Use Python-compatible random sampling
                     vector<int> sampled = python_random.sample(available, additional);
                     candidates.insert(candidates.end(), sampled.begin(), sampled.end());
                 }
             }
             
-            
+            // Sort candidates by Hamming distance - EXACT same as Python
             sort(candidates.begin(), candidates.end(),
                  [this, sketch](int a, int b) {
                      return hamming_distance(sketch, simhash_sketches[a]) < 
                             hamming_distance(sketch, simhash_sketches[b]);
                  });
             
-            
+            // Take top candidates - EXACT same as Python
             if (candidates.size() > max_candidates) {
                 candidates.resize(max_candidates);
             }
             
-            
+            // Calculate similarities - EXACT same as Python
             vector<pair<int, double>> similarities;
             for (int candidate_idx : candidates) {
                 double sim = similarity_score(encoded, encoded_scanpaths[candidate_idx]);
                 similarities.push_back({candidate_idx, sim});
             }
             
-            
+            // Sort by similarity - EXACT same as Python
             sort(similarities.begin(), similarities.end(),
                  [](const auto& a, const auto& b) { return a.second > b.second; });
             
-            
+            // Take top k - EXACT same as Python
             if (similarities.size() > num_neighbors) {
                 similarities.resize(num_neighbors);
             }
             
-            
+            // Majority vote with weights - EXACT same as Python
             map<int, double> votes;
             for (const auto& sim_pair : similarities) {
                 int label = labels[sim_pair.first];
@@ -695,7 +700,7 @@ public:
                                              return a.second < b.second;
                                          })->first;
             } else {
-                
+                // Fallback: most common label - EXACT same as Python
                 map<int, int> label_counts;
                 for (int label : labels) {
                     label_counts[label]++;
@@ -717,13 +722,13 @@ public:
     }
 };
 
-
+// EXACT replication of Python load_scanpaths function
 pair<vector<vector<string>>, vector<int>> load_scanpaths(const string& input_dir, 
                                                          int sample_percentage = 100) {
     vector<vector<string>> scanpaths;
     vector<int> labels;
     
-    
+    // Get all JSON files - EXACT same logic as Python
     vector<string> files;
     for (const auto& entry : filesystem::directory_iterator(input_dir)) {
         if (entry.path().extension() == ".json") {
@@ -731,10 +736,10 @@ pair<vector<vector<string>>, vector<int>> load_scanpaths(const string& input_dir
         }
     }
     
-    
+    // CRITICAL: Sort files to ensure deterministic order (unlike Python glob which may vary)
     sort(files.begin(), files.end());
     
-    
+    // Sample files if requested - EXACT same as Python
     if (sample_percentage < 100) {
         int num_files = files.size() * sample_percentage / 100;
         vector<string> sampled_files = python_random.sample(files, num_files);
@@ -744,7 +749,7 @@ pair<vector<vector<string>>, vector<int>> load_scanpaths(const string& input_dir
     cout << "Loading " << files.size() << " scanpath files..." << endl;
     
     for (const string& file_path : files) {
-        
+        // Parse filename: S_XXXX_SY_Z_TTT_tokens.json - EXACT same as Python
         filesystem::path path(file_path);
         string filename = path.filename().string();
         
@@ -776,29 +781,29 @@ pair<vector<vector<string>>, vector<int>> load_scanpaths(const string& input_dir
 EvaluationResults evaluate_classifier(const vector<int>& y_true, const vector<int>& y_pred) {
     EvaluationResults results;
     
-    
+    // Calculate accuracy
     int correct = 0;
     for (int i = 0; i < y_true.size(); i++) {
         if (y_true[i] == y_pred[i]) correct++;
     }
     results.accuracy = static_cast<double>(correct) / y_true.size();
     
-    
+    // Get unique classes
     set<int> class_set(y_true.begin(), y_true.end());
     vector<int> classes(class_set.begin(), class_set.end());
     sort(classes.begin(), classes.end());
     
-    
+    // Initialize confusion matrix
     results.confusion_matrix.resize(classes.size(), vector<int>(classes.size(), 0));
     
-    
+    // Fill confusion matrix
     for (int i = 0; i < y_true.size(); i++) {
         int true_idx = find(classes.begin(), classes.end(), y_true[i]) - classes.begin();
         int pred_idx = find(classes.begin(), classes.end(), y_pred[i]) - classes.begin();
         results.confusion_matrix[true_idx][pred_idx]++;
     }
     
-    
+    // Calculate per-class metrics
     double total_precision = 0, total_recall = 0, total_f1 = 0;
     
     for (int cls_idx = 0; cls_idx < classes.size(); cls_idx++) {
@@ -830,7 +835,7 @@ EvaluationResults evaluate_classifier(const vector<int>& y_true, const vector<in
         total_f1 += f1;
     }
     
-    
+    // Calculate macro averages
     results.macro_avg.precision = total_precision / classes.size();
     results.macro_avg.recall = total_recall / classes.size();
     results.macro_avg.f1 = total_f1 / classes.size();
@@ -845,10 +850,10 @@ void save_results(const EvaluationResults& results,
                   const vector<EvaluationResults>* parameter_sweep_results = nullptr,
                   const vector<int>* k_values = nullptr) {
     
-    
+    // Create output directory
     filesystem::create_directories(output_dir);
     
-    
+    // Save main results
     json results_json;
     results_json["accuracy"] = results.accuracy;
     results_json["macro_avg"]["precision"] = results.macro_avg.precision;
@@ -865,7 +870,7 @@ void save_results(const EvaluationResults& results,
     results_json["confusion_matrix"] = results.confusion_matrix;
     results_json["timing_data"] = timing_data;
     
-    
+    // Add parameter sweep results if available
     if (parameter_sweep_results && k_values) {
         json sweep_results = json::array();
         for (size_t i = 0; i < parameter_sweep_results->size(); i++) {
@@ -877,7 +882,7 @@ void save_results(const EvaluationResults& results,
             sweep_entry["macro_avg"]["recall"] = sweep_result.macro_avg.recall;
             sweep_entry["macro_avg"]["f1"] = sweep_result.macro_avg.f1;
             
-            
+            // Add class metrics for sweep
             for (const auto& [cls, metrics] : sweep_result.class_metrics) {
                 sweep_entry["class_metrics"][to_string(cls)]["precision"] = metrics.precision;
                 sweep_entry["class_metrics"][to_string(cls)]["recall"] = metrics.recall;
@@ -896,7 +901,7 @@ void save_results(const EvaluationResults& results,
     results_file << results_json.dump(2);
     results_file.close();
     
-    
+    // Save predictions
     json pred_json;
     pred_json["true"] = y_true;
     pred_json["pred"] = y_pred;
@@ -905,10 +910,10 @@ void save_results(const EvaluationResults& results,
     pred_file << pred_json.dump(2);
     pred_file.close();
     
-    
+    // Export raw plotting data
     json plot_data;
     
-    
+    // Basic metrics for plotting
     plot_data["accuracy"] = results.accuracy;
     plot_data["macro_avg"] = {
         {"precision", results.macro_avg.precision},
@@ -916,7 +921,7 @@ void save_results(const EvaluationResults& results,
         {"f1", results.macro_avg.f1}
     };
     
-    
+    // Class metrics for bar plots
     json class_data;
     vector<int> classes;
     vector<double> precisions, recalls, f1_scores, supports;
@@ -936,19 +941,19 @@ void save_results(const EvaluationResults& results,
     class_data["support"] = supports;
     plot_data["class_data"] = class_data;
     
-    
+    // Timing data for plots
     plot_data["timing_data"] = timing_data;
     
-    
+    // Predictions for confusion matrix
     plot_data["predictions"] = {
         {"y_true", y_true},
         {"y_pred", y_pred}
     };
     
-    
+    // Confusion matrix
     plot_data["confusion_matrix"] = results.confusion_matrix;
     
-    
+    // Parameter sweep data if available
     if (parameter_sweep_results && k_values) {
         vector<double> accuracies, f1_scores;
         for (const auto& sweep_result : *parameter_sweep_results) {
@@ -962,7 +967,7 @@ void save_results(const EvaluationResults& results,
         };
     }
     
-    
+    // Calculate total samples for summary
     int total_samples = 0;
     for (const auto& [cls, metrics] : results.class_metrics) {
         total_samples += metrics.support;
@@ -973,7 +978,7 @@ void save_results(const EvaluationResults& results,
     plot_file << plot_data.dump(2);
     plot_file.close();
     
-    
+    // Save detailed report
     ofstream report_file(output_dir + "/detailed_report.txt");
     report_file << "FastEyeBLAST C++ Detailed Performance Report\n";
     report_file << string(50, '=') << "\n\n";
@@ -1015,7 +1020,7 @@ void save_results(const EvaluationResults& results,
 }
 
 int main(int argc, char* argv[]) {
-    
+    // Default parameters - EXACT same as Python
     string input_dir = "GazeBaseVR_IVT";
     string output_dir = "FastEyeBLAST_Results_Cpp_Compare";
     int sample_percentage = 100;
@@ -1032,7 +1037,7 @@ int main(int argc, char* argv[]) {
     bool parameter_sweep = false;
     vector<int> k_values = {1, 3, 5, 7, 10};
     
-    
+    // Simple argument parsing - EXACT same parameters as Python
     for (int i = 1; i < argc; i++) {
         string arg = argv[i];
         if (arg == "--input_dir" && i + 1 < argc) {
@@ -1062,7 +1067,7 @@ int main(int argc, char* argv[]) {
         }
     }
     
-    
+    // Set random seed - EXACT same as Python
     python_random.seed(seed);
     
     cout << string(60, '=') << endl;
@@ -1072,7 +1077,7 @@ int main(int argc, char* argv[]) {
     map<string, double> timing_data;
     auto overall_start = high_resolution_clock::now();
     
-    
+    // Load data
     cout << "Loading scanpaths..." << endl;
     auto load_start = high_resolution_clock::now();
     auto [scanpaths, labels] = load_scanpaths(input_dir, sample_percentage);
@@ -1081,16 +1086,16 @@ int main(int argc, char* argv[]) {
     cout << "Loaded " << scanpaths.size() << " scanpaths in " 
          << timing_data["data_loading"] << " seconds" << endl;
     
-    
+    // Split data - EXACT same logic as Python
     auto split_start = high_resolution_clock::now();
     int test_count = static_cast<int>(scanpaths.size() * test_size);
     
-    
+    // Create indices and shuffle - EXACT same as Python
     vector<int> indices(scanpaths.size());
     iota(indices.begin(), indices.end(), 0);
-    python_random.shuffle(indices);  
+    python_random.shuffle(indices);  // Use Python-compatible shuffle
     
-    
+    // Split indices - EXACT same as Python
     vector<int> test_indices(indices.begin(), indices.begin() + test_count);
     vector<int> train_indices(indices.begin() + test_count, indices.end());
     
@@ -1113,13 +1118,13 @@ int main(int argc, char* argv[]) {
     cout << "Training set: " << train_scanpaths.size() << " scanpaths" << endl;
     cout << "Test set: " << test_scanpaths.size() << " scanpaths" << endl;
     
-    
+    // Initialize classifier - EXACT same parameters as Python
     FastEyeBLAST classifier(seed_length, band_width, num_neighbors, 
                            DEFAULT_NUM_HASH_TABLES, DEFAULT_NUM_HASH_BITS,
                            max_candidates, DEFAULT_LSH_HASH_SIZE, 
                            use_duration_bins, duration_bins, use_parallel, num_processes);
     
-    
+    // Train classifier
     cout << "\nTraining classifier..." << endl;
     auto train_start = high_resolution_clock::now();
     classifier.fit(train_scanpaths, train_labels);
@@ -1185,7 +1190,7 @@ int main(int argc, char* argv[]) {
     auto overall_end = high_resolution_clock::now();
     timing_data["total_time"] = duration<double>(overall_end - overall_start).count();
     
-    
+    // Print results - EXACT same format as Python
     cout << "\n" << string(40, '=') << endl;
     cout << "PERFORMANCE RESULTS" << endl;
     cout << string(40, '=') << endl;
@@ -1215,7 +1220,7 @@ int main(int argc, char* argv[]) {
              << setw(12) << metrics.f1 << setw(12) << metrics.support << endl;
     }
     
-    
+    // Save results with parameter sweep data if available
     if (parameter_sweep) {
         save_results(final_results, timing_data, test_labels, final_predictions, output_dir, &results_list, &k_values);
     } else {

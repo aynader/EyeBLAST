@@ -1,0 +1,108 @@
+{
+  "predicted_label": "sample_18",
+  "privacy_preserving": true,
+  "protocol": "1-to-N",
+  "similarities": [
+    {
+      "index": 0,
+      "label": "sample_0",
+      "similarity_score": 0.8713389121338913
+    },
+    {
+      "index": 1,
+      "label": "sample_1",
+      "similarity_score": 0.7610294117647058
+    },
+    {
+      "index": 2,
+      "label": "sample_2",
+      "similarity_score": 0.9544600938967136
+    },
+    {
+      "index": 3,
+      "label": "sample_3",
+      "similarity_score": 0.9578675838349097
+    },
+    {
+      "index": 4,
+      "label": "sample_4",
+      "similarity_score": 0.0
+    },
+    {
+      "index": 5,
+      "label": "sample_5",
+      "similarity_score": 0.9015837104072398
+    },
+    {
+      "index": 6,
+      "label": "sample_6",
+      "similarity_score": 0.7783585990590696
+    },
+    {
+      "index": 7,
+      "label": "sample_7",
+      "similarity_score": 0.7140845070422536
+    },
+    {
+      "index": 8,
+      "label": "sample_8",
+      "similarity_score": 0.9967350746268657
+    },
+    {
+      "index": 9,
+      "label": "sample_9",
+      "similarity_score": 0.0
+    },
+    {
+      "index": 10,
+      "label": "sample_10",
+      "similarity_score": 0.0
+    },
+    {
+      "index": 11,
+      "label": "sample_11",
+      "similarity_score": 0.8192446043165468
+    },
+    {
+      "index": 12,
+      "label": "sample_12",
+      "similarity_score": 0.8718309859154929
+    },
+    {
+      "index": 13,
+      "label": "sample_13",
+      "similarity_score": 0.9953488372093023
+    },
+    {
+      "index": 14,
+      "label": "sample_14",
+      "similarity_score": 0.0
+    },
+    {
+      "index": 15,
+      "label": "sample_15",
+      "similarity_score": 0.8826291079812206
+    },
+    {
+      "index": 16,
+      "label": "sample_16",
+      "similarity_score": 0.7844551282051282
+    },
+    {
+      "index": 17,
+      "label": "sample_17",
+      "similarity_score": 0.8488262910798122
+    },
+    {
+      "index": 18,
+      "label": "sample_18",
+      "similarity_score": 0.9995309568480301
+    },
+    {
+      "index": 19,
+      "label": "sample_19",
+      "similarity_score": 0.91311093871218
+    }
+  ],
+  "total_time_ms": 13146
+}

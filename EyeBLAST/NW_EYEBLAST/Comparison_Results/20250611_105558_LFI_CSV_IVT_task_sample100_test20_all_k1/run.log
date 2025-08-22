@@ -1,0 +1,157 @@
+2025-06-11 10:55:58,903 - INFO - Starting comparison study with the following parameters:
+2025-06-11 10:55:58,903 - INFO -   band_width: 5
+2025-06-11 10:55:58,903 - INFO -   comparison: all
+2025-06-11 10:55:58,903 - INFO -   component_modes: ['full', 'simhash_only', 'alignment_only']
+2025-06-11 10:55:58,903 - INFO -   data_type: task
+2025-06-11 10:55:58,903 - INFO -   gender_file: None
+2025-06-11 10:55:58,903 - INFO -   input_dir: LFI_CSV_IVT
+2025-06-11 10:55:58,903 - INFO -   k: 1
+2025-06-11 10:55:58,903 - INFO -   max_candidates: 20
+2025-06-11 10:55:58,907 - INFO -   n_jobs: -1
+2025-06-11 10:55:58,907 - INFO -   nw_nj: true
+2025-06-11 10:55:58,907 - INFO -   output_dir: Comparison_Results
+2025-06-11 10:55:58,907 - INFO -   random: False
+2025-06-11 10:55:58,917 - INFO -   sample_percentage: 100
+2025-06-11 10:55:58,917 - INFO -   seed_length: 3
+2025-06-11 10:55:58,917 - INFO -   task_filter: None
+2025-06-11 10:55:58,917 - INFO -   test_size: 0.2
+2025-06-11 10:55:58,917 - INFO -   variable_word_size: 64
+2025-06-11 10:55:58,918 - INFO -   word_size: 28
+2025-06-11 10:55:58,920 - INFO - Using fixed seed for reproducibility (42)
+2025-06-11 10:55:58,921 - INFO - Loading data from LFI_CSV_IVT.
+2025-06-11 10:55:58,921 - INFO - Detected data format: IVT
+2025-06-11 10:55:58,923 - INFO - Loading 70 scanpath files from LFI_CSV_IVT...
+2025-06-11 10:55:59,104 - INFO - Loaded 70 scanpaths with 7 different labels
+2025-06-11 10:55:59,104 - INFO - Label distribution:
+2025-06-11 10:55:59,104 - INFO -   Task 1 (TALK): 10 samples
+2025-06-11 10:55:59,104 - INFO -   Task 2 (READ): 10 samples
+2025-06-11 10:55:59,104 - INFO -   Task 3 (VIDEO): 10 samples
+2025-06-11 10:55:59,104 - INFO -   Task 4 (WALK): 10 samples
+2025-06-11 10:55:59,104 - INFO -   Task 5 (TYPE): 10 samples
+2025-06-11 10:55:59,104 - INFO -   Task 6 (SOLVE): 10 samples
+2025-06-11 10:55:59,104 - INFO -   Task 7 (CYCLE): 10 samples
+2025-06-11 10:55:59,120 - INFO - Computing full NW similarity matrix for 70 samples...
+2025-06-11 10:55:59,121 - INFO - Computing pairwise similarities for 70 scanpaths (2415 pairs)...
+2025-06-11 10:55:59,121 - INFO - Sequence length stats: max=159014, avg=56055.6
+2025-06-11 10:55:59,121 - INFO - Estimated memory per NW comparison: 0.6 MB
+2025-06-11 10:55:59,122 - INFO - Available system memory: 15.6 GB
+2025-06-11 10:55:59,168 - INFO - Processing 2415 pairs in batches of 500
+2025-06-11 10:55:59,168 - INFO - Processing batch 1/5 (500 pairs)
+2025-06-11 10:55:59,168 - INFO - Memory usage before batch: 51.0%
+2025-06-11 11:04:41,701 - INFO - Memory usage after batch: 59.5%
+2025-06-11 11:04:41,786 - INFO - Processing batch 2/5 (500 pairs)
+2025-06-11 11:04:41,786 - INFO - Memory usage before batch: 59.5%
+2025-06-11 11:11:22,255 - INFO - Memory usage after batch: 59.0%
+2025-06-11 11:11:22,361 - INFO - Processing batch 3/5 (500 pairs)
+2025-06-11 11:11:22,363 - INFO - Memory usage before batch: 59.0%
+2025-06-11 11:20:37,933 - INFO - Memory usage after batch: 60.3%
+2025-06-11 11:20:38,040 - INFO - Processing batch 4/5 (500 pairs)
+2025-06-11 11:20:38,042 - INFO - Memory usage before batch: 60.3%
+2025-06-11 11:28:22,211 - INFO - Memory usage after batch: 59.1%
+2025-06-11 11:28:22,323 - INFO - Processing batch 5/5 (415 pairs)
+2025-06-11 11:28:22,327 - INFO - Memory usage before batch: 59.1%
+2025-06-11 11:34:32,350 - INFO - Memory usage after batch: 56.6%
+2025-06-11 11:34:32,458 - INFO - Successfully computed 2415 similarity pairs
+2025-06-11 11:34:32,464 - INFO - Saved NW similarity matrix to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\full_nw_similarity.npy
+2025-06-11 11:34:32,464 - INFO - Building FB index and computing full similarity matrix for 70 samples...
+2025-06-11 11:34:32,466 - INFO - Encoding scanpaths...
+2025-06-11 11:34:40,329 - INFO - Alphabet size: 21
+2025-06-11 11:34:40,329 - INFO - Bits per token: 5
+2025-06-11 11:34:40,329 - INFO - Tokens per 64-bit word: 12
+2025-06-11 11:34:40,329 - INFO - Packing scanpaths into words...
+2025-06-11 11:34:41,482 - INFO - Computing SimHash sketches...
+2025-06-11 11:35:15,363 - INFO - Building LSH index...
+2025-06-11 11:37:44,611 - INFO - Saved FB similarity matrix to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\full_fb_similarity.npy
+2025-06-11 11:37:44,658 - INFO - Saved NW vs. FB correlation stats to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\matrix_correlation_stats.json
+2025-06-11 11:37:45,047 - INFO - Saved enhanced FB vs. NW similarity scatter to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\fb_vs_nw_scatter.png
+2025-06-11 11:37:45,047 - INFO - Saved scatter interpretation report to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\scatter_report.log
+2025-06-11 11:37:45,047 - INFO - Splitting data into train/test sets (80/20).
+2025-06-11 11:37:45,063 - INFO - Training set: 56 samples
+2025-06-11 11:37:45,063 - INFO - Test set: 14 samples
+2025-06-11 11:37:45,066 - INFO - 
+==================================================
+2025-06-11 11:37:45,068 - INFO - 1. Needleman-Wunsch Classification
+2025-06-11 11:37:45,069 - INFO - ==================================================
+2025-06-11 11:37:45,069 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-06-11 11:37:45,175 - INFO - Training Needleman-Wunsch classifier.
+2025-06-11 11:37:45,175 - INFO - Detected IVT-encoded data for Needleman-Wunsch
+2025-06-11 11:37:46,558 - INFO - Needleman-Wunsch training completed in 1.38 seconds
+2025-06-11 11:37:46,558 - INFO - Training memory usage: 21.9 MB
+2025-06-11 11:37:46,558 - INFO - Evaluating Needleman-Wunsch classifier.
+2025-06-11 11:37:46,670 - INFO - Evaluating classifier on 14 test samples...
+2025-06-11 11:37:46,670 - INFO - Predicting labels for 14 test samples using Needleman-Wunsch...
+2025-06-11 11:37:46,670 - INFO - Split test data into 14 batches
+2025-06-11 11:37:46,670 - INFO - Processing 14 batches in parallel using 32 jobs
+2025-06-11 12:09:49,674 - INFO - Computing evaluation metrics...
+2025-06-11 12:09:49,674 - WARNING - Error generating classification report: Number of classes, 7, does not match size of target_names, 6. Try specifying the labels parameter
+2025-06-11 12:09:49,686 - INFO - Needleman-Wunsch Accuracy: 0.1429
+2025-06-11 12:09:49,686 - INFO - Prediction time: 1923.00 seconds
+2025-06-11 12:09:49,686 - INFO - Prediction memory usage: -270.9 MB
+2025-06-11 12:09:49,686 - INFO - Total memory usage: -249.0 MB
+2025-06-11 12:09:49,828 - INFO - 
+==================================================
+2025-06-11 12:09:49,828 - INFO - 2. NCBI MegaBLAST Classification
+2025-06-11 12:09:49,828 - INFO - ==================================================
+2025-06-11 12:09:49,983 - INFO - Training MegaBLAST classifier.
+2025-06-11 12:09:49,983 - INFO - Detected IVT-encoded data for MegaBLAST
+2025-06-11 12:09:49,983 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmpplptqyy2
+2025-06-11 12:09:49,983 - INFO - Converting training scanpaths to FASTA format...
+2025-06-11 12:09:52,746 - INFO - Creating BLAST database from training data...
+2025-06-11 12:09:53,480 - INFO - NCBI MegaBLAST training completed in 3.50 seconds
+2025-06-11 12:09:53,480 - INFO - Training memory usage: 7.6 MB
+2025-06-11 12:09:53,480 - INFO - Evaluating NCBI MegaBLAST classifier.
+2025-06-11 12:09:53,560 - INFO - Evaluating classifier on 14 test samples...
+2025-06-11 12:09:53,560 - INFO - Predicting labels for 14 test samples using MegaBLAST...
+2025-06-11 12:09:55,519 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_0_results.tsv
+2025-06-11 12:09:57,513 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_1_results.tsv
+2025-06-11 12:10:00,133 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_2_results.tsv
+2025-06-11 12:10:02,953 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_3_results.tsv
+2025-06-11 12:10:05,387 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_4_results.tsv
+2025-06-11 12:10:07,894 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_5_results.tsv
+2025-06-11 12:10:09,544 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_6_results.tsv
+2025-06-11 12:10:11,261 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_7_results.tsv
+2025-06-11 12:10:12,913 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_8_results.tsv
+2025-06-11 12:10:14,778 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_9_results.tsv
+2025-06-11 12:10:16,033 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_10_results.tsv
+2025-06-11 12:10:17,828 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_11_results.tsv
+2025-06-11 12:10:19,421 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_12_results.tsv
+2025-06-11 12:10:22,112 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpplptqyy2/test_13_results.tsv
+2025-06-11 12:10:22,112 - INFO - Computing evaluation metrics...
+2025-06-11 12:10:22,112 - WARNING - Error generating classification report: Number of classes, 7, does not match size of target_names, 6. Try specifying the labels parameter
+2025-06-11 12:10:22,123 - INFO - NCBI MegaBLAST Accuracy: 0.0000
+2025-06-11 12:10:22,123 - INFO - Prediction time: 28.55 seconds
+2025-06-11 12:10:22,123 - INFO - Prediction memory usage: 0.1 MB
+2025-06-11 12:10:22,123 - INFO - Total memory usage: 7.7 MB
+2025-06-11 12:10:22,252 - INFO - 
+==================================================
+2025-06-11 12:10:22,254 - INFO - 3. FastEyeBLAST Classification
+2025-06-11 12:10:22,254 - INFO - ==================================================
+2025-06-11 12:10:22,254 - INFO - Using IVT version of FastEyeBLAST
+2025-06-11 12:10:22,334 - INFO - Training FastEyeBLAST classifier.
+2025-06-11 12:10:22,334 - INFO - Encoding scanpaths...
+2025-06-11 12:10:26,548 - INFO - Alphabet size: 21
+2025-06-11 12:10:26,548 - INFO - Bits per token: 5
+2025-06-11 12:10:26,548 - INFO - Tokens per 64-bit word: 12
+2025-06-11 12:10:26,548 - INFO - Packing scanpaths into words...
+2025-06-11 12:10:27,038 - INFO - Computing SimHash sketches...
+2025-06-11 12:10:45,485 - INFO - Building LSH index...
+2025-06-11 12:10:45,485 - INFO - FastEyeBLAST training completed in 23.15 seconds
+2025-06-11 12:10:45,485 - INFO - Training memory usage: 26.7 MB
+2025-06-11 12:10:45,485 - INFO - Evaluating FastEyeBLAST classifier.
+2025-06-11 12:10:45,569 - INFO - Evaluating classifier on 14 test samples...
+2025-06-11 12:11:00,759 - INFO - Computing evaluation metrics...
+2025-06-11 12:11:00,759 - WARNING - Error generating classification report: Number of classes, 7, does not match size of target_names, 6. Try specifying the labels parameter
+2025-06-11 12:11:00,759 - INFO - FastEyeBLAST Accuracy: 0.2143
+2025-06-11 12:11:00,759 - INFO - Prediction time: 15.19 seconds
+2025-06-11 12:11:00,776 - INFO - Prediction memory usage: 1.7 MB
+2025-06-11 12:11:00,776 - INFO - Total memory usage: 28.4 MB
+2025-06-11 12:11:00,919 - INFO - 
+==================================================
+2025-06-11 12:11:00,924 - INFO - Plotting comparison results
+2025-06-11 12:11:00,924 - INFO - ==================================================
+2025-06-11 12:11:00,924 - INFO - Creating performance comparison chart at Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\performance_comparison.png.
+2025-06-11 12:11:03,218 - INFO - Saving detailed results to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\comparison_results.json.
+2025-06-11 12:11:03,218 - INFO - Results saved to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1/
+2025-06-11 12:11:03,218 - INFO - Performance comparison plot saved to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\performance_comparison.png
+2025-06-11 12:11:03,218 - INFO - Run parameters saved to Comparison_Results\20250611_105558_LFI_CSV_IVT_task_sample100_test20_all_k1\run_parameters.json
+2025-06-11 12:11:03,218 - INFO - Comparison study completed.

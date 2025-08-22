@@ -1,0 +1,14 @@
+2025-05-31 01:43:02,168 - INFO - Starting comparison study with the following parameters:
+2025-05-31 01:43:02,168 - INFO -   band_width: 16
+2025-05-31 01:43:02,168 - INFO -   input_dir: dataset16S
+2025-05-31 01:43:02,168 - INFO -   k: 5
+2025-05-31 01:43:02,168 - INFO -   n_jobs: -1
+2025-05-31 01:43:02,169 - INFO -   output_dir: Results
+2025-05-31 01:43:02,169 - INFO -   sample_percentage: 5
+2025-05-31 01:43:02,169 - INFO -   seed: 42
+2025-05-31 01:43:02,169 - INFO -   seed_length: 11
+2025-05-31 01:43:02,169 - INFO -   test_size: 0.2
+2025-05-31 01:43:02,169 - INFO -   word_size: 28
+2025-05-31 01:43:02,179 - INFO - Searching for FASTA files in dataset16S...
+2025-05-31 01:43:02,180 - INFO - Loading 0 FASTA files...
+2025-05-31 01:43:02,181 - INFO - Loaded 0 sequences from 0 classes

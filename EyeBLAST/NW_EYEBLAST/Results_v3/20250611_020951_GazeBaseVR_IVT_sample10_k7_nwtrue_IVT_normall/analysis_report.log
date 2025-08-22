@@ -1,0 +1,145 @@
+Analysis Report - Multiple Normalization Methods
+================================================
+
+Run Timestamp       : 2025-06-11 02:12:35
+Mode                : IVT
+Input Directory     : EyeBLAST/GazeBaseVR_IVT
+Sample Percentage   : 10%
+Number of Samples   : 502
+k (FB neighbors)    : 7
+Needleman-Wunsch NJ : true
+Normalization Mode  : all
+
+Correlation Summary Across Normalization Methods
+=================================================
+Method               Pearson    P-value      Spearman   P-value     
+----------------------------------------------------------------------------
+none                 0.4796     0.0000e+00   0.9706     0.0000e+00  
+minmax               0.4796     0.0000e+00   0.9706     0.0000e+00  
+zscore               0.4796     0.0000e+00   0.9706     0.0000e+00  
+rank                 0.9706     0.0000e+00   0.9706     0.0000e+00  
+quantile             0.9706     0.0000e+00   0.9706     0.0000e+00  
+correlation_preserving 0.4796     0.0000e+00   0.9706     0.0000e+00  
+
+Detailed Analysis: NONE Normalization
+==================================================
+Pearson Correlation : 0.4796 (p-value = 0.0000e+00)
+  Interpretation     : Moderate linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=-124.5291, max=0.4044, mean=-2.1771, std=5.4205
+  FB: min=0.0000, max=1.0000, mean=0.7919, std=0.1339
+
+Visualizations Saved:
+  - Scatter Plot            : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_scatter.png
+  - NW Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_fb_heatmap.png
+  - Histogram               : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_rank_scatter.png
+
+Detailed Analysis: MINMAX Normalization
+==================================================
+Pearson Correlation : 0.4796 (p-value = 0.0000e+00)
+  Interpretation     : Moderate linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=0.0000, max=0.9953, mean=0.9747, std=0.0432
+  FB: min=0.0000, max=1.0000, mean=0.7919, std=0.1339
+
+Visualizations Saved:
+  - Scatter Plot            : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_scatter.png
+  - NW Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_fb_heatmap.png
+  - Histogram               : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_rank_scatter.png
+
+Detailed Analysis: ZSCORE Normalization
+==================================================
+Pearson Correlation : 0.4796 (p-value = 0.0000e+00)
+  Interpretation     : Moderate linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=-22.5881, max=0.4754, mean=-0.0012, std=1.0007
+  FB: min=-5.9101, max=1.5490, mean=-0.0031, std=0.9986
+
+Visualizations Saved:
+  - Scatter Plot            : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_scatter.png
+  - NW Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_fb_heatmap.png
+  - Histogram               : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_rank_scatter.png
+
+Detailed Analysis: RANK Normalization
+==================================================
+Pearson Correlation : 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=0.0000, max=0.9990, mean=0.4995, std=0.2884
+  FB: min=0.0000, max=1.0000, mean=0.4980, std=0.2894
+
+Visualizations Saved:
+  - Scatter Plot            : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_scatter.png
+  - NW Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_fb_heatmap.png
+  - Histogram               : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_rank_scatter.png
+
+Detailed Analysis: QUANTILE Normalization
+==================================================
+Pearson Correlation : 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=0.0000, max=0.9980, mean=0.4990, std=0.2881
+  FB: min=0.0000, max=1.0000, mean=0.4990, std=0.2881
+
+Visualizations Saved:
+  - Scatter Plot            : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_scatter.png
+  - NW Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_fb_heatmap.png
+  - Histogram               : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_rank_scatter.png
+
+Detailed Analysis: CORRELATION_PRESERVING Normalization
+==================================================
+Pearson Correlation : 0.4796 (p-value = 0.0000e+00)
+  Interpretation     : Moderate linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=0.0000, max=11.1508, mean=10.9204, std=0.4838
+  FB: min=0.0000, max=11.2040, mean=8.8726, std=1.4999
+
+Visualizations Saved:
+  - Scatter Plot            : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_scatter.png
+  - NW Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_fb_heatmap.png
+  - Histogram               : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_rank_scatter.png
+
+Comparative Analysis Across Normalization Methods
+==================================================
+Highest Absolute Pearson Correlation : quantile (0.9706)
+Highest Absolute Spearman Correlation: quantile (0.9706)
+
+Normalization Method Descriptions:
+- none                : Raw similarity scores (no normalization)
+- minmax              : Linear scaling to [0,1] range
+- zscore              : Standardization to mean=0, std=1
+- rank                : Rank-based normalization to [0,1]
+- quantile            : Quantile normalization to uniform distribution
+- correlation_preserving : Geometric mean scaling preserving correlation structure
+
+Please inspect the visualizations in each normalization subdirectory for detailed analysis.

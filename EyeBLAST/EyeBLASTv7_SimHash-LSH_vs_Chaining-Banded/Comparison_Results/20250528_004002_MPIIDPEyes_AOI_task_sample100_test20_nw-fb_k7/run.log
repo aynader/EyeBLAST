@@ -1,0 +1,74 @@
+2025-05-28 00:40:02,890 - INFO - Starting comparison study with the following parameters:
+2025-05-28 00:40:02,891 - INFO -   band_width: 5
+2025-05-28 00:40:02,891 - INFO -   comparison: nw-fb
+2025-05-28 00:40:02,891 - INFO -   data_type: task
+2025-05-28 00:40:02,891 - INFO -   gender_file: None
+2025-05-28 00:40:02,891 - INFO -   input_dir: MPIIDPEye_AOIs
+2025-05-28 00:40:02,891 - INFO -   k: 7
+2025-05-28 00:40:02,892 - INFO -   max_candidates: 20
+2025-05-28 00:40:02,892 - INFO -   n_jobs: -1
+2025-05-28 00:40:02,892 - INFO -   nw_nj: true
+2025-05-28 00:40:02,892 - INFO -   output_dir: Comparison_Results
+2025-05-28 00:40:02,892 - INFO -   random: False
+2025-05-28 00:40:02,892 - INFO -   sample_percentage: 100
+2025-05-28 00:40:02,893 - INFO -   seed_length: 3
+2025-05-28 00:40:02,894 - INFO -   test_size: 0.2
+2025-05-28 00:40:02,894 - INFO -   word_size: 28
+2025-05-28 00:40:02,895 - INFO - Using fixed seed for reproducibility (42)
+2025-05-28 00:40:02,895 - INFO - Loading data from MPIIDPEye_AOIs...
+2025-05-28 00:40:02,895 - INFO - Detected data format: AOI
+2025-05-28 00:40:02,896 - INFO - Loading AOI-encoded sequences from MPIIDPEye_AOIs\encoded_sequences.json
+2025-05-28 00:40:02,899 - INFO - Loaded 60 scanpaths with 3 different labels
+2025-05-28 00:40:02,899 - INFO - Label distribution:
+2025-05-28 00:40:02,901 - INFO -   Task 1 (Comic): 20 samples
+2025-05-28 00:40:02,901 - INFO -   Task 2 (Online newspaper): 20 samples
+2025-05-28 00:40:02,901 - INFO -   Task 3 (Textbook): 20 samples
+2025-05-28 00:40:02,902 - INFO - Splitting data into train/test sets (80/20)...
+2025-05-28 00:40:02,902 - INFO - Training set: 48 samples
+2025-05-28 00:40:02,903 - INFO - Test set: 12 samples
+2025-05-28 00:40:02,903 - INFO - 
+==================================================
+2025-05-28 00:40:02,904 - INFO - 1. Needleman-Wunsch Classification
+2025-05-28 00:40:02,904 - INFO - ==================================================
+2025-05-28 00:40:02,904 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-28 00:40:02,944 - INFO - Training Needleman-Wunsch classifier...
+2025-05-28 00:40:03,109 - INFO - Needleman-Wunsch training completed in 0.16 seconds
+2025-05-28 00:40:03,110 - INFO - Memory usage: 7.6 MB
+2025-05-28 00:40:03,110 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-28 00:40:03,110 - INFO - Evaluating classifier on 12 test samples...
+2025-05-28 00:40:03,110 - INFO - Predicting labels for 12 test samples using Needleman-Wunsch...
+2025-05-28 00:40:03,110 - INFO - Split test data into 12 batches
+2025-05-28 00:40:03,110 - INFO - Processing 12 batches in parallel using 32 jobs
+2025-05-28 00:42:41,358 - INFO - Computing evaluation metrics...
+2025-05-28 00:42:41,377 - INFO - Needleman-Wunsch Accuracy: 0.1667
+2025-05-28 00:42:41,378 - INFO - Prediction time: 158.25 seconds
+2025-05-28 00:42:41,784 - INFO - 
+==================================================
+2025-05-28 00:42:41,785 - INFO - 3. FastEyeBLAST Classification
+2025-05-28 00:42:41,785 - INFO - ==================================================
+2025-05-28 00:42:41,786 - WARNING - AOI modules not available, falling back to IVT version
+2025-05-28 00:42:41,859 - INFO - Training FastEyeBLAST classifier...
+2025-05-28 00:42:41,860 - INFO - Encoding scanpaths...
+2025-05-28 00:42:42,116 - INFO - Alphabet size: 15
+2025-05-28 00:42:42,116 - INFO - Bits per token: 4
+2025-05-28 00:42:42,117 - INFO - Tokens per 64-bit word: 16
+2025-05-28 00:42:42,117 - INFO - Packing scanpaths into words...
+2025-05-28 00:42:42,267 - INFO - Computing SimHash sketches...
+2025-05-28 00:42:47,775 - INFO - Building LSH index...
+2025-05-28 00:42:47,776 - INFO - FastEyeBLAST training completed in 5.92 seconds
+2025-05-28 00:42:47,777 - INFO - Memory usage: 12.5 MB
+2025-05-28 00:42:47,777 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-28 00:42:47,777 - INFO - Evaluating classifier on 12 test samples...
+2025-05-28 00:42:54,777 - INFO - Computing evaluation metrics...
+2025-05-28 00:42:54,780 - INFO - FastEyeBLAST Accuracy: 0.3333
+2025-05-28 00:42:54,782 - INFO - Prediction time: 7.00 seconds
+2025-05-28 00:42:54,868 - INFO - 
+==================================================
+2025-05-28 00:42:54,868 - INFO - Plotting comparison results
+2025-05-28 00:42:54,869 - INFO - ==================================================
+2025-05-28 00:42:54,869 - INFO - Creating performance comparison chart at Comparison_Results\20250528_004002_MPIIDPEyes_AOI_task_sample100_test20_nw-fb_k7\performance_comparison.png...
+2025-05-28 00:42:55,000 - INFO - Saving detailed results to Comparison_Results\20250528_004002_MPIIDPEyes_AOI_task_sample100_test20_nw-fb_k7\comparison_results.json...
+2025-05-28 00:42:55,001 - INFO - Results saved to Comparison_Results\20250528_004002_MPIIDPEyes_AOI_task_sample100_test20_nw-fb_k7/
+2025-05-28 00:42:55,002 - INFO - Performance comparison plot saved to Comparison_Results\20250528_004002_MPIIDPEyes_AOI_task_sample100_test20_nw-fb_k7\performance_comparison.png
+2025-05-28 00:42:55,002 - INFO - Run parameters saved to Comparison_Results\20250528_004002_MPIIDPEyes_AOI_task_sample100_test20_nw-fb_k7\run_parameters.json
+2025-05-28 00:42:55,003 - INFO - Comparison study completed.

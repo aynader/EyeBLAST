@@ -1,0 +1,9 @@
+{
+  "total_samples": 992,
+  "train_size": 793,
+  "test_size": 199,
+  "task_distribution": {
+    "Female": 525,
+    "Male": 467
+  }
+}

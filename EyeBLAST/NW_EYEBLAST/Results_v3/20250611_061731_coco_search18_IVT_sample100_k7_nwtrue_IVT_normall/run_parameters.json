@@ -1,0 +1,10 @@
+{
+  "timestamp": "20250611_061731",
+  "input_dir": "EyeBLAST/coco_search18_IVT",
+  "sample_percentage": 100,
+  "k": 7,
+  "nw_nj": "true",
+  "normalization_mode": "all",
+  "mode": "IVT",
+  "command": "python compare_similarity_scores_v3.py --input-dir=EyeBLAST/coco_search18_IVT --sample-percentage=100 --k=7 --nw-nj=true --normalization-mode=all --output-dir=EyeBLAST/Results_v3"
+}

@@ -1,0 +1,139 @@
+2025-06-02 03:40:44,068 - INFO - Starting comparison study with the following parameters:
+2025-06-02 03:40:44,068 - INFO -   band_width: 5
+2025-06-02 03:40:44,069 - INFO -   comparison: all
+2025-06-02 03:40:44,069 - INFO -   component_modes: ['full', 'simhash_only', 'alignment_only']
+2025-06-02 03:40:44,069 - INFO -   data_type: task
+2025-06-02 03:40:44,069 - INFO -   gender_file: None
+2025-06-02 03:40:44,069 - INFO -   input_dir: GazeBaseVR_IVT
+2025-06-02 03:40:44,069 - INFO -   k: 7
+2025-06-02 03:40:44,070 - INFO -   max_candidates: 20
+2025-06-02 03:40:44,070 - INFO -   n_jobs: -1
+2025-06-02 03:40:44,070 - INFO -   nw_nj: true
+2025-06-02 03:40:44,070 - INFO -   output_dir: Comparison_Results
+2025-06-02 03:40:44,070 - INFO -   random: False
+2025-06-02 03:40:44,081 - INFO -   sample_percentage: 2
+2025-06-02 03:40:44,081 - INFO -   seed_length: 3
+2025-06-02 03:40:44,081 - INFO -   task_filter: None
+2025-06-02 03:40:44,082 - INFO -   test_size: 0.2
+2025-06-02 03:40:44,082 - INFO -   variable_word_size: 64
+2025-06-02 03:40:44,082 - INFO -   word_size: 28
+2025-06-02 03:40:44,083 - INFO - Using fixed seed for reproducibility (42)
+2025-06-02 03:40:44,083 - INFO - Loading data from GazeBaseVR_IVT.
+2025-06-02 03:40:44,083 - INFO - Detected data format: IVT
+2025-06-02 03:40:44,097 - INFO - Sampling 100 files (2% of 5020)
+2025-06-02 03:40:44,098 - INFO - Loading 100 scanpath files from GazeBaseVR_IVT...
+2025-06-02 03:40:44,112 - INFO - Loaded 100 scanpaths with 5 different labels
+2025-06-02 03:40:44,112 - INFO - Label distribution:
+2025-06-02 03:40:44,113 - INFO -   Task 1 (Vergence): 17 samples
+2025-06-02 03:40:44,113 - INFO -   Task 2 (Pursuit): 19 samples
+2025-06-02 03:40:44,113 - INFO -   Task 3 (Video): 30 samples
+2025-06-02 03:40:44,113 - INFO -   Task 4 (Text): 19 samples
+2025-06-02 03:40:44,113 - INFO -   Task 5 (Random): 15 samples
+2025-06-02 03:40:44,113 - INFO - Computing full NW similarity matrix for 100 samples...
+2025-06-02 03:40:44,113 - INFO - Computing pairwise similarities for 100 scanpaths (4950 pairs)...
+2025-06-02 03:40:50,183 - INFO - Saved NW similarity matrix to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\full_nw_similarity.npy
+2025-06-02 03:40:50,183 - INFO - Building FB index and computing full similarity matrix for 100 samples...
+2025-06-02 03:40:50,183 - INFO - Encoding scanpaths...
+2025-06-02 03:40:50,342 - INFO - Alphabet size: 21
+2025-06-02 03:40:50,342 - INFO - Bits per token: 5
+2025-06-02 03:40:50,342 - INFO - Tokens per 64-bit word: 12
+2025-06-02 03:40:50,343 - INFO - Packing scanpaths into words...
+2025-06-02 03:40:50,360 - INFO - Computing SimHash sketches...
+2025-06-02 03:40:50,990 - INFO - Building LSH index...
+2025-06-02 03:40:55,313 - INFO - Saved FB similarity matrix to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\full_fb_similarity.npy
+2025-06-02 03:40:55,337 - INFO - Saved NW vs. FB correlation stats to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\matrix_correlation_stats.json
+2025-06-02 03:40:55,628 - INFO - Saved enhanced FB vs. NW similarity scatter to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\fb_vs_nw_scatter.png
+2025-06-02 03:40:55,628 - INFO - Saved scatter interpretation report to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\scatter_report.log
+2025-06-02 03:40:55,630 - INFO - Splitting data into train/test sets (80/20).
+2025-06-02 03:40:55,631 - INFO - Training set: 80 samples
+2025-06-02 03:40:55,631 - INFO - Test set: 20 samples
+2025-06-02 03:40:55,631 - INFO - 
+==================================================
+2025-06-02 03:40:55,632 - INFO - 1. Needleman-Wunsch Classification
+2025-06-02 03:40:55,632 - INFO - ==================================================
+2025-06-02 03:40:55,632 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-06-02 03:40:55,679 - INFO - Training Needleman-Wunsch classifier.
+2025-06-02 03:40:55,679 - INFO - Detected IVT-encoded data for Needleman-Wunsch
+2025-06-02 03:40:55,706 - INFO - Needleman-Wunsch training completed in 0.03 seconds
+2025-06-02 03:40:55,706 - INFO - Training memory usage: 0.0 MB
+2025-06-02 03:40:55,706 - INFO - Evaluating Needleman-Wunsch classifier.
+2025-06-02 03:40:55,757 - INFO - Evaluating classifier on 20 test samples...
+2025-06-02 03:40:55,757 - INFO - Predicting labels for 20 test samples using Needleman-Wunsch...
+2025-06-02 03:40:55,757 - INFO - Split test data into 20 batches
+2025-06-02 03:40:55,757 - INFO - Processing 20 batches in parallel using 32 jobs
+2025-06-02 03:40:57,380 - INFO - Computing evaluation metrics...
+2025-06-02 03:40:57,386 - INFO - Needleman-Wunsch Accuracy: 0.4500
+2025-06-02 03:40:57,387 - INFO - Prediction time: 1.62 seconds
+2025-06-02 03:40:57,387 - INFO - Prediction memory usage: 3.6 MB
+2025-06-02 03:40:57,387 - INFO - Total memory usage: 3.6 MB
+2025-06-02 03:40:57,508 - INFO - 
+==================================================
+2025-06-02 03:40:57,508 - INFO - 2. NCBI MegaBLAST Classification
+2025-06-02 03:40:57,508 - INFO - ==================================================
+2025-06-02 03:40:57,563 - INFO - Training MegaBLAST classifier.
+2025-06-02 03:40:57,563 - INFO - Detected IVT-encoded data for MegaBLAST
+2025-06-02 03:40:57,564 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmp02_73c60
+2025-06-02 03:40:57,564 - INFO - Converting training scanpaths to FASTA format...
+2025-06-02 03:40:58,575 - INFO - Creating BLAST database from training data...
+2025-06-02 03:40:59,211 - INFO - NCBI MegaBLAST training completed in 1.65 seconds
+2025-06-02 03:40:59,211 - INFO - Training memory usage: 0.0 MB
+2025-06-02 03:40:59,212 - INFO - Evaluating NCBI MegaBLAST classifier.
+2025-06-02 03:40:59,259 - INFO - Evaluating classifier on 20 test samples...
+2025-06-02 03:40:59,259 - INFO - Predicting labels for 20 test samples using MegaBLAST...
+2025-06-02 03:40:59,945 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_0_results.tsv
+2025-06-02 03:41:00,576 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_1_results.tsv
+2025-06-02 03:41:01,248 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_2_results.tsv
+2025-06-02 03:41:01,871 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_3_results.tsv
+2025-06-02 03:41:02,490 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_4_results.tsv
+2025-06-02 03:41:03,114 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_5_results.tsv
+2025-06-02 03:41:03,814 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_6_results.tsv
+2025-06-02 03:41:04,468 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_7_results.tsv
+2025-06-02 03:41:05,134 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_8_results.tsv
+2025-06-02 03:41:05,746 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_9_results.tsv
+2025-06-02 03:41:06,384 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_10_results.tsv
+2025-06-02 03:41:06,992 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_11_results.tsv
+2025-06-02 03:41:07,616 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_12_results.tsv
+2025-06-02 03:41:08,255 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_13_results.tsv
+2025-06-02 03:41:08,925 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_14_results.tsv
+2025-06-02 03:41:09,567 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_15_results.tsv
+2025-06-02 03:41:10,213 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_16_results.tsv
+2025-06-02 03:41:10,845 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_17_results.tsv
+2025-06-02 03:41:11,538 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_18_results.tsv
+2025-06-02 03:41:12,243 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp02_73c60/test_19_results.tsv
+2025-06-02 03:41:12,244 - INFO - Computing evaluation metrics...
+2025-06-02 03:41:12,247 - INFO - NCBI MegaBLAST Accuracy: 0.2000
+2025-06-02 03:41:12,249 - INFO - Prediction time: 12.99 seconds
+2025-06-02 03:41:12,249 - INFO - Prediction memory usage: 0.0 MB
+2025-06-02 03:41:12,249 - INFO - Total memory usage: 0.0 MB
+2025-06-02 03:41:12,369 - INFO - 
+==================================================
+2025-06-02 03:41:12,370 - INFO - 3. FastEyeBLAST Classification
+2025-06-02 03:41:12,371 - INFO - ==================================================
+2025-06-02 03:41:12,371 - INFO - Using IVT version of FastEyeBLAST
+2025-06-02 03:41:12,420 - INFO - Training FastEyeBLAST classifier.
+2025-06-02 03:41:12,421 - INFO - Encoding scanpaths...
+2025-06-02 03:41:12,533 - INFO - Alphabet size: 21
+2025-06-02 03:41:12,534 - INFO - Bits per token: 5
+2025-06-02 03:41:12,535 - INFO - Tokens per 64-bit word: 12
+2025-06-02 03:41:12,535 - INFO - Packing scanpaths into words...
+2025-06-02 03:41:12,548 - INFO - Computing SimHash sketches...
+2025-06-02 03:41:13,082 - INFO - Building LSH index...
+2025-06-02 03:41:13,083 - INFO - FastEyeBLAST training completed in 0.66 seconds
+2025-06-02 03:41:13,084 - INFO - Training memory usage: 0.0 MB
+2025-06-02 03:41:13,084 - INFO - Evaluating FastEyeBLAST classifier.
+2025-06-02 03:41:13,129 - INFO - Evaluating classifier on 20 test samples...
+2025-06-02 03:41:16,771 - INFO - Computing evaluation metrics...
+2025-06-02 03:41:16,779 - INFO - FastEyeBLAST Accuracy: 0.5500
+2025-06-02 03:41:16,779 - INFO - Prediction time: 3.64 seconds
+2025-06-02 03:41:16,780 - INFO - Prediction memory usage: 0.0 MB
+2025-06-02 03:41:16,780 - INFO - Total memory usage: 0.0 MB
+2025-06-02 03:41:16,973 - INFO - 
+==================================================
+2025-06-02 03:41:16,974 - INFO - Plotting comparison results
+2025-06-02 03:41:16,974 - INFO - ==================================================
+2025-06-02 03:41:16,974 - INFO - Creating performance comparison chart at Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\performance_comparison.png.
+2025-06-02 03:41:17,496 - INFO - Saving detailed results to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\comparison_results.json.
+2025-06-02 03:41:17,498 - INFO - Results saved to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7/
+2025-06-02 03:41:17,498 - INFO - Performance comparison plot saved to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\performance_comparison.png
+2025-06-02 03:41:17,498 - INFO - Run parameters saved to Comparison_Results\20250602_034044_GazeBaseVR_IVT_task_sample2_test20_all_k7\run_parameters.json
+2025-06-02 03:41:17,498 - INFO - Comparison study completed.

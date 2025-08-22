@@ -1,0 +1,386 @@
+{
+  "Needleman-Wunsch": {
+    "accuracy": 0.14285714285714285,
+    "train_time": 1.110001802444458,
+    "prediction_time": 1675.3156309127808,
+    "memory_mb": 18.22265625,
+    "confusion_matrix": [
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1
+      ],
+      [
+        0,
+        3,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "report": {
+      "TALK": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "READ": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "VIDEO": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 5.0
+      },
+      "WALK": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.5,
+        "support": 3.0
+      },
+      "TYPE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 4.0
+      },
+      "SOLVE": {
+        "precision": 0.14285714285714285,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.15384615384615385,
+        "support": 6.0
+      },
+      "CYCLE": {
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1-score": 0.3333333333333333,
+        "support": 2.0
+      },
+      "accuracy": 0.14285714285714285,
+      "macro avg": {
+        "precision": 0.2704081632653061,
+        "recall": 0.17142857142857143,
+        "f1-score": 0.18184196755625326,
+        "support": 28.0
+      },
+      "weighted avg": {
+        "precision": 0.24489795918367346,
+        "recall": 0.14285714285714285,
+        "f1-score": 0.16136839351125065,
+        "support": 28.0
+      }
+    }
+  },
+  "NCBI MegaBLAST": {
+    "accuracy": 0.07142857142857142,
+    "train_time": 3.911165952682495,
+    "prediction_time": 71.74895763397217,
+    "memory_mb": 0.921875,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "report": {
+      "TALK": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "READ": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "VIDEO": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "WALK": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "TYPE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 4.0
+      },
+      "SOLVE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "CYCLE": {
+        "precision": 0.07142857142857142,
+        "recall": 1.0,
+        "f1-score": 0.13333333333333333,
+        "support": 2.0
+      },
+      "accuracy": 0.07142857142857142,
+      "macro avg": {
+        "precision": 0.01020408163265306,
+        "recall": 0.14285714285714285,
+        "f1-score": 0.019047619047619046,
+        "support": 28.0
+      },
+      "weighted avg": {
+        "precision": 0.00510204081632653,
+        "recall": 0.07142857142857142,
+        "f1-score": 0.009523809523809523,
+        "support": 28.0
+      }
+    }
+  },
+  "FastEyeBLAST": {
+    "accuracy": 0.07142857142857142,
+    "train_time": 28.708953142166138,
+    "prediction_time": 29.57448697090149,
+    "memory_mb": 21.19140625,
+    "confusion_matrix": [
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        3,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "report": {
+      "TALK": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "READ": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "VIDEO": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "WALK": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.4,
+        "support": 3.0
+      },
+      "TYPE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 4.0
+      },
+      "SOLVE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "CYCLE": {
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1-score": 0.3333333333333333,
+        "support": 2.0
+      },
+      "accuracy": 0.07142857142857142,
+      "macro avg": {
+        "precision": 0.10714285714285714,
+        "recall": 0.11904761904761904,
+        "f1-score": 0.10476190476190476,
+        "support": 28.0
+      },
+      "weighted avg": {
+        "precision": 0.07142857142857142,
+        "recall": 0.07142857142857142,
+        "f1-score": 0.06666666666666667,
+        "support": 28.0
+      }
+    }
+  }
+}

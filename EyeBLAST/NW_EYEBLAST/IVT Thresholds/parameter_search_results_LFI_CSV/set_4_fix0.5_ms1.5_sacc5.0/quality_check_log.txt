@@ -1,0 +1,24 @@
+LFI_CSV IVT Quality Check Results
+Parameters: thresh_fix=0.5, thresh_ms=1.5, thresh_sacc=5.0
+Files processed: 10
+Total tokens: 231294
+
+Overall Results:
+By token count:
+  Fixations: 1.45%
+  Microsaccades: 49.95%
+  Saccades: 48.60%
+
+By time spent:
+  Fixations: 0.14%
+  Microsaccades: 21.95%
+  Saccades: 77.90%
+
+Results by Task:
+  TALK: F=1.8%, M=49.9%, S=48.2% (54370 tokens)
+  READ: F=2.8%, M=49.9%, S=47.3% (34710 tokens)
+  VIDEO: F=2.1%, M=49.9%, S=48.0% (42991 tokens)
+  WALK: F=0.3%, M=50.0%, S=49.8% (23084 tokens)
+  TYPE: F=0.8%, M=50.0%, S=49.2% (23027 tokens)
+  SOLVE: F=0.5%, M=50.0%, S=49.5% (26887 tokens)
+  CYCLE: F=0.3%, M=50.0%, S=49.7% (26225 tokens)

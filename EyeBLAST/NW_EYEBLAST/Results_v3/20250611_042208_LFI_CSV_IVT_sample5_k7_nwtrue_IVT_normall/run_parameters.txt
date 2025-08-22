@@ -1,0 +1,12 @@
+Similarity Comparison Run v3: 20250611_042208
+==========================================
+
+Command: python compare_similarity_scores_v3.py --input-dir=LFI_CSV_IVT --sample-percentage=5 --k=7 --nw-nj=true --normalization-mode=all --output-dir=Results_v3
+
+Parameters:
+  input_dir: LFI_CSV_IVT
+  sample_percentage: 5
+  k: 7
+  nw_nj: true
+  normalization_mode: all
+  mode: IVT

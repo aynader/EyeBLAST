@@ -1,0 +1,9 @@
+{
+  "total_samples": 60,
+  "train_size": 30,
+  "test_size": 30,
+  "task_distribution": {
+    "Male": 30,
+    "Female": 30
+  }
+}

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/compare_plain_vs_gc.dir/src/compare_plain_vs_gc.cpp.o -o compare_plain_vs_gc  libfasteyeblast.a 

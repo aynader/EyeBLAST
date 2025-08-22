@@ -1,0 +1,13 @@
+set,thresh_fix,thresh_ms,thresh_sacc,scale_factor,smooth_window,notes,fix_pct,ms_pct,sacc_pct,mse,output_folder,files_processed
+1,1.0,3.0,20.0,40.0,5,Very low thresholds to maximize fixations,0.0,1.4966666666666668,98.50333333333333,5655.826540740741,parameter_search_results_S01_MindLink\set_1_fix1.0_ms3.0_sacc20.0_scale40.0_smooth5,3
+2,1.5,5.0,25.0,40.0,5,"Low thresholds, slightly higher microsaccade threshold",0.0,12.333333333333334,87.66666666666667,5006.060007407408,parameter_search_results_S01_MindLink\set_2_fix1.5_ms5.0_sacc25.0_scale40.0_smooth5,3
+3,2.0,6.0,30.0,40.0,7,Moderate thresholds with medium scale factor,0.0,14.666666666666666,85.33333333333333,4886.640007407407,parameter_search_results_S01_MindLink\set_3_fix2.0_ms6.0_sacc30.0_scale40.0_smooth7,3
+4,2.5,6.0,35.0,50.0,7,Current defaults,0.0,8.123333333333333,91.87666666666667,5239.892762962963,parameter_search_results_S01_MindLink\set_4_fix2.5_ms6.0_sacc35.0_scale50.0_smooth7,3
+5,2.0,5.0,25.0,50.0,7,Lower thresholds with medium scale factor,0.0,3.986666666666667,96.01333333333334,5492.670674074075,parameter_search_results_S01_MindLink\set_5_fix2.0_ms5.0_sacc25.0_scale50.0_smooth7,3
+6,1.5,4.0,20.0,50.0,7,Very low thresholds with medium scale factor,0.0,1.15,98.85000000000001,5679.197266666667,parameter_search_results_S01_MindLink\set_6_fix1.5_ms4.0_sacc20.0_scale50.0_smooth7,3
+7,1.0,3.0,15.0,50.0,7,Extremely low thresholds with medium scale factor,0.0,0.4266666666666667,99.57333333333334,5728.477162962964,parameter_search_results_S01_MindLink\set_7_fix1.0_ms3.0_sacc15.0_scale50.0_smooth7,3
+8,0.8,2.5,15.0,40.0,9,Lowest thresholds with higher smoothing,0.0,0.006666666666666667,99.99333333333334,5757.411429629629,parameter_search_results_S01_MindLink\set_8_fix0.8_ms2.5_sacc15.0_scale40.0_smooth9,3
+9,1.2,4.0,20.0,45.0,9,Low thresholds with higher smoothing,0.0,1.6633333333333333,98.33666666666666,5644.647651851851,parameter_search_results_S01_MindLink\set_9_fix1.2_ms4.0_sacc20.0_scale45.0_smooth9,3
+10,0.5,2.0,10.0,30.0,9,Minimum thresholds with lowest scale factor,0.0,0.8633333333333333,99.13666666666666,5698.644096296296,parameter_search_results_S01_MindLink\set_10_fix0.5_ms2.0_sacc10.0_scale30.0_smooth9,3
+11,0.7,3.0,20.0,35.0,7,Very low fixation threshold with medium other parameters,0.0,2.0366666666666666,97.96333333333332,5619.74134074074,parameter_search_results_S01_MindLink\set_11_fix0.7_ms3.0_sacc20.0_scale35.0_smooth7,3
+12,1.0,4.0,25.0,35.0,7,Low thresholds with lower scale factor,0.0,6.513333333333333,93.48666666666666,5335.5625407407415,parameter_search_results_S01_MindLink\set_12_fix1.0_ms4.0_sacc25.0_scale35.0_smooth7,3

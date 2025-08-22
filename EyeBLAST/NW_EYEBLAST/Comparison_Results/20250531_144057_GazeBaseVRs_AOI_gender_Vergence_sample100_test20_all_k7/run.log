@@ -1,0 +1,298 @@
+2025-05-31 14:40:57,628 - INFO - Starting comparison study with the following parameters:
+2025-05-31 14:40:57,628 - INFO -   band_width: 5
+2025-05-31 14:40:57,628 - INFO -   comparison: all
+2025-05-31 14:40:57,629 - INFO -   data_type: gender
+2025-05-31 14:40:57,629 - INFO -   gender_file: None
+2025-05-31 14:40:57,629 - INFO -   input_dir: GazeBaseVR_AOIs
+2025-05-31 14:40:57,629 - INFO -   k: 7
+2025-05-31 14:40:57,630 - INFO -   max_candidates: 20
+2025-05-31 14:40:57,630 - INFO -   n_jobs: -1
+2025-05-31 14:40:57,630 - INFO -   nw_nj: true
+2025-05-31 14:40:57,630 - INFO -   output_dir: Comparison_Results
+2025-05-31 14:40:57,630 - INFO -   random: False
+2025-05-31 14:40:57,630 - INFO -   sample_percentage: 100
+2025-05-31 14:40:57,630 - INFO -   seed_length: 3
+2025-05-31 14:40:57,640 - INFO -   task_filter: 1
+2025-05-31 14:40:57,640 - INFO -   test_size: 0.2
+2025-05-31 14:40:57,640 - INFO -   variable_word_size: 64
+2025-05-31 14:40:57,640 - INFO -   word_size: 28
+2025-05-31 14:40:57,642 - INFO - Using fixed seed for reproducibility (42)
+2025-05-31 14:40:57,642 - INFO - Auto-selected GazeBaseVR gender file: C:\Users\aynad\Desktop\Home\TUM\Research\Datasets\GazeBaseVR\participant_details.xlsx
+2025-05-31 14:40:57,642 - INFO - Loading data from GazeBaseVR_AOIs...
+2025-05-31 14:40:57,642 - INFO - Filtering gender classification to only use data from task 1
+2025-05-31 14:40:57,643 - INFO - Detected data format: AOI
+2025-05-31 14:40:57,643 - INFO - Loading AOI-encoded sequences from GazeBaseVR_AOIs\encoded_sequences.json
+2025-05-31 14:40:57,973 - INFO - Loading gender information from C:\Users\aynad\Desktop\Home\TUM\Research\Datasets\GazeBaseVR\participant_details.xlsx
+2025-05-31 14:40:58,287 - INFO - After filtering duplicates and non-binary genders, found 404 participants
+2025-05-31 14:40:58,294 - INFO - Loaded gender information for 404 subjects (Male/Female only)
+2025-05-31 14:40:58,308 - INFO - Loaded 788 scanpaths with 2 different labels
+2025-05-31 14:40:58,308 - INFO - Label distribution:
+2025-05-31 14:40:58,308 - INFO -   Female: 420 samples
+2025-05-31 14:40:58,309 - INFO -   Male: 368 samples
+2025-05-31 14:40:58,319 - INFO - Splitting data into train/test sets (80/20)...
+2025-05-31 14:40:58,320 - INFO - Training set: 630 samples
+2025-05-31 14:40:58,320 - INFO - Test set: 158 samples
+2025-05-31 14:40:58,321 - INFO - 
+==================================================
+2025-05-31 14:40:58,321 - INFO - 1. Needleman-Wunsch Classification
+2025-05-31 14:40:58,322 - INFO - ==================================================
+2025-05-31 14:40:58,322 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-31 14:40:58,365 - INFO - Training Needleman-Wunsch classifier...
+2025-05-31 14:40:58,366 - INFO - Detected AOI-encoded data for Needleman-Wunsch
+2025-05-31 14:40:58,366 - INFO - Average AOI sequence length: 14874.23 characters
+2025-05-31 14:40:58,366 - INFO - Using max_seq_length of 3000 for AOI data
+2025-05-31 14:40:58,367 - INFO - Using batch size of 5 for AOI data
+2025-05-31 14:40:58,367 - INFO - Needleman-Wunsch training completed in 0.00 seconds
+2025-05-31 14:40:58,367 - INFO - Training memory usage: 0.0 MB
+2025-05-31 14:40:58,368 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-31 14:40:58,407 - INFO - Evaluating classifier on 158 test samples...
+2025-05-31 14:40:58,408 - INFO - Predicting labels for 158 test samples using Needleman-Wunsch...
+2025-05-31 14:40:58,408 - INFO - Using memory-optimized approach for AOI data
+2025-05-31 14:40:58,408 - INFO - Average test sequence length: 14877.32 characters
+2025-05-31 14:40:58,409 - INFO - Using test batch size of 5
+2025-05-31 14:40:58,409 - INFO - Processing test batch 1/32: samples 0-4
+2025-05-31 14:41:57,775 - INFO - Processing test batch 2/32: samples 5-9
+2025-05-31 14:43:00,677 - INFO - Processing test batch 3/32: samples 10-14
+2025-05-31 14:44:04,976 - INFO - Processing test batch 4/32: samples 15-19
+2025-05-31 14:45:03,953 - INFO - Processing test batch 5/32: samples 20-24
+2025-05-31 14:46:01,258 - INFO - Processing test batch 6/32: samples 25-29
+2025-05-31 14:46:58,549 - INFO - Processing test batch 7/32: samples 30-34
+2025-05-31 14:47:54,338 - INFO - Processing test batch 8/32: samples 35-39
+2025-05-31 14:48:49,087 - INFO - Processing test batch 9/32: samples 40-44
+2025-05-31 14:49:44,520 - INFO - Processing test batch 10/32: samples 45-49
+2025-05-31 14:50:42,091 - INFO - Processing test batch 11/32: samples 50-54
+2025-05-31 14:51:41,060 - INFO - Processing test batch 12/32: samples 55-59
+2025-05-31 14:52:41,029 - INFO - Processing test batch 13/32: samples 60-64
+2025-05-31 14:53:39,744 - INFO - Processing test batch 14/32: samples 65-69
+2025-05-31 14:54:36,490 - INFO - Processing test batch 15/32: samples 70-74
+2025-05-31 14:55:35,078 - INFO - Processing test batch 16/32: samples 75-79
+2025-05-31 14:56:30,640 - INFO - Processing test batch 17/32: samples 80-84
+2025-05-31 14:57:27,441 - INFO - Processing test batch 18/32: samples 85-89
+2025-05-31 14:58:22,198 - INFO - Processing test batch 19/32: samples 90-94
+2025-05-31 14:59:15,866 - INFO - Processing test batch 20/32: samples 95-99
+2025-05-31 15:00:12,729 - INFO - Processing test batch 21/32: samples 100-104
+2025-05-31 15:01:11,143 - INFO - Processing test batch 22/32: samples 105-109
+2025-05-31 15:02:13,110 - INFO - Processing test batch 23/32: samples 110-114
+2025-05-31 15:03:13,647 - INFO - Processing test batch 24/32: samples 115-119
+2025-05-31 15:04:11,524 - INFO - Processing test batch 25/32: samples 120-124
+2025-05-31 15:05:13,617 - INFO - Processing test batch 26/32: samples 125-129
+2025-05-31 15:06:10,734 - INFO - Processing test batch 27/32: samples 130-134
+2025-05-31 15:07:05,239 - INFO - Processing test batch 28/32: samples 135-139
+2025-05-31 15:07:59,754 - INFO - Processing test batch 29/32: samples 140-144
+2025-05-31 15:08:56,672 - INFO - Processing test batch 30/32: samples 145-149
+2025-05-31 15:09:52,029 - INFO - Processing test batch 31/32: samples 150-154
+2025-05-31 15:10:55,035 - INFO - Processing test batch 32/32: samples 155-157
+2025-05-31 15:11:28,987 - INFO - Computing evaluation metrics...
+2025-05-31 15:11:28,994 - INFO - Needleman-Wunsch Accuracy: 0.5633
+2025-05-31 15:11:28,994 - INFO - Prediction time: 1830.58 seconds
+2025-05-31 15:11:28,994 - INFO - Prediction memory usage: 41.4 MB
+2025-05-31 15:11:28,995 - INFO - Total memory usage: 41.4 MB
+2025-05-31 15:11:29,181 - INFO - 
+==================================================
+2025-05-31 15:11:29,182 - INFO - 2. NCBI MegaBLAST Classification
+2025-05-31 15:11:29,182 - INFO - ==================================================
+2025-05-31 15:11:29,240 - INFO - Training MegaBLAST classifier...
+2025-05-31 15:11:29,241 - INFO - Detected AOI-encoded data for MegaBLAST
+2025-05-31 15:11:29,242 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmp53gb679x
+2025-05-31 15:11:29,242 - INFO - Converting training scanpaths to FASTA format...
+2025-05-31 15:11:46,861 - INFO - Creating BLAST database from training data...
+2025-05-31 15:11:47,557 - INFO - NCBI MegaBLAST training completed in 18.32 seconds
+2025-05-31 15:11:47,558 - INFO - Training memory usage: 0.2 MB
+2025-05-31 15:11:47,558 - INFO - Evaluating NCBI MegaBLAST classifier...
+2025-05-31 15:11:47,641 - INFO - Evaluating classifier on 158 test samples...
+2025-05-31 15:11:47,642 - INFO - Predicting labels for 158 test samples using MegaBLAST...
+2025-05-31 15:11:48,399 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_0_results.tsv
+2025-05-31 15:11:49,092 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_1_results.tsv
+2025-05-31 15:11:49,755 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_2_results.tsv
+2025-05-31 15:11:50,497 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_3_results.tsv
+2025-05-31 15:11:51,240 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_4_results.tsv
+2025-05-31 15:11:51,998 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_5_results.tsv
+2025-05-31 15:11:52,733 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_6_results.tsv
+2025-05-31 15:11:53,490 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_7_results.tsv
+2025-05-31 15:11:54,214 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_8_results.tsv
+2025-05-31 15:11:54,961 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_9_results.tsv
+2025-05-31 15:11:55,676 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_10_results.tsv
+2025-05-31 15:11:56,408 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_11_results.tsv
+2025-05-31 15:11:57,077 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_12_results.tsv
+2025-05-31 15:11:57,810 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_13_results.tsv
+2025-05-31 15:11:58,574 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_14_results.tsv
+2025-05-31 15:11:59,353 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_15_results.tsv
+2025-05-31 15:12:00,005 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_16_results.tsv
+2025-05-31 15:12:00,721 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_17_results.tsv
+2025-05-31 15:12:01,454 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_18_results.tsv
+2025-05-31 15:12:02,160 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_19_results.tsv
+2025-05-31 15:12:02,909 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_20_results.tsv
+2025-05-31 15:12:03,652 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_21_results.tsv
+2025-05-31 15:12:04,388 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_22_results.tsv
+2025-05-31 15:12:04,928 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_23_results.tsv
+2025-05-31 15:12:05,635 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_24_results.tsv
+2025-05-31 15:12:06,369 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_25_results.tsv
+2025-05-31 15:12:07,159 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_26_results.tsv
+2025-05-31 15:12:07,910 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_27_results.tsv
+2025-05-31 15:12:08,625 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_28_results.tsv
+2025-05-31 15:12:09,376 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_29_results.tsv
+2025-05-31 15:12:10,071 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_30_results.tsv
+2025-05-31 15:12:10,795 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_31_results.tsv
+2025-05-31 15:12:11,553 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_32_results.tsv
+2025-05-31 15:12:12,269 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_33_results.tsv
+2025-05-31 15:12:12,979 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_34_results.tsv
+2025-05-31 15:12:13,673 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_35_results.tsv
+2025-05-31 15:12:14,414 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_36_results.tsv
+2025-05-31 15:12:15,080 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_37_results.tsv
+2025-05-31 15:12:15,796 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_38_results.tsv
+2025-05-31 15:12:16,545 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_39_results.tsv
+2025-05-31 15:12:17,259 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_40_results.tsv
+2025-05-31 15:12:17,998 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_41_results.tsv
+2025-05-31 15:12:18,739 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_42_results.tsv
+2025-05-31 15:12:19,510 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_43_results.tsv
+2025-05-31 15:12:20,255 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_44_results.tsv
+2025-05-31 15:12:20,979 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_45_results.tsv
+2025-05-31 15:12:21,729 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_46_results.tsv
+2025-05-31 15:12:22,449 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_47_results.tsv
+2025-05-31 15:12:23,114 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_48_results.tsv
+2025-05-31 15:12:23,851 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_49_results.tsv
+2025-05-31 15:12:24,611 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_50_results.tsv
+2025-05-31 15:12:25,339 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_51_results.tsv
+2025-05-31 15:12:26,044 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_52_results.tsv
+2025-05-31 15:12:26,673 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_53_results.tsv
+2025-05-31 15:12:27,414 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_54_results.tsv
+2025-05-31 15:12:28,151 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_55_results.tsv
+2025-05-31 15:12:28,880 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_56_results.tsv
+2025-05-31 15:12:29,633 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_57_results.tsv
+2025-05-31 15:12:30,400 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_58_results.tsv
+2025-05-31 15:12:31,173 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_59_results.tsv
+2025-05-31 15:12:31,864 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_60_results.tsv
+2025-05-31 15:12:32,603 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_61_results.tsv
+2025-05-31 15:12:33,347 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_62_results.tsv
+2025-05-31 15:12:34,042 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_63_results.tsv
+2025-05-31 15:12:34,719 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_64_results.tsv
+2025-05-31 15:12:35,378 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_65_results.tsv
+2025-05-31 15:12:36,067 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_66_results.tsv
+2025-05-31 15:12:36,759 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_67_results.tsv
+2025-05-31 15:12:37,524 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_68_results.tsv
+2025-05-31 15:12:38,215 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_69_results.tsv
+2025-05-31 15:12:38,964 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_70_results.tsv
+2025-05-31 15:12:39,698 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_71_results.tsv
+2025-05-31 15:12:40,401 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_72_results.tsv
+2025-05-31 15:12:41,103 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_73_results.tsv
+2025-05-31 15:12:41,867 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_74_results.tsv
+2025-05-31 15:12:42,480 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_75_results.tsv
+2025-05-31 15:12:43,282 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_76_results.tsv
+2025-05-31 15:12:44,019 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_77_results.tsv
+2025-05-31 15:12:44,728 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_78_results.tsv
+2025-05-31 15:12:45,439 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_79_results.tsv
+2025-05-31 15:12:46,192 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_80_results.tsv
+2025-05-31 15:12:47,262 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_81_results.tsv
+2025-05-31 15:12:47,995 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_82_results.tsv
+2025-05-31 15:12:48,754 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_83_results.tsv
+2025-05-31 15:12:49,421 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_84_results.tsv
+2025-05-31 15:12:50,143 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_85_results.tsv
+2025-05-31 15:12:50,917 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_86_results.tsv
+2025-05-31 15:12:51,636 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_87_results.tsv
+2025-05-31 15:12:52,372 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_88_results.tsv
+2025-05-31 15:12:53,083 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_89_results.tsv
+2025-05-31 15:12:53,780 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_90_results.tsv
+2025-05-31 15:12:54,512 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_91_results.tsv
+2025-05-31 15:12:55,154 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_92_results.tsv
+2025-05-31 15:12:55,901 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_93_results.tsv
+2025-05-31 15:12:56,650 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_94_results.tsv
+2025-05-31 15:12:57,284 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_95_results.tsv
+2025-05-31 15:12:58,014 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_96_results.tsv
+2025-05-31 15:12:58,727 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_97_results.tsv
+2025-05-31 15:12:59,374 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_98_results.tsv
+2025-05-31 15:13:00,075 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_99_results.tsv
+2025-05-31 15:13:00,828 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_100_results.tsv
+2025-05-31 15:13:01,594 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_101_results.tsv
+2025-05-31 15:13:02,328 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_102_results.tsv
+2025-05-31 15:13:03,089 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_103_results.tsv
+2025-05-31 15:13:03,820 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_104_results.tsv
+2025-05-31 15:13:04,555 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_105_results.tsv
+2025-05-31 15:13:05,307 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_106_results.tsv
+2025-05-31 15:13:06,013 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_107_results.tsv
+2025-05-31 15:13:06,752 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_108_results.tsv
+2025-05-31 15:13:07,443 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_109_results.tsv
+2025-05-31 15:13:08,175 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_110_results.tsv
+2025-05-31 15:13:08,922 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_111_results.tsv
+2025-05-31 15:13:09,583 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_112_results.tsv
+2025-05-31 15:13:10,276 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_113_results.tsv
+2025-05-31 15:13:11,030 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_114_results.tsv
+2025-05-31 15:13:11,791 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_115_results.tsv
+2025-05-31 15:13:12,544 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_116_results.tsv
+2025-05-31 15:13:13,235 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_117_results.tsv
+2025-05-31 15:13:13,978 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_118_results.tsv
+2025-05-31 15:13:14,744 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_119_results.tsv
+2025-05-31 15:13:15,397 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_120_results.tsv
+2025-05-31 15:13:16,105 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_121_results.tsv
+2025-05-31 15:13:16,801 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_122_results.tsv
+2025-05-31 15:13:17,534 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_123_results.tsv
+2025-05-31 15:13:18,273 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_124_results.tsv
+2025-05-31 15:13:19,079 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_125_results.tsv
+2025-05-31 15:13:19,741 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_126_results.tsv
+2025-05-31 15:13:20,480 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_127_results.tsv
+2025-05-31 15:13:21,208 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_128_results.tsv
+2025-05-31 15:13:21,875 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_129_results.tsv
+2025-05-31 15:13:22,520 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_130_results.tsv
+2025-05-31 15:13:23,251 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_131_results.tsv
+2025-05-31 15:13:24,028 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_132_results.tsv
+2025-05-31 15:13:24,704 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_133_results.tsv
+2025-05-31 15:13:25,425 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_134_results.tsv
+2025-05-31 15:13:26,095 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_135_results.tsv
+2025-05-31 15:13:26,770 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_136_results.tsv
+2025-05-31 15:13:27,518 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_137_results.tsv
+2025-05-31 15:13:28,229 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_138_results.tsv
+2025-05-31 15:13:28,900 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_139_results.tsv
+2025-05-31 15:13:29,605 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_140_results.tsv
+2025-05-31 15:13:30,260 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_141_results.tsv
+2025-05-31 15:13:30,964 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_142_results.tsv
+2025-05-31 15:13:31,636 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_143_results.tsv
+2025-05-31 15:13:32,293 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_144_results.tsv
+2025-05-31 15:13:33,027 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_145_results.tsv
+2025-05-31 15:13:33,778 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_146_results.tsv
+2025-05-31 15:13:34,524 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_147_results.tsv
+2025-05-31 15:13:35,181 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_148_results.tsv
+2025-05-31 15:13:35,895 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_149_results.tsv
+2025-05-31 15:13:36,656 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_150_results.tsv
+2025-05-31 15:13:37,367 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_151_results.tsv
+2025-05-31 15:13:38,102 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_152_results.tsv
+2025-05-31 15:13:38,826 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_153_results.tsv
+2025-05-31 15:13:39,619 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_154_results.tsv
+2025-05-31 15:13:40,357 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_155_results.tsv
+2025-05-31 15:13:41,121 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_156_results.tsv
+2025-05-31 15:13:41,884 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp53gb679x/test_157_results.tsv
+2025-05-31 15:13:41,884 - INFO - Computing evaluation metrics...
+2025-05-31 15:13:41,891 - INFO - NCBI MegaBLAST Accuracy: 0.4684
+2025-05-31 15:13:41,891 - INFO - Prediction time: 114.24 seconds
+2025-05-31 15:13:41,891 - INFO - Prediction memory usage: -12.1 MB
+2025-05-31 15:13:41,892 - INFO - Total memory usage: -12.0 MB
+2025-05-31 15:13:41,983 - INFO - 
+==================================================
+2025-05-31 15:13:41,983 - INFO - 3. FastEyeBLAST Classification
+2025-05-31 15:13:41,983 - INFO - ==================================================
+2025-05-31 15:13:41,983 - INFO - Using AOI version of FastEyeBLAST
+2025-05-31 15:13:42,038 - INFO - Training FastEyeBLAST classifier...
+2025-05-31 15:13:42,038 - INFO - Encoding scanpaths...
+2025-05-31 15:13:42,730 - INFO - Alphabet size: 16
+2025-05-31 15:13:42,731 - INFO - Bits per token: 4
+2025-05-31 15:13:42,731 - INFO - Tokens per 64-bit word: 16
+2025-05-31 15:13:42,731 - INFO - Packing scanpaths into words...
+2025-05-31 15:13:44,199 - INFO - Computing SimHash sketches...
+2025-05-31 15:14:38,983 - INFO - Building LSH index...
+2025-05-31 15:14:38,987 - INFO - FastEyeBLAST training completed in 56.95 seconds
+2025-05-31 15:14:38,988 - INFO - Training memory usage: 102.9 MB
+2025-05-31 15:14:38,989 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-31 15:14:39,062 - INFO - Evaluating classifier on 158 test samples...
+2025-05-31 15:15:50,075 - INFO - Computing evaluation metrics...
+2025-05-31 15:15:50,079 - INFO - FastEyeBLAST Accuracy: 0.4747
+2025-05-31 15:15:50,079 - INFO - Prediction time: 71.01 seconds
+2025-05-31 15:15:50,080 - INFO - Prediction memory usage: 1.9 MB
+2025-05-31 15:15:50,080 - INFO - Total memory usage: 104.8 MB
+2025-05-31 15:15:50,164 - INFO - 
+==================================================
+2025-05-31 15:15:50,165 - INFO - Plotting comparison results
+2025-05-31 15:15:50,165 - INFO - ==================================================
+2025-05-31 15:15:50,165 - INFO - Creating performance comparison chart at Comparison_Results\20250531_144057_GazeBaseVRs_AOI_gender_Vergence_sample100_test20_all_k7\performance_comparison.png...
+2025-05-31 15:15:50,302 - INFO - Saving detailed results to Comparison_Results\20250531_144057_GazeBaseVRs_AOI_gender_Vergence_sample100_test20_all_k7\comparison_results.json...
+2025-05-31 15:15:50,304 - INFO - Results saved to Comparison_Results\20250531_144057_GazeBaseVRs_AOI_gender_Vergence_sample100_test20_all_k7/
+2025-05-31 15:15:50,304 - INFO - Performance comparison plot saved to Comparison_Results\20250531_144057_GazeBaseVRs_AOI_gender_Vergence_sample100_test20_all_k7\performance_comparison.png
+2025-05-31 15:15:50,304 - INFO - Run parameters saved to Comparison_Results\20250531_144057_GazeBaseVRs_AOI_gender_Vergence_sample100_test20_all_k7\run_parameters.json
+2025-05-31 15:15:50,305 - INFO - Comparison study completed.

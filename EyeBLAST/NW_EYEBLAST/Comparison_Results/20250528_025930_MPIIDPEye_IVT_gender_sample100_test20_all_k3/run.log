@@ -1,0 +1,114 @@
+2025-05-28 02:59:30,030 - INFO - Starting comparison study with the following parameters:
+2025-05-28 02:59:30,030 - INFO -   band_width: 5
+2025-05-28 02:59:30,031 - INFO -   comparison: all
+2025-05-28 02:59:30,031 - INFO -   data_type: gender
+2025-05-28 02:59:30,031 - INFO -   gender_file: None
+2025-05-28 02:59:30,032 - INFO -   input_dir: MPIIDPEye_IVT
+2025-05-28 02:59:30,032 - INFO -   k: 3
+2025-05-28 02:59:30,032 - INFO -   max_candidates: 20
+2025-05-28 02:59:30,032 - INFO -   n_jobs: -1
+2025-05-28 02:59:30,033 - INFO -   nw_nj: true
+2025-05-28 02:59:30,033 - INFO -   output_dir: Comparison_Results
+2025-05-28 02:59:30,033 - INFO -   random: False
+2025-05-28 02:59:30,033 - INFO -   sample_percentage: 100
+2025-05-28 02:59:30,033 - INFO -   seed_length: 3
+2025-05-28 02:59:30,035 - INFO -   test_size: 0.2
+2025-05-28 02:59:30,035 - INFO -   word_size: 28
+2025-05-28 02:59:30,036 - INFO - Using fixed seed for reproducibility (42)
+2025-05-28 02:59:30,036 - INFO - Auto-selected MPIIDPEye gender file: C:\Users\aynad\Desktop\Home\TUM\Research\Datasets\MPIIDPEye\Ground_Truth.csv
+2025-05-28 02:59:30,037 - INFO - Loading data from MPIIDPEye_IVT...
+2025-05-28 02:59:30,037 - INFO - Detected data format: IVT
+2025-05-28 02:59:30,038 - INFO - Loading gender information from C:\Users\aynad\Desktop\Home\TUM\Research\Datasets\MPIIDPEye\Ground_Truth.csv
+2025-05-28 02:59:30,041 - WARNING - Gender file columns not recognized. Available columns: ['Participant', 'Gender']
+2025-05-28 02:59:30,043 - INFO - After filtering duplicates and non-binary genders, found 20 participants
+2025-05-28 02:59:30,044 - INFO - Loaded gender information for 20 subjects (Male/Female only)
+2025-05-28 02:59:30,044 - INFO - Loading 60 scanpath files from MPIIDPEye_IVT...
+2025-05-28 02:59:30,051 - INFO - Loaded 60 scanpaths with 2 different labels
+2025-05-28 02:59:30,052 - INFO - Label distribution:
+2025-05-28 02:59:30,052 - INFO -   Female: 30 samples
+2025-05-28 02:59:30,052 - INFO -   Male: 30 samples
+2025-05-28 02:59:30,052 - INFO - Splitting data into train/test sets (80/20)...
+2025-05-28 02:59:30,053 - INFO - Training set: 48 samples
+2025-05-28 02:59:30,054 - INFO - Test set: 12 samples
+2025-05-28 02:59:30,055 - INFO - 
+==================================================
+2025-05-28 02:59:30,055 - INFO - 1. Needleman-Wunsch Classification
+2025-05-28 02:59:30,055 - INFO - ==================================================
+2025-05-28 02:59:30,056 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-28 02:59:30,090 - INFO - Training Needleman-Wunsch classifier...
+2025-05-28 02:59:30,090 - INFO - Detected IVT-encoded data for Needleman-Wunsch
+2025-05-28 02:59:30,104 - INFO - Needleman-Wunsch training completed in 0.01 seconds
+2025-05-28 02:59:30,104 - INFO - Training memory usage: 0.2 MB
+2025-05-28 02:59:30,105 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-28 02:59:30,140 - INFO - Evaluating classifier on 12 test samples...
+2025-05-28 02:59:30,142 - INFO - Predicting labels for 12 test samples using Needleman-Wunsch...
+2025-05-28 02:59:30,142 - INFO - Split test data into 12 batches
+2025-05-28 02:59:30,142 - INFO - Processing 12 batches in parallel using 32 jobs
+2025-05-28 02:59:32,845 - INFO - Computing evaluation metrics...
+2025-05-28 02:59:32,850 - INFO - Needleman-Wunsch Accuracy: 0.3333
+2025-05-28 02:59:32,851 - INFO - Prediction time: 2.70 seconds
+2025-05-28 02:59:32,851 - INFO - Prediction memory usage: 3.5 MB
+2025-05-28 02:59:32,851 - INFO - Total memory usage: 3.7 MB
+2025-05-28 02:59:33,010 - INFO - 
+==================================================
+2025-05-28 02:59:33,011 - INFO - 2. NCBI MegaBLAST Classification
+2025-05-28 02:59:33,011 - INFO - ==================================================
+2025-05-28 02:59:33,049 - INFO - Training MegaBLAST classifier...
+2025-05-28 02:59:33,049 - INFO - Detected IVT-encoded data for MegaBLAST
+2025-05-28 02:59:33,050 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmpgwovbtfl
+2025-05-28 02:59:33,051 - INFO - Converting training scanpaths to FASTA format...
+2025-05-28 02:59:33,665 - INFO - Creating BLAST database from training data...
+2025-05-28 02:59:34,383 - INFO - NCBI MegaBLAST training completed in 1.33 seconds
+2025-05-28 02:59:34,384 - INFO - Training memory usage: 0.4 MB
+2025-05-28 02:59:34,384 - INFO - Evaluating NCBI MegaBLAST classifier...
+2025-05-28 02:59:34,425 - INFO - Evaluating classifier on 12 test samples...
+2025-05-28 02:59:34,426 - INFO - Predicting labels for 12 test samples using MegaBLAST...
+2025-05-28 02:59:35,511 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_0_results.tsv
+2025-05-28 02:59:36,036 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_1_results.tsv
+2025-05-28 02:59:36,766 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_2_results.tsv
+2025-05-28 02:59:37,405 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_3_results.tsv
+2025-05-28 02:59:38,148 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_4_results.tsv
+2025-05-28 02:59:38,802 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_5_results.tsv
+2025-05-28 02:59:39,538 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_6_results.tsv
+2025-05-28 02:59:40,186 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_7_results.tsv
+2025-05-28 02:59:41,144 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_8_results.tsv
+2025-05-28 02:59:41,808 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_9_results.tsv
+2025-05-28 02:59:42,475 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_10_results.tsv
+2025-05-28 02:59:43,346 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpgwovbtfl/test_11_results.tsv
+2025-05-28 02:59:43,347 - INFO - Computing evaluation metrics...
+2025-05-28 02:59:43,351 - INFO - NCBI MegaBLAST Accuracy: 0.3333
+2025-05-28 02:59:43,352 - INFO - Prediction time: 8.92 seconds
+2025-05-28 02:59:43,352 - INFO - Prediction memory usage: 0.0 MB
+2025-05-28 02:59:43,352 - INFO - Total memory usage: 0.5 MB
+2025-05-28 02:59:43,437 - INFO - 
+==================================================
+2025-05-28 02:59:43,437 - INFO - 3. FastEyeBLAST Classification
+2025-05-28 02:59:43,439 - INFO - ==================================================
+2025-05-28 02:59:43,439 - INFO - Using IVT version of FastEyeBLAST
+2025-05-28 02:59:43,481 - INFO - Training FastEyeBLAST classifier...
+2025-05-28 02:59:43,482 - INFO - Encoding scanpaths...
+2025-05-28 02:59:43,539 - INFO - Alphabet size: 21
+2025-05-28 02:59:43,540 - INFO - Bits per token: 5
+2025-05-28 02:59:43,541 - INFO - Tokens per 64-bit word: 12
+2025-05-28 02:59:43,541 - INFO - Packing scanpaths into words...
+2025-05-28 02:59:43,548 - INFO - Computing SimHash sketches...
+2025-05-28 02:59:43,803 - INFO - Building LSH index...
+2025-05-28 02:59:43,804 - INFO - FastEyeBLAST training completed in 0.32 seconds
+2025-05-28 02:59:43,804 - INFO - Training memory usage: 0.1 MB
+2025-05-28 02:59:43,804 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-28 02:59:43,844 - INFO - Evaluating classifier on 12 test samples...
+2025-05-28 02:59:46,541 - INFO - Computing evaluation metrics...
+2025-05-28 02:59:46,544 - INFO - FastEyeBLAST Accuracy: 0.5000
+2025-05-28 02:59:46,544 - INFO - Prediction time: 2.70 seconds
+2025-05-28 02:59:46,545 - INFO - Prediction memory usage: 0.9 MB
+2025-05-28 02:59:46,545 - INFO - Total memory usage: 1.1 MB
+2025-05-28 02:59:46,622 - INFO - 
+==================================================
+2025-05-28 02:59:46,622 - INFO - Plotting comparison results
+2025-05-28 02:59:46,623 - INFO - ==================================================
+2025-05-28 02:59:46,623 - INFO - Creating performance comparison chart at Comparison_Results\20250528_025930_MPIIDPEye_IVT_gender_sample100_test20_all_k3\performance_comparison.png...
+2025-05-28 02:59:46,756 - INFO - Saving detailed results to Comparison_Results\20250528_025930_MPIIDPEye_IVT_gender_sample100_test20_all_k3\comparison_results.json...
+2025-05-28 02:59:46,757 - INFO - Results saved to Comparison_Results\20250528_025930_MPIIDPEye_IVT_gender_sample100_test20_all_k3/
+2025-05-28 02:59:46,758 - INFO - Performance comparison plot saved to Comparison_Results\20250528_025930_MPIIDPEye_IVT_gender_sample100_test20_all_k3\performance_comparison.png
+2025-05-28 02:59:46,758 - INFO - Run parameters saved to Comparison_Results\20250528_025930_MPIIDPEye_IVT_gender_sample100_test20_all_k3\run_parameters.json
+2025-05-28 02:59:46,758 - INFO - Comparison study completed.

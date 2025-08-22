@@ -1,0 +1,55 @@
+{
+  "plain_eyeblast": {
+    "1_to_1": {
+      "alice_file": "Alice/query.json",
+      "bob_file": "Bob_Single/S_1002_S1_1_VRG_tokens.json",
+      "runs": 3,
+      "plain_times": [0.0024, 0.0022, 0.0021],
+      "pp_times": [0.7260, 0.6427, 0.6185],
+      "avg_plain": 0.0022,
+      "avg_pp": 0.6624,
+      "speedup_factor": 297.17
+    },
+    "1_to_n": {
+      "alice_file": "Alice/query.json",
+      "bob_files": ["Bob directory with 20 files"],
+      "database_size": 20,
+      "runs": 3,
+      "plain_times": [0.0142, 0.0140, 0.0144],
+      "pp_times": [16.995, 13.132, 13.146],
+      "avg_plain": 0.0142,
+      "avg_pp": 14.424,
+      "speedup_factor": 1015.77
+    }
+  },
+  "pp_eyeblast": {
+    "1_to_1": {
+      "alice_file": "Alice/query.json",
+      "bob_file": "Bob_Single/S_1002_S1_1_VRG_tokens.json",
+      "runs": 3,
+      "plain_times": [0.0024, 0.0022, 0.0021],
+      "pp_times": [0.7260, 0.6427, 0.6185],
+      "avg_plain": 0.0022,
+      "avg_pp": 0.6624,
+      "speedup_factor": 297.17
+    },
+    "1_to_n": {
+      "alice_file": "Alice/query.json",
+      "bob_files": ["Bob directory with 20 files"],
+      "database_size": 20,
+      "runs": 3,
+      "plain_times": [0.0142, 0.0140, 0.0144],
+      "pp_times": [16.995, 13.132, 13.146],
+      "avg_plain": 0.0142,
+      "avg_pp": 14.424,
+      "speedup_factor": 1015.77
+    }
+  },
+  "metadata": {
+    "alice_file": "Alice/query.json",
+    "bob_single": "Bob_Single/S_1002_S1_1_VRG_tokens.json",
+    "bob_dir": "Bob",
+    "runs": 3,
+    "timestamp": 1752926818
+  }
+}

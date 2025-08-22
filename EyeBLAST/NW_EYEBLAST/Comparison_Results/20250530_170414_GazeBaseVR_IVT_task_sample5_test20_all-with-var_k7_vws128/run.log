@@ -1,0 +1,176 @@
+2025-05-30 17:04:14,183 - INFO - Starting comparison study with the following parameters:
+2025-05-30 17:04:14,183 - INFO -   band_width: 5
+2025-05-30 17:04:14,183 - INFO -   comparison: all-with-var
+2025-05-30 17:04:14,184 - INFO -   data_type: task
+2025-05-30 17:04:14,184 - INFO -   gender_file: None
+2025-05-30 17:04:14,184 - INFO -   input_dir: GazeBaseVR_IVT
+2025-05-30 17:04:14,184 - INFO -   k: 7
+2025-05-30 17:04:14,184 - INFO -   max_candidates: 20
+2025-05-30 17:04:14,185 - INFO -   n_jobs: -1
+2025-05-30 17:04:14,185 - INFO -   nw_nj: true
+2025-05-30 17:04:14,185 - INFO -   output_dir: Comparison_Results
+2025-05-30 17:04:14,185 - INFO -   random: False
+2025-05-30 17:04:14,185 - INFO -   sample_percentage: 5
+2025-05-30 17:04:14,185 - INFO -   seed_length: 3
+2025-05-30 17:04:14,186 - INFO -   test_size: 0.2
+2025-05-30 17:04:14,186 - INFO -   variable_word_size: 128
+2025-05-30 17:04:14,186 - INFO -   word_size: 28
+2025-05-30 17:04:14,187 - INFO - Using fixed seed for reproducibility (42)
+2025-05-30 17:04:14,187 - INFO - Loading data from GazeBaseVR_IVT...
+2025-05-30 17:04:14,187 - INFO - Detected data format: IVT
+2025-05-30 17:04:14,201 - INFO - Sampling 251 files (5% of 5020)
+2025-05-30 17:04:14,202 - INFO - Loading 251 scanpath files from GazeBaseVR_IVT...
+2025-05-30 17:04:14,236 - INFO - Loaded 251 scanpaths with 5 different labels
+2025-05-30 17:04:14,237 - INFO - Label distribution:
+2025-05-30 17:04:14,237 - INFO -   Task 1 (Vergence): 44 samples
+2025-05-30 17:04:14,237 - INFO -   Task 2 (Pursuit): 50 samples
+2025-05-30 17:04:14,237 - INFO -   Task 3 (Video): 55 samples
+2025-05-30 17:04:14,237 - INFO -   Task 4 (Text): 53 samples
+2025-05-30 17:04:14,238 - INFO -   Task 5 (Random): 49 samples
+2025-05-30 17:04:14,238 - INFO - Splitting data into train/test sets (80/20)...
+2025-05-30 17:04:14,239 - INFO - Training set: 200 samples
+2025-05-30 17:04:14,239 - INFO - Test set: 51 samples
+2025-05-30 17:04:14,240 - INFO - 
+==================================================
+2025-05-30 17:04:14,240 - INFO - 1. Needleman-Wunsch Classification
+2025-05-30 17:04:14,241 - INFO - ==================================================
+2025-05-30 17:04:14,241 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-30 17:04:14,284 - INFO - Training Needleman-Wunsch classifier...
+2025-05-30 17:04:14,285 - INFO - Detected IVT-encoded data for Needleman-Wunsch
+2025-05-30 17:04:14,357 - INFO - Needleman-Wunsch training completed in 0.07 seconds
+2025-05-30 17:04:14,357 - INFO - Training memory usage: 1.4 MB
+2025-05-30 17:04:14,358 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-30 17:04:14,400 - INFO - Evaluating classifier on 51 test samples...
+2025-05-30 17:04:14,400 - INFO - Predicting labels for 51 test samples using Needleman-Wunsch...
+2025-05-30 17:04:14,400 - INFO - Split test data into 51 batches
+2025-05-30 17:04:14,401 - INFO - Processing 51 batches in parallel using 32 jobs
+2025-05-30 17:04:25,630 - INFO - Computing evaluation metrics...
+2025-05-30 17:04:25,634 - INFO - Needleman-Wunsch Accuracy: 0.6863
+2025-05-30 17:04:25,634 - INFO - Prediction time: 11.23 seconds
+2025-05-30 17:04:25,635 - INFO - Prediction memory usage: 4.3 MB
+2025-05-30 17:04:25,635 - INFO - Total memory usage: 5.7 MB
+2025-05-30 17:04:25,851 - INFO - 
+==================================================
+2025-05-30 17:04:25,852 - INFO - 2. NCBI MegaBLAST Classification
+2025-05-30 17:04:25,852 - INFO - ==================================================
+2025-05-30 17:04:25,901 - INFO - Training MegaBLAST classifier...
+2025-05-30 17:04:25,901 - INFO - Detected IVT-encoded data for MegaBLAST
+2025-05-30 17:04:25,902 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmpk4jds5y4
+2025-05-30 17:04:25,902 - INFO - Converting training scanpaths to FASTA format...
+2025-05-30 17:04:28,584 - INFO - Creating BLAST database from training data...
+2025-05-30 17:04:29,275 - INFO - NCBI MegaBLAST training completed in 3.37 seconds
+2025-05-30 17:04:29,277 - INFO - Training memory usage: 0.2 MB
+2025-05-30 17:04:29,278 - INFO - Evaluating NCBI MegaBLAST classifier...
+2025-05-30 17:04:29,341 - INFO - Evaluating classifier on 51 test samples...
+2025-05-30 17:04:29,343 - INFO - Predicting labels for 51 test samples using MegaBLAST...
+2025-05-30 17:04:29,998 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_0_results.tsv
+2025-05-30 17:04:30,706 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_1_results.tsv
+2025-05-30 17:04:31,383 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_2_results.tsv
+2025-05-30 17:04:32,022 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_3_results.tsv
+2025-05-30 17:04:32,735 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_4_results.tsv
+2025-05-30 17:04:33,401 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_5_results.tsv
+2025-05-30 17:04:34,031 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_6_results.tsv
+2025-05-30 17:04:34,674 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_7_results.tsv
+2025-05-30 17:04:35,310 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_8_results.tsv
+2025-05-30 17:04:35,977 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_9_results.tsv
+2025-05-30 17:04:36,632 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_10_results.tsv
+2025-05-30 17:04:37,327 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_11_results.tsv
+2025-05-30 17:04:38,055 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_12_results.tsv
+2025-05-30 17:04:38,763 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_13_results.tsv
+2025-05-30 17:04:39,393 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_14_results.tsv
+2025-05-30 17:04:40,040 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_15_results.tsv
+2025-05-30 17:04:40,715 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_16_results.tsv
+2025-05-30 17:04:41,437 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_17_results.tsv
+2025-05-30 17:04:42,135 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_18_results.tsv
+2025-05-30 17:04:42,828 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_19_results.tsv
+2025-05-30 17:04:43,478 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_20_results.tsv
+2025-05-30 17:04:44,148 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_21_results.tsv
+2025-05-30 17:04:44,799 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_22_results.tsv
+2025-05-30 17:04:45,551 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_23_results.tsv
+2025-05-30 17:04:46,202 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_24_results.tsv
+2025-05-30 17:04:46,842 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_25_results.tsv
+2025-05-30 17:04:47,480 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_26_results.tsv
+2025-05-30 17:04:48,186 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_27_results.tsv
+2025-05-30 17:04:48,807 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_28_results.tsv
+2025-05-30 17:04:49,435 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_29_results.tsv
+2025-05-30 17:04:50,052 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_30_results.tsv
+2025-05-30 17:04:50,683 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_31_results.tsv
+2025-05-30 17:04:51,312 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_32_results.tsv
+2025-05-30 17:04:51,987 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_33_results.tsv
+2025-05-30 17:04:52,636 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_34_results.tsv
+2025-05-30 17:04:53,339 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_35_results.tsv
+2025-05-30 17:04:53,963 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_36_results.tsv
+2025-05-30 17:04:54,580 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_37_results.tsv
+2025-05-30 17:04:55,270 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_38_results.tsv
+2025-05-30 17:04:55,914 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_39_results.tsv
+2025-05-30 17:04:56,536 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_40_results.tsv
+2025-05-30 17:04:57,181 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_41_results.tsv
+2025-05-30 17:04:57,845 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_42_results.tsv
+2025-05-30 17:04:58,484 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_43_results.tsv
+2025-05-30 17:04:59,203 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_44_results.tsv
+2025-05-30 17:04:59,896 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_45_results.tsv
+2025-05-30 17:05:00,599 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_46_results.tsv
+2025-05-30 17:05:01,298 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_47_results.tsv
+2025-05-30 17:05:01,991 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_48_results.tsv
+2025-05-30 17:05:02,638 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_49_results.tsv
+2025-05-30 17:05:03,335 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpk4jds5y4/test_50_results.tsv
+2025-05-30 17:05:03,337 - INFO - Computing evaluation metrics...
+2025-05-30 17:05:03,342 - INFO - NCBI MegaBLAST Accuracy: 0.1373
+2025-05-30 17:05:03,342 - INFO - Prediction time: 33.99 seconds
+2025-05-30 17:05:03,342 - INFO - Prediction memory usage: 0.0 MB
+2025-05-30 17:05:03,342 - INFO - Total memory usage: 0.2 MB
+2025-05-30 17:05:03,439 - INFO - 
+==================================================
+2025-05-30 17:05:03,439 - INFO - 3. FastEyeBLAST Classification
+2025-05-30 17:05:03,439 - INFO - ==================================================
+2025-05-30 17:05:03,440 - INFO - Using IVT version of FastEyeBLAST
+2025-05-30 17:05:03,488 - INFO - Training FastEyeBLAST classifier...
+2025-05-30 17:05:03,488 - INFO - Encoding scanpaths...
+2025-05-30 17:05:03,806 - INFO - Alphabet size: 21
+2025-05-30 17:05:03,807 - INFO - Bits per token: 5
+2025-05-30 17:05:03,807 - INFO - Tokens per 64-bit word: 12
+2025-05-30 17:05:03,807 - INFO - Packing scanpaths into words...
+2025-05-30 17:05:03,843 - INFO - Computing SimHash sketches...
+2025-05-30 17:05:05,222 - INFO - Building LSH index...
+2025-05-30 17:05:05,223 - INFO - FastEyeBLAST training completed in 1.73 seconds
+2025-05-30 17:05:05,224 - INFO - Training memory usage: 1.7 MB
+2025-05-30 17:05:05,224 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-30 17:05:05,278 - INFO - Evaluating classifier on 51 test samples...
+2025-05-30 17:05:11,229 - INFO - Computing evaluation metrics...
+2025-05-30 17:05:11,236 - INFO - FastEyeBLAST Accuracy: 0.8235
+2025-05-30 17:05:11,236 - INFO - Prediction time: 5.95 seconds
+2025-05-30 17:05:11,237 - INFO - Prediction memory usage: 2.6 MB
+2025-05-30 17:05:11,238 - INFO - Total memory usage: 4.3 MB
+2025-05-30 17:05:11,357 - INFO - 
+==================================================
+2025-05-30 17:05:11,357 - INFO - 4. FastEyeBLAST Variable Classification
+2025-05-30 17:05:11,358 - INFO - ==================================================
+2025-05-30 17:05:11,358 - INFO - Using IVT version of FastEyeBLAST Variable with word_size=128
+2025-05-30 17:05:11,415 - INFO - Training FastEyeBLAST Variable (word_size=128) classifier...
+2025-05-30 17:05:11,415 - INFO - Encoding scanpaths...
+2025-05-30 17:05:11,770 - INFO - Alphabet size: 21
+2025-05-30 17:05:11,770 - INFO - Bits per token: 5
+2025-05-30 17:05:11,770 - INFO - Word size: 128 bits
+2025-05-30 17:05:11,771 - INFO - Tokens per 128-bit word: 25
+2025-05-30 17:05:11,771 - INFO - Packing scanpaths into words...
+2025-05-30 17:05:11,810 - INFO - Computing SimHash sketches...
+2025-05-30 17:05:13,383 - INFO - Building LSH index...
+2025-05-30 17:05:13,383 - INFO - FastEyeBLAST Variable training completed in 1.97 seconds
+2025-05-30 17:05:13,384 - INFO - Training memory usage: 0.5 MB
+2025-05-30 17:05:13,384 - INFO - Evaluating FastEyeBLAST Variable classifier...
+2025-05-30 17:05:13,437 - INFO - Evaluating classifier on 51 test samples...
+2025-05-30 17:05:19,780 - INFO - Computing evaluation metrics...
+2025-05-30 17:05:19,785 - INFO - FastEyeBLAST Variable Accuracy: 0.8039
+2025-05-30 17:05:19,785 - INFO - Prediction time: 6.34 seconds
+2025-05-30 17:05:19,785 - INFO - Prediction memory usage: 1.9 MB
+2025-05-30 17:05:19,786 - INFO - Total memory usage: 2.4 MB
+2025-05-30 17:05:19,915 - INFO - 
+==================================================
+2025-05-30 17:05:19,915 - INFO - Plotting comparison results
+2025-05-30 17:05:19,916 - INFO - ==================================================
+2025-05-30 17:05:19,916 - INFO - Creating performance comparison chart at Comparison_Results\20250530_170414_GazeBaseVR_IVT_task_sample5_test20_all-with-var_k7_vws128\performance_comparison.png...
+2025-05-30 17:05:20,173 - INFO - Saving detailed results to Comparison_Results\20250530_170414_GazeBaseVR_IVT_task_sample5_test20_all-with-var_k7_vws128\comparison_results.json...
+2025-05-30 17:05:20,175 - INFO - Results saved to Comparison_Results\20250530_170414_GazeBaseVR_IVT_task_sample5_test20_all-with-var_k7_vws128/
+2025-05-30 17:05:20,175 - INFO - Performance comparison plot saved to Comparison_Results\20250530_170414_GazeBaseVR_IVT_task_sample5_test20_all-with-var_k7_vws128\performance_comparison.png
+2025-05-30 17:05:20,175 - INFO - Run parameters saved to Comparison_Results\20250530_170414_GazeBaseVR_IVT_task_sample5_test20_all-with-var_k7_vws128\run_parameters.json
+2025-05-30 17:05:20,177 - INFO - Comparison study completed.

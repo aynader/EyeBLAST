@@ -1,0 +1,99 @@
+=== BandedDPCircuit Debug Log ===
+Processing 90 word pairs
+Band width: 5
+Word 0: Alice=0x8587948765343210, Bob=0x8587948765343210, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=2
+Word 1: Alice=0x9085351412649482, Bob=0x9085351412649482, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=4
+Word 2: Alice=0x1014148415121012, Bob=0x1014148415121012, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=6
+Word 3: Alice=0x30853c1c1c3b1a14, Bob=0x30853c1c1c3b1a14, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=8
+Word 4: Alice=0x3212949d9780123c, Bob=0x3212949d9780123c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=10
+Word 5: Alice=0x8014101294358210, Bob=0x8014101294358210, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=12
+Word 6: Alice=0x1282849484953080, Bob=0x1282849484953080, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=14
+Word 7: Alice=0x15828212158a1282, Bob=0x15828212158a1282, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=16
+Word 8: Alice=0x1c35928515853214, Bob=0x1c35928515853214, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=18
+Word 9: Alice=0x158512128530803c, Bob=0x158512128530803c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=20
+Word 10: Alice=0x846085141c943c95, Bob=0x846085141c943c95, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=22
+Word 11: Alice=0x85858c9085858535, Bob=0x85858c9085858535, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=24
+Word 12: Alice=0x3015901090323095, Bob=0x3015901090323095, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=26
+Word 13: Alice=0x3c85153c32341285, Bob=0x3c85153c32341285, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=28
+Word 14: Alice=0x3515321430843012, Bob=0x3515321430843012, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=30
+Word 15: Alice=0x3797851210129485, Bob=0x3797851210129485, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=32
+Word 16: Alice=0x848df732828c829e, Bob=0x848df732828c829e, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=34
+Word 17: Alice=0x1480821230358482, Bob=0x1480821230358482, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=36
+Word 18: Alice=0x3214101010143532, Bob=0x3214101010143532, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=38
+Word 19: Alice=0x1590159594101210, Bob=0x1590159594101210, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=40
+Word 20: Alice=0x92353a9530103012, Bob=0x92353a9530103012, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=42
+Word 21: Alice=0x8c3c15103a32341a, Bob=0x8c3c15103a32341a, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=44
+Word 22: Alice=0x85128c1414143515, Bob=0x85128c1414143515, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=46
+Word 23: Alice=0x1230121c123c101c, Bob=0x1230121c123c101c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=48
+Word 24: Alice=0x92143212341c108b, Bob=0x92143212341c108b, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=50
+Word 25: Alice=0x1530943515851532, Bob=0x1530943515851532, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=52
+Word 26: Alice=0x1414129d37358232, Bob=0x1414129d37358232, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=54
+Word 27: Alice=0x3a8484121c123234, Bob=0x3a8484121c123234, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=56
+Word 28: Alice=0x151c1214141c8512, Bob=0x151c1214141c8512, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=58
+Word 29: Alice=0x3085303484821012, Bob=0x3085303484821012, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=60
+Word 30: Alice=0x321080851a90103c, Bob=0x321080851a90103c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=62
+Word 31: Alice=0x109212853a821432, Bob=0x109212853a821432, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=64
+Word 32: Alice=0x1212151010851515, Bob=0x1212151010851515, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=66
+Word 33: Alice=0x151015121a123032, Bob=0x151015121a123032, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=68
+Word 34: Alice=0x9532841c15353212, Bob=0x9532841c15353212, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=70
+Word 35: Alice=0x1c9210151410859c, Bob=0x1c9210151410859c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=72
+Word 36: Alice=0x12321c123a358c30, Bob=0x12321c123a358c30, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=74
+Word 37: Alice=0x9c12101585123582, Bob=0x9c12101585123582, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=76
+Word 38: Alice=0x121512321034108c, Bob=0x121512321034108c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=78
+Word 39: Alice=0x3412108415941410, Bob=0x3412108415941410, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=80
+Word 40: Alice=0x158232358c3c351a, Bob=0x158232358c3c351a, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=82
+Word 41: Alice=0x1295121c3035921c, Bob=0x1295121c3035921c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=84
+Word 42: Alice=0x8482829717973090, Bob=0x8482829717973090, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=86
+Word 43: Alice=0x14359410328c8094, Bob=0x14359410328c8094, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=88
+Word 44: Alice=0x1c1c841594158432, Bob=0x1c1c841594158432, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=90
+Word 45: Alice=0x1234828c32121c12, Bob=0x1234828c32121c12, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=92
+Word 46: Alice=0x321c143535348510, Bob=0x321c143535348510, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=94
+Word 47: Alice=0x1212121c941a3a82, Bob=0x1212121c941a3a82, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=96
+Word 48: Alice=0x1532123030941c12, Bob=0x1532123030941c12, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=98
+Word 49: Alice=0x853512121c348435, Bob=0x853512121c348435, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=100
+Word 50: Alice=0x8435843214303592, Bob=0x8435843214303592, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=102
+Word 51: Alice=0x6535948c82849512, Bob=0x6535948c82849512, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=104
+Word 52: Alice=0x34309c3432341082, Bob=0x34309c3432341082, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=106
+Word 53: Alice=0x1485859515301412, Bob=0x1485859515301412, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=108
+Word 54: Alice=0x85153c1c35101482, Bob=0x85153c1c35101482, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=110
+Word 55: Alice=0x9412148a32148482, Bob=0x9412148a32148482, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=112
+Word 56: Alice=0x12701c8485851215, Bob=0x12701c8485851215, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=114
+Word 57: Alice=0x3a80303a10823234, Bob=0x3a80303a10823234, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=116
+Word 58: Alice=0x1c9c348012941512, Bob=0x1c9c348012941512, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=118
+Word 59: Alice=0x8210943234321585, Bob=0x8210943234321585, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=120
+Word 60: Alice=0x1c141415153a3a80, Bob=0x1c141415153a3a80, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=122
+Word 61: Alice=0x121a94851c1c159c, Bob=0x121a94851c1c159c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=124
+Word 62: Alice=0x158a8410101a1014, Bob=0x158a8410101a1014, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=126
+Word 63: Alice=0x1512853430141482, Bob=0x1512853430141482, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=128
+Word 64: Alice=0x308a12348c1a853a, Bob=0x308a12348c1a853a, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=130
+Word 65: Alice=0x95128a151514151c, Bob=0x95128a151514151c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=132
+Word 66: Alice=0x85101214149c3c9c, Bob=0x85101214149c3c9c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=134
+Word 67: Alice=0x3432121215148010, Bob=0x3432121215148010, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=136
+Word 68: Alice=0x3c32123410803214, Bob=0x3c32123410803214, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=138
+Word 69: Alice=0x9c8580823c12341c, Bob=0x9c8580823c12341c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=140
+Word 70: Alice=0x3010858c82323034, Bob=0x3010858c82323034, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=142
+Word 71: Alice=0x153484348c301032, Bob=0x153484348c301032, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=144
+Word 72: Alice=0x1284121585828215, Bob=0x1284121585828215, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=146
+Word 73: Alice=0x8030948515958510, Bob=0x8030948515958510, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=148
+Word 74: Alice=0x851214953290141c, Bob=0x851214953290141c, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=150
+Word 75: Alice=0x1234108a10141214, Bob=0x1234108a10141214, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=152
+Word 76: Alice=0x30151c1412148514, Bob=0x30151c1412148514, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=154
+Word 77: Alice=0x84901c851212109a, Bob=0x84901c851212109a, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=156
+Word 78: Alice=0x8014148c308c321a, Bob=0x8014148c308c321a, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=158
+Word 79: Alice=0x85848c3035121c14, Bob=0x85848c3035121c14, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=160
+Word 80: Alice=0x8492141c35123214, Bob=0x8492141c35123214, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=162
+Word 81: Alice=0x1082828284128012, Bob=0x1082828284128012, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=164
+Word 82: Alice=0x80158c9c3c1c1015, Bob=0x80158c9c3c1c1015, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=166
+Word 83: Alice=0x84928c3592903515, Bob=0x84928c3592903515, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=168
+Word 84: Alice=0x3032848482129494, Bob=0x3032848482129494, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=170
+Word 85: Alice=0x12123c1295351232, Bob=0x12123c1295351232, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=172
+Word 86: Alice=0x14151c1210848512, Bob=0x14151c1210848512, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=174
+Word 87: Alice=0x8214858214143432, Bob=0x8214858214143432, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=176
+Word 88: Alice=0x1280323432353480, Bob=0x1280323432353480, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=178
+Word 89: Alice=0x1414151214, Bob=0x1414151214, XOR=0x0, popcount=0, is_match=YES, word_score=2, total_so_far=180
+=== FINAL SUMMARY ===
+Total matches: 90
+Total mismatches: 0
+Expected score (matches*2 + mismatches*(-1)): 180
+Circuit final score: 180
+Max possible score (len*2): 180

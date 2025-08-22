@@ -1,0 +1,10 @@
+Parameter Set 1 Analysis
+=============================
+thresh_fix: 3.0, thresh_ms: 6.0, thresh_sacc: 30.0
+Notes: very strict fix - lots of events; micro and saccade only the fastest
+
+Token Distribution:
+  Fixations (F): 56554 (17.81%)
+  Microsaccades (M): 156552 (49.30%)
+  Saccades (S): 104437 (32.89%)
+  Total Tokens: 317543

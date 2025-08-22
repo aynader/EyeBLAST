@@ -1,0 +1,10 @@
+set,thresh_fix,thresh_ms,thresh_sacc,notes,fix_token_pct,ms_token_pct,sacc_token_pct,fix_time_pct,ms_time_pct,sacc_time_pct,output_folder,files_processed
+1,0.1,0.5,2.0,very strict fix → lots of events; micro and saccade only the fastest,0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_1_fix0.1_ms0.5_sacc2.0,3
+2,0.2,0.8,3.0,"strict fix, baseline micro/sacc",0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_2_fix0.2_ms0.8_sacc3.0,3
+3,0.3,1.0,4.0,"strict fix, broad micro window",0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_3_fix0.3_ms1.0_sacc4.0,3
+4,0.5,1.5,5.0,"moderate fix, baseline micro/sacc",0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_4_fix0.5_ms1.5_sacc5.0,3
+5,0.5,2.0,10.0,"current default - moderate fix, extended sacc",0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_5_fix0.5_ms2.0_sacc10.0,3
+6,0.8,2.5,12.0,"liberal fix, extended micro/sacc",0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_6_fix0.8_ms2.5_sacc12.0,3
+7,1.0,3.0,15.0,"liberal fix, broad micro/sacc",0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_7_fix1.0_ms3.0_sacc15.0,3
+8,1.5,4.0,20.0,"very liberal fix, broad micro/sacc",0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_8_fix1.5_ms4.0_sacc20.0,3
+9,2.0,5.0,25.0,"extremely liberal fix, very broad thresholds",0,0,0,0,0,0,parameter_search_results_LFI_CSV\set_9_fix2.0_ms5.0_sacc25.0,3

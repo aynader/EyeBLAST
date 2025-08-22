@@ -1,0 +1,123 @@
+2025-05-28 01:52:16,033 - INFO - Starting comparison study with the following parameters:
+2025-05-28 01:52:16,034 - INFO -   band_width: 5
+2025-05-28 01:52:16,034 - INFO -   comparison: all
+2025-05-28 01:52:16,034 - INFO -   data_type: task
+2025-05-28 01:52:16,034 - INFO -   gender_file: None
+2025-05-28 01:52:16,034 - INFO -   input_dir: GazeBaseVR_AOIs
+2025-05-28 01:52:16,035 - INFO -   k: 7
+2025-05-28 01:52:16,035 - INFO -   max_candidates: 20
+2025-05-28 01:52:16,035 - INFO -   n_jobs: -1
+2025-05-28 01:52:16,035 - INFO -   nw_nj: true
+2025-05-28 01:52:16,035 - INFO -   output_dir: Comparison_Results
+2025-05-28 01:52:16,035 - INFO -   random: False
+2025-05-28 01:52:16,036 - INFO -   sample_percentage: 2
+2025-05-28 01:52:16,036 - INFO -   seed_length: 3
+2025-05-28 01:52:16,036 - INFO -   test_size: 0.2
+2025-05-28 01:52:16,036 - INFO -   word_size: 28
+2025-05-28 01:52:16,038 - INFO - Using fixed seed for reproducibility (42)
+2025-05-28 01:52:16,038 - INFO - Loading data from GazeBaseVR_AOIs...
+2025-05-28 01:52:16,038 - INFO - Detected data format: AOI
+2025-05-28 01:52:16,039 - INFO - Loading AOI-encoded sequences from GazeBaseVR_AOIs\encoded_sequences.json
+2025-05-28 01:52:16,365 - INFO - Sampling 100 sequences (2% of 5020)
+2025-05-28 01:52:16,372 - INFO - Loaded 100 scanpaths with 5 different labels
+2025-05-28 01:52:16,373 - INFO - Label distribution:
+2025-05-28 01:52:16,374 - INFO -   Task 1 (Vergence): 17 samples
+2025-05-28 01:52:16,374 - INFO -   Task 2 (Pursuit): 19 samples
+2025-05-28 01:52:16,374 - INFO -   Task 3 (Video): 30 samples
+2025-05-28 01:52:16,375 - INFO -   Task 4 (Text): 19 samples
+2025-05-28 01:52:16,375 - INFO -   Task 5 (Random): 15 samples
+2025-05-28 01:52:16,375 - INFO - Splitting data into train/test sets (80/20)...
+2025-05-28 01:52:16,378 - INFO - Training set: 80 samples
+2025-05-28 01:52:16,378 - INFO - Test set: 20 samples
+2025-05-28 01:52:16,380 - INFO - 
+==================================================
+2025-05-28 01:52:16,381 - INFO - 1. Needleman-Wunsch Classification
+2025-05-28 01:52:16,381 - INFO - ==================================================
+2025-05-28 01:52:16,381 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-28 01:52:16,422 - INFO - Training Needleman-Wunsch classifier...
+2025-05-28 01:52:16,423 - INFO - Detected AOI-encoded data for Needleman-Wunsch
+2025-05-28 01:52:16,423 - INFO - Average AOI sequence length: 18331.97 characters
+2025-05-28 01:52:16,423 - INFO - Using max_seq_length of 3000 for AOI data
+2025-05-28 01:52:16,424 - INFO - Using batch size of 5 for AOI data
+2025-05-28 01:52:16,424 - INFO - Needleman-Wunsch training completed in 0.00 seconds
+2025-05-28 01:52:16,424 - INFO - Memory usage: 0.0 MB
+2025-05-28 01:52:16,424 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-28 01:52:16,425 - INFO - Evaluating classifier on 20 test samples...
+2025-05-28 01:52:16,425 - INFO - Predicting labels for 20 test samples using Needleman-Wunsch...
+2025-05-28 01:52:16,425 - INFO - Using memory-optimized approach for AOI data
+2025-05-28 01:52:16,425 - INFO - Average test sequence length: 22352.05 characters
+2025-05-28 01:52:16,425 - INFO - Using test batch size of 5
+2025-05-28 01:52:16,426 - INFO - Processing test batch 1/4: samples 0-4
+2025-05-28 01:52:23,624 - INFO - Processing test batch 2/4: samples 5-9
+2025-05-28 01:52:29,993 - INFO - Processing test batch 3/4: samples 10-14
+2025-05-28 01:52:36,319 - INFO - Processing test batch 4/4: samples 15-19
+2025-05-28 01:52:42,592 - INFO - Computing evaluation metrics...
+2025-05-28 01:52:42,611 - INFO - Needleman-Wunsch Accuracy: 0.7000
+2025-05-28 01:52:42,611 - INFO - Prediction time: 26.17 seconds
+2025-05-28 01:52:42,969 - INFO - 
+==================================================
+2025-05-28 01:52:42,970 - INFO - 2. NCBI MegaBLAST Classification
+2025-05-28 01:52:42,970 - INFO - ==================================================
+2025-05-28 01:52:43,020 - INFO - Training MegaBLAST classifier...
+2025-05-28 01:52:43,021 - INFO - Detected AOI-encoded data for MegaBLAST
+2025-05-28 01:52:43,022 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmpm0846n3i
+2025-05-28 01:52:43,022 - INFO - Converting training scanpaths to FASTA format...
+2025-05-28 01:52:45,242 - INFO - Creating BLAST database from training data...
+2025-05-28 01:52:45,918 - INFO - NCBI MegaBLAST training completed in 2.90 seconds
+2025-05-28 01:52:45,918 - INFO - Memory usage: 0.1 MB
+2025-05-28 01:52:45,918 - INFO - Evaluating NCBI MegaBLAST classifier...
+2025-05-28 01:52:45,918 - INFO - Evaluating classifier on 20 test samples...
+2025-05-28 01:52:45,919 - INFO - Predicting labels for 20 test samples using MegaBLAST...
+2025-05-28 01:52:46,996 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_0_results.tsv
+2025-05-28 01:52:47,728 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_1_results.tsv
+2025-05-28 01:52:48,548 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_2_results.tsv
+2025-05-28 01:52:49,270 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_3_results.tsv
+2025-05-28 01:52:49,951 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_4_results.tsv
+2025-05-28 01:52:50,710 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_5_results.tsv
+2025-05-28 01:52:51,616 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_6_results.tsv
+2025-05-28 01:52:52,434 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_7_results.tsv
+2025-05-28 01:52:53,317 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_8_results.tsv
+2025-05-28 01:52:54,031 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_9_results.tsv
+2025-05-28 01:52:54,737 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_10_results.tsv
+2025-05-28 01:52:55,430 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_11_results.tsv
+2025-05-28 01:52:56,214 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_12_results.tsv
+2025-05-28 01:52:56,982 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_13_results.tsv
+2025-05-28 01:52:57,888 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_14_results.tsv
+2025-05-28 01:52:58,657 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_15_results.tsv
+2025-05-28 01:52:59,602 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_16_results.tsv
+2025-05-28 01:53:00,305 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_17_results.tsv
+2025-05-28 01:53:01,099 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_18_results.tsv
+2025-05-28 01:53:02,031 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpm0846n3i/test_19_results.tsv
+2025-05-28 01:53:02,032 - INFO - Computing evaluation metrics...
+2025-05-28 01:53:02,035 - INFO - NCBI MegaBLAST Accuracy: 0.2000
+2025-05-28 01:53:02,036 - INFO - Prediction time: 16.11 seconds
+2025-05-28 01:53:02,138 - INFO - 
+==================================================
+2025-05-28 01:53:02,139 - INFO - 3. FastEyeBLAST Classification
+2025-05-28 01:53:02,139 - INFO - ==================================================
+2025-05-28 01:53:02,140 - WARNING - AOI modules not available, falling back to IVT version
+2025-05-28 01:53:02,191 - INFO - Training FastEyeBLAST classifier...
+2025-05-28 01:53:02,192 - INFO - Encoding scanpaths...
+2025-05-28 01:53:02,563 - INFO - Alphabet size: 16
+2025-05-28 01:53:02,564 - INFO - Bits per token: 4
+2025-05-28 01:53:02,564 - INFO - Tokens per 64-bit word: 16
+2025-05-28 01:53:02,565 - INFO - Packing scanpaths into words...
+2025-05-28 01:53:02,787 - INFO - Computing SimHash sketches...
+2025-05-28 01:53:10,930 - INFO - Building LSH index...
+2025-05-28 01:53:10,931 - INFO - FastEyeBLAST training completed in 8.74 seconds
+2025-05-28 01:53:10,931 - INFO - Memory usage: 15.9 MB
+2025-05-28 01:53:10,932 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-28 01:53:10,932 - INFO - Evaluating classifier on 20 test samples...
+2025-05-28 01:53:18,388 - INFO - Computing evaluation metrics...
+2025-05-28 01:53:18,393 - INFO - FastEyeBLAST Accuracy: 0.7500
+2025-05-28 01:53:18,393 - INFO - Prediction time: 7.46 seconds
+2025-05-28 01:53:18,498 - INFO - 
+==================================================
+2025-05-28 01:53:18,498 - INFO - Plotting comparison results
+2025-05-28 01:53:18,498 - INFO - ==================================================
+2025-05-28 01:53:18,499 - INFO - Creating performance comparison chart at Comparison_Results\20250528_015216_GazeBaseVRs_AOI_task_sample2_test20_all_k7\performance_comparison.png...
+2025-05-28 01:53:18,638 - INFO - Saving detailed results to Comparison_Results\20250528_015216_GazeBaseVRs_AOI_task_sample2_test20_all_k7\comparison_results.json...
+2025-05-28 01:53:18,639 - INFO - Results saved to Comparison_Results\20250528_015216_GazeBaseVRs_AOI_task_sample2_test20_all_k7/
+2025-05-28 01:53:18,640 - INFO - Performance comparison plot saved to Comparison_Results\20250528_015216_GazeBaseVRs_AOI_task_sample2_test20_all_k7\performance_comparison.png
+2025-05-28 01:53:18,641 - INFO - Run parameters saved to Comparison_Results\20250528_015216_GazeBaseVRs_AOI_task_sample2_test20_all_k7\run_parameters.json
+2025-05-28 01:53:18,641 - INFO - Comparison study completed.

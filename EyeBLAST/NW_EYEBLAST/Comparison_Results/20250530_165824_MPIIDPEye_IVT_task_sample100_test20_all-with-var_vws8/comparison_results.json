@@ -1,0 +1,226 @@
+{
+  "Needleman-Wunsch": {
+    "accuracy": 0.5833333333333334,
+    "train_time": 0.014128684997558594,
+    "prediction_time": 3.0201549530029297,
+    "memory_mb": 3.5859375,
+    "confusion_matrix": [
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "report": {
+      "Comic": {
+        "precision": 1.0,
+        "recall": 0.375,
+        "f1-score": 0.5454545454545454,
+        "support": 8.0
+      },
+      "Online newspaper": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1-score": 0.5,
+        "support": 2.0
+      },
+      "Textbook": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "accuracy": 0.5833333333333334,
+      "macro avg": {
+        "precision": 0.6666666666666666,
+        "recall": 0.7916666666666666,
+        "f1-score": 0.6151515151515151,
+        "support": 12.0
+      },
+      "weighted avg": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5833333333333334,
+        "f1-score": 0.5803030303030302,
+        "support": 12.0
+      }
+    }
+  },
+  "NCBI MegaBLAST": {
+    "accuracy": 0.16666666666666666,
+    "train_time": 1.3401682376861572,
+    "prediction_time": 9.005945444107056,
+    "memory_mb": 0.60546875,
+    "confusion_matrix": [
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ]
+    ],
+    "report": {
+      "Comic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 8.0
+      },
+      "Online newspaper": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.2857142857142857,
+        "support": 2.0
+      },
+      "Textbook": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "accuracy": 0.16666666666666666,
+      "macro avg": {
+        "precision": 0.05555555555555555,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.09523809523809523,
+        "support": 12.0
+      },
+      "weighted avg": {
+        "precision": 0.027777777777777776,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.047619047619047616,
+        "support": 12.0
+      }
+    }
+  },
+  "FastEyeBLAST": {
+    "accuracy": 0.5,
+    "train_time": 0.34347057342529297,
+    "prediction_time": 2.939624309539795,
+    "memory_mb": 1.26953125,
+    "confusion_matrix": [
+      [
+        4,
+        3,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "report": {
+      "Comic": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 8.0
+      },
+      "Online newspaper": {
+        "precision": 0.2,
+        "recall": 0.5,
+        "f1-score": 0.2857142857142857,
+        "support": 2.0
+      },
+      "Textbook": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 2.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.5111111111111111,
+        "recall": 0.5,
+        "f1-score": 0.4507936507936508,
+        "support": 12.0
+      },
+      "weighted avg": {
+        "precision": 0.7555555555555555,
+        "recall": 0.5,
+        "f1-score": 0.5587301587301586,
+        "support": 12.0
+      }
+    }
+  },
+  "FastEyeBLAST Variable (w=8)": {
+    "accuracy": 0.0,
+    "train_time": 0.11680126190185547,
+    "prediction_time": 3.1210410594940186,
+    "memory_mb": 0.83203125,
+    "confusion_matrix": [
+      [
+        0,
+        6,
+        2
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "report": {
+      "Comic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 8.0
+      },
+      "Online newspaper": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "Textbook": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "accuracy": 0.0,
+      "macro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 12.0
+      },
+      "weighted avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 12.0
+      }
+    }
+  }
+}

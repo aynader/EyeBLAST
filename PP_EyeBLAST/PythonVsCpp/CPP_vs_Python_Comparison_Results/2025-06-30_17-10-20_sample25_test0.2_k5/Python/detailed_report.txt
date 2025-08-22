@@ -1,0 +1,48 @@
+FastEyeBLAST Detailed Performance Report
+==================================================
+
+Experiment Configuration:
+-------------------------
+Input directory: GazeBaseVR_IVT
+Sample percentage: 25%
+Test size: 0.2
+Seed length: 3
+Band width: 5
+Number of neighbors: 5
+Max candidates: 20
+Use duration bins: True
+Duration bins: 8
+Use parallel: True
+Random seed: 42
+
+Overall Performance:
+--------------------
+Accuracy: 0.9084 (90.84%)
+Macro-avg Precision: 0.9079
+Macro-avg Recall: 0.9166
+Macro-avg F1-Score: 0.9122
+
+Per-Class Performance:
+----------------------
+Class    Precision  Recall     F1-Score   Support   
+-------------------------------------------------------
+1        0.9153     0.8571     0.8852     63        
+2        0.9057     0.9796     0.9412     49        
+3        0.9184     0.9000     0.9091     50        
+4        0.9024     1.0000     0.9487     37        
+5        0.8980     0.8462     0.8713     52        
+
+Timing Analysis:
+----------------
+Total execution time: 55.39 seconds
+data_loading: 0.27s (0.5%)
+data_splitting: 0.00s (0.0%)
+train_time: 14.88s (26.9%)
+predict_time: 12.55s (22.6%)
+evaluation: 0.00s (0.0%)
+total_time: 27.70s (50.0%)
+
+Per-Sample Performance:
+-----------------------
+Average prediction time: 49.98 ms/sample
+Throughput: 20.0 samples/second

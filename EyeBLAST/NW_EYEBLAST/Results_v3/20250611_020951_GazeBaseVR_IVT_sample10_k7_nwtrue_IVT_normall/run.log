@@ -1,0 +1,332 @@
+2025-06-11 02:09:51,720 - INFO - Starting similarity comparison with the following parameters:
+2025-06-11 02:09:51,720 - INFO -   input_dir: EyeBLAST/GazeBaseVR_IVT
+2025-06-11 02:09:51,721 - INFO -   k: 7
+2025-06-11 02:09:51,721 - INFO -   normalization_mode: all
+2025-06-11 02:09:51,721 - INFO -   nw_nj: true
+2025-06-11 02:09:51,721 - INFO -   output_dir: EyeBLAST/Results_v3
+2025-06-11 02:09:51,721 - INFO -   sample_percentage: 10
+2025-06-11 02:09:51,721 - INFO -   mode: IVT
+2025-06-11 02:09:51,736 - INFO - Loading 502 IVT scanpath files (10% of 5020)...
+2025-06-11 02:09:51,797 - INFO - Total IVT scanpaths loaded: 502
+2025-06-11 02:09:51,797 - INFO - Computing raw similarity matrices...
+2025-06-11 02:09:51,797 - INFO - Computing Needleman-Wunsch_IVT similarity matrix (may be slow)...
+2025-06-11 02:09:51,797 - INFO - Computing pairwise similarities for 502 scanpaths (125751 pairs)...
+2025-06-11 02:09:51,908 - INFO - Processing batch 1/252
+2025-06-11 02:09:56,158 - INFO - Processing batch 2/252
+2025-06-11 02:09:56,565 - INFO - Processing batch 3/252
+2025-06-11 02:09:56,843 - INFO - Processing batch 4/252
+2025-06-11 02:09:57,182 - INFO - Processing batch 5/252
+2025-06-11 02:09:57,505 - INFO - Processing batch 6/252
+2025-06-11 02:09:57,803 - INFO - Processing batch 7/252
+2025-06-11 02:09:58,168 - INFO - Processing batch 8/252
+2025-06-11 02:09:58,471 - INFO - Processing batch 9/252
+2025-06-11 02:09:58,733 - INFO - Processing batch 10/252
+2025-06-11 02:09:59,004 - INFO - Processing batch 11/252
+2025-06-11 02:09:59,363 - INFO - Processing batch 12/252
+2025-06-11 02:09:59,794 - INFO - Processing batch 13/252
+2025-06-11 02:10:00,113 - INFO - Processing batch 14/252
+2025-06-11 02:10:00,381 - INFO - Processing batch 15/252
+2025-06-11 02:10:00,899 - INFO - Processing batch 16/252
+2025-06-11 02:10:01,318 - INFO - Processing batch 17/252
+2025-06-11 02:10:01,698 - INFO - Processing batch 18/252
+2025-06-11 02:10:02,014 - INFO - Processing batch 19/252
+2025-06-11 02:10:02,244 - INFO - Processing batch 20/252
+2025-06-11 02:10:02,477 - INFO - Processing batch 21/252
+2025-06-11 02:10:02,800 - INFO - Processing batch 22/252
+2025-06-11 02:10:03,173 - INFO - Processing batch 23/252
+2025-06-11 02:10:03,519 - INFO - Processing batch 24/252
+2025-06-11 02:10:03,872 - INFO - Processing batch 25/252
+2025-06-11 02:10:04,167 - INFO - Processing batch 26/252
+2025-06-11 02:10:04,453 - INFO - Processing batch 27/252
+2025-06-11 02:10:04,754 - INFO - Processing batch 28/252
+2025-06-11 02:10:04,987 - INFO - Processing batch 29/252
+2025-06-11 02:10:05,201 - INFO - Processing batch 30/252
+2025-06-11 02:10:05,419 - INFO - Processing batch 31/252
+2025-06-11 02:10:05,862 - INFO - Processing batch 32/252
+2025-06-11 02:10:06,120 - INFO - Processing batch 33/252
+2025-06-11 02:10:06,452 - INFO - Processing batch 34/252
+2025-06-11 02:10:06,655 - INFO - Processing batch 35/252
+2025-06-11 02:10:06,876 - INFO - Processing batch 36/252
+2025-06-11 02:10:07,140 - INFO - Processing batch 37/252
+2025-06-11 02:10:07,374 - INFO - Processing batch 38/252
+2025-06-11 02:10:07,620 - INFO - Processing batch 39/252
+2025-06-11 02:10:07,879 - INFO - Processing batch 40/252
+2025-06-11 02:10:08,086 - INFO - Processing batch 41/252
+2025-06-11 02:10:08,432 - INFO - Processing batch 42/252
+2025-06-11 02:10:08,668 - INFO - Processing batch 43/252
+2025-06-11 02:10:08,938 - INFO - Processing batch 44/252
+2025-06-11 02:10:09,169 - INFO - Processing batch 45/252
+2025-06-11 02:10:09,418 - INFO - Processing batch 46/252
+2025-06-11 02:10:09,653 - INFO - Processing batch 47/252
+2025-06-11 02:10:09,994 - INFO - Processing batch 48/252
+2025-06-11 02:10:10,338 - INFO - Processing batch 49/252
+2025-06-11 02:10:10,713 - INFO - Processing batch 50/252
+2025-06-11 02:10:11,069 - INFO - Processing batch 51/252
+2025-06-11 02:10:11,488 - INFO - Processing batch 52/252
+2025-06-11 02:10:11,962 - INFO - Processing batch 53/252
+2025-06-11 02:10:12,251 - INFO - Processing batch 54/252
+2025-06-11 02:10:12,708 - INFO - Processing batch 55/252
+2025-06-11 02:10:13,020 - INFO - Processing batch 56/252
+2025-06-11 02:10:13,332 - INFO - Processing batch 57/252
+2025-06-11 02:10:13,576 - INFO - Processing batch 58/252
+2025-06-11 02:10:13,846 - INFO - Processing batch 59/252
+2025-06-11 02:10:14,123 - INFO - Processing batch 60/252
+2025-06-11 02:10:14,595 - INFO - Processing batch 61/252
+2025-06-11 02:10:14,891 - INFO - Processing batch 62/252
+2025-06-11 02:10:15,113 - INFO - Processing batch 63/252
+2025-06-11 02:10:15,385 - INFO - Processing batch 64/252
+2025-06-11 02:10:15,699 - INFO - Processing batch 65/252
+2025-06-11 02:10:15,995 - INFO - Processing batch 66/252
+2025-06-11 02:10:16,441 - INFO - Processing batch 67/252
+2025-06-11 02:10:16,713 - INFO - Processing batch 68/252
+2025-06-11 02:10:16,983 - INFO - Processing batch 69/252
+2025-06-11 02:10:17,246 - INFO - Processing batch 70/252
+2025-06-11 02:10:17,571 - INFO - Processing batch 71/252
+2025-06-11 02:10:17,828 - INFO - Processing batch 72/252
+2025-06-11 02:10:18,073 - INFO - Processing batch 73/252
+2025-06-11 02:10:18,518 - INFO - Processing batch 74/252
+2025-06-11 02:10:18,793 - INFO - Processing batch 75/252
+2025-06-11 02:10:19,119 - INFO - Processing batch 76/252
+2025-06-11 02:10:19,512 - INFO - Processing batch 77/252
+2025-06-11 02:10:19,935 - INFO - Processing batch 78/252
+2025-06-11 02:10:20,201 - INFO - Processing batch 79/252
+2025-06-11 02:10:20,757 - INFO - Processing batch 80/252
+2025-06-11 02:10:21,149 - INFO - Processing batch 81/252
+2025-06-11 02:10:21,399 - INFO - Processing batch 82/252
+2025-06-11 02:10:21,703 - INFO - Processing batch 83/252
+2025-06-11 02:10:22,044 - INFO - Processing batch 84/252
+2025-06-11 02:10:22,383 - INFO - Processing batch 85/252
+2025-06-11 02:10:22,861 - INFO - Processing batch 86/252
+2025-06-11 02:10:23,450 - INFO - Processing batch 87/252
+2025-06-11 02:10:23,834 - INFO - Processing batch 88/252
+2025-06-11 02:10:24,270 - INFO - Processing batch 89/252
+2025-06-11 02:10:24,739 - INFO - Processing batch 90/252
+2025-06-11 02:10:25,083 - INFO - Processing batch 91/252
+2025-06-11 02:10:25,470 - INFO - Processing batch 92/252
+2025-06-11 02:10:25,707 - INFO - Processing batch 93/252
+2025-06-11 02:10:26,058 - INFO - Processing batch 94/252
+2025-06-11 02:10:26,412 - INFO - Processing batch 95/252
+2025-06-11 02:10:26,942 - INFO - Processing batch 96/252
+2025-06-11 02:10:27,214 - INFO - Processing batch 97/252
+2025-06-11 02:10:27,662 - INFO - Processing batch 98/252
+2025-06-11 02:10:28,137 - INFO - Processing batch 99/252
+2025-06-11 02:10:28,419 - INFO - Processing batch 100/252
+2025-06-11 02:10:28,760 - INFO - Processing batch 101/252
+2025-06-11 02:10:29,105 - INFO - Processing batch 102/252
+2025-06-11 02:10:29,395 - INFO - Processing batch 103/252
+2025-06-11 02:10:29,703 - INFO - Processing batch 104/252
+2025-06-11 02:10:29,975 - INFO - Processing batch 105/252
+2025-06-11 02:10:30,289 - INFO - Processing batch 106/252
+2025-06-11 02:10:30,572 - INFO - Processing batch 107/252
+2025-06-11 02:10:31,010 - INFO - Processing batch 108/252
+2025-06-11 02:10:31,404 - INFO - Processing batch 109/252
+2025-06-11 02:10:31,889 - INFO - Processing batch 110/252
+2025-06-11 02:10:32,393 - INFO - Processing batch 111/252
+2025-06-11 02:10:32,852 - INFO - Processing batch 112/252
+2025-06-11 02:10:33,282 - INFO - Processing batch 113/252
+2025-06-11 02:10:33,656 - INFO - Processing batch 114/252
+2025-06-11 02:10:34,041 - INFO - Processing batch 115/252
+2025-06-11 02:10:34,325 - INFO - Processing batch 116/252
+2025-06-11 02:10:34,792 - INFO - Processing batch 117/252
+2025-06-11 02:10:35,240 - INFO - Processing batch 118/252
+2025-06-11 02:10:35,850 - INFO - Processing batch 119/252
+2025-06-11 02:10:36,173 - INFO - Processing batch 120/252
+2025-06-11 02:10:36,421 - INFO - Processing batch 121/252
+2025-06-11 02:10:36,829 - INFO - Processing batch 122/252
+2025-06-11 02:10:37,263 - INFO - Processing batch 123/252
+2025-06-11 02:10:37,752 - INFO - Processing batch 124/252
+2025-06-11 02:10:38,180 - INFO - Processing batch 125/252
+2025-06-11 02:10:38,546 - INFO - Processing batch 126/252
+2025-06-11 02:10:39,007 - INFO - Processing batch 127/252
+2025-06-11 02:10:39,478 - INFO - Processing batch 128/252
+2025-06-11 02:10:40,157 - INFO - Processing batch 129/252
+2025-06-11 02:10:40,576 - INFO - Processing batch 130/252
+2025-06-11 02:10:40,821 - INFO - Processing batch 131/252
+2025-06-11 02:10:41,277 - INFO - Processing batch 132/252
+2025-06-11 02:10:41,642 - INFO - Processing batch 133/252
+2025-06-11 02:10:42,079 - INFO - Processing batch 134/252
+2025-06-11 02:10:42,542 - INFO - Processing batch 135/252
+2025-06-11 02:10:42,837 - INFO - Processing batch 136/252
+2025-06-11 02:10:43,141 - INFO - Processing batch 137/252
+2025-06-11 02:10:43,642 - INFO - Processing batch 138/252
+2025-06-11 02:10:44,017 - INFO - Processing batch 139/252
+2025-06-11 02:10:44,285 - INFO - Processing batch 140/252
+2025-06-11 02:10:44,739 - INFO - Processing batch 141/252
+2025-06-11 02:10:45,048 - INFO - Processing batch 142/252
+2025-06-11 02:10:45,448 - INFO - Processing batch 143/252
+2025-06-11 02:10:45,747 - INFO - Processing batch 144/252
+2025-06-11 02:10:46,198 - INFO - Processing batch 145/252
+2025-06-11 02:10:46,587 - INFO - Processing batch 146/252
+2025-06-11 02:10:46,824 - INFO - Processing batch 147/252
+2025-06-11 02:10:47,083 - INFO - Processing batch 148/252
+2025-06-11 02:10:47,439 - INFO - Processing batch 149/252
+2025-06-11 02:10:47,741 - INFO - Processing batch 150/252
+2025-06-11 02:10:48,153 - INFO - Processing batch 151/252
+2025-06-11 02:10:48,667 - INFO - Processing batch 152/252
+2025-06-11 02:10:48,990 - INFO - Processing batch 153/252
+2025-06-11 02:10:49,467 - INFO - Processing batch 154/252
+2025-06-11 02:10:49,769 - INFO - Processing batch 155/252
+2025-06-11 02:10:50,058 - INFO - Processing batch 156/252
+2025-06-11 02:10:50,274 - INFO - Processing batch 157/252
+2025-06-11 02:10:50,587 - INFO - Processing batch 158/252
+2025-06-11 02:10:50,942 - INFO - Processing batch 159/252
+2025-06-11 02:10:51,243 - INFO - Processing batch 160/252
+2025-06-11 02:10:51,536 - INFO - Processing batch 161/252
+2025-06-11 02:10:51,918 - INFO - Processing batch 162/252
+2025-06-11 02:10:52,246 - INFO - Processing batch 163/252
+2025-06-11 02:10:52,675 - INFO - Processing batch 164/252
+2025-06-11 02:10:53,155 - INFO - Processing batch 165/252
+2025-06-11 02:10:53,462 - INFO - Processing batch 166/252
+2025-06-11 02:10:53,809 - INFO - Processing batch 167/252
+2025-06-11 02:10:54,126 - INFO - Processing batch 168/252
+2025-06-11 02:10:54,444 - INFO - Processing batch 169/252
+2025-06-11 02:10:54,839 - INFO - Processing batch 170/252
+2025-06-11 02:10:55,185 - INFO - Processing batch 171/252
+2025-06-11 02:10:55,552 - INFO - Processing batch 172/252
+2025-06-11 02:10:55,844 - INFO - Processing batch 173/252
+2025-06-11 02:10:56,136 - INFO - Processing batch 174/252
+2025-06-11 02:10:56,509 - INFO - Processing batch 175/252
+2025-06-11 02:10:56,976 - INFO - Processing batch 176/252
+2025-06-11 02:10:57,316 - INFO - Processing batch 177/252
+2025-06-11 02:10:57,687 - INFO - Processing batch 178/252
+2025-06-11 02:10:58,000 - INFO - Processing batch 179/252
+2025-06-11 02:10:58,354 - INFO - Processing batch 180/252
+2025-06-11 02:10:58,647 - INFO - Processing batch 181/252
+2025-06-11 02:10:58,966 - INFO - Processing batch 182/252
+2025-06-11 02:10:59,281 - INFO - Processing batch 183/252
+2025-06-11 02:10:59,628 - INFO - Processing batch 184/252
+2025-06-11 02:10:59,911 - INFO - Processing batch 185/252
+2025-06-11 02:11:00,273 - INFO - Processing batch 186/252
+2025-06-11 02:11:00,691 - INFO - Processing batch 187/252
+2025-06-11 02:11:01,119 - INFO - Processing batch 188/252
+2025-06-11 02:11:01,493 - INFO - Processing batch 189/252
+2025-06-11 02:11:01,899 - INFO - Processing batch 190/252
+2025-06-11 02:11:02,342 - INFO - Processing batch 191/252
+2025-06-11 02:11:02,709 - INFO - Processing batch 192/252
+2025-06-11 02:11:03,011 - INFO - Processing batch 193/252
+2025-06-11 02:11:03,329 - INFO - Processing batch 194/252
+2025-06-11 02:11:03,617 - INFO - Processing batch 195/252
+2025-06-11 02:11:04,038 - INFO - Processing batch 196/252
+2025-06-11 02:11:04,409 - INFO - Processing batch 197/252
+2025-06-11 02:11:04,922 - INFO - Processing batch 198/252
+2025-06-11 02:11:05,283 - INFO - Processing batch 199/252
+2025-06-11 02:11:05,693 - INFO - Processing batch 200/252
+2025-06-11 02:11:05,967 - INFO - Processing batch 201/252
+2025-06-11 02:11:06,327 - INFO - Processing batch 202/252
+2025-06-11 02:11:06,611 - INFO - Processing batch 203/252
+2025-06-11 02:11:06,892 - INFO - Processing batch 204/252
+2025-06-11 02:11:07,171 - INFO - Processing batch 205/252
+2025-06-11 02:11:07,525 - INFO - Processing batch 206/252
+2025-06-11 02:11:07,841 - INFO - Processing batch 207/252
+2025-06-11 02:11:08,268 - INFO - Processing batch 208/252
+2025-06-11 02:11:08,506 - INFO - Processing batch 209/252
+2025-06-11 02:11:08,950 - INFO - Processing batch 210/252
+2025-06-11 02:11:09,351 - INFO - Processing batch 211/252
+2025-06-11 02:11:09,699 - INFO - Processing batch 212/252
+2025-06-11 02:11:10,037 - INFO - Processing batch 213/252
+2025-06-11 02:11:10,291 - INFO - Processing batch 214/252
+2025-06-11 02:11:10,588 - INFO - Processing batch 215/252
+2025-06-11 02:11:11,007 - INFO - Processing batch 216/252
+2025-06-11 02:11:11,462 - INFO - Processing batch 217/252
+2025-06-11 02:11:11,806 - INFO - Processing batch 218/252
+2025-06-11 02:11:12,240 - INFO - Processing batch 219/252
+2025-06-11 02:11:12,712 - INFO - Processing batch 220/252
+2025-06-11 02:11:13,082 - INFO - Processing batch 221/252
+2025-06-11 02:11:13,451 - INFO - Processing batch 222/252
+2025-06-11 02:11:13,720 - INFO - Processing batch 223/252
+2025-06-11 02:11:14,216 - INFO - Processing batch 224/252
+2025-06-11 02:11:14,527 - INFO - Processing batch 225/252
+2025-06-11 02:11:15,024 - INFO - Processing batch 226/252
+2025-06-11 02:11:15,432 - INFO - Processing batch 227/252
+2025-06-11 02:11:15,686 - INFO - Processing batch 228/252
+2025-06-11 02:11:15,972 - INFO - Processing batch 229/252
+2025-06-11 02:11:16,350 - INFO - Processing batch 230/252
+2025-06-11 02:11:16,727 - INFO - Processing batch 231/252
+2025-06-11 02:11:17,093 - INFO - Processing batch 232/252
+2025-06-11 02:11:17,539 - INFO - Processing batch 233/252
+2025-06-11 02:11:17,937 - INFO - Processing batch 234/252
+2025-06-11 02:11:18,292 - INFO - Processing batch 235/252
+2025-06-11 02:11:18,559 - INFO - Processing batch 236/252
+2025-06-11 02:11:18,915 - INFO - Processing batch 237/252
+2025-06-11 02:11:19,257 - INFO - Processing batch 238/252
+2025-06-11 02:11:19,620 - INFO - Processing batch 239/252
+2025-06-11 02:11:19,905 - INFO - Processing batch 240/252
+2025-06-11 02:11:20,210 - INFO - Processing batch 241/252
+2025-06-11 02:11:20,505 - INFO - Processing batch 242/252
+2025-06-11 02:11:20,789 - INFO - Processing batch 243/252
+2025-06-11 02:11:21,169 - INFO - Processing batch 244/252
+2025-06-11 02:11:21,553 - INFO - Processing batch 245/252
+2025-06-11 02:11:21,920 - INFO - Processing batch 246/252
+2025-06-11 02:11:22,302 - INFO - Processing batch 247/252
+2025-06-11 02:11:22,621 - INFO - Processing batch 248/252
+2025-06-11 02:11:23,010 - INFO - Processing batch 249/252
+2025-06-11 02:11:23,304 - INFO - Processing batch 250/252
+2025-06-11 02:11:23,594 - INFO - Processing batch 251/252
+2025-06-11 02:11:23,902 - INFO - Processing batch 252/252
+2025-06-11 02:11:24,094 - INFO - Saved raw NW similarity matrix to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\nw_similarity_matrix_raw.npy
+2025-06-11 02:11:24,095 - INFO - Fitting Fast_EyeBLAST_IVT (building indices, encoding all scanpaths)...
+2025-06-11 02:11:24,095 - INFO - Encoding scanpaths...
+2025-06-11 02:11:24,967 - INFO - Alphabet size: 21
+2025-06-11 02:11:24,967 - INFO - Bits per token: 5
+2025-06-11 02:11:24,967 - INFO - Tokens per 64-bit word: 12
+2025-06-11 02:11:24,967 - INFO - Packing scanpaths into words...
+2025-06-11 02:11:25,062 - INFO - Computing SimHash sketches...
+2025-06-11 02:11:28,524 - INFO - Building LSH index...
+2025-06-11 02:11:28,527 - INFO - Computing Fast_EyeBLAST_IVT pairwise similarities...
+2025-06-11 02:12:21,333 - INFO - Saved raw FB similarity matrix to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\fb_similarity_matrix_raw.npy
+2025-06-11 02:12:21,333 - INFO - Processing normalization method: none
+2025-06-11 02:12:21,336 - INFO - Saved none normalized matrices
+2025-06-11 02:12:21,377 - INFO - [none] Pearson correlation: 0.4796 (p-value = 0.0000e+00)
+2025-06-11 02:12:21,377 - INFO - [none] Spearman correlation: 0.9706 (p-value = 0.0000e+00)
+2025-06-11 02:12:22,047 - INFO - [none] Saved scatter plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_scatter.png
+2025-06-11 02:12:22,490 - INFO - [none] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_nw_heatmap.png
+2025-06-11 02:12:22,951 - INFO - [none] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_fb_heatmap.png
+2025-06-11 02:12:23,137 - INFO - [none] Saved histogram plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_histogram.png
+2025-06-11 02:12:23,667 - INFO - [none] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_rank_scatter.png
+2025-06-11 02:12:23,668 - INFO - Processing normalization method: minmax
+2025-06-11 02:12:23,672 - INFO - Saved minmax normalized matrices
+2025-06-11 02:12:23,700 - INFO - [minmax] Pearson correlation: 0.4796 (p-value = 0.0000e+00)
+2025-06-11 02:12:23,700 - INFO - [minmax] Spearman correlation: 0.9706 (p-value = 0.0000e+00)
+2025-06-11 02:12:24,309 - INFO - [minmax] Saved scatter plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_scatter.png
+2025-06-11 02:12:24,743 - INFO - [minmax] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_nw_heatmap.png
+2025-06-11 02:12:25,193 - INFO - [minmax] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_fb_heatmap.png
+2025-06-11 02:12:25,388 - INFO - [minmax] Saved histogram plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_histogram.png
+2025-06-11 02:12:25,935 - INFO - [minmax] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_rank_scatter.png
+2025-06-11 02:12:25,936 - INFO - Processing normalization method: zscore
+2025-06-11 02:12:25,941 - INFO - Saved zscore normalized matrices
+2025-06-11 02:12:25,968 - INFO - [zscore] Pearson correlation: 0.4796 (p-value = 0.0000e+00)
+2025-06-11 02:12:25,969 - INFO - [zscore] Spearman correlation: 0.9706 (p-value = 0.0000e+00)
+2025-06-11 02:12:26,588 - INFO - [zscore] Saved scatter plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_scatter.png
+2025-06-11 02:12:27,096 - INFO - [zscore] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_nw_heatmap.png
+2025-06-11 02:12:27,544 - INFO - [zscore] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_fb_heatmap.png
+2025-06-11 02:12:27,735 - INFO - [zscore] Saved histogram plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_histogram.png
+2025-06-11 02:12:28,274 - INFO - [zscore] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_rank_scatter.png
+2025-06-11 02:12:28,275 - INFO - Processing normalization method: rank
+2025-06-11 02:12:28,321 - INFO - Saved rank normalized matrices
+2025-06-11 02:12:28,348 - INFO - [rank] Pearson correlation: 0.9706 (p-value = 0.0000e+00)
+2025-06-11 02:12:28,348 - INFO - [rank] Spearman correlation: 0.9706 (p-value = 0.0000e+00)
+2025-06-11 02:12:29,038 - INFO - [rank] Saved scatter plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_scatter.png
+2025-06-11 02:12:29,488 - INFO - [rank] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_nw_heatmap.png
+2025-06-11 02:12:29,939 - INFO - [rank] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_fb_heatmap.png
+2025-06-11 02:12:30,158 - INFO - [rank] Saved histogram plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_histogram.png
+2025-06-11 02:12:30,681 - INFO - [rank] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_rank_scatter.png
+2025-06-11 02:12:30,681 - INFO - Processing normalization method: quantile
+2025-06-11 02:12:30,720 - INFO - Saved quantile normalized matrices
+2025-06-11 02:12:30,745 - INFO - [quantile] Pearson correlation: 0.9706 (p-value = 0.0000e+00)
+2025-06-11 02:12:30,745 - INFO - [quantile] Spearman correlation: 0.9706 (p-value = 0.0000e+00)
+2025-06-11 02:12:31,453 - INFO - [quantile] Saved scatter plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_scatter.png
+2025-06-11 02:12:32,014 - INFO - [quantile] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_nw_heatmap.png
+2025-06-11 02:12:32,503 - INFO - [quantile] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_fb_heatmap.png
+2025-06-11 02:12:32,742 - INFO - [quantile] Saved histogram plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_histogram.png
+2025-06-11 02:12:33,314 - INFO - [quantile] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_rank_scatter.png
+2025-06-11 02:12:33,315 - INFO - Processing normalization method: correlation_preserving
+2025-06-11 02:12:33,319 - INFO - Saved correlation_preserving normalized matrices
+2025-06-11 02:12:33,346 - INFO - [correlation_preserving] Pearson correlation: 0.4796 (p-value = 0.0000e+00)
+2025-06-11 02:12:33,347 - INFO - [correlation_preserving] Spearman correlation: 0.9706 (p-value = 0.0000e+00)
+2025-06-11 02:12:33,955 - INFO - [correlation_preserving] Saved scatter plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_scatter.png
+2025-06-11 02:12:34,382 - INFO - [correlation_preserving] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_nw_heatmap.png
+2025-06-11 02:12:34,839 - INFO - [correlation_preserving] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_fb_heatmap.png
+2025-06-11 02:12:35,051 - INFO - [correlation_preserving] Saved histogram plot to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_histogram.png
+2025-06-11 02:12:35,593 - INFO - [correlation_preserving] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_rank_scatter.png
+2025-06-11 02:12:35,595 - INFO - Comprehensive analysis report saved to EyeBLAST/Results_v3\20250611_020951_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normall\analysis_report.log
+2025-06-11 02:12:35,596 - INFO - Similarity comparison completed for all normalization methods.

@@ -36,29 +36,29 @@ struct MatchResult {
 
 class FastEyeBLAST {
 private:
-    
+    // Core parameters
     int seed_length_;
     int band_width_;
     bool use_duration_bins_;
     int duration_bins_;
     
-    
+    // Tokenization state
     std::unordered_map<std::string, int> token_to_id_;
     std::unordered_map<int, std::string> id_to_token_;
     int next_token_id_;
     bool frozen_;
     
-    
+    // Bit-packing parameters
     int bits_per_token_;
     int tokens_per_word_;
     uint64_t base_;
     std::vector<uint64_t> pow_base_;
     
-    
+    // SimHash parameters
     std::vector<uint64_t> id_bitmasks_;
     int lsh_hash_size_;
     
-    
+    // Internal methods
     void initialize_bit_packing();
     void initialize_simhash();
     std::vector<uint64_t> pack_ids_into_words(const std::vector<int>& id_list);
@@ -79,33 +79,33 @@ public:
     
     ~FastEyeBLAST() = default;
     
-    
+    // Main API functions
     Encoding encode_and_pack(const std::vector<std::string>& tokens);
     
     double normalized_similarity(const std::vector<int>& seq1, 
                                 const std::vector<int>& seq2, 
                                 int band_width);
 
-    
+    // Utility functions for garbled circuits
     uint64_t compute_simhash(const std::vector<int>& id_list);
     int hamming_distance(uint64_t a, uint64_t b);
     
-    
+    // Getters for testing
     const std::unordered_map<std::string, int>& get_token_to_id() const { return token_to_id_; }
     int get_bits_per_token() const { return bits_per_token_; }
     int get_tokens_per_word() const { return tokens_per_word_; }
     
-    
+    // Public access for token synchronization
     std::string bin_duration(const std::string& token);
     int token_to_integer(const std::string& token);
     
-    
+    // Dictionary management
     void freeze_dictionary();
     bool is_frozen() const;
-    void reset_dictionary();  
+    void reset_dictionary();  // For testing only
 };
 
-
+// Utility functions for deterministic random number generation
 class DeterministicRandom {
 private:
     uint64_t state_;
@@ -120,13 +120,13 @@ public:
     uint64_t random_uint64();
 };
 
-
+// Global functions for easier access
 Encoding encode_and_pack(const std::vector<std::string>& tokens);
 double normalized_similarity(const std::vector<int>& seq1, 
                             const std::vector<int>& seq2, 
                             int band_width = 5);
 
-
+/// Return the singleton FastEyeBLAST instance (for GC helpers).
 FastEyeBLAST &get_global_instance();
 
-} 
+} // namespace pp_eyeblast

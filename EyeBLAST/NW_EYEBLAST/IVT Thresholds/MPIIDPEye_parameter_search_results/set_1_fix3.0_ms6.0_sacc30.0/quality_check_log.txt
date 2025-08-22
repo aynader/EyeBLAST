@@ -1,0 +1,27 @@
+
+======================================================================
+IVT Quality Check for MPIIDPEye Dataset
+======================================================================
+Parameters:
+  Fixation threshold: 3.0 deg/s
+  Microsaccade threshold: 6.0 deg/s
+  Saccade threshold: 30.0 deg/s
+
+Token statistics:
+  Total tokens: 12469
+  Fixation tokens: 84 (0.67%)
+  Microsaccade tokens: 6146 (49.29%)
+  Saccade tokens: 6239 (50.04%)
+
+By token count:
+  Fixations: 0.67%
+  Microsaccades: 49.29%
+  Saccades: 50.04%
+
+By time spent:
+  Fixations: 0.27%
+  Microsaccades: 10.75%
+  Saccades: 88.98%
+
+Total recording time: 6.49 seconds
+======================================================================

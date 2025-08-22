@@ -1,0 +1,68 @@
+SynchronEyes IVT Parameter Search Analysis
+==================================================
+
+Target Distribution:
+  - Fixations: 89.03%
+  - Microsaccades: 7.37%
+  - Saccades: 3.60%
+
+Top 5 Parameter Sets:
+
+1. Set 3 (MSE: 4903.7573)
+   - thresh_fix: 2.0
+   - thresh_ms: 6.0
+   - thresh_sacc: 30.0
+   - scale_factor: 40.0
+   - smooth_window: 7
+   - Distribution: Fixations=0.18%, Microsaccades=13.91%, Saccades=85.91%
+
+2. Set 2 (MSE: 5049.0179)
+   - thresh_fix: 1.5
+   - thresh_ms: 5.0
+   - thresh_sacc: 25.0
+   - scale_factor: 40.0
+   - smooth_window: 5
+   - Distribution: Fixations=0.09%, Microsaccades=11.34%, Saccades=88.58%
+
+3. Set 4 (MSE: 5219.6419)
+   - thresh_fix: 2.5
+   - thresh_ms: 6.0
+   - thresh_sacc: 35.0
+   - scale_factor: 50.0
+   - smooth_window: 7
+   - Distribution: Fixations=0.18%, Microsaccades=8.10%, Saccades=91.72%
+
+4. Set 12 (MSE: 5280.3392)
+   - thresh_fix: 1.0
+   - thresh_ms: 4.0
+   - thresh_sacc: 25.0
+   - scale_factor: 35.0
+   - smooth_window: 7
+   - Distribution: Fixations=0.04%, Microsaccades=7.36%, Saccades=92.60%
+
+5. Set 5 (MSE: 5420.0466)
+   - thresh_fix: 2.0
+   - thresh_ms: 5.0
+   - thresh_sacc: 25.0
+   - scale_factor: 50.0
+   - smooth_window: 7
+   - Distribution: Fixations=0.08%, Microsaccades=4.99%, Saccades=94.93%
+
+
+Recommendation:
+The optimal parameters for achieving the target distribution are:
+  - thresh_fix: 2.0
+  - thresh_ms: 6.0
+  - thresh_sacc: 30.0
+  - scale_factor: 40.0
+  - smooth_window: 7
+
+With these parameters, the distribution would be:
+  - Fixations: 0.18% (target: 89.03%)
+  - Microsaccades: 13.91% (target: 7.37%)
+  - Saccades: 85.91% (target: 3.60%)
+
+To use these parameters, run the SynchronEyes_IVT.py script with:
+python SynchronEyes_IVT.py --thresh-fix 2.0 --thresh-ms 6.0 --thresh-sacc 30.0 --smooth-window 7
+
+and update the scale_factor value in the script to 40.0

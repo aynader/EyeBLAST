@@ -1,0 +1,12 @@
+Best Parameters:
+seed_length: 11.0
+band_width: 16.0
+num_neighbors: 3.0
+num_hash_tables: 12.0
+num_hash_bits: 16.0
+max_candidates: 30.0
+lsh_hash_size: 64.0
+
+Best Accuracy: 0.3750
+Training Time: 6.97s
+Prediction Time: 0.00s

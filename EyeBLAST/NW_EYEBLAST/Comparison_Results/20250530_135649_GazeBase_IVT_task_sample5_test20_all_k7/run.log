@@ -1,0 +1,227 @@
+2025-05-30 13:56:49,663 - INFO - Starting comparison study with the following parameters:
+2025-05-30 13:56:49,663 - INFO -   band_width: 5
+2025-05-30 13:56:49,663 - INFO -   comparison: all
+2025-05-30 13:56:49,664 - INFO -   data_type: task
+2025-05-30 13:56:49,664 - INFO -   gender_file: None
+2025-05-30 13:56:49,664 - INFO -   input_dir: GazeBase_IVT
+2025-05-30 13:56:49,664 - INFO -   k: 7
+2025-05-30 13:56:49,664 - INFO -   max_candidates: 20
+2025-05-30 13:56:49,664 - INFO -   n_jobs: -1
+2025-05-30 13:56:49,664 - INFO -   nw_nj: true
+2025-05-30 13:56:49,664 - INFO -   output_dir: Comparison_Results
+2025-05-30 13:56:49,665 - INFO -   random: False
+2025-05-30 13:56:49,665 - INFO -   sample_percentage: 5
+2025-05-30 13:56:49,665 - INFO -   seed_length: 3
+2025-05-30 13:56:49,665 - INFO -   test_size: 0.2
+2025-05-30 13:56:49,665 - INFO -   word_size: 28
+2025-05-30 13:56:49,667 - INFO - Using fixed seed for reproducibility (42)
+2025-05-30 13:56:49,667 - INFO - Loading data from GazeBase_IVT...
+2025-05-30 13:56:49,667 - INFO - Detected data format: IVT
+2025-05-30 13:56:49,701 - INFO - Sampling 616 files (5% of 12334)
+2025-05-30 13:56:49,702 - INFO - Loading 616 scanpath files from GazeBase_IVT...
+2025-05-30 13:56:50,004 - INFO - Loaded 616 scanpaths with 7 different labels
+2025-05-30 13:56:50,004 - INFO - Label distribution:
+2025-05-30 13:56:50,004 - INFO -   Task 1 (Balura Game): 95 samples
+2025-05-30 13:56:50,004 - INFO -   Task 2 (Fixation): 74 samples
+2025-05-30 13:56:50,004 - INFO -   Task 3 (Video 1): 77 samples
+2025-05-30 13:56:50,004 - INFO -   Task 4 (Video 2): 87 samples
+2025-05-30 13:56:50,004 - INFO -   Task 5 (Text): 95 samples
+2025-05-30 13:56:50,004 - INFO -   Task 6 (Random): 100 samples
+2025-05-30 13:56:50,004 - INFO -   Task 7 (Horizontal Saccade): 88 samples
+2025-05-30 13:56:50,004 - INFO - Splitting data into train/test sets (80/20)...
+2025-05-30 13:56:50,020 - INFO - Training set: 492 samples
+2025-05-30 13:56:50,020 - INFO - Test set: 124 samples
+2025-05-30 13:56:50,020 - INFO - 
+==================================================
+2025-05-30 13:56:50,020 - INFO - 1. Needleman-Wunsch Classification
+2025-05-30 13:56:50,023 - INFO - ==================================================
+2025-05-30 13:56:50,023 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-30 13:56:50,068 - INFO - Training Needleman-Wunsch classifier...
+2025-05-30 13:56:50,069 - INFO - Detected IVT-encoded data for Needleman-Wunsch
+2025-05-30 13:56:50,462 - INFO - Needleman-Wunsch training completed in 0.39 seconds
+2025-05-30 13:56:50,463 - INFO - Training memory usage: 9.1 MB
+2025-05-30 13:56:50,463 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-30 13:56:50,514 - INFO - Evaluating classifier on 124 test samples...
+2025-05-30 13:56:50,514 - INFO - Predicting labels for 124 test samples using Needleman-Wunsch...
+2025-05-30 13:56:50,515 - INFO - Split test data into 42 batches
+2025-05-30 13:56:50,515 - INFO - Processing 42 batches in parallel using 32 jobs
+2025-05-30 14:00:50,154 - INFO - Computing evaluation metrics...
+2025-05-30 14:00:50,161 - INFO - Needleman-Wunsch Accuracy: 0.4032
+2025-05-30 14:00:50,161 - INFO - Prediction time: 239.64 seconds
+2025-05-30 14:00:50,162 - INFO - Prediction memory usage: 3.5 MB
+2025-05-30 14:00:50,162 - INFO - Total memory usage: 12.6 MB
+2025-05-30 14:00:50,591 - INFO - 
+==================================================
+2025-05-30 14:00:50,592 - INFO - 2. NCBI MegaBLAST Classification
+2025-05-30 14:00:50,592 - INFO - ==================================================
+2025-05-30 14:00:50,656 - INFO - Training MegaBLAST classifier...
+2025-05-30 14:00:50,657 - INFO - Detected IVT-encoded data for MegaBLAST
+2025-05-30 14:00:50,657 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmp90m7a2wg
+2025-05-30 14:00:50,658 - INFO - Converting training scanpaths to FASTA format...
+2025-05-30 14:00:58,716 - INFO - Creating BLAST database from training data...
+2025-05-30 14:00:59,510 - INFO - NCBI MegaBLAST training completed in 8.85 seconds
+2025-05-30 14:00:59,510 - INFO - Training memory usage: 0.2 MB
+2025-05-30 14:00:59,510 - INFO - Evaluating NCBI MegaBLAST classifier...
+2025-05-30 14:00:59,569 - INFO - Evaluating classifier on 124 test samples...
+2025-05-30 14:00:59,570 - INFO - Predicting labels for 124 test samples using MegaBLAST...
+2025-05-30 14:01:00,550 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_0_results.tsv
+2025-05-30 14:01:01,335 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_1_results.tsv
+2025-05-30 14:01:02,168 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_2_results.tsv
+2025-05-30 14:01:03,178 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_3_results.tsv
+2025-05-30 14:01:04,091 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_4_results.tsv
+2025-05-30 14:01:04,942 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_5_results.tsv
+2025-05-30 14:01:05,618 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_6_results.tsv
+2025-05-30 14:01:06,343 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_7_results.tsv
+2025-05-30 14:01:07,174 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_8_results.tsv
+2025-05-30 14:01:07,998 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_9_results.tsv
+2025-05-30 14:01:08,874 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_10_results.tsv
+2025-05-30 14:01:09,790 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_11_results.tsv
+2025-05-30 14:01:11,613 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_12_results.tsv
+2025-05-30 14:01:12,548 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_13_results.tsv
+2025-05-30 14:01:13,434 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_14_results.tsv
+2025-05-30 14:01:14,358 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_15_results.tsv
+2025-05-30 14:01:15,253 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_16_results.tsv
+2025-05-30 14:01:16,026 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_17_results.tsv
+2025-05-30 14:01:16,920 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_18_results.tsv
+2025-05-30 14:01:17,721 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_19_results.tsv
+2025-05-30 14:01:18,646 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_20_results.tsv
+2025-05-30 14:01:19,325 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_21_results.tsv
+2025-05-30 14:01:20,088 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_22_results.tsv
+2025-05-30 14:01:20,959 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_23_results.tsv
+2025-05-30 14:01:21,826 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_24_results.tsv
+2025-05-30 14:01:22,772 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_25_results.tsv
+2025-05-30 14:01:23,569 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_26_results.tsv
+2025-05-30 14:01:24,369 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_27_results.tsv
+2025-05-30 14:01:25,155 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_28_results.tsv
+2025-05-30 14:01:26,058 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_29_results.tsv
+2025-05-30 14:01:26,831 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_30_results.tsv
+2025-05-30 14:01:27,717 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_31_results.tsv
+2025-05-30 14:01:28,659 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_32_results.tsv
+2025-05-30 14:01:29,539 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_33_results.tsv
+2025-05-30 14:01:30,452 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_34_results.tsv
+2025-05-30 14:01:31,088 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_35_results.tsv
+2025-05-30 14:01:31,790 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_36_results.tsv
+2025-05-30 14:01:32,646 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_37_results.tsv
+2025-05-30 14:01:33,368 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_38_results.tsv
+2025-05-30 14:01:34,052 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_39_results.tsv
+2025-05-30 14:01:34,839 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_40_results.tsv
+2025-05-30 14:01:35,635 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_41_results.tsv
+2025-05-30 14:01:36,363 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_42_results.tsv
+2025-05-30 14:01:37,109 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_43_results.tsv
+2025-05-30 14:01:37,838 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_44_results.tsv
+2025-05-30 14:01:38,642 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_45_results.tsv
+2025-05-30 14:01:39,341 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_46_results.tsv
+2025-05-30 14:01:40,011 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_47_results.tsv
+2025-05-30 14:01:40,748 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_48_results.tsv
+2025-05-30 14:01:41,464 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_49_results.tsv
+2025-05-30 14:01:42,331 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_50_results.tsv
+2025-05-30 14:01:43,196 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_51_results.tsv
+2025-05-30 14:01:43,964 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_52_results.tsv
+2025-05-30 14:01:44,736 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_53_results.tsv
+2025-05-30 14:01:45,485 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_54_results.tsv
+2025-05-30 14:01:46,392 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_55_results.tsv
+2025-05-30 14:01:47,232 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_56_results.tsv
+2025-05-30 14:01:47,935 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_57_results.tsv
+2025-05-30 14:01:48,841 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_58_results.tsv
+2025-05-30 14:01:49,579 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_59_results.tsv
+2025-05-30 14:01:50,285 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_60_results.tsv
+2025-05-30 14:01:51,026 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_61_results.tsv
+2025-05-30 14:01:51,672 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_62_results.tsv
+2025-05-30 14:01:52,363 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_63_results.tsv
+2025-05-30 14:01:53,004 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_64_results.tsv
+2025-05-30 14:01:53,699 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_65_results.tsv
+2025-05-30 14:01:54,447 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_66_results.tsv
+2025-05-30 14:01:55,234 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_67_results.tsv
+2025-05-30 14:01:55,920 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_68_results.tsv
+2025-05-30 14:01:56,686 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_69_results.tsv
+2025-05-30 14:01:57,403 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_70_results.tsv
+2025-05-30 14:01:58,050 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_71_results.tsv
+2025-05-30 14:01:58,842 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_72_results.tsv
+2025-05-30 14:01:59,660 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_73_results.tsv
+2025-05-30 14:02:00,536 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_74_results.tsv
+2025-05-30 14:02:01,250 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_75_results.tsv
+2025-05-30 14:02:01,937 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_76_results.tsv
+2025-05-30 14:02:02,582 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_77_results.tsv
+2025-05-30 14:02:03,278 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_78_results.tsv
+2025-05-30 14:02:03,949 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_79_results.tsv
+2025-05-30 14:02:04,692 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_80_results.tsv
+2025-05-30 14:02:05,392 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_81_results.tsv
+2025-05-30 14:02:06,113 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_82_results.tsv
+2025-05-30 14:02:06,835 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_83_results.tsv
+2025-05-30 14:02:07,748 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_84_results.tsv
+2025-05-30 14:02:08,531 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_85_results.tsv
+2025-05-30 14:02:09,188 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_86_results.tsv
+2025-05-30 14:02:09,845 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_87_results.tsv
+2025-05-30 14:02:10,630 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_88_results.tsv
+2025-05-30 14:02:11,415 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_89_results.tsv
+2025-05-30 14:02:12,245 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_90_results.tsv
+2025-05-30 14:02:13,019 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_91_results.tsv
+2025-05-30 14:02:13,755 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_92_results.tsv
+2025-05-30 14:02:14,602 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_93_results.tsv
+2025-05-30 14:02:15,366 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_94_results.tsv
+2025-05-30 14:02:16,243 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_95_results.tsv
+2025-05-30 14:02:18,119 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_96_results.tsv
+2025-05-30 14:02:18,858 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_97_results.tsv
+2025-05-30 14:02:19,651 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_98_results.tsv
+2025-05-30 14:02:20,425 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_99_results.tsv
+2025-05-30 14:02:21,139 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_100_results.tsv
+2025-05-30 14:02:21,808 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_101_results.tsv
+2025-05-30 14:02:22,475 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_102_results.tsv
+2025-05-30 14:02:23,335 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_103_results.tsv
+2025-05-30 14:02:24,103 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_104_results.tsv
+2025-05-30 14:02:24,876 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_105_results.tsv
+2025-05-30 14:02:25,667 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_106_results.tsv
+2025-05-30 14:02:26,517 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_107_results.tsv
+2025-05-30 14:02:27,380 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_108_results.tsv
+2025-05-30 14:02:28,242 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_109_results.tsv
+2025-05-30 14:02:28,940 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_110_results.tsv
+2025-05-30 14:02:29,785 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_111_results.tsv
+2025-05-30 14:02:30,437 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_112_results.tsv
+2025-05-30 14:02:31,172 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_113_results.tsv
+2025-05-30 14:02:32,021 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_114_results.tsv
+2025-05-30 14:02:32,876 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_115_results.tsv
+2025-05-30 14:02:33,604 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_116_results.tsv
+2025-05-30 14:02:34,364 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_117_results.tsv
+2025-05-30 14:02:35,147 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_118_results.tsv
+2025-05-30 14:02:35,947 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_119_results.tsv
+2025-05-30 14:02:36,727 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_120_results.tsv
+2025-05-30 14:02:37,457 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_121_results.tsv
+2025-05-30 14:02:38,226 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_122_results.tsv
+2025-05-30 14:02:38,884 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmp90m7a2wg/test_123_results.tsv
+2025-05-30 14:02:38,885 - INFO - Computing evaluation metrics...
+2025-05-30 14:02:38,892 - INFO - NCBI MegaBLAST Accuracy: 0.1855
+2025-05-30 14:02:38,892 - INFO - Prediction time: 99.32 seconds
+2025-05-30 14:02:38,892 - INFO - Prediction memory usage: 0.0 MB
+2025-05-30 14:02:38,894 - INFO - Total memory usage: 0.2 MB
+2025-05-30 14:02:39,006 - INFO - 
+==================================================
+2025-05-30 14:02:39,007 - INFO - 3. FastEyeBLAST Classification
+2025-05-30 14:02:39,007 - INFO - ==================================================
+2025-05-30 14:02:39,008 - INFO - Using IVT version of FastEyeBLAST
+2025-05-30 14:02:39,064 - INFO - Training FastEyeBLAST classifier...
+2025-05-30 14:02:39,065 - INFO - Encoding scanpaths...
+2025-05-30 14:02:40,767 - INFO - Alphabet size: 20
+2025-05-30 14:02:40,768 - INFO - Bits per token: 5
+2025-05-30 14:02:40,768 - INFO - Tokens per 64-bit word: 12
+2025-05-30 14:02:40,769 - INFO - Packing scanpaths into words...
+2025-05-30 14:02:40,974 - INFO - Computing SimHash sketches...
+2025-05-30 14:02:48,590 - INFO - Building LSH index...
+2025-05-30 14:02:48,592 - INFO - FastEyeBLAST training completed in 9.53 seconds
+2025-05-30 14:02:48,592 - INFO - Training memory usage: 14.3 MB
+2025-05-30 14:02:48,593 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-30 14:02:48,652 - INFO - Evaluating classifier on 124 test samples...
+2025-05-30 14:03:01,161 - INFO - Computing evaluation metrics...
+2025-05-30 14:03:01,168 - INFO - FastEyeBLAST Accuracy: 0.5323
+2025-05-30 14:03:01,168 - INFO - Prediction time: 12.51 seconds
+2025-05-30 14:03:01,169 - INFO - Prediction memory usage: -165.4 MB
+2025-05-30 14:03:01,169 - INFO - Total memory usage: -151.1 MB
+2025-05-30 14:03:01,333 - INFO - 
+==================================================
+2025-05-30 14:03:01,333 - INFO - Plotting comparison results
+2025-05-30 14:03:01,333 - INFO - ==================================================
+2025-05-30 14:03:01,334 - INFO - Creating performance comparison chart at Comparison_Results\20250530_135649_GazeBase_IVT_task_sample5_test20_all_k7\performance_comparison.png...
+2025-05-30 14:03:01,488 - INFO - Saving detailed results to Comparison_Results\20250530_135649_GazeBase_IVT_task_sample5_test20_all_k7\comparison_results.json...
+2025-05-30 14:03:01,491 - INFO - Results saved to Comparison_Results\20250530_135649_GazeBase_IVT_task_sample5_test20_all_k7/
+2025-05-30 14:03:01,491 - INFO - Performance comparison plot saved to Comparison_Results\20250530_135649_GazeBase_IVT_task_sample5_test20_all_k7\performance_comparison.png
+2025-05-30 14:03:01,491 - INFO - Run parameters saved to Comparison_Results\20250530_135649_GazeBase_IVT_task_sample5_test20_all_k7\run_parameters.json
+2025-05-30 14:03:01,492 - INFO - Comparison study completed.

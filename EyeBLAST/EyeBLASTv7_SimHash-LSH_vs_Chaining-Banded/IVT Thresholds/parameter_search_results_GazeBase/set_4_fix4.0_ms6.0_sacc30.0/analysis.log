@@ -1,0 +1,10 @@
+Parameter Set 4 Analysis
+=============================
+thresh_fix: 4.0, thresh_ms: 6.0, thresh_sacc: 30.0
+Notes: moderate fix, strict micro/sacc
+
+Token Distribution:
+  Fixations (F): 123947 (27.40%)
+  Microsaccades (M): 223924 (49.51%)
+  Saccades (S): 104437 (23.09%)
+  Total Tokens: 452308

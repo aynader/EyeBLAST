@@ -1,0 +1,16 @@
+set,thresh_fix,thresh_ms,thresh_sacc,scale_factor,smooth_window,notes,fix_pct,ms_pct,sacc_pct,mse,output_folder,files_processed
+1,50.0,100.0,200.0,1.0,7,Initial successful parameters,43.026199999999996,41.0572,15.915,1134.2787610933335,parameter_search_results_S02_EyeLink\set_1_fix50.0_ms100.0_sacc200.0_scale1.0_smooth7,50
+2,60.0,120.0,240.0,1.0,7,"Higher thresholds, same scale",56.3978,31.9738,11.6284,578.2208859466667,parameter_search_results_S02_EyeLink\set_2_fix60.0_ms120.0_sacc240.0_scale1.0_smooth7,50
+3,40.0,80.0,160.0,1.0,7,"Lower thresholds, same scale",27.768600000000003,47.678000000000004,24.553800000000003,1938.918576133333,parameter_search_results_S02_EyeLink\set_3_fix40.0_ms80.0_sacc160.0_scale1.0_smooth7,50
+4,50.0,100.0,200.0,0.8,7,"Same thresholds, lower scale",59.4962,29.614,10.890799999999999,473.39888102666663,parameter_search_results_S02_EyeLink\set_4_fix50.0_ms100.0_sacc200.0_scale0.8_smooth7,50
+5,50.0,100.0,200.0,1.2,7,"Same thresholds, higher scale",30.476599999999998,47.028,22.4958,1786.1029577333336,parameter_search_results_S02_EyeLink\set_5_fix50.0_ms100.0_sacc200.0_scale1.2_smooth7,50
+6,70.0,100.0,200.0,1.0,7,Higher fixation threshold only,66.942,17.1254,15.9318,245.04028813333343,parameter_search_results_S02_EyeLink\set_6_fix70.0_ms100.0_sacc200.0_scale1.0_smooth7,50
+7,80.0,120.0,200.0,1.0,7,Higher fixation and microsaccade thresholds,75.0932,13.59,11.3168,97.49059882666671,parameter_search_results_S02_EyeLink\set_7_fix80.0_ms120.0_sacc200.0_scale1.0_smooth7,50
+8,90.0,130.0,220.0,1.0,7,Much higher fixation threshold with adjusted others,80.6702,9.2598,10.069600000000001,38.43777474666671,parameter_search_results_S02_EyeLink\set_8_fix90.0_ms130.0_sacc220.0_scale1.0_smooth7,50
+9,100.0,140.0,240.0,0.9,9,Very high thresholds with lower scale and more smoothing,88.4254,4.4614,7.114,7.057897040000001,parameter_search_results_S02_EyeLink\set_9_fix100.0_ms140.0_sacc240.0_scale0.9_smooth9,50
+10,50.0,100.0,200.0,1.0,5,Less smoothing,44.717200000000005,39.3192,15.964400000000001,1045.75133728,parameter_search_results_S02_EyeLink\set_10_fix50.0_ms100.0_sacc200.0_scale1.0_smooth5,50
+11,50.0,100.0,200.0,1.0,9,More smoothing,42.331199999999995,42.1368,15.531600000000001,1177.290460746667,parameter_search_results_S02_EyeLink\set_11_fix50.0_ms100.0_sacc200.0_scale1.0_smooth9,50
+12,60.0,110.0,220.0,0.9,11,Higher thresholds with maximum smoothing,64.778,24.481199999999998,10.741,310.6488501466666,parameter_search_results_S02_EyeLink\set_12_fix60.0_ms110.0_sacc220.0_scale0.9_smooth11,50
+13,120.0,160.0,250.0,0.8,9,Very high thresholds with lower scale,92.64540000000001,2.1018,5.2512,14.517169946666685,parameter_search_results_S02_EyeLink\set_13_fix120.0_ms160.0_sacc250.0_scale0.8_smooth9,50
+14,150.0,200.0,300.0,0.7,11,Maximum thresholds with lowest scale,95.166,1.3678,3.4662,24.56493442666665,parameter_search_results_S02_EyeLink\set_14_fix150.0_ms200.0_sacc300.0_scale0.7_smooth11,50
+15,80.0,150.0,250.0,0.5,9,High thresholds with very low scale,93.3036,3.4004000000000003,3.2952,11.37142805333334,parameter_search_results_S02_EyeLink\set_15_fix80.0_ms150.0_sacc250.0_scale0.5_smooth9,50

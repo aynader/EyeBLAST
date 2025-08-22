@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfasteyeblast.a CMakeFiles/fasteyeblast.dir/src/fast_eyeblast.cpp.o
+/usr/bin/ranlib libfasteyeblast.a

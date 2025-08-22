@@ -1,0 +1,84 @@
+2025-06-11 02:06:03,074 - INFO - Starting similarity comparison with the following parameters:
+2025-06-11 02:06:03,074 - INFO -   input_dir: EyeBLAST/JuDo1000_IVT
+2025-06-11 02:06:03,074 - INFO -   k: 7
+2025-06-11 02:06:03,074 - INFO -   normalization_mode: all
+2025-06-11 02:06:03,074 - INFO -   nw_nj: true
+2025-06-11 02:06:03,074 - INFO -   output_dir: EyeBLAST/Results_v3
+2025-06-11 02:06:03,074 - INFO -   sample_percentage: 10
+2025-06-11 02:06:03,074 - INFO -   mode: IVT
+2025-06-11 02:06:03,082 - INFO - Loading 60 IVT scanpath files (10% of 600)...
+2025-06-11 02:06:03,131 - INFO - Total IVT scanpaths loaded: 60
+2025-06-11 02:06:03,132 - INFO - Computing raw similarity matrices...
+2025-06-11 02:06:03,132 - INFO - Computing Needleman-Wunsch_IVT similarity matrix (may be slow)...
+2025-06-11 02:06:03,132 - INFO - Computing pairwise similarities for 60 scanpaths (1770 pairs)...
+2025-06-11 02:06:03,134 - INFO - Processing batch 1/4
+2025-06-11 02:06:19,989 - INFO - Processing batch 2/4
+2025-06-11 02:06:31,575 - INFO - Processing batch 3/4
+2025-06-11 02:06:48,366 - INFO - Processing batch 4/4
+2025-06-11 02:06:55,220 - INFO - Saved raw NW similarity matrix to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\nw_similarity_matrix_raw.npy
+2025-06-11 02:06:55,221 - INFO - Fitting Fast_EyeBLAST_IVT (building indices, encoding all scanpaths)...
+2025-06-11 02:06:55,221 - INFO - Encoding scanpaths...
+2025-06-11 02:06:55,811 - INFO - Alphabet size: 15
+2025-06-11 02:06:55,812 - INFO - Bits per token: 4
+2025-06-11 02:06:55,812 - INFO - Tokens per 64-bit word: 16
+2025-06-11 02:06:55,813 - INFO - Packing scanpaths into words...
+2025-06-11 02:06:55,876 - INFO - Computing SimHash sketches...
+2025-06-11 02:06:58,288 - INFO - Building LSH index...
+2025-06-11 02:06:58,288 - INFO - Computing Fast_EyeBLAST_IVT pairwise similarities...
+2025-06-11 02:07:02,277 - INFO - Saved raw FB similarity matrix to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\fb_similarity_matrix_raw.npy
+2025-06-11 02:07:02,277 - INFO - Processing normalization method: none
+2025-06-11 02:07:02,282 - INFO - Saved none normalized matrices
+2025-06-11 02:07:02,382 - INFO - [none] Pearson correlation: 0.7280 (p-value = 3.7824e-292)
+2025-06-11 02:07:02,382 - INFO - [none] Spearman correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-11 02:07:02,914 - INFO - [none] Saved scatter plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_scatter.png
+2025-06-11 02:07:03,218 - INFO - [none] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_nw_heatmap.png
+2025-06-11 02:07:03,504 - INFO - [none] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_fb_heatmap.png
+2025-06-11 02:07:03,707 - INFO - [none] Saved histogram plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_histogram.png
+2025-06-11 02:07:03,868 - INFO - [none] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_rank_scatter.png
+2025-06-11 02:07:03,870 - INFO - Processing normalization method: minmax
+2025-06-11 02:07:03,871 - INFO - Saved minmax normalized matrices
+2025-06-11 02:07:03,873 - INFO - [minmax] Pearson correlation: 0.7280 (p-value = 3.7824e-292)
+2025-06-11 02:07:03,873 - INFO - [minmax] Spearman correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-11 02:07:04,097 - INFO - [minmax] Saved scatter plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_scatter.png
+2025-06-11 02:07:04,392 - INFO - [minmax] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_nw_heatmap.png
+2025-06-11 02:07:04,676 - INFO - [minmax] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_fb_heatmap.png
+2025-06-11 02:07:05,018 - INFO - [minmax] Saved histogram plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_histogram.png
+2025-06-11 02:07:05,181 - INFO - [minmax] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_rank_scatter.png
+2025-06-11 02:07:05,181 - INFO - Processing normalization method: zscore
+2025-06-11 02:07:05,183 - INFO - Saved zscore normalized matrices
+2025-06-11 02:07:05,186 - INFO - [zscore] Pearson correlation: 0.7280 (p-value = 3.7824e-292)
+2025-06-11 02:07:05,186 - INFO - [zscore] Spearman correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-11 02:07:05,422 - INFO - [zscore] Saved scatter plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_scatter.png
+2025-06-11 02:07:05,700 - INFO - [zscore] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_nw_heatmap.png
+2025-06-11 02:07:05,998 - INFO - [zscore] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_fb_heatmap.png
+2025-06-11 02:07:06,191 - INFO - [zscore] Saved histogram plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_histogram.png
+2025-06-11 02:07:06,354 - INFO - [zscore] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_rank_scatter.png
+2025-06-11 02:07:06,354 - INFO - Processing normalization method: rank
+2025-06-11 02:07:06,357 - INFO - Saved rank normalized matrices
+2025-06-11 02:07:06,360 - INFO - [rank] Pearson correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-11 02:07:06,360 - INFO - [rank] Spearman correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-11 02:07:06,599 - INFO - [rank] Saved scatter plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_scatter.png
+2025-06-11 02:07:06,888 - INFO - [rank] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_nw_heatmap.png
+2025-06-11 02:07:07,178 - INFO - [rank] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_fb_heatmap.png
+2025-06-11 02:07:07,467 - INFO - [rank] Saved histogram plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_histogram.png
+2025-06-11 02:07:07,625 - INFO - [rank] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_rank_scatter.png
+2025-06-11 02:07:07,625 - INFO - Processing normalization method: quantile
+2025-06-11 02:07:07,627 - INFO - Saved quantile normalized matrices
+2025-06-11 02:07:07,630 - INFO - [quantile] Pearson correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-11 02:07:07,630 - INFO - [quantile] Spearman correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-11 02:07:07,854 - INFO - [quantile] Saved scatter plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_scatter.png
+2025-06-11 02:07:08,135 - INFO - [quantile] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_nw_heatmap.png
+2025-06-11 02:07:08,428 - INFO - [quantile] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_fb_heatmap.png
+2025-06-11 02:07:08,637 - INFO - [quantile] Saved histogram plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_histogram.png
+2025-06-11 02:07:08,795 - INFO - [quantile] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_rank_scatter.png
+2025-06-11 02:07:08,796 - INFO - Processing normalization method: correlation_preserving
+2025-06-11 02:07:08,798 - INFO - Saved correlation_preserving normalized matrices
+2025-06-11 02:07:08,800 - INFO - [correlation_preserving] Pearson correlation: 0.7280 (p-value = 3.7824e-292)
+2025-06-11 02:07:08,800 - INFO - [correlation_preserving] Spearman correlation: 0.9816 (p-value = 0.0000e+00)
+2025-06-11 02:07:09,021 - INFO - [correlation_preserving] Saved scatter plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_scatter.png
+2025-06-11 02:07:09,316 - INFO - [correlation_preserving] Saved NW heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_nw_heatmap.png
+2025-06-11 02:07:09,624 - INFO - [correlation_preserving] Saved FB heatmap to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_fb_heatmap.png
+2025-06-11 02:07:09,823 - INFO - [correlation_preserving] Saved histogram plot to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_histogram.png
+2025-06-11 02:07:10,105 - INFO - [correlation_preserving] Saved rank-vs-rank scatter to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_rank_scatter.png
+2025-06-11 02:07:10,106 - INFO - Comprehensive analysis report saved to EyeBLAST/Results_v3\20250611_020603_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normall\analysis_report.log
+2025-06-11 02:07:10,107 - INFO - Similarity comparison completed for all normalization methods.

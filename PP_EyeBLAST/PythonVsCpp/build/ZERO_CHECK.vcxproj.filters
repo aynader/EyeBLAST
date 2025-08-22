@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\aynad\Desktop\Home\TUM\Research\Ongoing_Projects\Privacy-Preserving_EyeBLAST\PP_EyeBLAST_v13\PythonVsCpp\build\CMakeFiles\f3b5f960379e43215987e6e5c76999f8\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F019989B-1933-3D8A-AD5D-02D7B786C92A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

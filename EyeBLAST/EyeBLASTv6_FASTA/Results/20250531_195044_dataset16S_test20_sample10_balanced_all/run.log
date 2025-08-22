@@ -1,0 +1,213 @@
+2025-05-31 19:50:44,186 - INFO - Starting comparison study with the following parameters:
+2025-05-31 19:50:44,186 - INFO -   algorithms: all
+2025-05-31 19:50:44,186 - INFO -   balanced: True
+2025-05-31 19:50:44,186 - INFO -   band_width: 16
+2025-05-31 19:50:44,186 - INFO -   batch_size: 10
+2025-05-31 19:50:44,186 - INFO -   fe_runs: 5
+2025-05-31 19:50:44,186 - INFO -   input_dir: dataset16S
+2025-05-31 19:50:44,186 - INFO -   k: 5
+2025-05-31 19:50:44,186 - INFO -   max_seq_length: 500
+2025-05-31 19:50:44,186 - INFO -   n_jobs: -1
+2025-05-31 19:50:44,186 - INFO -   no_numba: False
+2025-05-31 19:50:44,186 - INFO -   nw_gap: -2
+2025-05-31 19:50:44,186 - INFO -   nw_match: 1
+2025-05-31 19:50:44,186 - INFO -   nw_mismatch: -1
+2025-05-31 19:50:44,186 - INFO -   output_dir: Results
+2025-05-31 19:50:44,186 - INFO -   sample_percentage: 10
+2025-05-31 19:50:44,186 - INFO -   seed: 42
+2025-05-31 19:50:44,186 - INFO -   seed_length: 11
+2025-05-31 19:50:44,186 - INFO -   test_size: 0.2
+2025-05-31 19:50:44,186 - INFO -   word_size: 28
+2025-05-31 19:50:44,186 - INFO - Searching for FASTA files in dataset16S...
+2025-05-31 19:50:44,198 - INFO - Loading 10 FASTA files...
+2025-05-31 19:50:44,287 - INFO - Balanced sampling: 80 sequences per class
+2025-05-31 19:50:44,288 - INFO - Loaded 800 sequences from 10 classes
+2025-05-31 19:50:44,289 - INFO - Class distribution:
+2025-05-31 19:50:44,289 - INFO -   Bacillus: 80 sequences
+2025-05-31 19:50:44,289 - INFO -   Clostridium: 80 sequences
+2025-05-31 19:50:44,290 - INFO -   Enterococcus: 80 sequences
+2025-05-31 19:50:44,290 - INFO -   Escherichia: 80 sequences
+2025-05-31 19:50:44,290 - INFO -   Lactobacillus: 80 sequences
+2025-05-31 19:50:44,290 - INFO -   Neisseria: 80 sequences
+2025-05-31 19:50:44,291 - INFO -   Pseudomonas: 80 sequences
+2025-05-31 19:50:44,291 - INFO -   Salmonella: 80 sequences
+2025-05-31 19:50:44,291 - INFO -   Staphylococcus: 80 sequences
+2025-05-31 19:50:44,291 - INFO -   Streptococcus: 80 sequences
+2025-05-31 19:50:44,291 - INFO - Ensuring balanced class distribution...
+2025-05-31 19:50:44,291 - INFO - Created balanced dataset with 80 sequences
+2025-05-31 19:50:44,291 - INFO -   Bacillus: 8 sequences
+2025-05-31 19:50:44,291 - INFO -   Clostridium: 8 sequences
+2025-05-31 19:50:44,291 - INFO -   Enterococcus: 8 sequences
+2025-05-31 19:50:44,291 - INFO -   Escherichia: 8 sequences
+2025-05-31 19:50:44,291 - INFO -   Lactobacillus: 8 sequences
+2025-05-31 19:50:44,291 - INFO -   Neisseria: 8 sequences
+2025-05-31 19:50:44,293 - INFO -   Pseudomonas: 8 sequences
+2025-05-31 19:50:44,293 - INFO -   Salmonella: 8 sequences
+2025-05-31 19:50:44,293 - INFO -   Staphylococcus: 8 sequences
+2025-05-31 19:50:44,293 - INFO -   Streptococcus: 8 sequences
+2025-05-31 19:50:44,293 - INFO - Splitting data: 80 sequences with 10 classes
+2025-05-31 19:50:44,295 - INFO - Train set: 64 sequences
+2025-05-31 19:50:44,295 - INFO - Test set: 16 sequences
+2025-05-31 19:50:44,296 - INFO - 
+==================================================
+2025-05-31 19:50:44,296 - INFO - Running FastEyeBLAST_DNA (5 runs)
+2025-05-31 19:50:44,296 - INFO - ==================================================
+2025-05-31 19:50:44,296 - INFO - 
+FastEyeBLAST_DNA Run 1/5
+2025-05-31 19:50:44,338 - INFO - Training FastEyeBLAST_DNA...
+2025-05-31 19:50:44,339 - INFO - Encoding sequences...
+2025-05-31 19:50:44,349 - INFO - Computing conserved region weights...
+2025-05-31 19:50:44,349 - INFO - Sequences appear to be 16S rRNA - using specialized optimization
+2025-05-31 19:50:44,349 - INFO - Packing sequences...
+2025-05-31 19:50:44,366 - INFO - Computing simhash sketches...
+2025-05-31 19:50:44,915 - INFO - Building LSH index...
+2025-05-31 19:50:44,916 - INFO - Training completed in 0.58 seconds
+2025-05-31 19:50:44,916 - INFO - Memory usage: 0.89 MB
+2025-05-31 19:50:44,916 - INFO - FastEyeBLAST_DNA training completed in 0.58 seconds
+2025-05-31 19:50:44,916 - INFO - Training memory usage: 0.9 MB
+2025-05-31 19:50:44,953 - INFO - Evaluating classifier on 16 test samples...
+2025-05-31 19:50:44,953 - INFO - Predicting...
+2025-05-31 19:50:44,953 - INFO - Optimizing for 16S rRNA classification
+2025-05-31 19:50:47,613 - INFO - Prediction completed in 2.66 seconds
+2025-05-31 19:50:47,613 - INFO - Computing evaluation metrics...
+2025-05-31 19:50:47,615 - INFO - FastEyeBLAST_DNA Accuracy: 0.7500
+2025-05-31 19:50:47,615 - INFO - Prediction time: 2.66 seconds
+2025-05-31 19:50:47,619 - INFO - Prediction memory usage: 0.4 MB
+2025-05-31 19:50:47,619 - INFO - Total memory usage: 1.3 MB
+2025-05-31 19:50:47,619 - INFO - 
+FastEyeBLAST_DNA Run 2/5
+2025-05-31 19:50:47,672 - INFO - Training FastEyeBLAST_DNA...
+2025-05-31 19:50:47,673 - INFO - Encoding sequences...
+2025-05-31 19:50:47,682 - INFO - Computing conserved region weights...
+2025-05-31 19:50:47,683 - INFO - Sequences appear to be 16S rRNA - using specialized optimization
+2025-05-31 19:50:47,683 - INFO - Packing sequences...
+2025-05-31 19:50:47,700 - INFO - Computing simhash sketches...
+2025-05-31 19:50:48,245 - INFO - Building LSH index...
+2025-05-31 19:50:48,247 - INFO - Training completed in 0.57 seconds
+2025-05-31 19:50:48,247 - INFO - Memory usage: 0.41 MB
+2025-05-31 19:50:48,247 - INFO - FastEyeBLAST_DNA training completed in 0.57 seconds
+2025-05-31 19:50:48,247 - INFO - Training memory usage: 0.4 MB
+2025-05-31 19:50:48,300 - INFO - Evaluating classifier on 16 test samples...
+2025-05-31 19:50:48,300 - INFO - Predicting...
+2025-05-31 19:50:48,301 - INFO - Optimizing for 16S rRNA classification
+2025-05-31 19:50:50,719 - INFO - Prediction completed in 2.42 seconds
+2025-05-31 19:50:50,719 - INFO - Computing evaluation metrics...
+2025-05-31 19:50:50,720 - INFO - FastEyeBLAST_DNA Accuracy: 0.5000
+2025-05-31 19:50:50,723 - INFO - Prediction time: 2.42 seconds
+2025-05-31 19:50:50,723 - INFO - Prediction memory usage: 0.1 MB
+2025-05-31 19:50:50,723 - INFO - Total memory usage: 0.5 MB
+2025-05-31 19:50:50,723 - INFO - 
+FastEyeBLAST_DNA Run 3/5
+2025-05-31 19:50:50,765 - INFO - Training FastEyeBLAST_DNA...
+2025-05-31 19:50:50,765 - INFO - Encoding sequences...
+2025-05-31 19:50:50,781 - INFO - Computing conserved region weights...
+2025-05-31 19:50:50,782 - INFO - Sequences appear to be 16S rRNA - using specialized optimization
+2025-05-31 19:50:50,782 - INFO - Packing sequences...
+2025-05-31 19:50:50,785 - INFO - Computing simhash sketches...
+2025-05-31 19:50:51,340 - INFO - Building LSH index...
+2025-05-31 19:50:51,340 - INFO - Training completed in 0.58 seconds
+2025-05-31 19:50:51,340 - INFO - Memory usage: 0.04 MB
+2025-05-31 19:50:51,340 - INFO - FastEyeBLAST_DNA training completed in 0.58 seconds
+2025-05-31 19:50:51,340 - INFO - Training memory usage: 0.0 MB
+2025-05-31 19:50:51,393 - INFO - Evaluating classifier on 16 test samples...
+2025-05-31 19:50:51,393 - INFO - Predicting...
+2025-05-31 19:50:51,393 - INFO - Optimizing for 16S rRNA classification
+2025-05-31 19:50:53,356 - INFO - Prediction completed in 1.96 seconds
+2025-05-31 19:50:53,356 - INFO - Computing evaluation metrics...
+2025-05-31 19:50:53,356 - INFO - FastEyeBLAST_DNA Accuracy: 0.6875
+2025-05-31 19:50:53,356 - INFO - Prediction time: 1.96 seconds
+2025-05-31 19:50:53,356 - INFO - Prediction memory usage: 0.0 MB
+2025-05-31 19:50:53,356 - INFO - Total memory usage: 0.0 MB
+2025-05-31 19:50:53,356 - INFO - 
+FastEyeBLAST_DNA Run 4/5
+2025-05-31 19:50:53,406 - INFO - Training FastEyeBLAST_DNA...
+2025-05-31 19:50:53,406 - INFO - Encoding sequences...
+2025-05-31 19:50:53,424 - INFO - Computing conserved region weights...
+2025-05-31 19:50:53,425 - INFO - Sequences appear to be 16S rRNA - using specialized optimization
+2025-05-31 19:50:53,425 - INFO - Packing sequences...
+2025-05-31 19:50:53,441 - INFO - Computing simhash sketches...
+2025-05-31 19:50:53,986 - INFO - Building LSH index...
+2025-05-31 19:50:53,987 - INFO - Training completed in 0.58 seconds
+2025-05-31 19:50:53,987 - INFO - Memory usage: 0.00 MB
+2025-05-31 19:50:53,987 - INFO - FastEyeBLAST_DNA training completed in 0.58 seconds
+2025-05-31 19:50:53,987 - INFO - Training memory usage: 0.0 MB
+2025-05-31 19:50:54,042 - INFO - Evaluating classifier on 16 test samples...
+2025-05-31 19:50:54,042 - INFO - Predicting...
+2025-05-31 19:50:54,042 - INFO - Optimizing for 16S rRNA classification
+2025-05-31 19:50:56,106 - INFO - Prediction completed in 2.06 seconds
+2025-05-31 19:50:56,106 - INFO - Computing evaluation metrics...
+2025-05-31 19:50:56,106 - INFO - FastEyeBLAST_DNA Accuracy: 0.7500
+2025-05-31 19:50:56,106 - INFO - Prediction time: 2.06 seconds
+2025-05-31 19:50:56,106 - INFO - Prediction memory usage: 0.0 MB
+2025-05-31 19:50:56,106 - INFO - Total memory usage: 0.0 MB
+2025-05-31 19:50:56,106 - INFO - 
+FastEyeBLAST_DNA Run 5/5
+2025-05-31 19:50:56,165 - INFO - Training FastEyeBLAST_DNA...
+2025-05-31 19:50:56,165 - INFO - Encoding sequences...
+2025-05-31 19:50:56,177 - INFO - Computing conserved region weights...
+2025-05-31 19:50:56,178 - INFO - Sequences appear to be 16S rRNA - using specialized optimization
+2025-05-31 19:50:56,178 - INFO - Packing sequences...
+2025-05-31 19:50:56,195 - INFO - Computing simhash sketches...
+2025-05-31 19:50:56,756 - INFO - Building LSH index...
+2025-05-31 19:50:56,756 - INFO - Training completed in 0.59 seconds
+2025-05-31 19:50:56,756 - INFO - Memory usage: 0.00 MB
+2025-05-31 19:50:56,756 - INFO - FastEyeBLAST_DNA training completed in 0.59 seconds
+2025-05-31 19:50:56,756 - INFO - Training memory usage: 0.0 MB
+2025-05-31 19:50:56,816 - INFO - Evaluating classifier on 16 test samples...
+2025-05-31 19:50:56,816 - INFO - Predicting...
+2025-05-31 19:50:56,816 - INFO - Optimizing for 16S rRNA classification
+2025-05-31 19:50:59,274 - INFO - Prediction completed in 2.46 seconds
+2025-05-31 19:50:59,274 - INFO - Computing evaluation metrics...
+2025-05-31 19:50:59,280 - INFO - FastEyeBLAST_DNA Accuracy: 0.5625
+2025-05-31 19:50:59,280 - INFO - Prediction time: 2.46 seconds
+2025-05-31 19:50:59,280 - INFO - Prediction memory usage: 0.0 MB
+2025-05-31 19:50:59,280 - INFO - Total memory usage: 0.0 MB
+2025-05-31 19:50:59,284 - INFO - 
+FastEyeBLAST_DNA Average Results over 5 runs:
+2025-05-31 19:50:59,284 - INFO - Average Accuracy: 0.6500 ± 0.1016
+2025-05-31 19:50:59,284 - INFO - Average Training time: 0.58 ± 0.01 seconds
+2025-05-31 19:50:59,284 - INFO - Average Prediction time: 2.31 ± 0.26 seconds
+2025-05-31 19:50:59,284 - INFO - Average Memory usage: 0.4 ± 0.5 MB
+2025-05-31 19:50:59,774 - INFO - 
+==================================================
+2025-05-31 19:50:59,774 - INFO - Running Needleman-Wunsch
+2025-05-31 19:50:59,774 - INFO - ==================================================
+2025-05-31 19:50:59,833 - INFO - Training Needleman-Wunsch classifier...
+2025-05-31 19:50:59,833 - INFO - Processing training sequences...
+2025-05-31 19:50:59,844 - INFO - Needleman-Wunsch training completed in 0.01 seconds
+2025-05-31 19:50:59,844 - INFO - Training memory usage: 1.9 MB
+2025-05-31 19:50:59,900 - INFO - Evaluating classifier on 16 test samples...
+2025-05-31 19:50:59,902 - INFO - Predicting 16 sequences using Needleman-Wunsch...
+2025-05-31 19:51:16,697 - INFO - Computing evaluation metrics...
+2025-05-31 19:51:16,702 - INFO - Needleman-Wunsch Accuracy: 0.7500
+2025-05-31 19:51:16,702 - INFO - Prediction time: 16.80 seconds
+2025-05-31 19:51:16,702 - INFO - Prediction memory usage: 3.7 MB
+2025-05-31 19:51:16,702 - INFO - Total memory usage: 5.6 MB
+2025-05-31 19:51:17,058 - INFO - 
+==================================================
+2025-05-31 19:51:17,058 - INFO - Running MegaBLAST
+2025-05-31 19:51:17,058 - INFO - ==================================================
+2025-05-31 19:51:17,107 - INFO - Training MegaBLAST classifier...
+2025-05-31 19:51:17,107 - INFO - Creating BLAST database...
+2025-05-31 19:51:17,117 - INFO - Running makeblastdb...
+2025-05-31 19:51:18,019 - INFO - MegaBLAST training completed in 0.91 seconds
+2025-05-31 19:51:18,019 - INFO - Training memory usage: 0.0 MB
+2025-05-31 19:51:18,070 - INFO - Evaluating classifier on 16 test samples...
+2025-05-31 19:51:18,070 - INFO - Running MegaBLAST predictions...
+2025-05-31 19:51:28,029 - INFO - Computing evaluation metrics...
+2025-05-31 19:51:28,029 - INFO - MegaBLAST Accuracy: 0.9375
+2025-05-31 19:51:28,029 - INFO - Prediction time: 9.96 seconds
+2025-05-31 19:51:28,029 - INFO - Prediction memory usage: 0.0 MB
+2025-05-31 19:51:28,029 - INFO - Total memory usage: 0.0 MB
+2025-05-31 19:51:28,392 - INFO - Creating performance comparison chart at Results\20250531_195044_dataset16S_test20_sample10_balanced_all\performance_comparison.png...
+2025-05-31 19:51:28,558 - INFO - 
+Writing results to Results\20250531_195044_dataset16S_test20_sample10_balanced_all\dna_comparison_results.json
+2025-05-31 19:51:28,558 - INFO - 
+==================================================
+2025-05-31 19:51:28,558 - INFO - RESULTS SUMMARY
+2025-05-31 19:51:28,558 - INFO - ==================================================
+2025-05-31 19:51:28,558 - INFO - {
+  "FastEyeBLAST_DNA": 0.65,
+  "NCBI MegaBLAST": 0.9375,
+  "Needleman-Wunsch": 0.75
+}

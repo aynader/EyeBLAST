@@ -1,0 +1,50 @@
+Analysis Report - Multiple Normalization Methods
+================================================
+
+Run Timestamp       : 2025-06-12 09:48:18
+Mode                : IVT
+Input Directory     : GazeBaseVR_IVT
+Sample Percentage   : 10%
+Number of Samples   : 502
+k (FB neighbors)    : 7
+Needleman-Wunsch NJ : true
+Normalization Mode  : none
+
+Correlation Summary Across Normalization Methods
+=================================================
+Method               Pearson    P-value      Spearman   P-value     
+----------------------------------------------------------------------------
+none                 0.4796     0.0000e+00   0.9706     0.0000e+00  
+
+Detailed Analysis: NONE Normalization
+==================================================
+Pearson Correlation : 0.4796 (p-value = 0.0000e+00)
+  Interpretation     : Moderate linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.9706 (p-value = 0.0000e+00)
+  Interpretation     : Strong monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=-124.5291, max=0.4044, mean=-2.1771, std=5.4205
+  FB: min=0.0000, max=1.0000, mean=0.7919, std=0.1339
+
+Visualizations Saved:
+  - Scatter Plot            : Results_v3\20250612_094525_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_scatter.png
+  - NW Heatmap              : Results_v3\20250612_094525_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : Results_v3\20250612_094525_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_fb_heatmap.png
+  - Histogram               : Results_v3\20250612_094525_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : Results_v3\20250612_094525_GazeBaseVR_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_rank_scatter.png
+
+Comparative Analysis Across Normalization Methods
+==================================================
+Highest Absolute Pearson Correlation : none (0.4796)
+Highest Absolute Spearman Correlation: none (0.9706)
+
+Normalization Method Descriptions:
+- none                : Raw similarity scores (no normalization)
+- minmax              : Linear scaling to [0,1] range
+- zscore              : Standardization to mean=0, std=1
+- rank                : Rank-based normalization to [0,1]
+- quantile            : Quantile normalization to uniform distribution
+- correlation_preserving : Geometric mean scaling preserving correlation structure
+
+Please inspect the visualizations in each normalization subdirectory for detailed analysis.

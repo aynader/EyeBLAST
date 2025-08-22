@@ -1,0 +1,639 @@
+{
+  "FastEyeBLAST_DNA": {
+    "accuracy": 0.426,
+    "accuracy_std": 0.08867919710958148,
+    "confusion_matrix": [
+      [
+        8.2,
+        0.6,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8,
+        0.0,
+        0.0,
+        0.4
+      ],
+      [
+        0.0,
+        4.0,
+        1.2,
+        0.0,
+        0.2,
+        0.2,
+        0.6,
+        0.0,
+        0.0,
+        3.8
+      ],
+      [
+        3.8,
+        1.4,
+        3.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.8
+      ],
+      [
+        0.2,
+        0.2,
+        0.4,
+        6.2,
+        0.2,
+        0.4,
+        0.2,
+        0.6,
+        0.0,
+        1.6
+      ],
+      [
+        1.4,
+        0.6,
+        0.6,
+        0.6,
+        4.8,
+        0.6,
+        0.2,
+        0.0,
+        0.6,
+        0.6
+      ],
+      [
+        0.2,
+        1.2,
+        0.2,
+        1.8,
+        0.4,
+        1.8,
+        0.2,
+        0.6,
+        0.2,
+        3.4
+      ],
+      [
+        0.4,
+        0.2,
+        0.2,
+        0.4,
+        0.4,
+        0.0,
+        7.4,
+        0.2,
+        0.0,
+        0.8
+      ],
+      [
+        0.2,
+        0.2,
+        0.2,
+        4.8,
+        0.2,
+        0.2,
+        0.0,
+        0.4,
+        0.0,
+        3.8
+      ],
+      [
+        6.6,
+        1.4,
+        0.0,
+        0.0,
+        0.4,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.6
+      ],
+      [
+        1.4,
+        0.6,
+        0.6,
+        0.0,
+        0.2,
+        0.0,
+        0.2,
+        0.0,
+        0.2,
+        6.8
+      ]
+    ],
+    "report": {
+      "Bacillus": {
+        "precision": 0.32,
+        "recall": 0.8,
+        "f1-score": 0.45714285714285713,
+        "support": 10.0
+      },
+      "Clostridium": {
+        "precision": 0.47058823529411764,
+        "recall": 0.8,
+        "f1-score": 0.5925925925925926,
+        "support": 10.0
+      },
+      "Enterococcus": {
+        "precision": 0.4,
+        "recall": 0.2,
+        "f1-score": 0.26666666666666666,
+        "support": 10.0
+      },
+      "Escherichia": {
+        "precision": 0.3448275862068966,
+        "recall": 1.0,
+        "f1-score": 0.5128205128205128,
+        "support": 10.0
+      },
+      "Lactobacillus": {
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1-score": 0.16666666666666666,
+        "support": 10.0
+      },
+      "Neisseria": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "Pseudomonas": {
+        "precision": 0.5263157894736842,
+        "recall": 1.0,
+        "f1-score": 0.6896551724137931,
+        "support": 10.0
+      },
+      "Salmonella": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "Staphylococcus": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "Streptococcus": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "accuracy": 0.39,
+      "macro avg": {
+        "precision": 0.25617316109746985,
+        "recall": 0.39,
+        "f1-score": 0.2685544468303089,
+        "support": 100.0
+      },
+      "weighted avg": {
+        "precision": 0.25617316109746985,
+        "recall": 0.39,
+        "f1-score": 0.2685544468303089,
+        "support": 100.0
+      }
+    },
+    "train_time": 3.8363880157470702,
+    "train_time_std": 0.24442043961330895,
+    "prediction_time": 2.3771052837371824,
+    "prediction_time_std": 0.23512043923478237,
+    "memory_mb": 1.84609375,
+    "memory_mb_std": 2.7946073645980443,
+    "num_runs": 5,
+    "individual_runs": {
+      "accuracies": [
+        0.55,
+        0.3,
+        0.5,
+        0.39,
+        0.39
+      ],
+      "train_times": [
+        3.559828519821167,
+        3.5198023319244385,
+        3.9801583290100098,
+        4.07442307472229,
+        4.047727823257446
+      ],
+      "prediction_times": [
+        2.537377119064331,
+        2.427278995513916,
+        1.9128625392913818,
+        2.488579750061035,
+        2.519428014755249
+      ]
+    }
+  },
+  "Needleman-Wunsch": {
+    "accuracy": 0.9,
+    "confusion_matrix": [
+      [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10
+      ]
+    ],
+    "report": {
+      "Bacillus": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "Clostridium": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Enterococcus": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1-score": 0.9523809523809523,
+        "support": 10.0
+      },
+      "Escherichia": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "Lactobacillus": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9473684210526315,
+        "support": 10.0
+      },
+      "Neisseria": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Pseudomonas": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Salmonella": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.7272727272727273,
+        "support": 10.0
+      },
+      "Staphylococcus": {
+        "precision": 0.7692307692307693,
+        "recall": 1.0,
+        "f1-score": 0.8695652173913043,
+        "support": 10.0
+      },
+      "Streptococcus": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "accuracy": 0.9,
+      "macro avg": {
+        "precision": 0.9094988344988346,
+        "recall": 0.9,
+        "f1-score": 0.8986783396528988,
+        "support": 100.0
+      },
+      "weighted avg": {
+        "precision": 0.9094988344988344,
+        "recall": 0.9,
+        "f1-score": 0.8986783396528988,
+        "support": 100.0
+      }
+    },
+    "train_time": 0.05084109306335449,
+    "prediction_time": 193.78576135635376,
+    "memory_mb": 26.02734375
+  },
+  "NCBI MegaBLAST": {
+    "accuracy": 0.99,
+    "confusion_matrix": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10
+      ]
+    ],
+    "report": {
+      "Bacillus": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Clostridium": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Enterococcus": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1-score": 0.9523809523809523,
+        "support": 10.0
+      },
+      "Escherichia": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Lactobacillus": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9473684210526315,
+        "support": 10.0
+      },
+      "Neisseria": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Pseudomonas": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Salmonella": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Staphylococcus": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Streptococcus": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "accuracy": 0.99,
+      "macro avg": {
+        "precision": 0.990909090909091,
+        "recall": 0.99,
+        "f1-score": 0.9899749373433584,
+        "support": 100.0
+      },
+      "weighted avg": {
+        "precision": 0.990909090909091,
+        "recall": 0.99,
+        "f1-score": 0.9899749373433585,
+        "support": 100.0
+      }
+    },
+    "train_time": 0.7533183097839355,
+    "prediction_time": 67.96660447120667,
+    "memory_mb": 0.00390625
+  }
+}

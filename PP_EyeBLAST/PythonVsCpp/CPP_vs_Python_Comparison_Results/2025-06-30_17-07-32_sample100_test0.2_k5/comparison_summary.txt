@@ -1,0 +1,29 @@
+FastEyeBLAST Implementation Comparison Summary
+==================================================
+
+Timestamp: 2025-06-30_17-07-32
+Input directory: GazeBaseVR_IVT
+Sample percentage: 100%
+Test size: 0.2
+Number of neighbors: 5
+Random seed: 42
+Parameter sweep: False
+
+Results:
+- Results match: ✗
+- Predictions match: ✗
+
+Performance Metrics:
+- Python Accuracy: 0.918327
+- C++ Accuracy: 0.921315
+- Accuracy Difference: 0.002988
+
+Timing Comparison:
+- Python total time: 79.97s
+- C++ total time: 3.45s
+- C++ speedup: 23.21x
+
+Output Structure:
+- Python results: CPP_vs_Python_Comparison_Results\2025-06-30_17-07-32_sample100_test0.2_k5\Python
+- C++ results: CPP_vs_Python_Comparison_Results\2025-06-30_17-07-32_sample100_test0.2_k5\CPP
+- This summary: CPP_vs_Python_Comparison_Results\2025-06-30_17-07-32_sample100_test0.2_k5\comparison_summary.txt

@@ -1,0 +1,170 @@
+{
+  "Needleman-Wunsch": {
+    "accuracy": 0.6666666666666666,
+    "train_time": 0.18283557891845703,
+    "prediction_time": 150.22713470458984,
+    "memory_mb": 8.4765625,
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "report": {
+      "Comic": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 4.0
+      },
+      "Online newspaper": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Textbook": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.6666666666666666,
+      "macro avg": {
+        "precision": 0.2222222222222222,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.26666666666666666,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5333333333333333,
+        "support": 6.0
+      }
+    }
+  },
+  "NCBI MegaBLAST": {
+    "accuracy": 0.5,
+    "train_time": 2.4680559635162354,
+    "prediction_time": 4.671777725219727,
+    "memory_mb": 0.11328125,
+    "confusion_matrix": [
+      [
+        2,
+        2,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "report": {
+      "Comic": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 4.0
+      },
+      "Online newspaper": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1-score": 0.4,
+        "support": 1.0
+      },
+      "Textbook": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5,
+        "f1-score": 0.35555555555555557,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.7083333333333334,
+        "recall": 0.5,
+        "f1-score": 0.5111111111111111,
+        "support": 6.0
+      }
+    }
+  },
+  "FastEyeBLAST": {
+    "accuracy": 0.3333333333333333,
+    "train_time": 6.6501452922821045,
+    "prediction_time": 9.315345048904419,
+    "memory_mb": 12.5546875,
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "report": {
+      "Comic": {
+        "precision": 0.5,
+        "recall": 0.25,
+        "f1-score": 0.3333333333333333,
+        "support": 4.0
+      },
+      "Online newspaper": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Textbook": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1-score": 0.4,
+        "support": 1.0
+      },
+      "accuracy": 0.3333333333333333,
+      "macro avg": {
+        "precision": 0.25,
+        "recall": 0.4166666666666667,
+        "f1-score": 0.24444444444444446,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.375,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.2888888888888889,
+        "support": 6.0
+      }
+    }
+  }
+}

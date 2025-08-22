@@ -1,0 +1,96 @@
+2025-06-12 11:34:19,692 - INFO - Starting comparison study with the following parameters:
+2025-06-12 11:34:19,693 - INFO -   band_width: 5
+2025-06-12 11:34:19,693 - INFO -   comparison: nw-only
+2025-06-12 11:34:19,693 - INFO -   component_modes: ['full', 'simhash_only', 'alignment_only']
+2025-06-12 11:34:19,694 - INFO -   data_type: task
+2025-06-12 11:34:19,694 - INFO -   gender_file: None
+2025-06-12 11:34:19,694 - INFO -   input_dir: JuDo1000_IVT
+2025-06-12 11:34:19,695 - INFO -   k: 7
+2025-06-12 11:34:19,695 - INFO -   max_candidates: 20
+2025-06-12 11:34:19,696 - INFO -   n_jobs: -1
+2025-06-12 11:34:19,696 - INFO -   nw_nj: true
+2025-06-12 11:34:19,697 - INFO -   output_dir: Comparison_Results
+2025-06-12 11:34:19,698 - INFO -   random: False
+2025-06-12 11:34:19,708 - INFO -   sample_percentage: 10
+2025-06-12 11:34:19,708 - INFO -   seed_length: 3
+2025-06-12 11:34:19,709 - INFO -   task_filter: None
+2025-06-12 11:34:19,709 - INFO -   test_size: 0.2
+2025-06-12 11:34:19,709 - INFO -   variable_word_size: 64
+2025-06-12 11:34:19,709 - INFO -   word_size: 28
+2025-06-12 11:34:19,713 - INFO - Using fixed seed for reproducibility (42)
+2025-06-12 11:34:19,713 - INFO - Loading data from JuDo1000_IVT.
+2025-06-12 11:34:19,714 - INFO - Detected data format: IVT
+2025-06-12 11:34:19,717 - INFO - Sampling 60 files (10% of 600)
+2025-06-12 11:34:19,718 - INFO - Loading 60 scanpath files from JuDo1000_IVT...
+2025-06-12 11:34:19,751 - INFO - Loaded 60 scanpaths with 4 different labels
+2025-06-12 11:34:19,752 - INFO - Label distribution:
+2025-06-12 11:34:19,752 - INFO -   Task 1 (Task 1): 15 samples
+2025-06-12 11:34:19,753 - INFO -   Task 2 (Task 2): 14 samples
+2025-06-12 11:34:19,753 - INFO -   Task 3 (Task 3): 15 samples
+2025-06-12 11:34:19,753 - INFO -   Task 4 (Task 4): 16 samples
+2025-06-12 11:34:19,753 - INFO - Computing full NW similarity matrix for 60 samples...
+2025-06-12 11:34:19,753 - INFO - Computing pairwise similarities for 60 scanpaths (1770 pairs)...
+2025-06-12 11:34:19,753 - INFO - Sequence length stats: max=42285, avg=6655.2
+2025-06-12 11:34:19,753 - INFO - Estimated memory per NW comparison: 0.2 MB
+2025-06-12 11:34:19,757 - INFO - Available system memory: 13.6 GB
+2025-06-12 11:34:19,762 - INFO - Processing 1770 pairs in batches of 500
+2025-06-12 11:34:19,763 - INFO - Processing batch 1/4 (500 pairs)
+2025-06-12 11:34:19,763 - INFO - Memory usage before batch: 57.1%
+2025-06-12 11:34:34,228 - INFO - Memory usage after batch: 66.9%
+2025-06-12 11:34:34,282 - INFO - Processing batch 2/4 (500 pairs)
+2025-06-12 11:34:34,286 - INFO - Memory usage before batch: 66.9%
+2025-06-12 11:34:43,973 - INFO - Memory usage after batch: 66.8%
+2025-06-12 11:34:44,035 - INFO - Processing batch 3/4 (500 pairs)
+2025-06-12 11:34:44,035 - INFO - Memory usage before batch: 66.8%
+2025-06-12 11:34:56,127 - INFO - Memory usage after batch: 66.6%
+2025-06-12 11:34:56,188 - INFO - Processing batch 4/4 (270 pairs)
+2025-06-12 11:34:56,188 - INFO - Memory usage before batch: 66.6%
+2025-06-12 11:35:03,849 - INFO - Memory usage after batch: 65.3%
+2025-06-12 11:35:03,905 - INFO - Successfully computed 1770 similarity pairs
+2025-06-12 11:35:03,925 - INFO - Saved NW similarity matrix to Comparison_Results\20250612_113419_JuDo1000_IVT_task_sample10_test20_nw-only_k7\full_nw_similarity.npy
+2025-06-12 11:35:03,927 - INFO - Building FB index and computing full similarity matrix for 60 samples...
+2025-06-12 11:35:03,929 - INFO - Encoding scanpaths...
+2025-06-12 11:35:04,806 - INFO - Alphabet size: 15
+2025-06-12 11:35:04,813 - INFO - Bits per token: 4
+2025-06-12 11:35:04,813 - INFO - Tokens per 64-bit word: 16
+2025-06-12 11:35:04,815 - INFO - Packing scanpaths into words...
+2025-06-12 11:35:04,921 - INFO - Computing SimHash sketches...
+2025-06-12 11:35:08,954 - INFO - Building LSH index...
+2025-06-12 11:35:30,356 - INFO - Saved FB similarity matrix to Comparison_Results\20250612_113419_JuDo1000_IVT_task_sample10_test20_nw-only_k7\full_fb_similarity.npy
+2025-06-12 11:35:30,392 - INFO - Saved NW vs. FB correlation stats to Comparison_Results\20250612_113419_JuDo1000_IVT_task_sample10_test20_nw-only_k7\matrix_correlation_stats.json
+2025-06-12 11:35:30,855 - INFO - Saved enhanced FB vs. NW similarity scatter to Comparison_Results\20250612_113419_JuDo1000_IVT_task_sample10_test20_nw-only_k7\fb_vs_nw_scatter.png
+2025-06-12 11:35:30,855 - INFO - Saved scatter interpretation report to Comparison_Results\20250612_113419_JuDo1000_IVT_task_sample10_test20_nw-only_k7\scatter_report.log
+2025-06-12 11:35:30,855 - INFO - Splitting data into train/test sets (80/20).
+2025-06-12 11:35:30,855 - INFO - Training set: 48 samples
+2025-06-12 11:35:30,855 - INFO - Test set: 12 samples
+2025-06-12 11:35:30,855 - INFO - 
+==================================================
+2025-06-12 11:35:30,855 - INFO - 1. Needleman-Wunsch Classification
+2025-06-12 11:35:30,866 - INFO - ==================================================
+2025-06-12 11:35:30,868 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-06-12 11:35:30,929 - INFO - Training Needleman-Wunsch classifier.
+2025-06-12 11:35:30,929 - INFO - Detected IVT-encoded data for Needleman-Wunsch
+2025-06-12 11:35:31,105 - INFO - Needleman-Wunsch training completed in 0.18 seconds
+2025-06-12 11:35:31,105 - INFO - Training memory usage: 2.0 MB
+2025-06-12 11:35:31,105 - INFO - Evaluating Needleman-Wunsch classifier.
+2025-06-12 11:35:31,184 - INFO - Evaluating classifier on 12 test samples...
+2025-06-12 11:35:31,184 - INFO - Predicting labels for 12 test samples using Needleman-Wunsch...
+2025-06-12 11:35:31,184 - INFO - Split test data into 12 batches
+2025-06-12 11:35:31,184 - INFO - Processing 12 batches in parallel using 32 jobs
+2025-06-12 11:36:26,957 - INFO - Computing evaluation metrics...
+2025-06-12 11:36:26,980 - INFO - Needleman-Wunsch Accuracy: 0.1667
+2025-06-12 11:36:26,980 - INFO - Prediction time: 55.77 seconds
+2025-06-12 11:36:26,980 - INFO - Prediction memory usage: 2.9 MB
+2025-06-12 11:36:26,983 - INFO - Total memory usage: 4.9 MB
+2025-06-12 11:36:27,140 - INFO - 
+==================================================
+2025-06-12 11:36:27,141 - INFO - Single algorithm results
+2025-06-12 11:36:27,142 - INFO - ==================================================
+2025-06-12 11:36:27,142 - INFO - Needleman-Wunsch Accuracy: 0.1667
+2025-06-12 11:36:27,143 - INFO - Needleman-Wunsch Train time: 0.18 seconds
+2025-06-12 11:36:27,144 - INFO - Needleman-Wunsch Prediction time: 55.77 seconds
+2025-06-12 11:36:27,144 - INFO - Needleman-Wunsch Memory usage: 4.87 MB
+2025-06-12 11:36:27,145 - INFO - Saving detailed results to Comparison_Results\20250612_113419_JuDo1000_IVT_task_sample10_test20_nw-only_k7\comparison_results.json.
+2025-06-12 11:36:27,147 - INFO - Results saved to Comparison_Results\20250612_113419_JuDo1000_IVT_task_sample10_test20_nw-only_k7/
+2025-06-12 11:36:27,147 - INFO - Run parameters saved to Comparison_Results\20250612_113419_JuDo1000_IVT_task_sample10_test20_nw-only_k7\run_parameters.json
+2025-06-12 11:36:27,148 - INFO - Comparison study completed.

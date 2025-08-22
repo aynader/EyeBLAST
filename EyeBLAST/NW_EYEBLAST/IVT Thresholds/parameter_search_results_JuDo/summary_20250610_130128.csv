@@ -1,0 +1,10 @@
+set,thresh_fix,thresh_ms,thresh_sacc,notes,fix_token_pct,ms_token_pct,sacc_token_pct,fix_time_pct,ms_time_pct,sacc_time_pct,output_folder,files_processed
+1,50000,200000,1000000,strict fix → lots of events; micro and saccade only the fastest,0.0,50.0,50.0,0.0,35.18,64.82,parameter_search_results_JuDo\set_1_fix50000_ms200000_sacc1000000,10
+2,50000,300000,1500000,"strict fix, baseline micro/sacc",0.0,50.0,50.0,0.0,68.25,31.75,parameter_search_results_JuDo\set_2_fix50000_ms300000_sacc1500000,10
+3,50000,500000,2000000,"strict fix, broad micro window",0.0,50.0,50.0,0.0,85.52,14.48,parameter_search_results_JuDo\set_3_fix50000_ms500000_sacc2000000,10
+4,100000,200000,1000000,"moderate fix, strict micro/sacc",0.0,50.0,50.0,0.0,35.18,64.82,parameter_search_results_JuDo\set_4_fix100000_ms200000_sacc1000000,10
+5,100000,500000,2000000,current default,0.0,50.0,50.0,0.0,85.52,14.48,parameter_search_results_JuDo\set_5_fix100000_ms500000_sacc2000000,10
+6,100000,700000,2500000,"moderate fix, extended micro/sacc",0.0,50.01,49.99,0.0,91.22,8.78,parameter_search_results_JuDo\set_6_fix100000_ms700000_sacc2500000,10
+7,200000,300000,1000000,"liberal fix, strict micro/sacc",0.0,50.0,50.0,0.0,35.18,64.82,parameter_search_results_JuDo\set_7_fix200000_ms300000_sacc1000000,10
+8,200000,500000,2000000,"liberal fix, baseline micro/sacc",0.01,50.0,49.99,0.0,85.52,14.48,parameter_search_results_JuDo\set_8_fix200000_ms500000_sacc2000000,10
+9,200000,700000,2500000,"liberal fix, broad micro/sacc",0.02,50.01,49.97,0.0,91.22,8.78,parameter_search_results_JuDo\set_9_fix200000_ms700000_sacc2500000,10

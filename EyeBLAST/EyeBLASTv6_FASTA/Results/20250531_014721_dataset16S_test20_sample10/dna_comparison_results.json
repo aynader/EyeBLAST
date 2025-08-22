@@ -1,0 +1,66 @@
+{
+  "FastEyeBLAST_DNA": {
+    "accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        200
+      ]
+    ],
+    "report": {
+      "Clostridium": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      }
+    },
+    "train_time": 7.517010927200317,
+    "prediction_time": 143.19452834129333,
+    "memory_mb": 118.90234375
+  },
+  "MegaBLAST_DNA": {
+    "accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        200
+      ]
+    ],
+    "report": {
+      "Clostridium": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      }
+    },
+    "train_time": 0.7318463325500488,
+    "prediction_time": 136.08867645263672,
+    "memory_mb": -0.01953125
+  }
+}

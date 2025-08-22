@@ -1,0 +1,16 @@
+set,thresh_fix,thresh_ms,thresh_sacc,scale_factor,smooth_window,notes,fix_pct,ms_pct,sacc_pct,mse,output_folder,files_processed
+1,0.01,0.1,1.0,5.0,9,Extremely low thresholds with minimal scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_1_fix0.01_ms0.1_sacc1.0_scale5.0_smooth9,5
+2,0.05,0.2,2.0,10.0,7,Very low thresholds with minimal scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_2_fix0.05_ms0.2_sacc2.0_scale10.0_smooth7,5
+3,0.1,0.5,3.0,15.0,5,Low thresholds with low scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_3_fix0.1_ms0.5_sacc3.0_scale15.0_smooth5,5
+4,0.2,0.8,5.0,20.0,7,Low thresholds with medium-low scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_4_fix0.2_ms0.8_sacc5.0_scale20.0_smooth7,5
+5,0.5,1.0,8.0,25.0,9,Moderate-low thresholds with medium scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_5_fix0.5_ms1.0_sacc8.0_scale25.0_smooth9,5
+6,0.8,2.0,10.0,20.0,11,Moderate thresholds with medium scaling and high smoothing,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_6_fix0.8_ms2.0_sacc10.0_scale20.0_smooth11,5
+7,10.0,15.0,30.0,1.0,5,High thresholds with minimal scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_7_fix10.0_ms15.0_sacc30.0_scale1.0_smooth5,5
+8,8.0,12.0,25.0,2.0,7,High thresholds with very low scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_8_fix8.0_ms12.0_sacc25.0_scale2.0_smooth7,5
+9,5.0,10.0,20.0,3.0,9,Medium-high thresholds with low scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_9_fix5.0_ms10.0_sacc20.0_scale3.0_smooth9,5
+10,2.5,6.0,35.0,5.0,7,Previous defaults with reduced scale,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_10_fix2.5_ms6.0_sacc35.0_scale5.0_smooth7,5
+11,2.0,5.0,30.0,10.0,7,Slightly reduced thresholds with low scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_11_fix2.0_ms5.0_sacc30.0_scale10.0_smooth7,5
+12,2.5,6.0,35.0,15.0,7,Previous defaults with moderate scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_12_fix2.5_ms6.0_sacc35.0_scale15.0_smooth7,5
+13,2.0,5.0,30.0,-20.0,7,Testing negative scale for inverted coordinates,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_13_fix2.0_ms5.0_sacc30.0_scale-20.0_smooth7,5
+14,0.001,0.01,0.1,1.0,5,Minimal thresholds with minimal scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_14_fix0.001_ms0.01_sacc0.1_scale1.0_smooth5,5
+15,20.0,30.0,50.0,0.5,11,Maximum thresholds with minimal scaling,0,0,0,2664.5392666666667,parameter_search_results_S02_EyeLink\set_15_fix20.0_ms30.0_sacc50.0_scale0.5_smooth11,5

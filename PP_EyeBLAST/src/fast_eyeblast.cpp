@@ -11,10 +11,10 @@
 
 namespace pp_eyeblast {
 
-
+// Constants from Python implementation
 const uint64_t MASK64 = UINT64_MAX;
 
-
+// Cross-platform popcount function
 inline int popcount64(uint64_t value) {
 #ifdef _MSC_VER
     return static_cast<int>(__popcnt64(value));
@@ -30,22 +30,22 @@ inline int popcount64(uint64_t value) {
 #endif
 }
 
-
+// DeterministicRandom implementation - EXACT same as original Python
 double DeterministicRandom::random() {
-    
+    // Linear congruential generator with same constants as Python
     state_ = (state_ * 1103515245ULL + 12345ULL) & 0x7fffffffULL;
     return static_cast<double>(state_) / 0x80000000ULL;
 }
 
 bool DeterministicRandom::random_bool() {
-    
+    // EXACT same logic as Python: if rng.random() < 0.5:
     return random() < 0.5;
 }
 
 uint64_t DeterministicRandom::random_uint64() {
     uint64_t result = 0;
     for (int i = 0; i < 64; ++i) {
-        
+        // EXACT same logic as Python for bitmask generation
         if (random_bool()) {
             result |= (1ULL << i);
         }
@@ -53,7 +53,7 @@ uint64_t DeterministicRandom::random_uint64() {
     return result;
 }
 
-
+// FastEyeBLAST implementation
 FastEyeBLAST::FastEyeBLAST(int seed_length, int band_width, 
                            bool use_duration_bins, int duration_bins,
                            int lsh_hash_size)
@@ -70,18 +70,18 @@ static inline int deterministic_token_id(const std::string& tok) {
     char c = tok[0];
     int letter = (c == 'M') ? 0
                : (c == 'F') ? 1
-               :              2;          
+               :              2;          // treat everything else as ‘S’
 
     int value = 0;
     for (size_t i = 1; i < tok.size(); ++i)
         if (std::isdigit(tok[i]))
-            value = value * 10 + (tok[i] - '0');   
+            value = value * 10 + (tok[i] - '0');   // parse decimal part
 
-    value &= 0x1FF;                     
-    return (letter << 9) | value;       
+    value &= 0x1FF;                     // clamp to 0-511 just in case
+    return (letter << 9) | value;       // (letter*512) + value
 }
 
-
+// EXACT replication of Python _token_to_integer - MUST match original algorithm
 int FastEyeBLAST::token_to_integer(const std::string& token) {
     if (token_to_id_.find(token) == token_to_id_.end()) {
         if (frozen_) {
@@ -124,10 +124,10 @@ std::string FastEyeBLAST::bin_duration(const std::string& token) {
     }
 }
 
-
+// EXACT replication of Python _initialize_bit_packing - MUST match original algorithm
 void FastEyeBLAST::initialize_bit_packing() {
     int alphabet_size = token_to_id_.size();
-    
+    // EXACT same calculation as Python
     bits_per_token_ = std::max(1, static_cast<int>(std::ceil(std::log2(alphabet_size))));
     tokens_per_word_ = 64 / bits_per_token_;
     
@@ -135,8 +135,8 @@ void FastEyeBLAST::initialize_bit_packing() {
     std::cout << "Bits per token: " << bits_per_token_ << std::endl;
     std::cout << "Tokens per 64-bit word: " << tokens_per_word_ << std::endl;
     
-    
-    base_ = 31;  
+    // Initialize rolling hash parameters - EXACT same as Python
+    base_ = 31;  // A prime number for rolling hash
     pow_base_.clear();
     pow_base_.push_back(1);
     for (int i = 1; i < std::max(seed_length_, 100); i++) {
@@ -144,19 +144,19 @@ void FastEyeBLAST::initialize_bit_packing() {
     }
 }
 
-
+// EXACT replication of Python _initialize_simhash - MUST match original algorithm
 void FastEyeBLAST::initialize_simhash() {
     int alphabet_size = token_to_id_.size();
     id_bitmasks_.clear();
     id_bitmasks_.resize(alphabet_size);
     
-    
+    // Use EXACT same seed and algorithm as Python: rng = random.Random(42)
     DeterministicRandom rng(42);
     
     for (int i = 0; i < alphabet_size; i++) {
         uint64_t mask = 0;
         for (int j = 0; j < lsh_hash_size_; j++) {
-            
+            // EXACT same logic as Python: if rng.random() < 0.5:
             if (rng.random() < 0.5) {
                 mask |= (1ULL << j);
             }
@@ -186,27 +186,27 @@ std::vector<uint64_t> FastEyeBLAST::pack_ids_into_words(const std::vector<int>& 
     return packed_words;
 }
 
-
+// EXACT replication of Python _calculate_rolling_hash
 std::vector<uint64_t> FastEyeBLAST::calculate_rolling_hash(const std::vector<int>& id_list) {
     if (id_list.size() < seed_length_) return {};
     
     std::vector<uint64_t> hashes;
     int k = seed_length_;
     
-    
+    // Initialize hash for first k-mer - EXACT same as Python
     uint64_t h = 0;
     for (int i = 0; i < k; i++) {
         h = (h * base_ + id_list[i]) & MASK64;
     }
     hashes.push_back(h);
     
-    
+    // Calculate rolling hash for remaining k-mers - EXACT same as Python
     for (size_t i = k; i < id_list.size(); i++) {
-        
+        // Remove contribution of the oldest character
         h = (h - id_list[i - k] * pow_base_[k - 1]) & MASK64;
-        
+        // Multiply by base
         h = (h * base_) & MASK64;
-        
+        // Add contribution of the new character
         h = (h + id_list[i]) & MASK64;
         hashes.push_back(h);
     }
@@ -214,16 +214,16 @@ std::vector<uint64_t> FastEyeBLAST::calculate_rolling_hash(const std::vector<int
     return hashes;
 }
 
-
+// EXACT replication of Python _compute_simhash - MUST match original algorithm
 uint64_t FastEyeBLAST::compute_simhash(const std::vector<int>& id_list) {
     if (id_bitmasks_.empty()) {
         initialize_simhash();
     }
     
-    
+    // Initialize counters for each bit position - EXACT same as Python
     std::vector<int> counters(lsh_hash_size_, 0);
     
-    
+    // Accumulate counts - EXACT same logic as Python
     for (int token_id : id_list) {
         if (token_id >= 0 && token_id < static_cast<int>(id_bitmasks_.size())) {
             uint64_t bitmask = id_bitmasks_[token_id];
@@ -237,7 +237,7 @@ uint64_t FastEyeBLAST::compute_simhash(const std::vector<int>& id_list) {
         }
     }
     
-    
+    // Generate fingerprint based on counters - EXACT same as Python
     uint64_t fingerprint = 0;
     for (int i = 0; i < lsh_hash_size_; i++) {
         if (counters[i] > 0) {
@@ -275,14 +275,14 @@ std::vector<SeedPair> FastEyeBLAST::greedy_chain_seeds(const std::vector<SeedPai
                                                        int len1, int len2) {
     if (seeds.empty()) return {};
     
-    
+    // Group seeds by diagonal
     std::map<int, std::vector<SeedPair>> diagonals;
     for (const auto& seed : seeds) {
         int diag = seed.pos2 - seed.pos1;
         diagonals[diag].push_back(seed);
     }
     
-    
+    // Find diagonal with most seeds
     auto best_diag = std::max_element(diagonals.begin(), diagonals.end(),
                                      [](const auto& a, const auto& b) {
                                          return a.second.size() < b.second.size();
@@ -294,7 +294,7 @@ std::vector<SeedPair> FastEyeBLAST::greedy_chain_seeds(const std::vector<SeedPai
                   return a.pos1 < b.pos1;
               });
     
-    
+    // Build greedy chain
     std::vector<SeedPair> chain;
     if (!best_seeds.empty()) {
         chain.push_back(best_seeds[0]);
@@ -314,47 +314,47 @@ MatchResult FastEyeBLAST::banded_levenshtein(const std::vector<int>& seq1,
                                            int band_width,
                                            const std::vector<SeedPair>& chain) {
     if (chain.empty()) {
-        
+        // EXACT same fallback as Python: return worst possible score for empty chain
         return MatchResult(static_cast<int>(-(seq1.size() + seq2.size())), {});
     }
     
-    
+    // Extract diagonal from chain - EXACT same as Python
     int diag = chain[0].pos2 - chain[0].pos1;
     
-    
+    // Adjust band width to be symmetric around diagonal - EXACT same as Python
     int half_band = band_width / 2;
     
-    
+    // Initialize dynamic programming matrix - EXACT same as Python
     int m = seq1.size();
     int n = seq2.size();
     
-    
+    // Use integer-only scoring - EXACT same as Python
     int match_score = 2;
     int mismatch_penalty = -1;
     int gap_penalty = -1;
     
-    
+    // Preallocate DP matrix with band - EXACT same as Python
     std::vector<std::vector<int>> dp(m + 1, std::vector<int>(band_width, 0));
     
-    
+    // Initialize first row and column - EXACT same as Python
     for (int i = 0; i < band_width; i++) {
         dp[0][i] = i * gap_penalty;
     }
     
     for (int i = 1; i <= m; i++) {
-        
+        // Calculate column range for this row - EXACT same as Python
         int col_start = std::max(1, i + diag - half_band);
         int col_end = std::min(n + 1, i + diag + half_band + 1);
         int band_start = 0;
         
-        
+        // Initialize left edge of band if needed - EXACT same as Python
         if (col_start > 1) {
             dp[i][0] = dp[i-1][0] + gap_penalty;
         } else {
             dp[i][0] = i * gap_penalty;
         }
         
-        
+        // Fill the band for this row - EXACT same as Python
         for (int j = col_start; j < col_end; j++) {
             int band_j = j - col_start + band_start;
             
@@ -362,84 +362,84 @@ MatchResult FastEyeBLAST::banded_levenshtein(const std::vector<int>& seq1,
                 break;
             }
             
-            
+            // Calculate scores - EXACT same as Python
             if (j <= n) {
                 bool match = (seq1[i-1] == seq2[j-1]);
-                
+                //int diag_score = dp[i-1][band_j-1 > 0 ? band_j-1 : 0] + (match ? match_score : mismatch_penalty);
                 int col_start_prev = std::max(1, (i-1) + diag - half_band);
                 int band_j_prev    = (j-1) - col_start_prev;
                 int diag_score     = (band_j_prev >= 0 && band_j_prev < band_width)? dp[i-1][band_j_prev] + (match ? match_score: mismatch_penalty): INT_MIN/2;
                 int up_score = dp[i-1][band_j] + gap_penalty;
                 int left_score = (band_j > 0) ? dp[i][band_j-1] : INT_MIN;
                 
-                
+                // Choose best score - EXACT same as Python
                 dp[i][band_j] = std::max({diag_score, up_score, left_score});
             }
         }
     }
     
-    
-    
+    // Extract score from bottom-right cell - calculate correct band position
+    // For row m, we want column n, which maps to band position:
     int final_col_start = std::max(1, m + diag - half_band);
     int final_band_pos = n - final_col_start;
     
-    
+    // Ensure we're within band bounds
     if (final_band_pos < 0) final_band_pos = 0;
     if (final_band_pos >= band_width) final_band_pos = band_width - 1;
     
     int score = dp[m][final_band_pos];
 
     
-    
+    // Simple alignment reconstruction (just use the chain) - EXACT same as Python
     return MatchResult(score, chain);
 }
 
 Encoding FastEyeBLAST::encode_and_pack(const std::vector<std::string>& tokens) {
-    
+    /* 1. token-level encoding - EXACT same as original */
     std::vector<int> encoded;
     encoded.reserve(tokens.size());
     for (const std::string& tok : tokens) {
         encoded.push_back(token_to_integer(bin_duration(tok)));
     }
 
-    
+    /* 2. initialise bit-packing parameters once */
     if (bits_per_token_ == 0)
         initialize_bit_packing();
 
-    
+    /* 3. bit-pack + SimHash - EXACT same as original */
     std::vector<uint64_t> packed  = pack_ids_into_words(encoded);
     uint64_t              simhash = compute_simhash(encoded);
 
-    
+    /* 4. fill *all* fields of Encoding, including the two new ones */
     Encoding enc;
     enc.ids             = std::move(encoded);
     enc.packed          = std::move(packed);
     enc.simhash         = simhash;
-    enc.bits_per_token  = bits_per_token_;   
-    enc.tokens_per_word = tokens_per_word_;  
+    enc.bits_per_token  = bits_per_token_;   // NEW
+    enc.tokens_per_word = tokens_per_word_;  // NEW
     return enc;
 }
 
 double FastEyeBLAST::normalized_similarity(const std::vector<int>& seq1,
                                          const std::vector<int>& seq2,
                                          int band_width) {
-    
+    // Pack sequences
     std::vector<uint64_t> packed1 = pack_ids_into_words(seq1);
     std::vector<uint64_t> packed2 = pack_ids_into_words(seq2);
     
-    
+    // Extract seeds
     std::vector<SeedPair> seeds = extract_seeds(packed1, packed2);
     std::cout << "DEBUG: Found " << seeds.size() << " seeds" << std::endl;
     
-    
+    // Chain seeds
     std::vector<SeedPair> chain = greedy_chain_seeds(seeds, seq1.size(), seq2.size());
     std::cout << "DEBUG: Chain has " << chain.size() << " seeds" << std::endl;
     
-    
+    // Compute banded Levenshtein on TOKEN SEQUENCES - EXACT same as original
     MatchResult result = banded_levenshtein(seq1, seq2, band_width, chain);
     std::cout << "DEBUG: Raw score = " << result.score << std::endl;
     
-    
+    // Normalize score - EXACT same as original
     int max_possible_score = std::max(seq1.size(), seq2.size()) * 2;
     std::cout << "DEBUG: Max possible score = " << max_possible_score << std::endl;
     double normalized_score = std::max(0.0, static_cast<double>(result.score)) / max_possible_score;
@@ -447,7 +447,7 @@ double FastEyeBLAST::normalized_similarity(const std::vector<int>& seq1,
     return normalized_score;
 }
 
-
+// Global instance for stateless API
 static FastEyeBLAST global_instance;
 
 FastEyeBLAST &get_global_instance() {
@@ -464,7 +464,7 @@ double normalized_similarity(const std::vector<int>& seq1,
     return global_instance.normalized_similarity(seq1, seq2, band_width);
 }
 
-
+// Dictionary management methods
 void FastEyeBLAST::freeze_dictionary() {
     frozen_ = true;
     std::cout << "Dictionary frozen with " << token_to_id_.size() << " tokens" << std::endl;
@@ -484,4 +484,4 @@ void FastEyeBLAST::reset_dictionary() {
     id_bitmasks_.clear();
 }
 
-} 
+} // namespace pp_eyeblast

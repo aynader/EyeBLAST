@@ -1,0 +1,14 @@
+JuDo1000 IVT Quality Check Results
+Parameters: thresh_fix=200000, thresh_ms=300000, thresh_sacc=1000000
+Files processed: 10
+Total tokens: 236287
+
+By token count:
+  Fixations: 0.00%
+  Microsaccades: 50.00%
+  Saccades: 50.00%
+
+By time spent:
+  Fixations: 0.00%
+  Microsaccades: 35.18%
+  Saccades: 64.82%

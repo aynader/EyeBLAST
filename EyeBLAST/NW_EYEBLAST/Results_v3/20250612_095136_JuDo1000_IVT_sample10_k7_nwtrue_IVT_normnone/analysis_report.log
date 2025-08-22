@@ -1,0 +1,50 @@
+Analysis Report - Multiple Normalization Methods
+================================================
+
+Run Timestamp       : 2025-06-12 09:52:21
+Mode                : IVT
+Input Directory     : JuDo1000_IVT
+Sample Percentage   : 10%
+Number of Samples   : 60
+k (FB neighbors)    : 7
+Needleman-Wunsch NJ : true
+Normalization Mode  : none
+
+Correlation Summary Across Normalization Methods
+=================================================
+Method               Pearson    P-value      Spearman   P-value     
+----------------------------------------------------------------------------
+none                 0.7280     3.7824e-292  0.9816     0.0000e+00  
+
+Detailed Analysis: NONE Normalization
+==================================================
+Pearson Correlation : 0.7280 (p-value = 3.7824e-292)
+  Interpretation     : Strong linear relationship between NW and FB similarity scores.
+Spearman Correlation: 0.9816 (p-value = 0.0000e+00)
+  Interpretation     : Strong monotonic relationship between NW and FB similarity scores.
+
+Data Distribution Statistics:
+  NW: min=-43.2384, max=0.4303, mean=-4.7161, std=7.6875
+  FB: min=0.0000, max=0.9996, mean=0.7593, std=0.1591
+
+Visualizations Saved:
+  - Scatter Plot            : Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_scatter.png
+  - NW Heatmap              : Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_nw_heatmap.png
+  - FB Heatmap              : Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_fb_heatmap.png
+  - Histogram               : Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_histogram.png
+  - Rank-vs-Rank Scatter    : Results_v3\20250612_095136_JuDo1000_IVT_sample10_k7_nwtrue_IVT_normnone\normalization_none\compare_similarity_rank_scatter.png
+
+Comparative Analysis Across Normalization Methods
+==================================================
+Highest Absolute Pearson Correlation : none (0.7280)
+Highest Absolute Spearman Correlation: none (0.9816)
+
+Normalization Method Descriptions:
+- none                : Raw similarity scores (no normalization)
+- minmax              : Linear scaling to [0,1] range
+- zscore              : Standardization to mean=0, std=1
+- rank                : Rank-based normalization to [0,1]
+- quantile            : Quantile normalization to uniform distribution
+- correlation_preserving : Geometric mean scaling preserving correlation structure
+
+Please inspect the visualizations in each normalization subdirectory for detailed analysis.

@@ -1,0 +1,21 @@
+{
+  "timestamp": "20250531_170433",
+  "input_dir": "dataset16S",
+  "test_size": 0.2,
+  "n_jobs": -1,
+  "k": 5,
+  "word_size": 28,
+  "seed": 42,
+  "seed_length": 11,
+  "band_width": 16,
+  "sample_percentage": 100,
+  "balanced": true,
+  "algorithms": "fe",
+  "nw_match": 1,
+  "nw_mismatch": -1,
+  "nw_gap": -2,
+  "no_numba": false,
+  "batch_size": 10,
+  "max_seq_length": 500,
+  "command": "python comparison_study.py --input-dir=dataset16S --output-dir=Results --test-size=0.2 --k=5 --seed-length=11 --band-width=16 --word-size=28 --nw-match=1 --nw-mismatch=-1 --nw-gap=-2 --batch-size=10 --max-seq-length=500 --algorithms=fe --seed=42 --n-jobs=-1 --sample-percentage=100 --balanced=True"
+}

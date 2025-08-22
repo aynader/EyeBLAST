@@ -1,0 +1,29 @@
+FastEyeBLAST C++ Detailed Performance Report
+==================================================
+
+Overall Performance:
+--------------------
+Accuracy: 0.9213 (92.1315%)
+Macro-avg Precision: 0.9207
+Macro-avg Recall: 0.9207
+Macro-avg F1-Score: 0.9206
+
+Per-Class Performance:
+----------------------
+Class   Precision   Recall      F1-Score    Support
+    -------------------------------------------------------
+1       0.8870      0.8533      0.8698      184         
+2       0.9439      0.9585      0.9512      193         
+3       0.9273      0.9148      0.9210      223         
+4       0.9505      0.9648      0.9576      199         
+5       0.8947      0.9122      0.9034      205         
+
+Timing Analysis:
+----------------
+Total execution time: 6.8910 seconds
+data_loading: 1.8075s (26.2303%)
+data_splitting: 0.1151s (1.6707%)
+evaluation: 0.0000s (0.0005%)
+predict_time: 0.6921s (10.0437%)
+total_time: 3.4456s (50.0016%)
+train_time: 0.8306s (12.0531%)

@@ -1,0 +1,114 @@
+2025-06-01 16:02:39,703 - INFO - Starting comparison study with the following parameters:
+2025-06-01 16:02:39,703 - INFO -   band_width: 5
+2025-06-01 16:02:39,703 - INFO -   comparison: fb-component-comparison
+2025-06-01 16:02:39,703 - INFO -   component_modes: ['full', 'simhash_only', 'alignment_only']
+2025-06-01 16:02:39,703 - INFO -   data_type: task
+2025-06-01 16:02:39,703 - INFO -   gender_file: None
+2025-06-01 16:02:39,703 - INFO -   input_dir: GazeBase_IVT
+2025-06-01 16:02:39,703 - INFO -   k: 7
+2025-06-01 16:02:39,703 - INFO -   max_candidates: 20
+2025-06-01 16:02:39,704 - INFO -   n_jobs: -1
+2025-06-01 16:02:39,704 - INFO -   nw_nj: true
+2025-06-01 16:02:39,704 - INFO -   output_dir: Comparison_Results
+2025-06-01 16:02:39,704 - INFO -   random: False
+2025-06-01 16:02:39,704 - INFO -   sample_percentage: 100
+2025-06-01 16:02:39,704 - INFO -   seed_length: 3
+2025-06-01 16:02:39,704 - INFO -   task_filter: None
+2025-06-01 16:02:39,704 - INFO -   test_size: 0.2
+2025-06-01 16:02:39,706 - INFO -   variable_word_size: 64
+2025-06-01 16:02:39,706 - INFO -   word_size: 28
+2025-06-01 16:02:39,707 - INFO - Using fixed seed for reproducibility (42)
+2025-06-01 16:02:39,707 - INFO - Loading data from GazeBase_IVT...
+2025-06-01 16:02:39,707 - INFO - Detected data format: IVT
+2025-06-01 16:02:39,743 - INFO - Loading 12334 scanpath files from GazeBase_IVT...
+2025-06-01 16:02:42,491 - INFO - Loaded 12334 scanpaths with 7 different labels
+2025-06-01 16:02:42,492 - INFO - Label distribution:
+2025-06-01 16:02:42,492 - INFO -   Task 1 (Balura Game): 1762 samples
+2025-06-01 16:02:42,493 - INFO -   Task 2 (Fixation): 1762 samples
+2025-06-01 16:02:42,493 - INFO -   Task 3 (Video 1): 1762 samples
+2025-06-01 16:02:42,493 - INFO -   Task 4 (Video 2): 1762 samples
+2025-06-01 16:02:42,493 - INFO -   Task 5 (Text): 1762 samples
+2025-06-01 16:02:42,493 - INFO -   Task 6 (Random): 1762 samples
+2025-06-01 16:02:42,494 - INFO -   Task 7 (Horizontal Saccade): 1762 samples
+2025-06-01 16:02:42,494 - INFO - Splitting data into train/test sets (80/20)...
+2025-06-01 16:02:42,498 - INFO - Training set: 9867 samples
+2025-06-01 16:02:42,498 - INFO - Test set: 2467 samples
+2025-06-01 16:02:42,499 - INFO - 
+==================================================
+2025-06-01 16:02:42,499 - INFO - 5. FastEyeBLAST Component Comparison
+2025-06-01 16:02:42,499 - INFO - ==================================================
+2025-06-01 16:02:42,500 - INFO - 
+Testing FastEyeBLAST component mode: full
+2025-06-01 16:02:42,729 - INFO - Training FastEyeBLAST (full mode) classifier...
+2025-06-01 16:02:42,729 - INFO - Encoding scanpaths in full mode...
+2025-06-01 16:03:19,851 - INFO - Alphabet size: 21
+2025-06-01 16:03:19,851 - INFO - Bits per token: 5
+2025-06-01 16:03:19,851 - INFO - Tokens per 64-bit word: 12
+2025-06-01 16:03:19,851 - INFO - Packing scanpaths into words...
+2025-06-01 16:03:23,978 - INFO - Computing SimHash sketches...
+2025-06-01 16:05:57,016 - INFO - Building LSH index...
+2025-06-01 16:05:57,029 - INFO - FastEyeBLAST (full mode) training completed in 194.30 seconds
+2025-06-01 16:05:57,029 - INFO - Training memory usage: 307.2 MB
+2025-06-01 16:05:57,030 - INFO - Evaluating FastEyeBLAST (full mode) classifier...
+2025-06-01 16:05:57,419 - INFO - Evaluating classifier on 2467 test samples...
+2025-06-01 16:05:57,420 - INFO - Predicting with mode: full
+2025-06-01 16:05:57,420 - INFO - Processing 32 batches in parallel using 32 processes
+2025-06-01 16:07:19,253 - INFO - All 32 batches processed
+2025-06-01 16:07:19,405 - INFO - Computing evaluation metrics...
+2025-06-01 16:07:19,420 - INFO - FastEyeBLAST (full mode) Accuracy: 0.6571
+2025-06-01 16:07:19,420 - INFO - Prediction time: 81.99 seconds
+2025-06-01 16:07:19,420 - INFO - Prediction memory usage: 2.7 MB
+2025-06-01 16:07:19,421 - INFO - Total memory usage: 309.9 MB
+2025-06-01 16:07:19,944 - INFO - 
+Testing FastEyeBLAST component mode: simhash_only
+2025-06-01 16:07:20,305 - INFO - Training FastEyeBLAST (simhash_only mode) classifier...
+2025-06-01 16:07:20,306 - INFO - Encoding scanpaths in simhash_only mode...
+2025-06-01 16:08:02,525 - INFO - Alphabet size: 21
+2025-06-01 16:08:02,526 - INFO - Bits per token: 5
+2025-06-01 16:08:02,526 - INFO - Tokens per 64-bit word: 12
+2025-06-01 16:08:02,526 - INFO - Computing SimHash sketches...
+2025-06-01 16:10:58,802 - INFO - Building LSH index...
+2025-06-01 16:10:58,817 - INFO - FastEyeBLAST (simhash_only mode) training completed in 218.51 seconds
+2025-06-01 16:10:58,817 - INFO - Training memory usage: 216.7 MB
+2025-06-01 16:10:58,817 - INFO - Evaluating FastEyeBLAST (simhash_only mode) classifier...
+2025-06-01 16:10:59,231 - INFO - Evaluating classifier on 2467 test samples...
+2025-06-01 16:10:59,231 - INFO - Predicting with mode: simhash_only
+2025-06-01 16:10:59,232 - INFO - Processing 32 batches in parallel using 32 processes
+2025-06-01 16:12:10,592 - INFO - All 32 batches processed
+2025-06-01 16:12:10,718 - INFO - Computing evaluation metrics...
+2025-06-01 16:12:10,731 - INFO - FastEyeBLAST (simhash_only mode) Accuracy: 0.4795
+2025-06-01 16:12:10,732 - INFO - Prediction time: 71.49 seconds
+2025-06-01 16:12:10,732 - INFO - Prediction memory usage: 2.4 MB
+2025-06-01 16:12:10,733 - INFO - Total memory usage: 219.1 MB
+2025-06-01 16:12:10,897 - INFO - 
+Testing FastEyeBLAST component mode: alignment_only
+2025-06-01 16:12:11,212 - INFO - Training FastEyeBLAST (alignment_only mode) classifier...
+2025-06-01 16:12:11,212 - INFO - Encoding scanpaths in alignment_only mode...
+2025-06-01 16:12:54,138 - INFO - Alphabet size: 21
+2025-06-01 16:12:54,138 - INFO - Bits per token: 5
+2025-06-01 16:12:54,138 - INFO - Tokens per 64-bit word: 12
+2025-06-01 16:12:54,139 - INFO - Packing scanpaths into words...
+2025-06-01 16:12:58,805 - INFO - FastEyeBLAST (alignment_only mode) training completed in 47.59 seconds
+2025-06-01 16:12:58,805 - INFO - Training memory usage: 285.8 MB
+2025-06-01 16:12:58,806 - INFO - Evaluating FastEyeBLAST (alignment_only mode) classifier...
+2025-06-01 16:12:59,153 - INFO - Evaluating classifier on 2467 test samples...
+2025-06-01 16:12:59,153 - INFO - Predicting with mode: alignment_only
+2025-06-01 16:12:59,153 - INFO - Processing 32 batches in parallel using 32 processes
+2025-06-01 16:47:49,279 - INFO - All 32 batches processed
+2025-06-01 16:47:50,087 - INFO - Computing evaluation metrics...
+2025-06-01 16:47:50,178 - INFO - FastEyeBLAST (alignment_only mode) Accuracy: 0.2748
+2025-06-01 16:47:50,178 - INFO - Prediction time: 2090.93 seconds
+2025-06-01 16:47:50,178 - INFO - Prediction memory usage: -2215.9 MB
+2025-06-01 16:47:50,178 - INFO - Total memory usage: -1930.1 MB
+2025-06-01 16:47:50,527 - INFO - Creating component comparison bar chart...
+2025-06-01 16:47:50,608 - INFO - Component comparison chart saved to Comparison_Results\20250601_160239_GazeBase_IVT_task_sample100_test20_fb-component-comparison_k7\component_comparison_accuracy.png
+2025-06-01 16:47:50,608 - INFO - 
+==================================================
+2025-06-01 16:47:50,608 - INFO - Plotting comparison results
+2025-06-01 16:47:50,610 - INFO - ==================================================
+2025-06-01 16:47:50,610 - INFO - Creating performance comparison chart at Comparison_Results\20250601_160239_GazeBase_IVT_task_sample100_test20_fb-component-comparison_k7\performance_comparison.png...
+2025-06-01 16:47:52,005 - INFO - Saving detailed results to Comparison_Results\20250601_160239_GazeBase_IVT_task_sample100_test20_fb-component-comparison_k7\comparison_results.json...
+2025-06-01 16:47:52,010 - INFO - Results saved to Comparison_Results\20250601_160239_GazeBase_IVT_task_sample100_test20_fb-component-comparison_k7/
+2025-06-01 16:47:52,010 - INFO - Performance comparison plot saved to Comparison_Results\20250601_160239_GazeBase_IVT_task_sample100_test20_fb-component-comparison_k7\performance_comparison.png
+2025-06-01 16:47:52,010 - INFO - Run parameters saved to Comparison_Results\20250601_160239_GazeBase_IVT_task_sample100_test20_fb-component-comparison_k7\run_parameters.json
+2025-06-01 16:47:52,010 - INFO - Comparison study completed.

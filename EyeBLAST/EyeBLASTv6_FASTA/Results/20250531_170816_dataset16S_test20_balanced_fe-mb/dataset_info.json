@@ -1,0 +1,41 @@
+{
+  "total_samples": 8090,
+  "train_size": 6472,
+  "test_size": 1618,
+  "class_distribution": {
+    "Bacillus": 809,
+    "Clostridium": 809,
+    "Enterococcus": 809,
+    "Escherichia": 809,
+    "Lactobacillus": 809,
+    "Neisseria": 809,
+    "Pseudomonas": 809,
+    "Salmonella": 809,
+    "Staphylococcus": 809,
+    "Streptococcus": 809
+  },
+  "train_class_distribution": {
+    "Neisseria": 647,
+    "Clostridium": 648,
+    "Streptococcus": 647,
+    "Staphylococcus": 648,
+    "Enterococcus": 647,
+    "Bacillus": 647,
+    "Lactobacillus": 647,
+    "Pseudomonas": 647,
+    "Salmonella": 647,
+    "Escherichia": 647
+  },
+  "test_class_distribution": {
+    "Pseudomonas": 162,
+    "Lactobacillus": 162,
+    "Enterococcus": 162,
+    "Staphylococcus": 161,
+    "Neisseria": 162,
+    "Escherichia": 162,
+    "Streptococcus": 162,
+    "Salmonella": 162,
+    "Bacillus": 162,
+    "Clostridium": 161
+  }
+}

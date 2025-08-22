@@ -1,0 +1,28 @@
+=== Packed Words Debug ===
+Alice length: 90
+Bob length: 90
+Max length: 90
+
+Alice words:
+Alice[0] = 0x8587948765343210
+Alice[1] = 0x9085351412649482
+Alice[2] = 0x1014148415121012
+Alice[3] = 0x30853c1c1c3b1a14
+Alice[4] = 0x3212949d9780123c
+Alice[5] = 0x8014101294358210
+Alice[6] = 0x1282849484953080
+Alice[7] = 0x15828212158a1282
+Alice[8] = 0x1c35928515853214
+Alice[9] = 0x158512128530803c
+
+Bob words:
+Bob[0] = [encrypted/unknown from Alice's perspective]
+Bob[1] = [encrypted/unknown from Alice's perspective]
+Bob[2] = [encrypted/unknown from Alice's perspective]
+Bob[3] = [encrypted/unknown from Alice's perspective]
+Bob[4] = [encrypted/unknown from Alice's perspective]
+Bob[5] = [encrypted/unknown from Alice's perspective]
+Bob[6] = [encrypted/unknown from Alice's perspective]
+Bob[7] = [encrypted/unknown from Alice's perspective]
+Bob[8] = [encrypted/unknown from Alice's perspective]
+Bob[9] = [encrypted/unknown from Alice's perspective]

@@ -1,0 +1,131 @@
+{
+  "Needleman-Wunsch": {
+    "accuracy": 0.5,
+    "train_time": 0.0052568912506103516,
+    "prediction_time": 2.054966688156128,
+    "memory_mb": 1.66796875,
+    "confusion_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "report": {
+      "Female": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1-score": 0.5,
+        "support": 1.0
+      },
+      "Male": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.5,
+        "support": 3.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5,
+        "support": 4.0
+      },
+      "weighted avg": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 4.0
+      }
+    }
+  },
+  "NCBI MegaBLAST": {
+    "accuracy": 0.25,
+    "train_time": 0.7999792098999023,
+    "prediction_time": 2.580596446990967,
+    "memory_mb": 0.0625,
+    "confusion_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "report": {
+      "Female": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1-score": 0.4,
+        "support": 1.0
+      },
+      "Male": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "accuracy": 0.25,
+      "macro avg": {
+        "precision": 0.125,
+        "recall": 0.5,
+        "f1-score": 0.2,
+        "support": 4.0
+      },
+      "weighted avg": {
+        "precision": 0.0625,
+        "recall": 0.25,
+        "f1-score": 0.1,
+        "support": 4.0
+      }
+    }
+  },
+  "FastEyeBLAST": {
+    "accuracy": 0.25,
+    "train_time": 0.11787199974060059,
+    "prediction_time": 0.07794499397277832,
+    "memory_mb": 0.0234375,
+    "confusion_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "report": {
+      "Female": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1-score": 0.4,
+        "support": 1.0
+      },
+      "Male": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "accuracy": 0.25,
+      "macro avg": {
+        "precision": 0.125,
+        "recall": 0.5,
+        "f1-score": 0.2,
+        "support": 4.0
+      },
+      "weighted avg": {
+        "precision": 0.0625,
+        "recall": 0.25,
+        "f1-score": 0.1,
+        "support": 4.0
+      }
+    }
+  }
+}

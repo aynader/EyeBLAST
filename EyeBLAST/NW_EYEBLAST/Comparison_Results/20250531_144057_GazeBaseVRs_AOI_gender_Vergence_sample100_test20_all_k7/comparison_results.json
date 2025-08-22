@@ -1,0 +1,131 @@
+{
+  "Needleman-Wunsch": {
+    "accuracy": 0.5632911392405063,
+    "train_time": 0.0009989738464355469,
+    "prediction_time": 1830.5786798000336,
+    "memory_mb": 41.35546875,
+    "confusion_matrix": [
+      [
+        60,
+        14
+      ],
+      [
+        55,
+        29
+      ]
+    ],
+    "report": {
+      "Female": {
+        "precision": 0.5217391304347826,
+        "recall": 0.8108108108108109,
+        "f1-score": 0.6349206349206349,
+        "support": 74.0
+      },
+      "Male": {
+        "precision": 0.6744186046511628,
+        "recall": 0.34523809523809523,
+        "f1-score": 0.4566929133858268,
+        "support": 84.0
+      },
+      "accuracy": 0.5632911392405063,
+      "macro avg": {
+        "precision": 0.5980788675429727,
+        "recall": 0.578024453024453,
+        "f1-score": 0.5458067741532309,
+        "support": 158.0
+      },
+      "weighted avg": {
+        "precision": 0.6029104964738708,
+        "recall": 0.5632911392405063,
+        "f1-score": 0.540166656383142,
+        "support": 158.0
+      }
+    }
+  },
+  "NCBI MegaBLAST": {
+    "accuracy": 0.46835443037974683,
+    "train_time": 18.316604375839233,
+    "prediction_time": 114.24273729324341,
+    "memory_mb": -11.96875,
+    "confusion_matrix": [
+      [
+        74,
+        0
+      ],
+      [
+        84,
+        0
+      ]
+    ],
+    "report": {
+      "Female": {
+        "precision": 0.46835443037974683,
+        "recall": 1.0,
+        "f1-score": 0.6379310344827587,
+        "support": 74.0
+      },
+      "Male": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 84.0
+      },
+      "accuracy": 0.46835443037974683,
+      "macro avg": {
+        "precision": 0.23417721518987342,
+        "recall": 0.5,
+        "f1-score": 0.31896551724137934,
+        "support": 158.0
+      },
+      "weighted avg": {
+        "precision": 0.21935587245633711,
+        "recall": 0.46835443037974683,
+        "f1-score": 0.2987778262767351,
+        "support": 158.0
+      }
+    }
+  },
+  "FastEyeBLAST": {
+    "accuracy": 0.47468354430379744,
+    "train_time": 56.949060916900635,
+    "prediction_time": 71.01194739341736,
+    "memory_mb": 104.7734375,
+    "confusion_matrix": [
+      [
+        47,
+        27
+      ],
+      [
+        56,
+        28
+      ]
+    ],
+    "report": {
+      "Female": {
+        "precision": 0.4563106796116505,
+        "recall": 0.6351351351351351,
+        "f1-score": 0.5310734463276836,
+        "support": 74.0
+      },
+      "Male": {
+        "precision": 0.509090909090909,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.4028776978417266,
+        "support": 84.0
+      },
+      "accuracy": 0.47468354430379744,
+      "macro avg": {
+        "precision": 0.48270079435127977,
+        "recall": 0.4842342342342342,
+        "f1-score": 0.4669755720847051,
+        "support": 158.0
+      },
+      "weighted avg": {
+        "precision": 0.4843710547778386,
+        "recall": 0.47468354430379744,
+        "f1-score": 0.4629187446009724,
+        "support": 158.0
+      }
+    }
+  }
+}

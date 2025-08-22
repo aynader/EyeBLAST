@@ -1,0 +1,29 @@
+Scatter Plot Interpretation Report
+===============================
+Total pairs compared: 1770
+Pearson correlation (r): -0.0858 (p = 3.03e-04)
+  - Interpretation: Weak linear correlation.
+Spearman correlation (ρ): -0.1307 (p = 3.45e-08)
+  - Interpretation: Weak rank-order agreement.
+Mean absolute error between scores: 0.5228
+Median absolute error: 0.5799
+Percentage of pairs with |error| < 0.05: 13.45%
+
+Points close to diagonal:
+  - These represent pairs where FB and NW agree closely (similarity difference < 0.05).
+Points above diagonal (FB > NW):
+  - FB tends to overestimate similarity compared to NW for these pairs.
+Points below diagonal (FB < NW):
+  - NW tends to give higher similarity than FB for these pairs.
+
+Density observations:
+  - Regions with warmer colors (red) indicate larger disagreements between FB and NW.
+  - Regions with cooler colors (blue) indicate closer agreement.
+
+Overall assessment:
+  - FB diverges significantly from NW; consider revisiting LSH or banded alignment parameters.
+
+Detailed suggestions:
+  - Investigate points with high |error| to identify systematic biases.
+  - If many points lie below the diagonal, FB may be missing alignments that NW captures.
+  - If many points lie above the diagonal, FB may be producing false positives due to LSH.

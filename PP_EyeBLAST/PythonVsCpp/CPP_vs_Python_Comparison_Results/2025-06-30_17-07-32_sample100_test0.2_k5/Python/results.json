@@ -1,0 +1,110 @@
+{
+  "accuracy": 0.9183266932270916,
+  "macro_avg": {
+    "precision": 0.9191963474000199,
+    "recall": 0.9175193006424516,
+    "f1": 0.9183570583921548
+  },
+  "class_metrics": {
+    "1": {
+      "precision": 0.943502824858757,
+      "recall": 0.8652849740932642,
+      "f1": 0.9027027027027028,
+      "support": 193
+    },
+    "2": {
+      "precision": 0.9077669902912622,
+      "recall": 0.9396984924623115,
+      "f1": 0.9234567901234568,
+      "support": 199
+    },
+    "3": {
+      "precision": 0.9114583333333334,
+      "recall": 0.8838383838383839,
+      "f1": 0.8974358974358975,
+      "support": 198
+    },
+    "4": {
+      "precision": 0.8954545454545455,
+      "recall": 0.9609756097560975,
+      "f1": 0.9270588235294117,
+      "support": 205
+    },
+    "5": {
+      "precision": 0.937799043062201,
+      "recall": 0.937799043062201,
+      "f1": 0.937799043062201,
+      "support": 209
+    }
+  },
+  "confusion_matrix": [
+    [
+      167,
+      8,
+      10,
+      5,
+      3
+    ],
+    [
+      1,
+      187,
+      0,
+      5,
+      6
+    ],
+    [
+      7,
+      4,
+      175,
+      10,
+      2
+    ],
+    [
+      0,
+      0,
+      6,
+      197,
+      2
+    ],
+    [
+      2,
+      7,
+      1,
+      3,
+      196
+    ]
+  ],
+  "timing_data": {
+    "data_loading": 1.0381267070770264,
+    "data_splitting": 0.0020933151245117188,
+    "train_time": 53.42090392112732,
+    "predict_time": 25.506128311157227,
+    "evaluation": 0.0,
+    "total_time": 79.96825289726257
+  },
+  "params": {
+    "input_dir": "GazeBaseVR_IVT",
+    "output_dir": "CPP_vs_Python_Comparison_Results\\2025-06-30_17-07-32_sample100_test0.2_k5\\Python",
+    "sample_percentage": 100,
+    "test_size": 0.2,
+    "seed_length": 3,
+    "band_width": 5,
+    "num_neighbors": 5,
+    "max_candidates": 20,
+    "use_duration_bins": true,
+    "duration_bins": 8,
+    "use_parallel": true,
+    "num_processes": null,
+    "seed": 42,
+    "create_plots": true,
+    "parameter_sweep": false,
+    "k_values": [
+      1,
+      3,
+      5,
+      7,
+      10
+    ]
+  },
+  "parameter_sweep_results": null
+}

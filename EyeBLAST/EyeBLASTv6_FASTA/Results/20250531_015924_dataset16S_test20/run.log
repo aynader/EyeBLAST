@@ -1,0 +1,37 @@
+2025-05-31 01:59:24,068 - INFO - Starting comparison study with the following parameters:
+2025-05-31 01:59:24,069 - INFO -   balanced: True
+2025-05-31 01:59:24,069 - INFO -   band_width: 16
+2025-05-31 01:59:24,069 - INFO -   input_dir: dataset16S
+2025-05-31 01:59:24,069 - INFO -   k: 5
+2025-05-31 01:59:24,069 - INFO -   n_jobs: -1
+2025-05-31 01:59:24,069 - INFO -   output_dir: Results
+2025-05-31 01:59:24,070 - INFO -   sample_percentage: 100
+2025-05-31 01:59:24,070 - INFO -   seed: 42
+2025-05-31 01:59:24,070 - INFO -   seed_length: 11
+2025-05-31 01:59:24,070 - INFO -   test_size: 0.2
+2025-05-31 01:59:24,070 - INFO -   word_size: 28
+2025-05-31 01:59:24,072 - INFO - Searching for FASTA files in dataset16S...
+2025-05-31 01:59:24,073 - INFO - Loading 10 FASTA files...
+2025-05-31 01:59:24,179 - INFO - Loaded 9718 sequences from 10 classes
+2025-05-31 01:59:24,179 - INFO - Class distribution:
+2025-05-31 01:59:24,179 - INFO -   Bacillus: 1000 sequences
+2025-05-31 01:59:24,180 - INFO -   Clostridium: 1000 sequences
+2025-05-31 01:59:24,180 - INFO -   Enterococcus: 1000 sequences
+2025-05-31 01:59:24,180 - INFO -   Escherichia: 1000 sequences
+2025-05-31 01:59:24,180 - INFO -   Lactobacillus: 1000 sequences
+2025-05-31 01:59:24,180 - INFO -   Neisseria: 809 sequences
+2025-05-31 01:59:24,180 - INFO -   Pseudomonas: 1000 sequences
+2025-05-31 01:59:24,180 - INFO -   Salmonella: 909 sequences
+2025-05-31 01:59:24,180 - INFO -   Staphylococcus: 1000 sequences
+2025-05-31 01:59:24,180 - INFO -   Streptococcus: 1000 sequences
+2025-05-31 01:59:24,180 - INFO - Splitting data: 9718 sequences with 10 classes
+2025-05-31 01:59:24,186 - INFO - Train set: 7774 sequences
+2025-05-31 01:59:24,187 - INFO - Test set: 1944 sequences
+2025-05-31 01:59:24,188 - INFO - 
+==================================================
+2025-05-31 01:59:24,188 - INFO - Running FastEyeBLAST_DNA
+2025-05-31 01:59:24,189 - INFO - ==================================================
+2025-05-31 01:59:24,232 - INFO - Training FastEyeBLAST_DNA...
+2025-05-31 01:59:24,233 - INFO - Encoding sequences...
+2025-05-31 01:59:25,190 - INFO - Packing sequences...
+2025-05-31 01:59:27,222 - INFO - Computing simhash sketches...

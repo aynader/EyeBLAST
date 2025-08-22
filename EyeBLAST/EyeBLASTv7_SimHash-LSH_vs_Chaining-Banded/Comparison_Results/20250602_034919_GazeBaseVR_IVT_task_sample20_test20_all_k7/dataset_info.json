@@ -1,0 +1,12 @@
+{
+  "total_samples": 1004,
+  "train_size": 803,
+  "test_size": 201,
+  "task_distribution": {
+    "3": 197,
+    "5": 203,
+    "4": 189,
+    "2": 211,
+    "1": 204
+  }
+}

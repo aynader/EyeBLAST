@@ -9,20 +9,20 @@ using namespace emp;
 using namespace pp_eyeblast;
 namespace fs = std::filesystem;
 
-
+// Protocol coordination GC - determines if Bob has 1 file (1-to-1) or multiple files (1-to-N)
 void run_coordinate_gc(int party, const std::string& ip, int port, 
                       const std::string& bob_dir, const std::string& output_file) {
     
     std::cout << "=== Protocol Coordination Phase ===" << std::endl;
     std::cout << "Party: " << (party == ALICE ? "Alice" : "Bob") << std::endl;
     
-    
+    // Setup network I/O
     NetIO io(party == ALICE ? nullptr : ip.c_str(), port);
     setup_semi_honest(&io, party);
     
     std::cout << "Connected. Starting coordination circuit..." << std::endl;
     
-    
+    // Bob determines his dataset size
     int bob_file_count = 0;
     if (party == BOB) {
         if (fs::is_directory(bob_dir)) {
@@ -32,26 +32,26 @@ void run_coordinate_gc(int party, const std::string& ip, int port,
                 }
             }
         } else {
-            bob_file_count = 1; 
+            bob_file_count = 1; // Single file
         }
         std::cout << "Bob has " << bob_file_count << " files" << std::endl;
     }
     
-    
+    // Create secret shared inputs
     Integer bob_count(32, bob_file_count, BOB);
     Integer threshold(32, 1, PUBLIC);
     
-    
+    // Compute: use_1to1 = (bob_count == 1)
     Bit use_1to1 = bob_count.equal(threshold);
     
-    
+    // Reveal result to both parties
     bool protocol_1to1 = use_1to1.reveal<bool>();
     
     std::cout << "Coordination result: " << (protocol_1to1 ? "1-to-1" : "1-to-N") << " protocol" << std::endl;
     
     finalize_semi_honest();
     
-    
+    // Both parties save the result to separate files to avoid race condition
     std::string party_output = output_file + "_" + (party == ALICE ? "alice" : "bob");
     std::ofstream out(party_output);
     out << (protocol_1to1 ? "1to1" : "1toN") << std::endl;
@@ -72,14 +72,14 @@ void print_usage(const char* program_name) {
 }
 
 int main(int argc, char* argv[]) {
-    
+    // Default parameters
     int party = -1;
     std::string ip = "127.0.0.1";
     int port = 12340;
     std::string bob_dir = "";
     std::string output_file = "coordinate_result.txt";
     
-    
+    // Parse command line arguments
     for (int i = 1; i < argc; i++) {
         std::string arg = argv[i];
         
@@ -111,7 +111,7 @@ int main(int argc, char* argv[]) {
         }
     }
     
-    
+    // Validate required arguments
     if (party == -1) {
         std::cerr << "Error: --role is required" << std::endl;
         print_usage(argv[0]);

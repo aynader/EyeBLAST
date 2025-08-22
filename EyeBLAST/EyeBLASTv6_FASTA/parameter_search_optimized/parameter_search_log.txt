@@ -1,0 +1,470 @@
+FastEyeBLASTDNA Parameter Search
+Date: 2025-05-31 14:04:33
+Input directory: dataset16S
+Sample percentage: 30%
+Balanced sampling: True
+Test size: 0.2
+Random seed: 42
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 16.98s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 9, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 16.73s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 13, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 18.19s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 12, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.56s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 20, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.03s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 2, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.04s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 4, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.33s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 5, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 21.72s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 8, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 16.78s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 10, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.30s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 14, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.35s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 14, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 20.64s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 18, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 29.60s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 20, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 18.89s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 25, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 19.03s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 35, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.17s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 56, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.44s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 72, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 20.80s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': True, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.11s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'improved', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.53s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 30, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': False}
+Accuracy: 0.0744
+Training time: 18.52s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 3, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 20, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'improved', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 18.08s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+
+Parameters: {'seed_length': 11, 'band_width': 16, 'num_neighbors': 2, 'num_hash_tables': 12, 'num_hash_bits': 16, 'max_candidates': 25, 'lsh_hash_size': 64, 'use_position_weights': False, 'similarity_method': 'basic', 'use_class_weights': True}
+Accuracy: 0.0744
+Training time: 17.59s
+Prediction time: 0.00s
+Classification Report:
+  Bacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Clostridium: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Enterococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Escherichia: precision=0.0729, recall=1.0000, f1-score=0.1359
+  Lactobacillus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Neisseria: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Pseudomonas: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Salmonella: precision=0.5000, recall=0.0185, f1-score=0.0357
+  Staphylococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  Streptococcus: precision=0.0000, recall=0.0000, f1-score=0.0000
+  macro avg: precision=0.0573, recall=0.1019, f1-score=0.0172
+  weighted avg: precision=0.0611, recall=0.0744, f1-score=0.0138
+
+--------------------------------------------------------------------------------
+

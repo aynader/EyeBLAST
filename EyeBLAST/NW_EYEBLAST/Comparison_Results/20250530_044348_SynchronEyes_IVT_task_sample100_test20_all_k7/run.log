@@ -1,0 +1,125 @@
+2025-05-30 04:43:48,271 - INFO - Starting comparison study with the following parameters:
+2025-05-30 04:43:48,271 - INFO -   band_width: 5
+2025-05-30 04:43:48,271 - INFO -   comparison: all
+2025-05-30 04:43:48,272 - INFO -   data_type: task
+2025-05-30 04:43:48,272 - INFO -   gender_file: None
+2025-05-30 04:43:48,272 - INFO -   input_dir: ./SynchronEyes_IVT
+2025-05-30 04:43:48,272 - INFO -   k: 7
+2025-05-30 04:43:48,272 - INFO -   max_candidates: 20
+2025-05-30 04:43:48,272 - INFO -   n_jobs: -1
+2025-05-30 04:43:48,272 - INFO -   nw_nj: true
+2025-05-30 04:43:48,272 - INFO -   output_dir: Comparison_Results
+2025-05-30 04:43:48,272 - INFO -   random: False
+2025-05-30 04:43:48,272 - INFO -   sample_percentage: 100
+2025-05-30 04:43:48,272 - INFO -   seed_length: 3
+2025-05-30 04:43:48,283 - INFO -   test_size: 0.2
+2025-05-30 04:43:48,283 - INFO -   word_size: 28
+2025-05-30 04:43:48,284 - INFO - Using fixed seed for reproducibility (42)
+2025-05-30 04:43:48,284 - INFO - Loading data from ./SynchronEyes_IVT...
+2025-05-30 04:43:48,285 - INFO - Detected data format: IVT
+2025-05-30 04:43:48,288 - INFO - Loading 125 scanpath files from ./SynchronEyes_IVT...
+2025-05-30 04:43:48,295 - INFO - Loaded 125 scanpaths with 5 different labels
+2025-05-30 04:43:48,295 - INFO - Label distribution:
+2025-05-30 04:43:48,305 - INFO -   Task 1 (VID): 25 samples
+2025-05-30 04:43:48,305 - INFO -   Task 2 (TEX): 25 samples
+2025-05-30 04:43:48,306 - INFO -   Task 3 (RAN): 25 samples
+2025-05-30 04:43:48,306 - INFO -   Task 4 (HSS): 24 samples
+2025-05-30 04:43:48,306 - INFO -   Task 5 (FIX): 26 samples
+2025-05-30 04:43:48,306 - INFO - Splitting data into train/test sets (80/20)...
+2025-05-30 04:43:48,307 - INFO - Training set: 100 samples
+2025-05-30 04:43:48,307 - INFO - Test set: 25 samples
+2025-05-30 04:43:48,308 - INFO - 
+==================================================
+2025-05-30 04:43:48,308 - INFO - 1. Needleman-Wunsch Classification
+2025-05-30 04:43:48,308 - INFO - ==================================================
+2025-05-30 04:43:48,308 - INFO - Using Numba JIT version of Needleman-Wunsch
+2025-05-30 04:43:48,346 - INFO - Training Needleman-Wunsch classifier...
+2025-05-30 04:43:48,346 - INFO - Detected IVT-encoded data for Needleman-Wunsch
+2025-05-30 04:43:48,380 - INFO - Needleman-Wunsch training completed in 0.03 seconds
+2025-05-30 04:43:48,380 - INFO - Training memory usage: 0.8 MB
+2025-05-30 04:43:48,380 - INFO - Evaluating Needleman-Wunsch classifier...
+2025-05-30 04:43:48,423 - INFO - Evaluating classifier on 25 test samples...
+2025-05-30 04:43:48,423 - INFO - Predicting labels for 25 test samples using Needleman-Wunsch...
+2025-05-30 04:43:48,423 - INFO - Split test data into 25 batches
+2025-05-30 04:43:48,426 - INFO - Processing 25 batches in parallel using 32 jobs
+2025-05-30 04:43:54,320 - INFO - Computing evaluation metrics...
+2025-05-30 04:43:54,325 - INFO - Needleman-Wunsch Accuracy: 0.4400
+2025-05-30 04:43:54,325 - INFO - Prediction time: 5.90 seconds
+2025-05-30 04:43:54,326 - INFO - Prediction memory usage: 4.0 MB
+2025-05-30 04:43:54,326 - INFO - Total memory usage: 4.8 MB
+2025-05-30 04:43:54,516 - INFO - 
+==================================================
+2025-05-30 04:43:54,516 - INFO - 2. NCBI MegaBLAST Classification
+2025-05-30 04:43:54,517 - INFO - ==================================================
+2025-05-30 04:43:54,559 - INFO - Training MegaBLAST classifier...
+2025-05-30 04:43:54,563 - INFO - Detected IVT-encoded data for MegaBLAST
+2025-05-30 04:43:54,563 - INFO - Created temporary directory for BLAST: C:\Users\aynad\AppData\Local\Temp\tmpyxlbfng1
+2025-05-30 04:43:54,563 - INFO - Converting training scanpaths to FASTA format...
+2025-05-30 04:43:55,851 - INFO - Creating BLAST database from training data...
+2025-05-30 04:43:56,471 - INFO - NCBI MegaBLAST training completed in 1.91 seconds
+2025-05-30 04:43:56,471 - INFO - Training memory usage: 0.2 MB
+2025-05-30 04:43:56,471 - INFO - Evaluating NCBI MegaBLAST classifier...
+2025-05-30 04:43:56,513 - INFO - Evaluating classifier on 25 test samples...
+2025-05-30 04:43:56,513 - INFO - Predicting labels for 25 test samples using MegaBLAST...
+2025-05-30 04:43:57,181 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_0_results.tsv
+2025-05-30 04:43:57,900 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_1_results.tsv
+2025-05-30 04:43:58,612 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_2_results.tsv
+2025-05-30 04:43:59,279 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_3_results.tsv
+2025-05-30 04:43:59,947 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_4_results.tsv
+2025-05-30 04:44:00,617 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_5_results.tsv
+2025-05-30 04:44:01,374 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_6_results.tsv
+2025-05-30 04:44:02,051 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_7_results.tsv
+2025-05-30 04:44:02,716 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_8_results.tsv
+2025-05-30 04:44:03,541 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_9_results.tsv
+2025-05-30 04:44:04,204 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_10_results.tsv
+2025-05-30 04:44:04,896 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_11_results.tsv
+2025-05-30 04:44:05,562 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_12_results.tsv
+2025-05-30 04:44:06,274 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_13_results.tsv
+2025-05-30 04:44:06,937 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_14_results.tsv
+2025-05-30 04:44:07,587 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_15_results.tsv
+2025-05-30 04:44:08,237 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_16_results.tsv
+2025-05-30 04:44:08,899 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_17_results.tsv
+2025-05-30 04:44:09,516 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_18_results.tsv
+2025-05-30 04:44:10,200 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_19_results.tsv
+2025-05-30 04:44:10,899 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_20_results.tsv
+2025-05-30 04:44:11,565 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_21_results.tsv
+2025-05-30 04:44:12,173 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_22_results.tsv
+2025-05-30 04:44:12,860 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_23_results.tsv
+2025-05-30 04:44:13,582 - INFO - MegaBLAST completed: C:/Users/aynad/AppData/Local/Temp/tmpyxlbfng1/test_24_results.tsv
+2025-05-30 04:44:13,582 - INFO - Computing evaluation metrics...
+2025-05-30 04:44:13,590 - INFO - NCBI MegaBLAST Accuracy: 0.0800
+2025-05-30 04:44:13,590 - INFO - Prediction time: 17.07 seconds
+2025-05-30 04:44:13,591 - INFO - Prediction memory usage: 0.0 MB
+2025-05-30 04:44:13,591 - INFO - Total memory usage: 0.2 MB
+2025-05-30 04:44:13,685 - INFO - 
+==================================================
+2025-05-30 04:44:13,685 - INFO - 3. FastEyeBLAST Classification
+2025-05-30 04:44:13,687 - INFO - ==================================================
+2025-05-30 04:44:13,687 - INFO - Using IVT version of FastEyeBLAST
+2025-05-30 04:44:13,727 - INFO - Training FastEyeBLAST classifier...
+2025-05-30 04:44:13,727 - INFO - Encoding scanpaths...
+2025-05-30 04:44:13,869 - INFO - Alphabet size: 19
+2025-05-30 04:44:13,869 - INFO - Bits per token: 5
+2025-05-30 04:44:13,869 - INFO - Tokens per 64-bit word: 12
+2025-05-30 04:44:13,869 - INFO - Packing scanpaths into words...
+2025-05-30 04:44:13,894 - INFO - Computing SimHash sketches...
+2025-05-30 04:44:14,527 - INFO - Building LSH index...
+2025-05-30 04:44:14,527 - INFO - FastEyeBLAST training completed in 0.80 seconds
+2025-05-30 04:44:14,531 - INFO - Training memory usage: 0.7 MB
+2025-05-30 04:44:14,531 - INFO - Evaluating FastEyeBLAST classifier...
+2025-05-30 04:44:14,573 - INFO - Evaluating classifier on 25 test samples...
+2025-05-30 04:44:18,514 - INFO - Computing evaluation metrics...
+2025-05-30 04:44:18,514 - INFO - FastEyeBLAST Accuracy: 0.1200
+2025-05-30 04:44:18,514 - INFO - Prediction time: 3.94 seconds
+2025-05-30 04:44:18,514 - INFO - Prediction memory usage: 1.7 MB
+2025-05-30 04:44:18,514 - INFO - Total memory usage: 2.4 MB
+2025-05-30 04:44:18,610 - INFO - 
+==================================================
+2025-05-30 04:44:18,614 - INFO - Plotting comparison results
+2025-05-30 04:44:18,614 - INFO - ==================================================
+2025-05-30 04:44:18,614 - INFO - Creating performance comparison chart at Comparison_Results\20250530_044348_SynchronEyes_IVT_task_sample100_test20_all_k7\performance_comparison.png...
+2025-05-30 04:44:18,734 - INFO - Saving detailed results to Comparison_Results\20250530_044348_SynchronEyes_IVT_task_sample100_test20_all_k7\comparison_results.json...
+2025-05-30 04:44:18,734 - INFO - Results saved to Comparison_Results\20250530_044348_SynchronEyes_IVT_task_sample100_test20_all_k7/
+2025-05-30 04:44:18,734 - INFO - Performance comparison plot saved to Comparison_Results\20250530_044348_SynchronEyes_IVT_task_sample100_test20_all_k7\performance_comparison.png
+2025-05-30 04:44:18,734 - INFO - Run parameters saved to Comparison_Results\20250530_044348_SynchronEyes_IVT_task_sample100_test20_all_k7\run_parameters.json
+2025-05-30 04:44:18,734 - INFO - Comparison study completed.

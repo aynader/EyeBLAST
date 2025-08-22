@@ -1,0 +1,100 @@
+2025-06-11 04:37:15,810 - INFO - Starting similarity comparison with the following parameters:
+2025-06-11 04:37:15,810 - INFO -   input_dir: LFI_CSV_IVT
+2025-06-11 04:37:15,810 - INFO -   k: 7
+2025-06-11 04:37:15,810 - INFO -   normalization_mode: all
+2025-06-11 04:37:15,810 - INFO -   nw_nj: true
+2025-06-11 04:37:15,810 - INFO -   output_dir: Results_v3
+2025-06-11 04:37:15,810 - INFO -   sample_percentage: 100
+2025-06-11 04:37:15,810 - INFO -   mode: IVT
+2025-06-11 04:37:15,812 - INFO - Loading 70 IVT scanpath files (100% of 70)...
+2025-06-11 04:37:15,977 - INFO - Total IVT scanpaths loaded: 70
+2025-06-11 04:37:15,977 - INFO - Computing raw similarity matrices...
+2025-06-11 04:37:15,977 - INFO - Computing Needleman-Wunsch_IVT similarity matrix (may be slow)...
+2025-06-11 04:37:15,977 - INFO - Computing pairwise similarities for 70 scanpaths (2415 pairs)...
+2025-06-11 04:37:15,977 - INFO - Sequence length stats: max=159014, avg=56055.6
+2025-06-11 04:37:15,977 - INFO - Estimated memory per NW comparison: 0.6 MB
+2025-06-11 04:37:15,977 - INFO - Available system memory: 18.5 GB
+2025-06-11 04:37:15,993 - INFO - Processing 2415 pairs in batches of 500
+2025-06-11 04:37:15,993 - INFO - Processing batch 1/5 (500 pairs)
+2025-06-11 04:37:15,993 - INFO - Memory usage before batch: 41.8%
+2025-06-11 04:41:49,298 - INFO - Memory usage after batch: 52.3%
+2025-06-11 04:41:49,366 - INFO - Processing batch 2/5 (500 pairs)
+2025-06-11 04:41:49,366 - INFO - Memory usage before batch: 52.3%
+2025-06-11 04:45:14,278 - INFO - Memory usage after batch: 55.8%
+2025-06-11 04:45:14,346 - INFO - Processing batch 3/5 (500 pairs)
+2025-06-11 04:45:14,346 - INFO - Memory usage before batch: 55.8%
+2025-06-11 04:49:55,065 - INFO - Memory usage after batch: 54.3%
+2025-06-11 04:49:55,135 - INFO - Processing batch 4/5 (500 pairs)
+2025-06-11 04:49:55,135 - INFO - Memory usage before batch: 54.3%
+2025-06-11 04:53:52,526 - INFO - Memory usage after batch: 54.1%
+2025-06-11 04:53:52,595 - INFO - Processing batch 5/5 (415 pairs)
+2025-06-11 04:53:52,596 - INFO - Memory usage before batch: 54.1%
+2025-06-11 04:56:46,681 - INFO - Memory usage after batch: 55.0%
+2025-06-11 04:56:46,740 - INFO - Successfully computed 2415 similarity pairs
+2025-06-11 04:56:46,750 - INFO - Saved raw NW similarity matrix to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\nw_similarity_matrix_raw.npy
+2025-06-11 04:56:46,750 - INFO - Fitting Fast_EyeBLAST_IVT (building indices, encoding all scanpaths)...
+2025-06-11 04:56:46,750 - INFO - Encoding scanpaths...
+2025-06-11 04:56:51,929 - INFO - Alphabet size: 21
+2025-06-11 04:56:51,930 - INFO - Bits per token: 5
+2025-06-11 04:56:51,930 - INFO - Tokens per 64-bit word: 12
+2025-06-11 04:56:51,930 - INFO - Packing scanpaths into words...
+2025-06-11 04:56:52,536 - INFO - Computing SimHash sketches...
+2025-06-11 04:57:15,102 - INFO - Building LSH index...
+2025-06-11 04:57:15,102 - INFO - Computing Fast_EyeBLAST_IVT pairwise similarities...
+2025-06-11 05:02:32,871 - INFO - Saved raw FB similarity matrix to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\fb_similarity_matrix_raw.npy
+2025-06-11 05:02:32,871 - INFO - Processing normalization method: none
+2025-06-11 05:02:32,873 - INFO - Saved none normalized matrices
+2025-06-11 05:02:32,891 - INFO - [none] Pearson correlation: -0.0013 (p-value = 9.4969e-01)
+2025-06-11 05:02:32,891 - INFO - [none] Spearman correlation: 0.1387 (p-value = 7.7420e-12)
+2025-06-11 05:02:33,237 - INFO - [none] Saved scatter plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_scatter.png
+2025-06-11 05:02:33,530 - INFO - [none] Saved NW heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_nw_heatmap.png
+2025-06-11 05:02:33,809 - INFO - [none] Saved FB heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_fb_heatmap.png
+2025-06-11 05:02:33,997 - INFO - [none] Saved histogram plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_histogram.png
+2025-06-11 05:02:34,169 - INFO - [none] Saved rank-vs-rank scatter to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_none\compare_similarity_rank_scatter.png
+2025-06-11 05:02:34,170 - INFO - Processing normalization method: minmax
+2025-06-11 05:02:34,172 - INFO - Saved minmax normalized matrices
+2025-06-11 05:02:34,175 - INFO - [minmax] Pearson correlation: -0.0013 (p-value = 9.4969e-01)
+2025-06-11 05:02:34,175 - INFO - [minmax] Spearman correlation: 0.1387 (p-value = 7.7420e-12)
+2025-06-11 05:02:34,412 - INFO - [minmax] Saved scatter plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_scatter.png
+2025-06-11 05:02:34,696 - INFO - [minmax] Saved NW heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_nw_heatmap.png
+2025-06-11 05:02:35,023 - INFO - [minmax] Saved FB heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_fb_heatmap.png
+2025-06-11 05:02:35,237 - INFO - [minmax] Saved histogram plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_histogram.png
+2025-06-11 05:02:35,402 - INFO - [minmax] Saved rank-vs-rank scatter to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_minmax\compare_similarity_rank_scatter.png
+2025-06-11 05:02:35,402 - INFO - Processing normalization method: zscore
+2025-06-11 05:02:35,406 - INFO - Saved zscore normalized matrices
+2025-06-11 05:02:35,408 - INFO - [zscore] Pearson correlation: -0.0013 (p-value = 9.4969e-01)
+2025-06-11 05:02:35,408 - INFO - [zscore] Spearman correlation: 0.1387 (p-value = 7.7420e-12)
+2025-06-11 05:02:35,875 - INFO - [zscore] Saved scatter plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_scatter.png
+2025-06-11 05:02:36,139 - INFO - [zscore] Saved NW heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_nw_heatmap.png
+2025-06-11 05:02:36,415 - INFO - [zscore] Saved FB heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_fb_heatmap.png
+2025-06-11 05:02:36,619 - INFO - [zscore] Saved histogram plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_histogram.png
+2025-06-11 05:02:36,781 - INFO - [zscore] Saved rank-vs-rank scatter to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_zscore\compare_similarity_rank_scatter.png
+2025-06-11 05:02:36,782 - INFO - Processing normalization method: rank
+2025-06-11 05:02:36,785 - INFO - Saved rank normalized matrices
+2025-06-11 05:02:36,788 - INFO - [rank] Pearson correlation: 0.1387 (p-value = 7.7420e-12)
+2025-06-11 05:02:36,788 - INFO - [rank] Spearman correlation: 0.1387 (p-value = 7.7420e-12)
+2025-06-11 05:02:37,028 - INFO - [rank] Saved scatter plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_scatter.png
+2025-06-11 05:02:37,336 - INFO - [rank] Saved NW heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_nw_heatmap.png
+2025-06-11 05:02:37,622 - INFO - [rank] Saved FB heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_fb_heatmap.png
+2025-06-11 05:02:37,864 - INFO - [rank] Saved histogram plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_histogram.png
+2025-06-11 05:02:38,073 - INFO - [rank] Saved rank-vs-rank scatter to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_rank\compare_similarity_rank_scatter.png
+2025-06-11 05:02:38,074 - INFO - Processing normalization method: quantile
+2025-06-11 05:02:38,076 - INFO - Saved quantile normalized matrices
+2025-06-11 05:02:38,079 - INFO - [quantile] Pearson correlation: 0.1607 (p-value = 1.9443e-15)
+2025-06-11 05:02:38,080 - INFO - [quantile] Spearman correlation: 0.1386 (p-value = 7.9736e-12)
+2025-06-11 05:02:38,334 - INFO - [quantile] Saved scatter plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_scatter.png
+2025-06-11 05:02:38,708 - INFO - [quantile] Saved NW heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_nw_heatmap.png
+2025-06-11 05:02:38,986 - INFO - [quantile] Saved FB heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_fb_heatmap.png
+2025-06-11 05:02:39,205 - INFO - [quantile] Saved histogram plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_histogram.png
+2025-06-11 05:02:39,363 - INFO - [quantile] Saved rank-vs-rank scatter to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_quantile\compare_similarity_rank_scatter.png
+2025-06-11 05:02:39,364 - INFO - Processing normalization method: correlation_preserving
+2025-06-11 05:02:39,367 - INFO - Saved correlation_preserving normalized matrices
+2025-06-11 05:02:39,370 - INFO - [correlation_preserving] Pearson correlation: -0.0013 (p-value = 9.4969e-01)
+2025-06-11 05:02:39,370 - INFO - [correlation_preserving] Spearman correlation: 0.1387 (p-value = 7.7420e-12)
+2025-06-11 05:02:39,606 - INFO - [correlation_preserving] Saved scatter plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_scatter.png
+2025-06-11 05:02:39,890 - INFO - [correlation_preserving] Saved NW heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_nw_heatmap.png
+2025-06-11 05:02:40,177 - INFO - [correlation_preserving] Saved FB heatmap to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_fb_heatmap.png
+2025-06-11 05:02:40,390 - INFO - [correlation_preserving] Saved histogram plot to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_histogram.png
+2025-06-11 05:02:40,590 - INFO - [correlation_preserving] Saved rank-vs-rank scatter to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\normalization_correlation_preserving\compare_similarity_rank_scatter.png
+2025-06-11 05:02:40,592 - INFO - Comprehensive analysis report saved to Results_v3\20250611_043715_LFI_CSV_IVT_sample100_k7_nwtrue_IVT_normall\analysis_report.log
+2025-06-11 05:02:40,593 - INFO - Similarity comparison completed for all normalization methods.

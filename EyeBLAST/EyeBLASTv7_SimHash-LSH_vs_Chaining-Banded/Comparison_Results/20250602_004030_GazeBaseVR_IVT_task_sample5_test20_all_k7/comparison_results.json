@@ -1,0 +1,266 @@
+{
+  "Needleman-Wunsch": {
+    "accuracy": 0.6862745098039216,
+    "train_time": 0.07892179489135742,
+    "prediction_time": 7.8248982429504395,
+    "memory_mb": 4.55078125,
+    "confusion_matrix": [
+      [
+        3,
+        0,
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        3,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        8,
+        1
+      ],
+      [
+        3,
+        0,
+        1,
+        1,
+        5
+      ]
+    ],
+    "report": {
+      "Vergence": {
+        "precision": 0.3333333333333333,
+        "recall": 0.42857142857142855,
+        "f1-score": 0.375,
+        "support": 7.0
+      },
+      "Pursuit": {
+        "precision": 0.75,
+        "recall": 0.42857142857142855,
+        "f1-score": 0.5454545454545454,
+        "support": 7.0
+      },
+      "Video": {
+        "precision": 0.7272727272727273,
+        "recall": 1.0,
+        "f1-score": 0.8421052631578947,
+        "support": 16.0
+      },
+      "Text": {
+        "precision": 0.8888888888888888,
+        "recall": 0.7272727272727273,
+        "f1-score": 0.8,
+        "support": 11.0
+      },
+      "Random": {
+        "precision": 0.7142857142857143,
+        "recall": 0.5,
+        "f1-score": 0.5882352941176471,
+        "support": 10.0
+      },
+      "accuracy": 0.6862745098039216,
+      "macro avg": {
+        "precision": 0.6827561327561328,
+        "recall": 0.6168831168831168,
+        "f1-score": 0.6301590205460175,
+        "support": 51.0
+      },
+      "weighted avg": {
+        "precision": 0.7086339586339587,
+        "recall": 0.6862745098039216,
+        "f1-score": 0.6784160582330314,
+        "support": 51.0
+      }
+    }
+  },
+  "NCBI MegaBLAST": {
+    "accuracy": 0.13725490196078433,
+    "train_time": 3.4204764366149902,
+    "prediction_time": 32.968047857284546,
+    "memory_mb": 0.1484375,
+    "confusion_matrix": [
+      [
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        16,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        11,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        10,
+        0,
+        0,
+        0
+      ]
+    ],
+    "report": {
+      "Vergence": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 7.0
+      },
+      "Pursuit": {
+        "precision": 0.13725490196078433,
+        "recall": 1.0,
+        "f1-score": 0.2413793103448276,
+        "support": 7.0
+      },
+      "Video": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 16.0
+      },
+      "Text": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "Random": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "accuracy": 0.13725490196078433,
+      "macro avg": {
+        "precision": 0.027450980392156866,
+        "recall": 0.2,
+        "f1-score": 0.04827586206896552,
+        "support": 51.0
+      },
+      "weighted avg": {
+        "precision": 0.018838908112264515,
+        "recall": 0.13725490196078433,
+        "f1-score": 0.03313049357674104,
+        "support": 51.0
+      }
+    }
+  },
+  "FastEyeBLAST": {
+    "accuracy": 0.8235294117647058,
+    "train_time": 1.657315731048584,
+    "prediction_time": 5.335289239883423,
+    "memory_mb": 1.1328125,
+    "confusion_matrix": [
+      [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        6,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        15,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        11,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        7
+      ]
+    ],
+    "report": {
+      "Vergence": {
+        "precision": 0.75,
+        "recall": 0.42857142857142855,
+        "f1-score": 0.5454545454545454,
+        "support": 7.0
+      },
+      "Pursuit": {
+        "precision": 0.6,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.7058823529411765,
+        "support": 7.0
+      },
+      "Video": {
+        "precision": 0.9375,
+        "recall": 0.9375,
+        "f1-score": 0.9375,
+        "support": 16.0
+      },
+      "Text": {
+        "precision": 0.8461538461538461,
+        "recall": 1.0,
+        "f1-score": 0.9166666666666666,
+        "support": 11.0
+      },
+      "Random": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "accuracy": 0.8235294117647058,
+      "macro avg": {
+        "precision": 0.8017307692307692,
+        "recall": 0.7846428571428572,
+        "f1-score": 0.7766562685680333,
+        "support": 51.0
+      },
+      "weighted avg": {
+        "precision": 0.8334841628959276,
+        "recall": 0.8235294117647058,
+        "f1-score": 0.8160876352917876,
+        "support": 51.0
+      }
+    }
+  }
+}
