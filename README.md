@@ -49,7 +49,7 @@ In the animation, pauses correspond to fixations, jumps to saccades, and fine mo
 
 ## The idea: borrow the search philosophy of BLAST
 
-![Seed-and-extend illustration from the thesis presentation](assets/blast_seed_and_extend.gif)
+![Seed-and-extend illustration](assets/blast_seed_and_extend.gif)
 
 The **NCBI Basic Local Alignment Search Tool (BLAST)** searches biological sequence databases efficiently by looking for promising short matches (*seeds*) before extending them into longer alignments. **MegaBLAST**, a nucleotide-oriented BLAST variant, was an early inspiration for this work.
 
@@ -147,7 +147,7 @@ A quick search is useful. A quick search that avoids handing over raw scanpaths 
 
 **PP-EyeBLAST** transfers the core comparison to **two-party garbled circuits (GC)**. Both parties locally preprocess their scanpaths, then participate in secure computation over a coarse similarity gate and the fine-alignment stage. The implementation targets the **semi-honest** threat model, with deliberately restricted output disclosure.
 
-- **1:1:** Alice provides one query and Bob one reference. A garbled-circuit rough filter checks their sketches, then the protocol refines passing pairs with seed chaining and banded alignment. The designated result recipient obtains the similarity score (with coarse pass/fail leakage described in the thesis), rather than the other's raw sequence.
+- **1:1:** Alice provides one query and Bob one reference. A garbled-circuit rough filter checks their sketches, then the protocol refines passing pairs with seed chaining and banded alignment. The designated result recipient obtains the similarity score (with coarse pass/fail leakage), rather than the other's raw sequence.
 - **1:N:** Alice compares a query against Bob's collection. The current prototype performs **repeated secure coarse comparisons**, collects passing candidates, and applies secure refinement / k-NN logic. The 1:N prototype **does not implement the plaintext LSH-index lookup privately**.
 
 ### 1:N protocol: complete diagram
@@ -234,7 +234,7 @@ For an initial smoke test, append `--test` **only to the preprocessing command**
 
 ## License
 
-MIT License — see [LICENSE](LICENSE). The MIT grant applies to original project code and documentation for which the copyright holder has authority to license. Third-party frameworks, vendored code, datasets, fonts, and externally created illustrations retain their own licenses and attribution requirements. Check any pre-existing institutional or contributor obligations before applying a repository-wide license.
+MIT License. see [LICENSE](LICENSE). The MIT grant applies to original project code and documentation for which the copyright holder has authority to license. Third-party frameworks, vendored code, datasets, fonts, and externally created illustrations retain their own licenses and attribution requirements. Check any pre-existing institutional or contributor obligations before applying a repository-wide license.
 
 ---
 
